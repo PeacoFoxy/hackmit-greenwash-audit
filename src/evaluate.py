@@ -23,7 +23,17 @@ C = Accounting_misleading: literally true but uses accounting choices to mislead
 D = Contradicted: conflicts with other information."""
 
 FLAG_NOTE = """Each claim also carries rule-based hints from a regex pass: "flags" (triggered risk patterns)
-and "vagueness" (0-1, higher = vaguer). Use them as evidence, not as verdicts."""
+and "vagueness" (0-1, higher = vaguer).
+These flags are heuristic signals, not conclusions. A flag suggests where to look; it does not
+by itself make a claim misleading. If the claim states its scope or method clearly despite a
+flag, label it A."""
+
+# SCOPE_BOUNDARY_UNCLEAR 误报率太高，不喂给模型
+PRECISE_FLAGS = {
+    "SCOPE2_METHOD_UNSTATED", "MATCHING_LANGUAGE", "OFFSET_UNDISCLOSED", "NO_BASELINE_YEAR",
+    "GRID_MISMATCH_RISK", "CHERRY_PICKED_METRIC", "WATER_ACCOUNTING_VAGUE",
+    "FUTURE_PROMISE_NO_MILESTONE",
+}
 
 SYSTEM = "Output ONLY a JSON array, no prose, no markdown fences."
 
@@ -38,7 +48,7 @@ Format: [{"claim_id":"...","label":"A"}]"""
 def item(c, with_hints):
     d = {"claim_id": c["claim_id"], "text": c["text"]}
     if with_hints:
-        d["flags"] = c["flags"]
+        d["flags"] = [f for f in c["flags"] if f in PRECISE_FLAGS]
         d["vagueness"] = c["vagueness"]
     return json.dumps(d, ensure_ascii=False)
 
@@ -50,7 +60,7 @@ def build_prompt(method, batch):
     head = "Classify each corporate environmental claim below as A, B, C, or D.\n\n" + rubric
     if hints:
         head += "\n\n" + FLAG_NOTE
-    return f"{head}\n\n{CONSTRAINTS}\n\nCLAIMS:\n{claims}"
+    return f"{head}\n\nCLAIMS:\n{claims}\n\n{CONSTRAINTS}"
 
 
 def parse_json(raw):
