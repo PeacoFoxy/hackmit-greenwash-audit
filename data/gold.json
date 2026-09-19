@@ -1,0 +1,122 @@
+[
+ {
+  "claim_id": "amzn_sr_304",
+  "gold_label": "A"
+ },
+ {
+  "claim_id": "goog_sr_134",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "amzn_sr_362",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "msft_sr_146",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "goog_sr_089",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "goog_sr_105",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "amzn_sr_385",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "goog_sr_061",
+  "gold_label": "A"
+ },
+ {
+  "claim_id": "goog_sr_074",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "amzn_sr_342",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "amzn_sr_316",
+  "gold_label": "A"
+ },
+ {
+  "claim_id": "goog_sr_071",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "amzn_sr_297",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "amzn_sr_337",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "goog_sr_083",
+  "gold_label": "SKIP"
+ },
+ {
+  "claim_id": "msft_sr_150",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "amzn_sr_292",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "goog_sr_004",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "amzn_sr_301",
+  "gold_label": "A"
+ },
+ {
+  "claim_id": "goog_sr_052",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "goog_sr_034",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "goog_sr_096",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "goog_sr_016",
+  "gold_label": "A"
+ },
+ {
+  "claim_id": "goog_sr_073",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "amzn_sr_303",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "msft_sr_235",
+  "gold_label": "C"
+ },
+ {
+  "claim_id": "goog_sr_042",
+  "gold_label": "A"
+ },
+ {
+  "claim_id": "msft_sr_197",
+  "gold_label": "B"
+ },
+ {
+  "claim_id": "amzn_sr_323",
+  "gold_label": "A"
+ },
+ {
+  "claim_id": "msft_sr_227",
+  "gold_label": "B"
+ }
+]

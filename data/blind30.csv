@@ -1,0 +1,31 @@
+claim_id,text,my_label
+amzn_sr_304,We reduced emissions per shipped unit by 39% compared to 2019.,A
+goog_sr_134,Alphabet uses a 25-year estimated lifespan for solar panels in both annual and lifetime emissions reduction methods.,C
+amzn_sr_362,"Where eliminating single-use plastics is not yet feasible, Amazon works to increase the proportion of recycled content in its plastic materials.",B
+msft_sr_146,Select large-scale Microsoft suppliers are required to transition to 100% carbon-free electricity for their delivered goods and services.,B
+goog_sr_089,"Alphabet accounts for all emissions from operations over which it has operational control, including data centers, offices, and other assets.",B
+goog_sr_105,We calculate electricity procured from renewable sources (%) on an annual basis by dividing the megawatt-hours of renewable electricity procured by the total megawatt-hours of electricity consumed by our global operations.,B
+amzn_sr_385,Amazon encourages suppliers to reduce consumption of water within their operations and supply chain.,B
+goog_sr_061,"In 2024, Google achieved approximately 66% global average carbon-free energy across its data centers and offices.",A
+goog_sr_074,The use of low-carbon construction materials is part of Google's work to reduce data center construction emissions.,B
+amzn_sr_342,"Amazon's water replenishment projects restore watersheds and bring clean water, sanitation, and hygiene services to water-stressed communities.",B
+amzn_sr_316,"Amazon expanded its existing nuclear energy relationship with Talen Energy, which will provide 1,900 MW of carbon-free nuclear power through 2042.",A
+goog_sr_071,The standardized nature of Google's data center designs allows reduction of the materials required for construction.,B
+amzn_sr_297,"Amazon matched 100% of the electricity consumed by its global operations with renewable energy by 2025, five years ahead of its original target of 2030.",C
+amzn_sr_337,"In Mississippi, U.S., Amazon became the first data center operator to commit to reclaimed water for cooling.",B
+goog_sr_083,"In 2021, Google joined the UN Race to Zero Campaign, the largest ever alliance committed to halving emissions by 2030 and achieving net-zero emissions by no later than 2050.",SKIP
+msft_sr_150,"Microsoft's alternative fuel and logistics efforts have reduced emissions by over 17,000 metric tons of CO2.",C
+amzn_sr_292,Amazon has reduced emissions per shipped unit by 7% compared to 2024.,C
+goog_sr_004,Google signed its first power purchase agreement in 2010.,C
+amzn_sr_301,"Emissions from our direct operations increased 2% compared to 2024, while we delivered more packages to more customers.",A
+goog_sr_052,"Alphabet has an aspiration to help individuals, cities, and other partners collectively reduce 1 gigaton of carbon equivalent emissions annually by 2030.",C
+goog_sr_034,"Ironwood is Alphabet's most powerful, capable and energy efficient TPU yet, designed to power thinking, inferential AI models at scale.",B
+goog_sr_096,"Category 1 (Purchased goods and services) includes upstream emissions from manufacturing consumer devices and spare parts, Alphabet's food program, and additional goods and services purchased for operations.",B
+goog_sr_016,"In 2024, Alphabet reduced its data center energy emissions by 12% compared to 2023.",A
+goog_sr_073,Optimizations to Google's standard data center design collectively have the potential to reduce the embodied carbon emissions intensity of a data center building by around 9%.,C
+amzn_sr_303,We reduced emissions per shipped unit by 7% compared to 2024.,C
+msft_sr_235,"Microsoft Devices supply chain transitioned from palletized containers to loose-loaded containers for ocean shipments of Xbox consoles from contract manufacturers, driving emissions savings of 136 mtCO2e through load optimization.",C
+goog_sr_042,"By 2020, we had already reached 94% plastic-free packaging.",A
+msft_sr_197,"Microsoft invests in solutions such as rainwater harvesting, groundwater replenishment, and irrigation modernization.",B
+amzn_sr_323,"In 2025, Amazon's inset projects helped reduce emissions by 199,400 metric tons of CO₂e.",A
+msft_sr_227,"By harvesting and recertifying decommissioned server components no longer available on the market, we are meeting new demand while reducing waste.",B

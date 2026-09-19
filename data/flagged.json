@@ -1,0 +1,4959 @@
+[
+ {
+  "claim_id": "goog_sr_001",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google reduced data center energy emissions by 12% in 2024.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_002",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google signed contracts for 8 GW of new clean energy generation in 2024.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_003",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google brought 2.5 GW of clean energy online in 2024.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_004",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google signed its first power purchase agreement in 2010.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "GRID_MISMATCH_RISK"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_005",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google's Flood Hub predicts riverine floods up to seven days in advance.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_006",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Flood Hub provides flood forecasts in over 100 countries.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_007",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Flood Hub covers territories where more than 700 million people live.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_008",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "WeatherNext AI models generate weather forecasts often 10 to 15 days in advance.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_009",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Ironwood (seventh-generation TPU) performance per watt is double that of Trillium, the sixth-generation TPU.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_010",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Ironwood is nearly 30 times more power efficient than the first Cloud TPU from 2018.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_011",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Trillium is 67% more energy efficient than the previous TPU v5e.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_012",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Trillium delivers 14 times more compute per watt of power compared to the first generation of Cloud TPUs.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_013",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google Axion Processors are up to 60% more energy efficient than comparable current-generation x86-based instances.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_014",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "NVIDIA Blackwell GPUs will train large models using 75% less power than older GPUs to complete the same task.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_015",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "NVIDIA Blackwell GPUs are 25 times as energy efficient compared to NVIDIA H100.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_016",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, Alphabet reduced its data center energy emissions by 12% compared to 2023.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_017",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's data center electricity consumption increased 27% year-on-year in 2024.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_018",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, Alphabet signed contracts to purchase over 8 GW of additional clean energy generation, the largest annual total in its history and twice the volume contracted the prior year.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_019",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "From 2010 to 2024, Alphabet signed more than 170 agreements to purchase over 22 GW of clean energy generation.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_020",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's clean energy purchases include over 17.3 GW in North America, over 4.5 GW in Europe, over 400 MW in Latin America, and over 300 MW in Asia Pacific.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_021",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Kairos Power's SMR design uses a molten salt cooling system and a unique ceramic pebble fuel.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_022",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Nuclear solutions offer a clean, round-the-clock power source that can help reliably meet electricity demands with carbon-free energy every hour of every day.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED"
+  ],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_023",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet increased its global carbon-free energy percentage across its data centers and offices to 66%.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "NO_BASELINE_YEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_024",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The 66% global carbon-free energy percentage represents a 2% increase compared to last year.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "NO_BASELINE_YEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_025",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's electricity consumption increased by 27% to support its growing business, including AI.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_026",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In Asia Pacific, Alphabet's regional average Google CFE was 12%.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_027",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In North America, Alphabet's regional average Google CFE was 70%.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_028",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In Latin America, Alphabet's regional average Google CFE was 92%.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_029",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet is advancing solar aggregation and piloting investments in new clean energy projects in Asia Pacific.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_030",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "WeatherNext AI models are expected to help HEMS intelligently manage energy flows in real time, contributing to a more balanced and sustainable energy grid.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_031",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet developed a free Energy Assessment tool designed to help supplier facility managers identify energy efficiency opportunities across their operations.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_032",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The Energy Assessment tool helps identify where energy is being lost, including outdated chillers, inefficient motors, or poor lighting.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_033",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The Energy Assessment tool provides guidance on which upgrades could yield the biggest energy consumption improvements and cost reductions.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_034",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Ironwood is Alphabet's most powerful, capable and energy efficient TPU yet, designed to power thinking, inferential AI models at scale.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_035",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's new hardware office in Taiwan features a stormwater capture system.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_036",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's new hardware office in Taiwan uses water-efficient fixtures.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_037",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's new hardware office in Taiwan uses non-potable water for toilet flushing.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_038",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's overall water consumption increased by 28% from 2023 to 2024.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_039",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet chose air cooling in Waltham Cross, Mesa, and Canelones as a climate-conscious cooling strategy to manage water footprint.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_040",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's water practices are designed to cover all aspects of water use in offices, including food preparation, cleaning and sanitation, campus landscape irrigation, and workspace cooling systems.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_041",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, we diverted 85% of food waste from landfill through composting, donations, or other recovery efforts.",
+  "topic": "waste",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_042",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "By 2020, we had already reached 94% plastic-free packaging.",
+  "topic": "waste",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_043",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The remaining 6% of plastic in packaging was hidden in places like box liners, seals, and adhesives.",
+  "topic": "waste",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_044",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Green Light uses AI and Google Maps driving trends to optimize traffic light timing, ensuring that cars spend less time idling and more time moving.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_045",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In one trial consisting of 70 test flights, flights that adjusted their routes using AI-based contrail predictions showed a 54% reduction in contrail kilometers, compared to control flights.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_046",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Flights rerouted to avoid creating contrails only used an average of 2% additional fuel, compared to control flights.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_047",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "A study found that only a small percentage of flights would need adjustments to avoid the majority of potential contrail formation.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_048",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The cost of reducing contrails through navigational avoidance could be in the range of $5–$25 per tCO2e.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_049",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Many carbon removal technologies cost hundreds of dollars per ton.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_050",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Sustainable aviation fuel costs thousands of dollars per ton.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_051",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, Alphabet began a collaboration with EUROCONTROL to apply contrail prediction technology in Europe's airspace.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_052",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet has an aspiration to help individuals, cities, and other partners collectively reduce 1 gigaton of carbon equivalent emissions annually by 2030.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.25
+ },
+ {
+  "claim_id": "goog_sr_053",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "1 gigaton of emissions reductions is comparable to the entire annual emissions of Japan.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_054",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Bellwether has built an AI-first wildfire risk forecasting system to understand the future probability of wildfire in the United States, Canada, and Australia.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_055",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Bellwether was named one of TIME's 'Best Inventions of 2024.'",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_056",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Only a small percentage of the world's rivers are equipped with streamflow gauges.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_057",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet has introduced 'virtual gauges'—AI-driven estimates of water levels in regions without physical flood sensors.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_058",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "AI-based forecasting improves flood forecasts in regions in Africa and Asia to a similar quality as those currently available in Europe.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_059",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "As the effects of climate change become more severe, floods could strike in increasingly unexpected places.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_060",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Policymakers can monitor real-time forest loss using Alphabet's tools.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_061",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, Google achieved approximately 66% global average carbon-free energy across its data centers and offices.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_062",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google aims to run on 24/7 carbon-free energy on every grid where it operates by 2030.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.25
+ },
+ {
+  "claim_id": "goog_sr_063",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google has achieved at least 80% CFE across nine out of 20 grid regions with Google-owned and -operated data centers.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_064",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Modeling by leading research organizations shows that 24/7 carbon-free energy procurement drives greater impact on grid decarbonization than alternative procurement approaches, with comparative benefits achieved starting at roughly 80% hourly matching.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "MATCHING_LANGUAGE",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.45
+ },
+ {
+  "claim_id": "goog_sr_065",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, Google estimates its ambition-based emissions were 66% lower than they would have been without clean energy procurement, machine hardware efficiencies, and PUE improvements.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "CHERRY_PICKED_METRIC"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_066",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, Google's total ambition-based emissions were 11.5 million tCO2e, representing a 51% increase compared to 2019.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_067",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, combined scope 1 and scope 2 (market-based) emissions were 3.1 million tCO2e, representing a 241% increase compared to 2019.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_068",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, scope 3 (ambition-based) emissions were 8.4 million tCO2e, representing a 25% increase compared to 2019.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_069",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Data center construction emissions are already meaningful and expected to increase in the near term as more data centers are built to meet demand.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_070",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google designs its data centers with standardization and optimization as core principles, focusing on efficiency and modular scalability.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_071",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The standardized nature of Google's data center designs allows reduction of the materials required for construction.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_072",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google's data center design teams have already optimized several core elements of the standard data center design.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_073",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Optimizations to Google's standard data center design collectively have the potential to reduce the embodied carbon emissions intensity of a data center building by around 9%.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_074",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The use of low-carbon construction materials is part of Google's work to reduce data center construction emissions.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_075",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "One sustainability-related internal community group has roughly 3,500 members globally.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_076",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The community group hosts weekly climate talks featuring internal and external speakers.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_077",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The community group hosts biannual events highlighting sustainability-related 20% opportunities.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_078",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google collaborated with EASA on the technical development of a ReFuelEU ecolabel, a uniform methodology for calculating flight emissions data.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_079",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google was one of six companies to join the pilot launch of the Climate Group's 24/7 Carbon-Free Coalition, launched at New York Climate Week in 2024.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_080",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The 24/7 Carbon-Free Coalition seeks to encourage and support companies to move toward local and hourly matching of their electricity demand with carbon-free electricity.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "MATCHING_LANGUAGE",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_081",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google became members of CLG Europe to advance policies that support Europe's decarbonization objectives.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_082",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google participated in engagements with energy policymakers and regulators across Asia Pacific via regionally-focused coalitions to promote cost-effective access to clean energy resources.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_083",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2021, Google joined the UN Race to Zero Campaign, the largest ever alliance committed to halving emissions by 2030 and achieving net-zero emissions by no later than 2050.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "OFFSET_UNDISCLOSED",
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.25
+ },
+ {
+  "claim_id": "goog_sr_084",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2022, Google co-founded Frontier, an advance market commitment that will accelerate the development of carbon removal technologies by guaranteeing future demand.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_085",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google's Environmental Insights Explorer was developed in partnership with GCoM to support city climate action with useful and accessible data and insights.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_086",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google worked with the European 24/7 Hub to create a platform where energy buyers, suppliers, and policymakers can learn more about 24/7 CFE and receive technical training and implementation guidance.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_087",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Materiom is using Vertex AI and Gemini to accelerate the development of sustainable plastic alternatives.",
+  "topic": "other",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_088",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet uses the operational control approach to define its organizational boundary for GHG emissions accounting.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_089",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet accounts for all emissions from operations over which it has operational control, including data centers, offices, and other assets.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_090",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet's GHG inventory includes all seven GHGs addressed by the Kyoto Protocol where relevant: CO2, CH4, N2O, HFCs, PFCs, SF6, and NF3.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_091",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3) are not emitted as a result of Alphabet's operations.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_092",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet reports emissions in metric tons per gas and in metric tons of carbon dioxide equivalent (tCO2e), with biogenic emissions reported as tCO2 only.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_093",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "In 2024, Alphabet stopped reporting a scope 3 (Other categories) metric that previously aggregated emissions from category 2, category 11, and category 12.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_094",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet determined that category 12 (End-of-life treatment of sold products) is not relevant and is no longer included in its inventory boundary.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_095",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Emissions from category 11 (Use of sold products) are not a material component of total scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_096",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Category 1 (Purchased goods and services) includes upstream emissions from manufacturing consumer devices and spare parts, Alphabet's food program, and additional goods and services purchased for operations.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_097",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "We calculate upstream emissions from purchased fuel, steam, heating, and cooling using 2024 DEFRA UK Government GHG Conversion Factors.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_098",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "We calculate emissions from upstream electricity by country using the 2024 IEA Emission Factors.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_099",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "We calculate emissions from electricity transmission and distribution losses using grid loss values and emission factors derived from the 2024 IEA Emission Factors and, for the United States, the 2025 EPA eGRID Emission Factors.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_100",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "For upstream electricity, we calculate emissions using scope 2 market-based data by using the remaining electricity not addressed by renewable energy.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_101",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "For electricity transmission and distribution losses, we use the market-based method to account for EACs that we've purchased to cover a portion of grid losses.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_102",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Category 4: Upstream transportation and distribution includes emissions generated primarily from the transportation and warehousing of our consumer products and data center equipment.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_103",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "We include the optional activity of upstream emissions of employee commuting using the distance-based method.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_104",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "We survey our employees to determine typical commuting patterns and apply these patterns to our global employee population.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_105",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "We calculate electricity procured from renewable sources (%) on an annual basis by dividing the megawatt-hours of renewable electricity procured by the total megawatt-hours of electricity consumed by our global operations.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_106",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Renewable electricity procured includes contractual instruments, on-site renewable electricity generation, and renewable electricity in the electric grids where our facilities are located.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_107",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "To achieve our 100% renewable energy match, we first consider both our on-site renewable electricity generation and the renewable electricity already in the electric grids where our facilities are located.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "MATCHING_LANGUAGE",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_108",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "We then procure renewable electricity through contractual instruments to achieve our 100% renewable energy match.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "MATCHING_LANGUAGE",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_109",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Water withdrawal is based on actual metered or invoiced data when it's available.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_110",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "At offices where actual metered or invoiced data isn't available, water withdrawal is estimated using facility square footage and internally developed water withdrawal intensity factors by office type.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_111",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "At data centers where actual data isn't available, water withdrawal is estimated using engineering principles.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_112",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Water discharge is based on actual metered or invoiced data when it's available.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_113",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Where actual domestic wastewater discharge data isn't available, an industry-standard 90% discharge flow factor is applied to a facility's domestic water withdrawal to estimate domestic water discharge.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_114",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "A 0% discharge flow factor is applied to a facility's irrigation water withdrawal to estimate irrigation water discharge.",
+  "topic": "water",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_115",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Carbon-free energy technologies include solar, wind, geothermal, hydropower, and nuclear.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED"
+  ],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_116",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The reporting boundary for GHG emissions, energy, and water metrics is Alphabet, globally.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_117",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet utilizes the operational control approach, as defined by the GHG Protocol, to establish relevant operations for emissions, energy, and water metrics at Alphabet's owned and leased data centers, offices, and other assets.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_118",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet uses the most up-to-date emission factors available at the time of their emissions inventory calculation.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_119",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet calculates emissions by multiplying relevant activity data by the applicable emission factors and global warming potentials (GWPs) where applicable.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_120",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The emissions from category 11 (Use of sold products) are not a material component of total scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_121",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Category 1: Purchased goods and services includes upstream emissions generated from manufacturing consumer devices and spare parts.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_122",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet uses a combination of the average-data method and spend-based method to calculate supply chain emissions.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_123",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet performs third-party-verified Life Cycle Assessments (LCAs) in accordance with ISO 14040 and ISO 14044 to calculate supply chain emissions generated from manufacturing consumer devices and spare parts.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.2
+ },
+ {
+  "claim_id": "goog_sr_124",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "To calculate emissions generated from the REWS food program, Alphabet uses LCA emission factors from WRI's Cool Food Pledge Calculator and annual procurement volumes from San Francisco Bay Area offices.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_125",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet collects well-to-wheel (WTW) emissions data for transportation emissions, calculated based on fuel use or weight-distance data.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_126",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Where actual logistics provider emissions data isn't available, Alphabet calculates WTW emissions using emission factors from the 2024 Global Logistics Emissions Council (GLEC) framework v3.1 or EPA SmartWay carrier performance data.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_127",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet calculates employee commuting emissions using mode-specific WTT emission factors from the 2024 DEFRA UK Government GHG Conversion Factors and TTW emission factors from the 2025 EPA Emission Factors for Greenhouse Gas Inventories.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_128",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Category 11: Use of sold products includes direct use-phase emissions generated by Google's consumer devices sold in the reporting period that directly consume electricity during use.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_129",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Category 11 emissions also include the optional activity of upstream electricity emissions of consumer devices by using LCA emission factors.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_130",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet performs LCAs for sold products that are in accordance with ISO 14040 and ISO 14044 and are third-party reviewed.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.2
+ },
+ {
+  "claim_id": "goog_sr_131",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The LCA results for sold products are published on Google's Sustainability Reports webpage.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_132",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "As of January 2023, Alphabet uses an updated energy savings calculation methodology to account for changes in common HVAC sizes and efficiencies, applying the respective energy savings percentages to Nest thermostats in North America and in European countries.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_133",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Poland's total electricity consumption was approximately 160 TWh in 2023.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_134",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Alphabet uses a 25-year estimated lifespan for solar panels in both annual and lifetime emissions reduction methods.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "goog_sr_135",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "The estimated annual enabled emissions reduction takes into account solar installations enabled by Solar API prior to 2024, dating back to 2022, to calculate the total impact in 2024 alone.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_136",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google uses an AI prediction model to estimate the expected fuel or energy consumption for each route option when users request driving directions.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_137",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "A February 2025 Google case study quantified the full lifecycle emissions of TPU hardware as a point-in-time snapshot across Google's generations of TPUs.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_138",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "To estimate operational emissions from electricity consumption of running workloads, Google used a one-month sample of observed machine power data from its entire TPU fleet, applying Google's 2023 average fleetwide carbon intensity.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_139",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "To estimate embodied emissions from manufacturing, transportation, and retirement of TPU hardware, Google performed a life-cycle assessment of the hardware.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "goog_sr_140",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Data center construction emissions were estimated based on Google's disclosed 2023 carbon footprint.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_141",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google's earliest fleet-wide trailing 12-month PUE was 1.21 in 2008, used as a baseline for avoided emissions calculations.",
+  "topic": "energy",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_142",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google calculates avoided emissions from PUE improvements by comparing its fleet-wide trailing 12-month PUE in each year from 2019 to 2024 to the 2008 baseline PUE of 1.21.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "goog_sr_143",
+  "company": "Alphabet",
+  "ticker": "GOOGL",
+  "text": "Google's climate target approach aligns with a 1.5°C scenario and utilizes the standard validation route for target setting.",
+  "topic": "emissions",
+  "source_id": "goog_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_144",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft decreased Scope 1 and 2 emissions by 29.9% from their 2020 baseline in FY24.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_145",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's Scope 3 emissions increased in FY24 by 26% from their 2020 baseline.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_146",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Select large-scale Microsoft suppliers are required to transition to 100% carbon-free electricity for their delivered goods and services.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_147",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft is launching guidance in July to target usage of sustainable aviation fuel for Microsoft business-related air travel by 2030.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_148",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Renewable diesel is now in use in Microsoft's road freight operations in Europe and California.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_149",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Use of renewable diesel in road freight operations in Europe and California cuts emissions by 50% for those shipments.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_150",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's alternative fuel and logistics efforts have reduced emissions by over 17,000 metric tons of CO2.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_151",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The 17,000 metric ton CO2 reduction is comparable to avoiding the combustion of nearly 40,000 barrels of oil.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_152",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft has partnered with airlines and shipping lines to expand the use of sustainable aviation and marine fuels.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_153",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 1 Purchased Goods and Services represents 34.04% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_154",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 2 Capital Goods represents 40.83% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_155",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 3 Fuel- and Energy-Related Activities (Market-Based) represents 4.40% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_156",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 4 Upstream Transportation and Distribution represents 2.69% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_157",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 5 Waste Generated in Operations represents 0.05% of Scope 3 emissions.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_158",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 6 Business Travel represents 1.70% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_159",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 7 Employee Commuting represents 1.40% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_160",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 9 Downstream Transportation and Distribution represents 0.29% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_161",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 11 Use of Sold Products represents 11.83% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_162",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 12 End-of-Life Treatment of Sold Products represents 0.02% of Scope 3 emissions.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_163",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Scope 3 Category 13 Downstream Leased Assets represents 0.04% of Scope 3 emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_164",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft has established the Microsoft Climate Council, an internal leadership body with representatives from nearly every business organization at Microsoft.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_165",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft is transitioning from traditional air-cooled datacenters to chip-level liquid cooling designs at all owned datacenters.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_166",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Chip-level liquid cooling supports significantly greater rack capacity, reducing the need for new datacenter construction.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_167",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Chip-level liquid cooling reduces embodied carbon emissions by reducing the need for new datacenter construction.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_168",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Chip-level liquid cooling eliminates the need for evaporation to align with Microsoft's water positive 2030 commitment.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "WATER_ACCOUNTING_VAGUE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_169",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "At the Open Compute Project (OCP) Global Summit in October 2024, Microsoft presented a detailed comparison of greenhouse gas emissions, water usage, and energy demand of advanced cooling technologies in datacenters.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_170",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In 2024, Microsoft introduced a new target requiring suppliers to transition to 100% carbon-free electricity for goods and services delivered to Microsoft by 2030.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_171",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft is deploying electric vehicle trucking in the United States, Asia, and Europe for more sustainable logistics operations.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_172",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's sites in Shanghai and Suzhou, China; Dublin, Ireland; and Paris, France have fully electrified fleets.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_173",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft India launched its first phase of electric vehicle adoption in 2024.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_174",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In the United States, over 15% of the Puget Sound fleet is electric, supporting commuting and facility operations.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_175",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In 2024, Microsoft signed four groundbreaking PPAs with Engie requiring that 100% of photovoltaic modules—from construction through end of life—will be reused or recycled.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "GRID_MISMATCH_RISK",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_176",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft announced a partnership with Qcells to supply Microsoft projects with up to 12 GW of solar modules and engineering, procurement, and construction services over an eight-year period.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_177",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The Qcells partnership is the equivalent of taking 4 million cars off the road for a year.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_178",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Eight of the carbon removal projects signed last year will start delivering over 100,000 metric tons annually by 2030.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_179",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft signed a 10-year agreement with Stockholm Exergi to purchase over 3 million metric tons of carbon removal from the planned BECCS facility in Vartan, Sweden.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_180",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Stockholm Exergi uses sustainably sourced forest biomass and captures carbon dioxide from flue gas, storing it for thousands of years.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_181",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The Microsoft DACinDC program integrates DAC technology directly into datacenter infrastructure, utilizing waste heat generated by computing workloads.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_182",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's approach of using excess datacenter heat to power DAC systems has shown promise in offsetting the carbon footprint of AI workloads.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_183",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In 2024, the DACinDC program advanced customized solutions to the prototype stage while exploring additional opportunities to reuse waste heat, airflow, and water from datacenters.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_184",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft participates in the IMEC Sustainable Semiconductor Technologies and Systems program, which assesses and works to reduce the environmental impacts of semiconductor manufacturing.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_185",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Through customized life cycle inventories for over 400 chip configurations, Microsoft can track chip generations, forecast emissions, and differentiate environmental impacts across device and Azure hardware configurations.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_186",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In 2024, Microsoft utilized a version of the Impact Accounting Methodology to refine carbon accounting in two datacenter construction projects.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_187",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "These pilots demonstrated measurable reductions in embodied carbon in datacenter construction projects.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_188",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "These pilots increased supplier awareness of EPDs.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_189",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "These pilots enabled greater integration of low-carbon materials into construction workflows.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_190",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft is developing strategies to integrate novel low-carbon materials into HVAC units.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_191",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft is incorporating low-carbon requirements for materials and equipment in datacenter construction into its contracts.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_192",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "As of FY24, 89 devices manufacturing facilities transitioned to 100% carbon-free energy for Microsoft production.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_193",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The transition to 100% CFE in 89 manufacturing facilities marks a more than tenfold increase over the previous year.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_194",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "These efforts expanded CFE use and avoided nearly 232,000 mtCO2e in emissions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_195",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft funds projects that restore, reuse, and reduce freshwater consumption in water-stressed locations where we operate.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_196",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft invests in water solutions across approximately 40 priority locations worldwide.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_197",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft invests in solutions such as rainwater harvesting, groundwater replenishment, and irrigation modernization.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "WATER_ACCOUNTING_VAGUE"
+  ],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_198",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft set its water replenishment target in 2020.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "WATER_ACCOUNTING_VAGUE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_199",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Leaking pipes account for an estimated 30% of global water losses.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_200",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's portfolio includes seven leak detection projects in cities such as London, Querétaro, Phoenix, Las Vegas, Madrid, Campinas, and Bengaluru.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_201",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In Madrid, Microsoft is funding Aganova to deploy advanced AI across more than 160 kilometers of pipes in the water distribution network of the Mancomunidad de Aguas del Sorbe (MAS) water utility.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_202",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "MAS plans to repair identified leaks within three months, helping reduce overall water withdrawals.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_203",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Reducing leaks will lower carbon emissions by decreasing the energy required for water treatment and distribution.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_204",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's agriculture and irrigation efficiency projects are projected to save 20 million cubic meters of water over their lifetimes.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_205",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Mobile drip irrigation systems directly water plants to minimize evaporation and reduce overapplication of fertilizers and pesticides.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_206",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Advanced soil moisture and climate monitoring systems provide data to optimize irrigation schedules.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_207",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Land-leveling of agricultural fields improves irrigation efficiency, increases crop yields, and reduces crop disease risk.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_208",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Center pivot sprinklers and subsurface drip irrigation systems reduce consumptive water use while maintaining crop productivity.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_209",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "A project is estimated to produce 60,000 cubic meters of clean water annually over the next three years.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_210",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The clean water project will provide more than 16,000 people with access to safe clean water.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_211",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In FY24, Microsoft added seven new projects, bringing its access portfolio to 13 initiatives.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_212",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's 13 access initiatives, when fully implemented, will serve over 1.6 million people across Brazil, India, Indonesia, Mexico, Chile, the United States, Malaysia, Kenya, and Nigeria.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_213",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's air-cooled CPU datacenters typically require water for cooling only during the hottest portions of the year.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_214",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Improvements surfaced in our 2022 audit eliminated 90% of excess water use instances.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.0
+ },
+ {
+  "claim_id": "msft_sr_215",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Less than 1% of water used is recycled today in the United States and many other countries.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_216",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Early testing of a new microporous evaporative media showed up to a 30% reduction in water usage.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_217",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Early testing of a new microporous evaporative media showed a 42% decrease in wastewater via higher cycle of concentration.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_218",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Testing of microporous evaporative media continues at Microsoft's Phoenix datacenter.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_219",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft achieved 90.9% reuse and recycling of servers and components in FY24 through its Circular Centers.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_220",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft surpassed its 90% reuse and recycling target for servers and components a year early.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_221",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft diverted 85.3% of construction and demolition waste from landfills and incinerators in FY24.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_222",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft exceeded its annual 75% construction and demolition waste diversion target six years ahead of schedule.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_223",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In FY24 we diverted approximately 26,000 metric tons of waste from being landfilled or incinerated across our owned datacenters and campuses.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_224",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Starting in FY24, the reported values now include the weight of reduction and on-site reuse in addition to off-site reuse which was reported in prior years.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_225",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In 2024, 100% of our new owned datacenters located in Europe and the Asia-Pacific region began operations with durable serviceware.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_226",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In many of our datacenters, washable pre-filters have been implemented to extend the lifespan of our primary filters.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_227",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "By harvesting and recertifying decommissioned server components no longer available on the market, we are meeting new demand while reducing waste.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_228",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Collaborations with original equipment manufacturers (OEMs) are allowing greater reuse of rare earth oxides and improving recycling processes for complex material types.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_229",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "All new cloud hardware programs must meet minimum recycled content requirements for plastic and steel.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_230",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "We are creating a direct channel with global recycling partners to help achieve best-in-class recycling efficiencies across material types.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_231",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Utilization of lightweight, reusable expanded polystyrene pallets for shipments from contract manufacturers drove a carbon emission reduction of 1,528 mtCO2e out of Microsoft's global logistics network.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_232",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "A complete packaging redesign for all new Xbox Series S and X console models eliminated single-use plastic packaging.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_233",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "New paper cushioning solutions replaced plastic foam in Xbox console packaging.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_234",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Plastic laminate films were eliminated through paper-based labels and coatings in Xbox console packaging.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_235",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft Devices supply chain transitioned from palletized containers to loose-loaded containers for ocean shipments of Xbox consoles from contract manufacturers, driving emissions savings of 136 mtCO2e through load optimization.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_236",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Since 2020, Microsoft has been integrating biodiversity considerations into its datacenter development strategy.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_237",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The Ecosystem Intelligence tool has evolved from basic environmental assessments for regulatory compliance to a comprehensive platform for measuring ecosystem service production around Microsoft's datacenters.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_238",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Nature-based design solutions such as native landscaping, stormwater management, and biodiversity enhancements are reducing Microsoft's environmental footprint at datacenters.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_239",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Since 2020, Microsoft has implemented 123 programs across 39 global cities to support communities that host datacenters by protecting and restoring natural environments.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_240",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "One Tree Planted has supported the planting of 87,000 trees across nine projects in eight countries.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_241",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Urban forestry projects improve local ecosystems and prioritize underserved neighborhoods and vulnerable populations.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_242",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft's urban forestry efforts enhance green spaces, mitigate urban heat islands, and improve stormwater management.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_243",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft is collaborating with the Society for Ecological Restoration to promote white stork wetland restoration in southern Sweden.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_244",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The restored wetlands provide essential breeding grounds for the white stork and support a wide range of species.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_245",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The restored wetlands improve water filtration and enhance flood resilience.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_246",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The AI for Good Lab developed Pytorch Wildlife, an open-source platform for creating, modifying, and sharing AI conservation models.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_247",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Project Guacamaya combines AI with satellite imagery, wildlife imagery, and bioacoustics monitoring to protect Amazonian ecosystems in Colombia.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_248",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Project Guacamaya uses AI to identify bird and non-bird sounds in the rainforest to provide insights to combat ecological threats.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_249",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "There are over 150 million developers on GitHub, including a thriving open-source software community focused on climate technology.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_250",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "There are over 60,000 climate-focused open-source software projects on GitHub.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_251",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Carbon optimization in Azure provides more granular emissions data, identifies underutilized resources for deletion or rightsizing, and delivers actionable recommendations to help reduce both emissions and costs.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_252",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Real-time workload scheduling maximizes hardware use to meet fluctuating demand, ensuring idle hardware is used efficiently and improving overall power utilization.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_253",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Higher demand during peak hours in one region can be balanced by running AI training workloads during off-peak hours elsewhere.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_254",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Surface Copilot+ PCs now feature 100% recycled aluminum alloy in the enclosures.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_255",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Surface Copilot+ PCs now feature 100% recycled rare earth metals in magnets.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_256",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Surface Laptop (7th Edition) uses less energy than Surface Laptop 5.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_257",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Surface Laptop (7th Edition) is ENERGY STAR® certified.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.2
+ },
+ {
+  "claim_id": "msft_sr_258",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Surface Laptop (7th Edition) is 71% better than the ENERGY STAR® limit.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_259",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Minecraft Planet Earth III downloadable content has seen more than 1 million downloads.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_260",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "In 2024, Microsoft expanded the Planetary Computer with new datasets including CONUS404, a high-resolution hydroclimate dataset covering over 40 years of climate data across the contiguous United States.",
+  "topic": "water",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_261",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Annual climate capital flows have nearly tripled from $600 billion to approximately $2.1 trillion globally over the past four years.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_262",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Annual climate capital flows remain far below the $4.5 trillion per year needed for a net zero transition by 2050.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "OFFSET_UNDISCLOSED"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_263",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "CIF has allocated over $793 million in capital to bring new supply to market and accelerate adoption and cost reduction in key target technologies.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_264",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Private market investments in climate tech have doubled from 2020 to 2022.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_265",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Sectors critical to Microsoft's Scope 3 carbon footprint—industry and manufacturing, building materials, and carbon management—account for approximately 20% of private market climate technology transactions.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_266",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Since 2009, more than 1,850 students from the Cascadia Corridor have participated in the Buerk Center's Environmental Innovation Challenge.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_267",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Over $550,000 in prizes have been awarded through the Environmental Innovation Challenge to support early-stage ideas addressing environmental and climate challenges.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_268",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "A sustainable aviation workshop co-hosted with Alaska Airlines and the Port of Seattle brought together over 100 students to collaborate on advancing SAF.",
+  "topic": "energy",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_269",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "CIF invests alongside a diverse network of over 250 co-investors.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_270",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "CIF's $793 million in commitments has catalyzed over $3.3 billion in follow-on funding, achieving a multiplier effect greater than four times.",
+  "topic": "other",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "msft_sr_271",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Analysis of 2023 data revealed a steep decline in the land carbon sink to just 0.14 gigatons of carbon per year—the lowest in nearly two decades.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_272",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The decline in the land carbon sink was driven by extreme climate events.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_273",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Despite stable fossil fuel emissions, increased oceanic carbon uptake was insufficient to counterbalance the loss in land-based sequestration.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_274",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The loss in land-based sequestration resulted in a sharp rise in atmospheric carbon dioxide.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_275",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The Mauna Loa Observatory recorded a 3.37-ppm increase in atmospheric carbon dioxide in 2023.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_276",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "The 2023 carbon dioxide levels recorded at Mauna Loa were the highest ever measured.",
+  "topic": "emissions",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "msft_sr_277",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Vitrimers possess dynamic chemical bonds that allow certain composites to be disassembled and reassembled without compromising material integrity.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_278",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft has developed a functional printed circuit board prototype that demonstrates how vitrimers can facilitate component disassembly, recycling, and reuse.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "msft_sr_279",
+  "company": "Microsoft",
+  "ticker": "MSFT",
+  "text": "Microsoft has developed generative AI methods for design of next-generation vitrimers with enhanced strength, flexibility, and recyclability.",
+  "topic": "waste",
+  "source_id": "msft_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_280",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon has been one of the largest corporate purchasers of renewable energy for six years in a row.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_281",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon is one of the most energy-efficient data center operators in the world.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_282",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon is an early investor in new technologies like small modular reactors (SMRs).",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_283",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's data centers are seven times more water-efficient than the industry average.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_284",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon has more buildings than any other cloud provider using reclaimed water.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_285",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's water replenishment projects have helped it get 75% of the way toward its goal to be water positive by 2030.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "WATER_ACCOUNTING_VAGUE",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_286",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's goal is to be water positive by 2030.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "WATER_ACCOUNTING_VAGUE",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_287",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon constructed its first delivery station using mass timber.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_288",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Mass timber is less carbon-intensive to produce than concrete and steel.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_289",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Mass timber retains the carbon that the trees sequestered before the trees were harvested.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_290",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's goal is to reach net-zero carbon emissions across its global operations by 2040.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "OFFSET_UNDISCLOSED",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_291",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "AI utility monitoring tools quickly identify leaks, malfunctioning HVAC and refrigeration systems, and operational opportunities at 820 Amazon buildings as of 2025.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_292",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon has reduced emissions per shipped unit by 7% compared to 2024.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_293",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon has reduced emissions per shipped unit by 39% compared to 2019.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_294",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "When a business moves from an on-premises data center to an Amazon data center, research estimates that data is processed 4.1 times more efficiently.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_295",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "100% of the electricity consumed by Amazon was matched with renewable energy sources in 2025.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_296",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon matched 100% of its electricity consumption with renewable energy for the third consecutive year in 2025.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_297",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon matched 100% of the electricity consumed by its global operations with renewable energy by 2025, five years ahead of its original target of 2030.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_298",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon pays for the full electricity costs of its data centers.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_299",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon makes substantial investments in building new energy generation and transmission infrastructure.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_300",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Since 2019, Amazon's revenue has grown 156%, with a 12% increase in 2025 alone.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_301",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Emissions from our direct operations increased 2% compared to 2024, while we delivered more packages to more customers.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_302",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Emissions from our direct operations represent 19% of our carbon footprint.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_303",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "We reduced emissions per shipped unit by 7% compared to 2024.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_304",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "We reduced emissions per shipped unit by 39% compared to 2019.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_305",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "We purchased 39.5 million gallons of renewable natural gas in 2025.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_306",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Renewable natural gas was used in 4,400 compressed natural gas vehicles in 2025.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_307",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, 342 Whole Foods Market stores used natural or lower-GWP refrigerants in primary refrigeration systems.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_308",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "29 Whole Foods Market stores relied on natural refrigerants in primary refrigeration systems in 2025.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_309",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "20 Whole Foods Market stores used a combination of natural and other refrigerants in primary refrigeration systems in 2025.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_310",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "293 Whole Foods Market stores used other lower-GWP refrigerants in primary refrigeration systems in 2025.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_311",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon's data centers achieved a global PUE of 1.14.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "CHERRY_PICKED_METRIC"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_312",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's global PUE of 1.14 is nearly 9% better than the public cloud industry average of 1.25.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_313",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's global PUE of 1.14 is 30% better than the on-premises enterprise data center average of 1.63.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_314",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon data centers and services in 35 countries were ISO 50001 Energy Management certified in 2025.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.0
+ },
+ {
+  "claim_id": "amzn_sr_315",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon has made an investment in SMR developer X-energy to help bring 5 GW of new nuclear energy to the U.S. grid by 2039.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_316",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon expanded its existing nuclear energy relationship with Talen Energy, which will provide 1,900 MW of carbon-free nuclear power through 2042.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_317",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "As of the end of 2025, 820 Amazon buildings used AI tools to monitor HVAC and water utilities.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_318",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "As of the end of 2025, 81 Amazon buildings used AI tools to monitor refrigeration systems.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_319",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon participated in a LEAF agreement to fund a government-led program in Ghana starting in 2026.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_320",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon worked to support jurisdictional efforts to reduce deforestation in Southeast Asia and Brazil.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_321",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon invested in improving manure management to reduce methane on dairy farms that supply products to its grocery stores.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_322",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon substituted conventional fossil fuels with lower-carbon alternatives in the ships, planes, and trucks that carry its goods.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_323",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon's inset projects helped reduce emissions by 199,400 metric tons of CO₂e.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_324",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon co-founded The Climate Pledge in 2019 as a commitment for companies to reach net-zero carbon emissions by 2040.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "OFFSET_UNDISCLOSED",
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "FUTURE_PROMISE_NO_MILESTONE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_325",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "The Climate Pledge initiated a collaboration with MIT Climate and Sustainability Consortium and Concrete Sustainability Hub to develop and test tools to reduce risk for lower-carbon cement and concrete solutions.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_326",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "The Amazon Sustainability Accelerator supports start-ups tackling energy, water, and waste challenges, with select companies piloting their innovations in Amazon's European operations in 2025.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_327",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "The Amazon Devices Climate Tech Accelerator helps climate tech companies fast-track technologies for potential integration into millions of Amazon devices.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_328",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's Right Now Climate Fund supports nature conservation and climate resilience in communities worldwide.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_329",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "The In-Row Heat Exchanger (IRHX) captures heat directly from high-density AI hardware at the rack before the heat spreads, reducing how often water-based cooling needs to run.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_330",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Adding more AI racks with IRHX is expected to result in a 9% reduction in water use compared to evaporative air-cooled data centers once fully operational.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_331",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon scaled smart-metering technology across its global data center portfolio to enhance real-time consumption monitoring that identifies leaks.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_332",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Cooling water use was reduced globally by 938 million liters in 2025.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_333",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's global data center Water Use Effectiveness (WUE) was reduced to 0.12 liters per kWh in 2025, a 20% improvement from 2024.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_334",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's global data center WUE of 0.12 liters per kWh in 2025 represents a 52% improvement from 2021.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_335",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In Hong Kong, China, Amazon achieved policy breakthroughs with the Water Supplies Department to allow reclaimed water use in cooling towers, which had previously been restricted to fresh water only.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_336",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In Virginia, U.S., Amazon worked with Loudon Water to enable reclaimed water use in direct evaporative cooling systems, a first in the state.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_337",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In Mississippi, U.S., Amazon became the first data center operator to commit to reclaimed water for cooling.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_338",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's Mississippi reclaimed water initiative with Canton Municipal Utilities and Madison County Wastewater Authority preserves 314 million liters of potable water annually.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_339",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "At the end of 2025, we had invested in 45 replenishment projects globally.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "WATER_ACCOUNTING_VAGUE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_340",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "We expect our 45 replenishment projects will collectively return more than 18 billion liters of water annually once completed.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "WATER_ACCOUNTING_VAGUE"
+  ],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_341",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, water replenishment projects returned 9.4 billion liters of water to communities.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR",
+   "WATER_ACCOUNTING_VAGUE"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_342",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's water replenishment projects restore watersheds and bring clean water, sanitation, and hygiene services to water-stressed communities.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "WATER_ACCOUNTING_VAGUE"
+  ],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_343",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon implemented a Mississippi irrigation-efficiency project through crop-intelligence company Arable in partnership with Mississippi State University.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_344",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Whole Foods Market contributed beef and dairy waste data for inclusion in a study to identify opportunities to advance sustainable practices in food production and retail.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_345",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Whole Foods Market participated in the Food Waste Pact, a joint initiative led by ReFED and World Wildlife Fund, to collaborate on food waste reduction.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_346",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Select Kindle Scribe models featured 100% recycled cobalt in batteries.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_347",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Select Kindle Scribe models featured 85% recycled tin in the solder used on printed circuit boards.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_348",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon is piloting air-cooled heat sinks with 50% recycled aluminum.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_349",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon programs have avoided the purchase of over one million new hard drives since 2023.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_350",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon reduced waste per shipped unit by 5% compared to 2024.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_351",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon diverted 84% of its waste from landfill.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_352",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, 82% of Amazon's waste was diverted through recycling or composting.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_353",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, 2% of Amazon's waste was diverted through incineration with energy recovery.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_354",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, landfill or incineration without energy recovery accounted for 16% of Amazon's waste.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_355",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon partnered with Carbon Trust to develop a standardized methodology for calculating the carbon footprint of refurbished devices.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_356",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Mill produces commercial devices that can process food scraps into a chicken feed ingredient intended for Whole Foods Market's private brands egg suppliers.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_357",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon focuses on avoiding unnecessary packaging when possible.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_358",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon focuses on reducing delivery packaging volume and weight.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_359",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon prioritizes paper packaging designed to work with local residential recycling systems.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_360",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon is improving the recycled content in its packaging materials.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_361",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon is expanding packaging efforts to include shipments from Egypt, Japan, Mexico, Saudi Arabia, Singapore, South Africa, and the United Arab Emirates.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_362",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Where eliminating single-use plastics is not yet feasible, Amazon works to increase the proportion of recycled content in its plastic materials.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_363",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon collaborated with the National Renewable Energy Laboratory to develop a novel recycling technology.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_364",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon worked with Glacier AI vision systems in 2024 and 2025 to identify biopolyester packaging in mixed waste streams.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_365",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon worked with startup company EsterCycle to produce closed loop bioplastics.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_366",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon piloted biopolyester materials in new packaging applications such as compostable produce bags, protective bags for liquids, and book wrapping.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_367",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "34% of all products sold at Whole Foods Market were organic in 2025.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_368",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "61% of fresh produce sold at Whole Foods Market were organic in 2025.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_369",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Whole Foods Market and Mad Agriculture launched a wilding pilot in 2025 to plant and maintain 1,000 acres of reconstructed prairie.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_370",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Most of the 1,000 acres of reconstructed prairie are on farms that supply ingredients to brands Amazon sells.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_371",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "The wilding pilot raised $1 million for biodiversity restoration.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.35
+ },
+ {
+  "claim_id": "amzn_sr_372",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "An independent study published in the Harvard Business Review in 2025 found that products with sustainability certifications experienced a 14% increase in consumer demand over an eight-week period following certification.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR"
+  ],
+  "vagueness": 0.0
+ },
+ {
+  "claim_id": "amzn_sr_373",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "A 2024 study by the Marshall School of Business at the University of Southern California reported a 12.5% increase in overall sales for certified products within the first year.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "NO_BASELINE_YEAR"
+  ],
+  "vagueness": 0.0
+ },
+ {
+  "claim_id": "amzn_sr_374",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "The Climate Pledge Friendly program includes more than 62 trusted certifications as of the end of 2025.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.0
+ },
+ {
+  "claim_id": "amzn_sr_375",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Five new certifications were added to the Climate Pledge Friendly portfolio in 2025.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.0
+ },
+ {
+  "claim_id": "amzn_sr_376",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon focused on carbon-free energy procurement.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [
+   "SCOPE2_METHOD_UNSTATED",
+   "SCOPE_BOUNDARY_UNCLEAR"
+  ],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_377",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon focused on climate finance.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_378",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon focused on community-based carbon neutralization projects.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ },
+ {
+  "claim_id": "amzn_sr_379",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon supports the Resilient Futures Fund, a private sector initiative that fosters healthier environments and stronger communities.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_380",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon's commuter benefits reduce transportation costs while supporting environmental sustainability.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_381",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon secured 3,081 audits of suppliers of Amazon-branded products, third-party labor, service, and not-for-resale goods providers in its logistics, warehousing, and construction supply chain over the year.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.2
+ },
+ {
+  "claim_id": "amzn_sr_382",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Of the 3,081 audits, 1,579 audits focused specifically on third-party labor, service, and not-for-resale goods providers.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.2
+ },
+ {
+  "claim_id": "amzn_sr_383",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon requires suppliers to comply with applicable environmental laws and regulations.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_384",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon encourages suppliers to reduce consumption of energy within their operations and supply chain.",
+  "topic": "energy",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_385",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon encourages suppliers to reduce consumption of water within their operations and supply chain.",
+  "topic": "water",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_386",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon encourages suppliers to reduce generation of greenhouse gas emissions within their operations and supply chain.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_387",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon encourages suppliers to reduce generation of waste within their operations and supply chain.",
+  "topic": "waste",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_388",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon encourages suppliers to reduce generation of hazardous materials within their operations and supply chain.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_389",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "Amazon supports supplier decarbonization actions through a procurement training program designed to equip procurement teams with tools and knowledge needed to effectively engage suppliers on carbon emissions reductions.",
+  "topic": "emissions",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.7
+ },
+ {
+  "claim_id": "amzn_sr_390",
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "text": "In 2025, Amazon expanded its use of AI and machine learning to help identify suppliers at higher risk of not meeting its Supply Chain Standards.",
+  "topic": "other",
+  "source_id": "amzn_sr",
+  "source_url": "TODO",
+  "source_date": "2025-01-01",
+  "flags": [],
+  "vagueness": 0.15
+ }
+]

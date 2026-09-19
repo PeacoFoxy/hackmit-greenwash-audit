@@ -1,0 +1,32 @@
+import os, json, hashlib, time
+from anthropic import Anthropic
+
+client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"], timeout=120.0)
+CACHE = "cache"
+os.makedirs(CACHE, exist_ok=True)
+
+
+def ask(prompt, system="", model="claude-sonnet-4-6", max_tokens=2000, tries=3):
+    """带磁盘缓存 + 重试的 LLM 调用。缓存命中不发请求。"""
+    key = hashlib.md5((model + system + prompt).encode()).hexdigest()
+    path = os.path.join(CACHE, f"{key}.json")
+    if os.path.exists(path):
+        return json.load(open(path))["text"]
+
+    last = None
+    for i in range(tries):
+        try:
+            kw = {"model": model, "max_tokens": max_tokens,
+                  "messages": [{"role": "user", "content": prompt}]}
+            if system:
+                kw["system"] = system
+            resp = client.messages.create(**kw)
+            text = resp.content[0].text
+            json.dump({"prompt": prompt, "system": system, "text": text},
+                      open(path, "w"), ensure_ascii=False)
+            return text
+        except Exception as e:
+            last = e
+            print(f"  (重试 {i+1}/{tries}: {type(e).__name__})")
+            time.sleep(2 * (i + 1))
+    raise last

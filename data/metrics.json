@@ -1,0 +1,277 @@
+{
+ "n": 29,
+ "metrics": {
+  "baseline1": {
+   "accuracy": 0.0,
+   "macro_f1": 0.0,
+   "C_precision": 0.0,
+   "C_recall": 0.0,
+   "C_f1": 0.0
+  },
+  "baseline2": {
+   "accuracy": 0.4482758620689655,
+   "macro_f1": 0.5025641025641026,
+   "C_precision": 0.5714285714285714,
+   "C_recall": 0.4444444444444444,
+   "C_f1": 0.5
+  },
+  "pipeline": {
+   "accuracy": 0.0,
+   "macro_f1": 0.0,
+   "C_precision": 0.0,
+   "C_recall": 0.0,
+   "C_f1": 0.0
+  }
+ },
+ "pipeline_confusion": {
+  "labels": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "UNKNOWN"
+  ],
+  "matrix": [
+   [
+    0,
+    0,
+    0,
+    0,
+    7
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    13
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    9
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ]
+ },
+ "predictions": [
+  {
+   "claim_id": "amzn_sr_304",
+   "gold": "A",
+   "baseline1": "UNKNOWN",
+   "baseline2": "C",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_134",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "A",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_362",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "B",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "msft_sr_146",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "C",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_089",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "A",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_105",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "A",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_385",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "B",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_061",
+   "gold": "A",
+   "baseline1": "UNKNOWN",
+   "baseline2": "A",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_074",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "B",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_342",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "B",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_316",
+   "gold": "A",
+   "baseline1": "UNKNOWN",
+   "baseline2": "A",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_071",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "B",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_297",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "C",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_337",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "B",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "msft_sr_150",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "C",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_292",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "C",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_004",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "A",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_301",
+   "gold": "A",
+   "baseline1": "UNKNOWN",
+   "baseline2": "C",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_052",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "C",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_034",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "B",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_096",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_016",
+   "gold": "A",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_073",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_303",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "msft_sr_235",
+   "gold": "C",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "goog_sr_042",
+   "gold": "A",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "msft_sr_197",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "amzn_sr_323",
+   "gold": "A",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  },
+  {
+   "claim_id": "msft_sr_227",
+   "gold": "B",
+   "baseline1": "UNKNOWN",
+   "baseline2": "UNKNOWN",
+   "pipeline": "UNKNOWN"
+  }
+ ]
+}

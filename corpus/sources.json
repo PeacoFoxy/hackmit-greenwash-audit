@@ -1,0 +1,11 @@
+[
+  {"id":"goog_sr","company":"Alphabet","ticker":"GOOGL",
+   "doc_type":"environmental_report","file":"corpus/goog_sr.pdf",
+   "url":"TODO","published_date":"2025-01-01"},
+  {"id":"msft_sr","company":"Microsoft","ticker":"MSFT",
+   "doc_type":"sustainability_report","file":"corpus/msft_sr.pdf",
+   "url":"TODO","published_date":"2025-01-01"},
+  {"id":"amzn_sr","company":"Amazon","ticker":"AMZN",
+   "doc_type":"sustainability_report","file":"corpus/amzn_sr.pdf",
+   "url":"TODO","published_date":"2025-01-01"}
+]
