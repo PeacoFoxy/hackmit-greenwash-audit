@@ -10,7 +10,9 @@ from pathlib import Path
 import streamlit as st
 
 from src.indicators import cached_bundle, grade_components, indicators_for
-from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS,
+from src.report_map import load_regions, region_option, render_map, span_caption
+from src.ui_text import (mechanism_badge, say_mechanism, why_flagged,
+                         GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS,
                          GRADE_TOOLTIP, INDICATORS)
 
 ROOT = Path(__file__).resolve().parent
@@ -152,8 +154,54 @@ with right:
         st.caption("Pick a company above, or upload a report, to fill these in.")
 
     panel("Commitment trajectory", "Target vs observed pace, or the honest empty state")
-    panel("Where to look", "Report map: flagged regions by mechanism, plus the passage picker")
-    panel("Selected passage", "Quote first, then why it was flagged, then the source")
+
+    # ---- Where to look（步骤 4：从 v1 原样移植）
+    with st.container(border=True):
+        scope = [selected["company"]] if selected else None
+        regions = load_regions(scope)
+        counts = ({selected["company"]: len(bundle["sentences"])} if bundle
+                  else {c: len(b["sentences"]) for c, b in bundles.items()})
+        if regions:
+            st.markdown(f"**{len(regions)} passages need review**")
+            st.caption(f"Out of {sum(counts.values()):,} sentences across {len(counts)} "
+                       f"report{'s' if len(counts) > 1 else ''}.")
+            st.pyplot(render_map(regions, counts), width="stretch")
+            st.caption(span_caption(regions))
+            pick = st.selectbox("Jump to a passage", options=range(len(regions)),
+                                format_func=lambda i: region_option(regions[i]),
+                                key="v2_region_choice")
+            st.session_state.selected_region = regions[pick]
+        else:
+            st.markdown("**No passages crossed the review threshold**")
+            st.session_state.selected_region = None
+
+    # ---- Selected passage（步骤 4：顺序不变，公司自己的话在前）
+    with st.container(border=True):
+        region = st.session_state.get("selected_region")
+        if not region:
+            st.markdown("**Selected passage**")
+            st.caption("Pick a passage above.")
+        else:
+            source = next((x for x in sources if x["company"] == region["company"]), None)
+            lo, hi = (p * 100 for p in region["rel_pos"])
+            st.markdown(f"{mechanism_badge(region['mechanism'])} &nbsp; "
+                        f"**{region['company']}** · {lo:.0f}–{hi:.0f}% into the report "
+                        f"· {region['n_sentences']} sentences")
+            st.markdown(f"> {region['text']}")
+            st.caption("Excerpt, first 400 characters of the passage.")
+            st.markdown("**Why it was flagged**")
+            st.write(why_flagged(region.get("flag_types", {}), region["n_sentences"]))
+            if source:
+                st.caption(f"Source: {source['company']} "
+                           f"{source['doc_type'].replace('_', ' ')} "
+                           f"({Path(source['file']).name}) · published "
+                           f"{source['published_date']}")
+            with st.expander("Technical detail"):
+                st.write({"sent_id_range": [region["start_sent_id"], region["end_sent_id"]],
+                          "rel_pos": region["rel_pos"], "peak_flag_density": region["peak"],
+                          "threshold": region["threshold"],
+                          "flag_counts": region.get("flag_types", {}),
+                          "mechanism": region["mechanism"]})
 
 # ============================================================ BELOW THE FOLD
 st.divider()
