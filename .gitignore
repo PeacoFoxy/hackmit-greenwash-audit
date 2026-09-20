@@ -5,3 +5,7 @@ __pycache__/
 data/discarded/
 data/uploads/
 data/upload_history.json
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml

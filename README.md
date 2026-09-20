@@ -30,6 +30,20 @@ Uploading your own PDF does need a key for the claim-extraction stage. Without o
 upload still runs the four deterministic stages (parse, rules, signals, passage
 detection) and says so rather than failing.
 
+### API keys
+
+The project calls exactly one external service: the Anthropic API, for claim extraction
+and for the LLM comparison baselines. Supply the key either as an environment variable
+or in a `.env` file at the repository root:
+
+```bash
+cp .env.example .env     # then fill in ANTHROPIC_API_KEY
+```
+
+`.env` is excluded by `.gitignore` and is loaded without any extra dependency; an already
+exported environment variable always wins. `requirements.txt` holds Python packages only
+— never credentials.
+
 **The three source PDFs are not in this repository.** They are published corporate
 reports and are excluded by `.gitignore`. Everything derived from them — sentences,
 signals, claims, labels, metrics — is committed under `data/`, so a fresh clone runs the

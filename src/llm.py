@@ -1,6 +1,23 @@
 """全项目唯一的 LLM 入口：带磁盘缓存 + 重试。缓存命中不发请求，断网也能复现结果。"""
 import os, json, hashlib, time
+from pathlib import Path
+
 from anthropic import Anthropic
+
+
+def _load_env(path=Path(__file__).resolve().parent.parent / ".env"):
+    """读项目根目录的 .env。不引入依赖；已存在的环境变量优先，文件缺失就跳过。"""
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+_load_env()
 
 client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""), timeout=120.0)
 CACHE = "cache"
