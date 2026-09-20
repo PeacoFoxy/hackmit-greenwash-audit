@@ -1,0 +1,8 @@
+# 生成自实际 import，版本为开发时验证过的版本
+anthropic>=1.7.0
+matplotlib>=3.11.0
+numpy>=2.4.0
+pypdf>=6.19.0
+scikit-learn>=1.9.0
+scipy>=1.17.0
+streamlit>=1.64.0
