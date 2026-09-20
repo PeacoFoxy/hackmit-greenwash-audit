@@ -1,0 +1,4860 @@
+[
+ {
+  "claim_id": "goog_sr_001",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "goog_sr_002",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other_capacity",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "in 2024"
+ },
+ {
+  "claim_id": "goog_sr_003",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_004",
+  "label": "C",
+  "terminal": "INSTRUMENT_NO_METHOD",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:no_matching",
+   "T5b:instrument_cited"
+  ],
+  "evidence_span": "power purchase"
+ },
+ {
+  "claim_id": "goog_sr_005",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_006",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_007",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_008",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_009",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_010",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_011",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_012",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_013",
+  "label": "C",
+  "terminal": "METHOD_UNSTATED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:no_matching",
+   "T5b:no_instrument"
+  ],
+  "evidence_span": "6"
+ },
+ {
+  "claim_id": "goog_sr_014",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_015",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_016",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_017",
+  "label": "C",
+  "terminal": "METHOD_UNSTATED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:no_matching",
+   "T5b:no_instrument"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_018",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other_capacity",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "In 2024"
+ },
+ {
+  "claim_id": "goog_sr_019",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other_capacity",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_020",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_021",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_022",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_023",
+  "label": "C",
+  "terminal": "PROPRIETARY_METRIC",
+  "mechanism": "UNDEFINED_TERM",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:issuer_defined",
+   "T9d:definition_absent"
+  ],
+  "evidence_span": "carbon-free energy percentage"
+ },
+ {
+  "claim_id": "goog_sr_024",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_025",
+  "label": "C",
+  "terminal": "METHOD_UNSTATED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:no_matching",
+   "T5b:no_instrument"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_026",
+  "label": "C",
+  "terminal": "PROPRIETARY_METRIC",
+  "mechanism": "UNDEFINED_TERM",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:issuer_defined",
+   "T9d:definition_absent"
+  ],
+  "evidence_span": "CFE"
+ },
+ {
+  "claim_id": "goog_sr_027",
+  "label": "C",
+  "terminal": "PROPRIETARY_METRIC",
+  "mechanism": "UNDEFINED_TERM",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:issuer_defined",
+   "T9d:definition_absent"
+  ],
+  "evidence_span": "CFE"
+ },
+ {
+  "claim_id": "goog_sr_028",
+  "label": "C",
+  "terminal": "PROPRIETARY_METRIC",
+  "mechanism": "UNDEFINED_TERM",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:issuer_defined",
+   "T9d:definition_absent"
+  ],
+  "evidence_span": "CFE"
+ },
+ {
+  "claim_id": "goog_sr_029",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Alphabet"
+ },
+ {
+  "claim_id": "goog_sr_030",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_031",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Alphabet"
+ },
+ {
+  "claim_id": "goog_sr_032",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_033",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_034",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Alphabet"
+ },
+ {
+  "claim_id": "goog_sr_035",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_036",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_037",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_038",
+  "label": "C",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:no_composite_term",
+   "T7a:watershed_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_039",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_040",
+  "label": "C",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:no_composite_term",
+   "T7a:watershed_absent"
+  ],
+  "evidence_span": "all"
+ },
+ {
+  "claim_id": "goog_sr_041",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_WASTE",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:diversion_term",
+   "T8p:pathway_named",
+   "T8a:stream_stated"
+  ],
+  "evidence_span": "food waste"
+ },
+ {
+  "claim_id": "goog_sr_042",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "By 2020"
+ },
+ {
+  "claim_id": "goog_sr_043",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_044",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_045",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_046",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_047",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_048",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_049",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_050",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_051",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_052",
+  "label": "C",
+  "terminal": "TARGET_SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:milestone",
+   "T3a:scope_absent"
+  ],
+  "evidence_span": "annually"
+ },
+ {
+  "claim_id": "goog_sr_053",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_054",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_055",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_056",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_057",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_058",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_059",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_060",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_061",
+  "label": "C",
+  "terminal": "METHOD_UNSTATED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:no_matching",
+   "T5b:no_instrument"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_062",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "aims to"
+ },
+ {
+  "claim_id": "goog_sr_063",
+  "label": "C",
+  "terminal": "PROPRIETARY_METRIC",
+  "mechanism": "UNDEFINED_TERM",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:issuer_defined",
+   "T9d:definition_absent"
+  ],
+  "evidence_span": "CFE"
+ },
+ {
+  "claim_id": "goog_sr_064",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_065",
+  "label": "C",
+  "terminal": "CHERRY_PICKED_METRIC",
+  "mechanism": "SELECTIVE_AGGREGATION",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:industry_standard",
+   "T9a:not_fleet_wide",
+   "T9r:no_breakdown"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_066",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_067",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_EMISSIONS",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_stated",
+   "T6b:percent_change",
+   "T6c:baseline_stated"
+  ],
+  "evidence_span": "compared to 2019"
+ },
+ {
+  "claim_id": "goog_sr_068",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_EMISSIONS",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_stated",
+   "T6b:percent_change",
+   "T6c:baseline_stated"
+  ],
+  "evidence_span": "compared to 2019"
+ },
+ {
+  "claim_id": "goog_sr_069",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_070",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_071",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Google"
+ },
+ {
+  "claim_id": "goog_sr_072",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_073",
+  "label": "C",
+  "terminal": "INTENSITY_NO_ABSOLUTE",
+  "mechanism": "SELECTIVE_AGGREGATION",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:intensity",
+   "T6i:absolute_absent"
+  ],
+  "evidence_span": "intensity"
+ },
+ {
+  "claim_id": "goog_sr_074",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Google"
+ },
+ {
+  "claim_id": "goog_sr_075",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_076",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_077",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_078",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_079",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "in 2024"
+ },
+ {
+  "claim_id": "goog_sr_080",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_081",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_082",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_083",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "by 2030"
+ },
+ {
+  "claim_id": "goog_sr_084",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "will"
+ },
+ {
+  "claim_id": "goog_sr_085",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_086",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_087",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_088",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Alphabet"
+ },
+ {
+  "claim_id": "goog_sr_089",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "all"
+ },
+ {
+  "claim_id": "goog_sr_090",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_091",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "6"
+ },
+ {
+  "claim_id": "goog_sr_092",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_093",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_094",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "goog_sr_095",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_096",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "goog_sr_097",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_098",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_099",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_100",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_101",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_102",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_103",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_104",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_105",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "We"
+ },
+ {
+  "claim_id": "goog_sr_106",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "our"
+ },
+ {
+  "claim_id": "goog_sr_107",
+  "label": "C",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:matching_language"
+  ],
+  "evidence_span": "match"
+ },
+ {
+  "claim_id": "goog_sr_108",
+  "label": "C",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:matching_language"
+  ],
+  "evidence_span": "match"
+ },
+ {
+  "claim_id": "goog_sr_109",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_110",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_111",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_112",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_113",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_114",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_115",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_116",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_117",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Alphabet"
+ },
+ {
+  "claim_id": "goog_sr_118",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_119",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_120",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_121",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_122",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_123",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_124",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_125",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_126",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_127",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_128",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_129",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_130",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:verifier_named"
+  ],
+  "evidence_span": "third-party"
+ },
+ {
+  "claim_id": "goog_sr_131",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_132",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_133",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_134",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_135",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_136",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_137",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_138",
+  "label": "C",
+  "terminal": "INTENSITY_NO_ABSOLUTE",
+  "mechanism": "SELECTIVE_AGGREGATION",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:intensity",
+   "T6i:absolute_absent"
+  ],
+  "evidence_span": "intensity"
+ },
+ {
+  "claim_id": "goog_sr_139",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "goog_sr_140",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "goog_sr_141",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:industry_standard",
+   "T9a:fleet_wide"
+  ],
+  "evidence_span": "fleet-wide"
+ },
+ {
+  "claim_id": "goog_sr_142",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:industry_standard",
+   "T9a:fleet_wide"
+  ],
+  "evidence_span": "fleet-wide"
+ },
+ {
+  "claim_id": "goog_sr_143",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_144",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_EMISSIONS",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_stated",
+   "T6b:percent_change",
+   "T6c:baseline_stated"
+  ],
+  "evidence_span": "baseline"
+ },
+ {
+  "claim_id": "msft_sr_145",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_EMISSIONS",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_stated",
+   "T6b:percent_change",
+   "T6c:baseline_stated"
+  ],
+  "evidence_span": "baseline"
+ },
+ {
+  "claim_id": "msft_sr_146",
+  "label": "C",
+  "terminal": "METHOD_UNSTATED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:no_matching",
+   "T5b:no_instrument"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "msft_sr_147",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "target"
+ },
+ {
+  "claim_id": "msft_sr_148",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_149",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_150",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "msft_sr_151",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_152",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_153",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_154",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_155",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_156",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_157",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_158",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_159",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_160",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_161",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_162",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_163",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_164",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_165",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "all"
+ },
+ {
+  "claim_id": "msft_sr_166",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_167",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_168",
+  "label": "C",
+  "terminal": "WATER_TERM_UNDEFINED",
+  "mechanism": "UNDEFINED_TERM",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:composite_term",
+   "T7m:method_absent"
+  ],
+  "evidence_span": "water positive"
+ },
+ {
+  "claim_id": "msft_sr_169",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_170",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "target"
+ },
+ {
+  "claim_id": "msft_sr_171",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_172",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_173",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_174",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_175",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "will"
+ },
+ {
+  "claim_id": "msft_sr_176",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_177",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_178",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_179",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "msft_sr_180",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_181",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_182",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_183",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_184",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_185",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_186",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_187",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_188",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_189",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_190",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_191",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_192",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_193",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_194",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_195",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_196",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_WATER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:no_composite_term",
+   "T7a:watershed_stated"
+  ],
+  "evidence_span": "worldwide"
+ },
+ {
+  "claim_id": "msft_sr_197",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_198",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "target"
+ },
+ {
+  "claim_id": "msft_sr_199",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_200",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_201",
+  "label": "C",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:no_composite_term",
+   "T7a:watershed_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "msft_sr_202",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_203",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_204",
+  "label": "C",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:no_composite_term",
+   "T7a:watershed_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "msft_sr_205",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_206",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_207",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_208",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_209",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_210",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_211",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_212",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "will"
+ },
+ {
+  "claim_id": "msft_sr_213",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_214",
+  "label": "C",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:no_composite_term",
+   "T7a:watershed_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "msft_sr_215",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_216",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_217",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_218",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_219",
+  "label": "C",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:diversion_term",
+   "T8p:pathway_named",
+   "T8a:stream_absent"
+  ],
+  "evidence_span": "reuse"
+ },
+ {
+  "claim_id": "msft_sr_220",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "target"
+ },
+ {
+  "claim_id": "msft_sr_221",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_WASTE",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:diversion_term",
+   "T8p:pathway_named",
+   "T8a:stream_stated"
+  ],
+  "evidence_span": "waste from landfills"
+ },
+ {
+  "claim_id": "msft_sr_222",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_223",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_WASTE",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:diversion_term",
+   "T8p:pathway_named",
+   "T8a:stream_stated"
+  ],
+  "evidence_span": "waste from being"
+ },
+ {
+  "claim_id": "msft_sr_224",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_225",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "In 2024"
+ },
+ {
+  "claim_id": "msft_sr_226",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_227",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "we"
+ },
+ {
+  "claim_id": "msft_sr_228",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_229",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_230",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "We"
+ },
+ {
+  "claim_id": "msft_sr_231",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "msft_sr_232",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_233",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_234",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "were"
+ },
+ {
+  "claim_id": "msft_sr_235",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "msft_sr_236",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_237",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_238",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_239",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_240",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_241",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_242",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_243",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_244",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_245",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_246",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_247",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_248",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_249",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_250",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_251",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_252",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_253",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_254",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_255",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_256",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_257",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_258",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_259",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_260",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_261",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_262",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_263",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_264",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_265",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_266",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_267",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_268",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_269",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_270",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_271",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_272",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_273",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_274",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_275",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_276",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "msft_sr_277",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "msft_sr_278",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "msft_sr_279",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Microsoft"
+ },
+ {
+  "claim_id": "amzn_sr_280",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_281",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_282",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_283",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_284",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_285",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "by 2030"
+ },
+ {
+  "claim_id": "amzn_sr_286",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "by 2030"
+ },
+ {
+  "claim_id": "amzn_sr_287",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_288",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_289",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_290",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "by 2040"
+ },
+ {
+  "claim_id": "amzn_sr_291",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "as of 2025"
+ },
+ {
+  "claim_id": "amzn_sr_292",
+  "label": "C",
+  "terminal": "INTENSITY_NO_ABSOLUTE",
+  "mechanism": "SELECTIVE_AGGREGATION",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:intensity",
+   "T6i:absolute_absent"
+  ],
+  "evidence_span": "per shipped"
+ },
+ {
+  "claim_id": "amzn_sr_293",
+  "label": "C",
+  "terminal": "INTENSITY_NO_ABSOLUTE",
+  "mechanism": "SELECTIVE_AGGREGATION",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:intensity",
+   "T6i:absolute_absent"
+  ],
+  "evidence_span": "per shipped"
+ },
+ {
+  "claim_id": "amzn_sr_294",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "4"
+ },
+ {
+  "claim_id": "amzn_sr_295",
+  "label": "C",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:matching_language"
+  ],
+  "evidence_span": "matched"
+ },
+ {
+  "claim_id": "amzn_sr_296",
+  "label": "C",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:matching_language"
+  ],
+  "evidence_span": "matched"
+ },
+ {
+  "claim_id": "amzn_sr_297",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "by 2025"
+ },
+ {
+  "claim_id": "amzn_sr_298",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_299",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_300",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "in 2025"
+ },
+ {
+  "claim_id": "amzn_sr_301",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_EMISSIONS",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_stated",
+   "T6b:percent_change",
+   "T6c:baseline_stated"
+  ],
+  "evidence_span": "compared to 2024"
+ },
+ {
+  "claim_id": "amzn_sr_302",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_EMISSIONS",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_stated",
+   "T6b:no_percent_change"
+  ],
+  "evidence_span": "direct operations"
+ },
+ {
+  "claim_id": "amzn_sr_303",
+  "label": "C",
+  "terminal": "INTENSITY_NO_ABSOLUTE",
+  "mechanism": "SELECTIVE_AGGREGATION",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:intensity",
+   "T6i:absolute_absent"
+  ],
+  "evidence_span": "per shipped"
+ },
+ {
+  "claim_id": "amzn_sr_304",
+  "label": "C",
+  "terminal": "INTENSITY_NO_ABSOLUTE",
+  "mechanism": "SELECTIVE_AGGREGATION",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:intensity",
+   "T6i:absolute_absent"
+  ],
+  "evidence_span": "per shipped"
+ },
+ {
+  "claim_id": "amzn_sr_305",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_306",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_307",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_308",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_309",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_310",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_311",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:industry_standard",
+   "T9a:fleet_wide"
+  ],
+  "evidence_span": "global"
+ },
+ {
+  "claim_id": "amzn_sr_312",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:industry_standard",
+   "T9a:fleet_wide"
+  ],
+  "evidence_span": "global"
+ },
+ {
+  "claim_id": "amzn_sr_313",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:industry_standard",
+   "T9a:fleet_wide"
+  ],
+  "evidence_span": "global"
+ },
+ {
+  "claim_id": "amzn_sr_314",
+  "label": "C",
+  "terminal": "METHOD_UNSTATED",
+  "mechanism": "UNDISCLOSED_METHOD",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:energy",
+   "T5:method_absent",
+   "T5a:no_matching",
+   "T5b:no_instrument"
+  ],
+  "evidence_span": "3"
+ },
+ {
+  "claim_id": "amzn_sr_315",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "by 2039"
+ },
+ {
+  "claim_id": "amzn_sr_316",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "will"
+ },
+ {
+  "claim_id": "amzn_sr_317",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_318",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_319",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_320",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_321",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "In 2025"
+ },
+ {
+  "claim_id": "amzn_sr_322",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_323",
+  "label": "C",
+  "terminal": "SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:emissions",
+   "T6:not_intensity",
+   "T6n:no_neutrality",
+   "T6s:scope_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "amzn_sr_324",
+  "label": "C",
+  "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:no_milestone"
+  ],
+  "evidence_span": "by 2040"
+ },
+ {
+  "claim_id": "amzn_sr_325",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_326",
+  "label": "C",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:no_diversion_term",
+   "T8a:stream_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "amzn_sr_327",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_328",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_329",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_330",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_331",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_332",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_333",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_WATER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:no_composite_term",
+   "T7a:watershed_stated"
+  ],
+  "evidence_span": "global"
+ },
+ {
+  "claim_id": "amzn_sr_334",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:efficiency",
+   "T9:industry_standard",
+   "T9a:fleet_wide"
+  ],
+  "evidence_span": "global"
+ },
+ {
+  "claim_id": "amzn_sr_335",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_336",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_337",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_338",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_339",
+  "label": "C",
+  "terminal": "WATER_TERM_UNDEFINED",
+  "mechanism": "UNDEFINED_TERM",
+  "severity": 3,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:water",
+   "T7:composite_term",
+   "T7m:method_absent"
+  ],
+  "evidence_span": "replenishment"
+ },
+ {
+  "claim_id": "amzn_sr_340",
+  "label": "C",
+  "terminal": "TARGET_SCOPE_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:forward_looking",
+   "T3:milestone",
+   "T3a:scope_absent"
+  ],
+  "evidence_span": "annually"
+ },
+ {
+  "claim_id": "amzn_sr_341",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_342",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_343",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_344",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_345",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_346",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_347",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_348",
+  "label": "C",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:no_diversion_term",
+   "T8a:stream_absent"
+  ],
+  "evidence_span": "5"
+ },
+ {
+  "claim_id": "amzn_sr_349",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "amzn_sr_350",
+  "label": "C",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:no_diversion_term",
+   "T8a:stream_absent"
+  ],
+  "evidence_span": "2"
+ },
+ {
+  "claim_id": "amzn_sr_351",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_WASTE",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:diversion_term",
+   "T8p:pathway_named",
+   "T8a:stream_stated"
+  ],
+  "evidence_span": "waste from landfill"
+ },
+ {
+  "claim_id": "amzn_sr_352",
+  "label": "C",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:diversion_term",
+   "T8p:pathway_named",
+   "T8a:stream_absent"
+  ],
+  "evidence_span": "recycling"
+ },
+ {
+  "claim_id": "amzn_sr_353",
+  "label": "C",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 2,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:waste",
+   "T8:diversion_term",
+   "T8p:pathway_named",
+   "T8a:stream_absent"
+  ],
+  "evidence_span": "incineration"
+ },
+ {
+  "claim_id": "amzn_sr_354",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_355",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_356",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_357",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_358",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_359",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_360",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_361",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_362",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_363",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_364",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_365",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_366",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_367",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "in 2025"
+ },
+ {
+  "claim_id": "amzn_sr_368",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_stated"
+  ],
+  "evidence_span": "in 2025"
+ },
+ {
+  "claim_id": "amzn_sr_369",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_370",
+  "label": "C",
+  "terminal": "UNSCOPED_FIGURE",
+  "mechanism": "UNDISCLOSED_BOUNDARY",
+  "severity": 1,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:no_verifier",
+   "T10a:boundary_absent"
+  ],
+  "evidence_span": "1"
+ },
+ {
+  "claim_id": "amzn_sr_371",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_372",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_373",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_374",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_375",
+  "label": "A",
+  "terminal": "SUBSTANTIATED_OTHER",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:quantity",
+   "T2:historical",
+   "T4:other",
+   "T10:verifier_named"
+  ],
+  "evidence_span": "certifications"
+ },
+ {
+  "claim_id": "amzn_sr_376",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_377",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_378",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_379",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_380",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_381",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_382",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_383",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ },
+ {
+  "claim_id": "amzn_sr_384",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_385",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_386",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_387",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_388",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_389",
+  "label": "B",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:self",
+   "T1:no_quantity"
+  ],
+  "evidence_span": "Amazon"
+ },
+ {
+  "claim_id": "amzn_sr_390",
+  "label": "SKIP",
+  "terminal": "SKIP",
+  "mechanism": null,
+  "severity": null,
+  "path": [
+   "T0:not_self"
+  ],
+  "evidence_span": null
+ }
+]

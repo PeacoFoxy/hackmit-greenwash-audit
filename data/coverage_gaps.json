@@ -1,0 +1,414 @@
+{
+ "residual_n": 58,
+ "total_claims": 390,
+ "gaps": [
+  {
+   "term": "carbon-free energy (cfe) percentage",
+   "count": 1,
+   "why_it_matters": "CFE % is an hourly or annual matched metric whose boundary (which generation assets count, which grid zones are included, and whether matching is hourly vs. annual) is not defined in the claim, so the figure can be inflated by favorable zone selection or annual averaging that hides non-green hours.",
+   "example_claim_ids": [
+    "goog_sr_026"
+   ]
+  },
+  {
+   "term": "regional averaging of cfe",
+   "count": 1,
+   "why_it_matters": "Blending CFE scores across a multi-country region can mask individual data centers or grid zones with very low clean-energy percentages behind high-performing sites, creating a misleading aggregate.",
+   "example_claim_ids": [
+    "goog_sr_027"
+   ]
+  },
+  {
+   "term": "grid region boundary definition for cfe targets",
+   "count": 1,
+   "why_it_matters": "Claiming 80 % CFE in '9 out of 20 grid regions' depends entirely on how grid-region boundaries are drawn; cherry-picking region granularity can make the same infrastructure look better or worse without any physical change.",
+   "example_claim_ids": [
+    "goog_sr_063"
+   ]
+  },
+  {
+   "term": "waste diversion rate boundary (operational vs. value-chain)",
+   "count": 1,
+   "why_it_matters": "An 85 % diversion rate for food waste does not disclose whether it covers only company-operated facilities, includes tenant or supply-chain food waste, or how 'diversion' is defined (e.g., whether anaerobic digestion counts), leaving the scope of the claim ambiguous.",
+   "example_claim_ids": [
+    "goog_sr_041"
+   ]
+  },
+  {
+   "term": "material-fraction scoping in plastic accounting",
+   "count": 1,
+   "why_it_matters": "Reporting that 6 % of packaging plastic is 'hidden' in liners, seals, and adhesives reveals that the headline plastic-reduction figure excludes hard-to-measure fractions, suggesting the reported boundary understates total plastic use.",
+   "example_claim_ids": [
+    "goog_sr_043"
+   ]
+  },
+  {
+   "term": "non-co2 climate forcing / radiative forcing index (contrail warming)",
+   "count": 1,
+   "why_it_matters": "Expressing contrail-avoidance benefit in tCO2e requires a global-warming-potential or effective radiative forcing conversion factor for contrail cirrus that is scientifically uncertain and not standardized in GHG accounting protocols, so the cost-per-tCO2e figure may be incomparable to other mitigation costs.",
+   "example_claim_ids": [
+    "goog_sr_048"
+   ]
+  },
+  {
+   "term": "control-flight comparator methodology",
+   "count": 1,
+   "why_it_matters": "The 2 % additional fuel claim depends on how 'control flights' are selected and whether the comparison holds across seasons, aircraft types, and traffic densities; without this, the figure cannot be generalized or audited.",
+   "example_claim_ids": [
+    "goog_sr_046"
+   ]
+  },
+  {
+   "term": "ambition-based scope 3 accounting",
+   "count": 1,
+   "why_it_matters": "'Ambition-based' is a non-standard qualifier for Scope 3 that likely means only a subset of Scope 3 categories are included based on strategic relevance rather than the full GHG Protocol category inventory, hiding potentially large excluded categories.",
+   "example_claim_ids": [
+    "goog_sr_068"
+   ]
+  },
+  {
+   "term": "scope 1+2 market-based absolute emissions with ai-driven growth context",
+   "count": 1,
+   "why_it_matters": "A 241 % increase in combined Scope 1 and 2 market-based emissions against a 2019 baseline is disclosed without normalizing for revenue, compute capacity, or service output, making it impossible to assess efficiency improvement versus pure growth effect.",
+   "example_claim_ids": [
+    "goog_sr_067"
+   ]
+  },
+  {
+   "term": "sbti 'standard validation route' specification",
+   "count": 1,
+   "why_it_matters": "Citing alignment with a 1.5 °C scenario via the 'standard validation route' obscures which SBTi methodology version, sectoral pathway, and coverage scope were used, and whether validation is current or lapsed, all of which materially affect the stringency of the target.",
+   "example_claim_ids": [
+    "goog_sr_143"
+   ]
+  },
+  {
+   "term": "fossil-fuel combustion equivalence analogy",
+   "count": 1,
+   "why_it_matters": "Translating a CO2 reduction into 'barrels of oil' is a unit-conversion analogy that does not correspond to any actual avoided combustion event and can misrepresent the boundary or permanence of the underlying reduction.",
+   "example_claim_ids": [
+    "msft_sr_151"
+   ]
+  },
+  {
+   "term": "fiscal-year vs. calendar-year boundary for emissions reporting",
+   "count": 1,
+   "why_it_matters": "Microsoft reports on a fiscal-year basis (ending June 30) while most GHG Protocol comparisons use calendar years; a 2020 FY baseline may not be comparable to peers or to prior self-reported figures, obscuring the true reduction trajectory.",
+   "example_claim_ids": [
+    "msft_sr_144"
+   ]
+  },
+  {
+   "term": "internal '20% time' / discretionary project accounting",
+   "count": 1,
+   "why_it_matters": "Characterizing sustainability work as '20% opportunities' implies it is voluntary and unaccounted in formal targets, raising questions about whether associated emissions, travel, or resource use are attributed to any reported scope boundary.",
+   "example_claim_ids": [
+    "goog_sr_077"
+   ]
+  },
+  {
+   "term": "scope 3 category omission (categories 8, 10, 14, 15 absent)",
+   "count": 1,
+   "why_it_matters": "Reporting only a subset of GHC Protocol Scope 3 categories without disclosing which are omitted or deemed not applicable allows material emission sources (e.g., Category 8 Upstream Leased Assets, Category 15 Investments) to silently vanish from the inventory boundary.",
+   "example_claim_ids": [
+    "msft_sr_160"
+   ]
+  },
+  {
+   "term": "percentage-of-scope-3 framing without absolute tonnage",
+   "count": 1,
+   "why_it_matters": "Expressing categories only as a share of a total obscures whether the absolute Scope 3 base has shrunk (making the denominator smaller and percentages misleading) and prevents year-over-year comparison of real emission changes.",
+   "example_claim_ids": [
+    "msft_sr_153"
+   ]
+  },
+  {
+   "term": "supplier/value-chain emission factor methodology (spend-based vs activity-based)",
+   "count": 1,
+   "why_it_matters": "Category 1 and Category 2 figures can vary by an order of magnitude depending on whether spend-based average-emission factors or supplier-specific activity data are used, and the choice is rarely disclosed, masking data quality and boundary decisions.",
+   "example_claim_ids": [
+    "msft_sr_154"
+   ]
+  },
+  {
+   "term": "market-based label applied to scope 3 category 3 (fuel- and energy-related activities)",
+   "count": 1,
+   "why_it_matters": "Applying a market-based adjustment to upstream fuel-cycle and transmission-loss emissions in Category 3 is methodologically contested; using it without disclosing the corresponding location-based figure can understate the true grid-related upstream footprint.",
+   "example_claim_ids": [
+    "msft_sr_155"
+   ]
+  },
+  {
+   "term": "fleet electrification percentage without energy-source disclosure",
+   "count": 1,
+   "why_it_matters": "Claiming a percentage of electric vehicles is environmentally meaningful only if the electricity source is specified; EVs charged on fossil-heavy grids may not reduce net emissions, yet the claim implies a climate benefit without accounting for Scope 2 or upstream charging emissions.",
+   "example_claim_ids": [
+    "msft_sr_174"
+   ]
+  },
+  {
+   "term": "announced supply-chain partnership volume (gw capacity) treated as an environmental outcome",
+   "count": 1,
+   "why_it_matters": "A procurement partnership for solar modules quantifies planned purchasing capacity, not actual deployed generation, emissions avoided, or additionality; it conflates a commercial agreement with a measurable climate result.",
+   "example_claim_ids": [
+    "msft_sr_176"
+   ]
+  },
+  {
+   "term": "carbon removal project 'delivery' without permanence, additionality, or verification standard disclosure",
+   "count": 1,
+   "why_it_matters": "Stating that projects will 'deliver' metric tons of removal by 2030 omits whether removals are independently verified, what permanence period applies, and whether they are additional to a business-as-usual baseline, all of which determine whether the tonnage claim is credible.",
+   "example_claim_ids": [
+    "msft_sr_178"
+   ]
+  },
+  {
+   "term": "beccs (bioenergy with carbon capture and storage) full lifecycle boundary",
+   "count": 1,
+   "why_it_matters": "BECCS removal credits can be overstated if the accounting boundary excludes upstream biogenic CO2 from land-use change, biomass transport, or parasitic energy loads, meaning the 'net removal' per ton is materially lower than the contracted gross figure.",
+   "example_claim_ids": [
+    "msft_sr_179"
+   ]
+  },
+  {
+   "term": "use-of-sold-products emission methodology (customer usage assumptions)",
+   "count": 1,
+   "why_it_matters": "Category 11 figures are highly sensitive to assumed product lifetimes, utilization rates, and future grid emission factors applied to cloud/device energy use; undisclosed assumptions can materially understate or overstate this largest remaining category.",
+   "example_claim_ids": [
+    "msft_sr_161"
+   ]
+  },
+  {
+   "term": "end-of-life treatment emission factor scope (recycling credit netting)",
+   "count": 1,
+   "why_it_matters": "An extremely low Category 12 share (0.02%) may reflect netting of recycling credits against disposal emissions rather than gross waste-treatment emissions, a boundary choice that should be disclosed to avoid understating end-of-life impacts.",
+   "example_claim_ids": [
+    "msft_sr_162"
+   ]
+  },
+  {
+   "term": "reuse and recycling rate boundary (owned vs. leased, in-scope asset definition)",
+   "count": 1,
+   "why_it_matters": "A recycling rate like 90.9% is only meaningful if the denominator is clearly defined; excluding leased hardware, third-party-managed servers, or end-user devices can inflate the rate by shrinking the scope of assets counted.",
+   "example_claim_ids": [
+    "msft_sr_219"
+   ]
+  },
+  {
+   "term": "early target achievement without restated target rigor",
+   "count": 1,
+   "why_it_matters": "Claiming a target was met 'a year early' or 'six years ahead of schedule' can mask that the original target was set conservatively or that the measurement boundary was narrowed post-hoc to make achievement easier.",
+   "example_claim_ids": [
+    "msft_sr_222"
+   ]
+  },
+  {
+   "term": "waste diversion definition (landfill/incineration only vs. total waste generated)",
+   "count": 1,
+   "why_it_matters": "Diversion rates exclude waste streams sent to lower-value recovery (e.g., downcycling, co-processing, waste-to-energy counted as 'diversion') and hide the total absolute waste generated, allowing a rising waste volume to be masked by a high diversion percentage.",
+   "example_claim_ids": [
+    "msft_sr_221"
+   ]
+  },
+  {
+   "term": "facility boundary for waste accounting (owned vs. leased vs. co-located)",
+   "count": 1,
+   "why_it_matters": "Reporting waste diversion only for 'owned datacenters and campuses' excludes leased facilities and co-location sites, which may represent a large and less-controlled portion of total operational waste.",
+   "example_claim_ids": [
+    "msft_sr_223"
+   ]
+  },
+  {
+   "term": "geographic and asset-class cherry-picking in sustainability feature rollout",
+   "count": 1,
+   "why_it_matters": "Limiting a '100%' claim to a specific region (Europe and Asia-Pacific) and asset class (new owned datacenters) conceals the overall adoption rate across the full global portfolio including existing and leased facilities.",
+   "example_claim_ids": [
+    "msft_sr_225"
+   ]
+  },
+  {
+   "term": "emission reduction attribution methodology (counterfactual baseline for logistics)",
+   "count": 1,
+   "why_it_matters": "A specific mtCO2e reduction figure from switching packaging materials depends entirely on the assumed counterfactual (what would have been used otherwise) and system boundary; without a disclosed baseline and allocation method the number is unverifiable.",
+   "example_claim_ids": [
+    "msft_sr_231"
+   ]
+  },
+  {
+   "term": "recycled content certification and chain-of-custody standard",
+   "count": 1,
+   "why_it_matters": "Claims of '100% recycled' material require a chain-of-custody certification standard (e.g., ISO 14021, SCS, or equivalent) to confirm the recycled content fraction is mass-balanced or physically traced rather than a book-and-claim credit.",
+   "example_claim_ids": [
+    "msft_sr_254"
+   ]
+  },
+  {
+   "term": "recycled rare earth metal supply chain traceability",
+   "count": 1,
+   "why_it_matters": "Rare earth recycling infrastructure is nascent and poorly standardized; a '100% recycled' claim for rare earth magnets without reference to a verified recycling pathway or certification body is highly susceptible to greenwashing.",
+   "example_claim_ids": [
+    "msft_sr_255"
+   ]
+  },
+  {
+   "term": "capital commitment vs. capital deployed distinction",
+   "count": 1,
+   "why_it_matters": "Reporting 'allocated' or 'committed' capital rather than actually deployed/disbursed capital overstates near-term climate impact because commitments can be withdrawn, restructured, or delayed without accountability.",
+   "example_claim_ids": [
+    "msft_sr_263"
+   ]
+  },
+  {
+   "term": "additionality and catalytic capital multiplier methodology",
+   "count": 1,
+   "why_it_matters": "A 'greater than 4x multiplier' claim requires a counterfactual showing that follow-on funding would not have occurred without the anchor investment; without additionality analysis the multiplier conflates correlation with causation.",
+   "example_claim_ids": [
+    "msft_sr_270"
+   ]
+  },
+  {
+   "term": "scope 3 category coverage and materiality threshold disclosure",
+   "count": 1,
+   "why_it_matters": "Characterizing sectors as 'critical to Microsoft's Scope 3 footprint' without disclosing which Scope 3 categories are included, excluded, and how materiality was assessed allows selective framing that understates total supply-chain emissions.",
+   "example_claim_ids": [
+    "msft_sr_265"
+   ]
+  },
+  {
+   "term": "revenue growth as sustainability context metric (intensity vs. absolute)",
+   "count": 1,
+   "why_it_matters": "Citing revenue growth alongside environmental claims without linking it to absolute or intensity-based emissions trends creates a misleading impression of decoupling if emissions grew proportionally or faster than revenue.",
+   "example_claim_ids": [
+    "amzn_sr_300"
+   ]
+  },
+  {
+   "term": "renewable natural gas (rng) additionality and biomethane certification standard",
+   "count": 1,
+   "why_it_matters": "Purchasing RNG does not guarantee the biogas was additional (i.e., would not have been captured anyway), and without reference to a certification standard (e.g., RNG Coalition, ISCC, or equivalent) the claimed climate benefit of 39.5 million gallons cannot be verified.",
+   "example_claim_ids": [
+    "amzn_sr_305"
+   ]
+  },
+  {
+   "term": "temporal matching of rng/energy certificates to actual consumption",
+   "count": 1,
+   "why_it_matters": "Annual volume purchases of renewable natural gas may not be matched to the time period or geography of actual gas consumption, creating the same unbundled-certificate problem as RECs in electricity accounting.",
+   "example_claim_ids": [
+    "amzn_sr_305"
+   ]
+  },
+  {
+   "term": "global water loss statistic sourcing and relevance to corporate boundary",
+   "count": 1,
+   "why_it_matters": "Citing a global infrastructure statistic (30% water losses from leaking pipes) without connecting it to the company's own operational water accounting boundary implies relevance to corporate performance without establishing any link.",
+   "example_claim_ids": [
+    "msft_sr_199"
+   ]
+  },
+  {
+   "term": "industry average benchmark source and vintage",
+   "count": 1,
+   "why_it_matters": "Comparing PUE against an 'industry average' or 'enterprise average' is only meaningful if the benchmark dataset, its collection methodology, geographic scope, and publication year are disclosed; an undisclosed or outdated benchmark can make any figure look favorable.",
+   "example_claim_ids": [
+    "amzn_sr_312"
+   ]
+  },
+  {
+   "term": "like-for-like workload normalization in pue comparisons",
+   "count": 1,
+   "why_it_matters": "Comparing a hyperscale cloud PUE to on-premises enterprise data centers conflates facilities running at very different IT load densities and utilization rates, making the efficiency gap appear larger than an apples-to-apples comparison would show.",
+   "example_claim_ids": [
+    "amzn_sr_313"
+   ]
+  },
+  {
+   "term": "absolute vs. intensity metric reporting (water)",
+   "count": 1,
+   "why_it_matters": "Reporting a reduction in absolute water volume (938 million liters) alongside a WUE intensity ratio obscures whether total consumption rose or fell as the fleet expanded; an intensity improvement can coexist with higher absolute consumption.",
+   "example_claim_ids": [
+    "amzn_sr_332"
+   ]
+  },
+  {
+   "term": "wue boundary definition (tower vs. campus vs. grid water)",
+   "count": 1,
+   "why_it_matters": "WUE can be scoped to only on-site evaporative cooling towers, excluding water consumed upstream by the electric grid or in off-site district cooling plants, silently understating true water impact.",
+   "example_claim_ids": [
+    "amzn_sr_333"
+   ]
+  },
+  {
+   "term": "multi-year intensity baseline consistency",
+   "count": 1,
+   "why_it_matters": "A 52% WUE improvement since 2021 is unverifiable if the 2021 baseline methodology, fleet composition, or metering coverage differed from 2025, allowing favorable restating of the starting point.",
+   "example_claim_ids": [
+    "amzn_sr_334"
+   ]
+  },
+  {
+   "term": "'select models' or partial-portfolio scoping for material claims",
+   "count": 1,
+   "why_it_matters": "Attributing recycled-content achievements only to 'select' SKUs without disclosing what share of total unit volume or material mass they represent lets a small subset carry an outsized impression of fleet-wide progress.",
+   "example_claim_ids": [
+    "amzn_sr_346"
+   ]
+  },
+  {
+   "term": "recycled-content mass fraction vs. component-level fraction",
+   "count": 1,
+   "why_it_matters": "Stating '85% recycled tin in solder' refers to a minor-mass component; without disclosing solder's share of total PCB or product mass, the figure conveys little about overall recycled-material intensity.",
+   "example_claim_ids": [
+    "amzn_sr_347"
+   ]
+  },
+  {
+   "term": "pilot vs. deployed-at-scale scope disclosure",
+   "count": 1,
+   "why_it_matters": "Describing a recycled-aluminum heat sink as a 'pilot' without stating deployment volume or timeline creates an impression of progress that may represent a negligible fraction of actual production.",
+   "example_claim_ids": [
+    "amzn_sr_348"
+   ]
+  },
+  {
+   "term": "waste-per-unit denominator definition",
+   "count": 1,
+   "why_it_matters": "'Shipped unit' can be defined as a package, an item, or an order, and changes in that definition between years can manufacture an apparent efficiency improvement without any real waste reduction.",
+   "example_claim_ids": [
+    "amzn_sr_350"
+   ]
+  },
+  {
+   "term": "landfill-diversion rate inclusion of waste-to-energy",
+   "count": 1,
+   "why_it_matters": "Diversion rates commonly count incineration with energy recovery as 'diverted,' masking whether material is actually recycled or merely combusted, which carries very different environmental implications.",
+   "example_claim_ids": [
+    "amzn_sr_351"
+   ]
+  },
+  {
+   "term": "operational boundary for waste accounting (owned vs. third-party facilities)",
+   "count": 1,
+   "why_it_matters": "Recycling and composting rates may cover only Amazon-operated fulfillment centers and exclude third-party logistics partners, marketplace seller operations, or customer packaging, understating true waste generation.",
+   "example_claim_ids": [
+    "amzn_sr_352"
+   ]
+  },
+  {
+   "term": "organic certification standard and chain-of-custody scope",
+   "count": 1,
+   "why_it_matters": "Aggregating 'organic' across varying national or private certification schemes with different input restrictions and audit rigor can inflate the apparent environmental benefit of the organic share figure.",
+   "example_claim_ids": [
+    "amzn_sr_367"
+   ]
+  },
+  {
+   "term": "product-category cherry-picking (fresh produce vs. all products)",
+   "count": 1,
+   "why_it_matters": "Reporting a high organic share for fresh produce separately from all products selects the category most favorable to organic penetration, giving a misleading impression of overall organic commitment.",
+   "example_claim_ids": [
+    "amzn_sr_368"
+   ]
+  }
+ ]
+}

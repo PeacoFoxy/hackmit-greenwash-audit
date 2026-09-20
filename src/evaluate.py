@@ -4,6 +4,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_recall_fscore_support
 from src.llm import ask
+from src.rules_v2 import classify as tree_classify
 
 FIG_DIR = "figures"
 os.makedirs(FIG_DIR, exist_ok=True)
@@ -48,7 +49,7 @@ Output ONLY a raw JSON array. No markdown fences, no analysis, no preamble.
 Format: [{"claim_id":"...","label":"A"}]"""
 
 
-METHODS = ["baseline1", "baseline2", "pipeline", "pipeline_allflags"]
+METHODS = ["tree_only", "baseline1", "baseline2", "pipeline", "pipeline_allflags"]
 
 
 def item(c, hint_mode):
@@ -98,6 +99,9 @@ def parse_json(raw):
 
 
 def classify(method, claims):
+    if method == "tree_only":  # 纯规则树，零 LLM 调用
+        return [tree_classify(c["text"], c["claim_id"])["label"] for c in claims]
+
     preds = {}
     for i in range(0, len(claims), BATCH):
         batch = claims[i:i+BATCH]
