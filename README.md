@@ -1,236 +1,219 @@
-# TextQuant — finding the claims that are true and incomplete
+# TextQuant
 
-HackMIT 2026 · Arrowstreet greenwashing challenge
+**Turning corporate environmental disclosure into a cross-sectional, point-in-time
+signal.**
 
-Corporate environmental reports rarely lie. They disclose a figure and omit the one thing
-that would let you check it: the accounting method, the boundary, the absolute total, the
-definition of the term. This tool reads a sustainability report, finds the passages where
-that pattern clusters, classifies individual claims by *which* disclosure is missing, and
-tells an analyst what to ask for.
+Sustainability reports rarely contain false statements. They state a figure and omit the
+one thing that would verify it — the accounting method, the boundary, the absolute total,
+the definition of the term. Finding that by hand does not scale: 50–120 pages per report,
+hundreds of reports per portfolio.
 
-It is a triage tool, not a verdict machine. Everything it outputs is a pointer to a
-passage and a reason, with the company's own words shown first.
+TextQuant reads any corporate environmental report and outputs:
+
+1. **Claim labels** — every quantified claim classified by *which* disclosure is missing
+2. **Passage locations** — where in the document that pattern clusters
+3. **Report-level indicators** — a comparable score per report, with its fragility stated
+
+Company-agnostic by construction: the rules encode greenhouse-gas accounting concepts —
+scope boundaries, market- versus location-based methods, intensity versus absolute
+figures — not any issuer's vocabulary. Nothing is trained on the validation corpus.
 
 ---
 
-## Quick start
+## Workflow
+
+```
+Any environmental report (PDF)
+        │
+        ▼
+  1. PREPROCESSING          text extraction, sentence split, prose filter
+        │
+        ▼
+  2. FEATURE EXTRACTION     7 language signals + 9 accounting rules per sentence
+        │
+        ▼
+  3. ANOMALY DETECTION      flag density vs the report's own baseline → passages
+        │
+        ▼
+  4. CLAIM EXTRACTION       atomic, independently checkable assertions
+        │
+        ▼
+  5. THREE PARALLEL TRACKS ──┬── Track R   rule decision tree     0 model calls
+                             ├── Track S   lift statistics        0 model calls
+                             └── Track D   language model
+        │                            │
+        │                            ▼
+        │                    CONSENSUS LAYER
+        │                    agreement between tracks as a
+        │                    label-free confidence signal
+        ▼
+  6. SIGNAL OUTPUT          labels · passages · indicators · recommended action
+```
+
+### Why three tracks
+
+Each fails differently, so agreement between them is itself a signal.
+
+| Track | Method | Fails when |
+| --- | --- | --- |
+| **R** rule-based | 22-node decision tree, 26 terminals | the wording is novel |
+| **S** statistical | how often a term appears with its required qualifier | the corpus is small |
+| **D** language model | four-class rubric, batched | it hallucinates or drifts |
+
+Track R also carries the explanation: every label ships with the root-to-leaf path that
+produced it, so a judgment can be audited instead of trusted.
+
+### Four labels
+
+Graded alignment, modelled on credit-rating scales rather than a binary verdict.
+
+| | Meaning |
+| --- | --- |
+| **A** | Substantiated: concrete figure with its scope or method stated |
+| **B** | Vague: no verifiable quantity |
+| **C** | Technically true but incomplete: the figure is real, the basis is missing |
+| **D** | Contradicted by other disclosed information |
+
+Class C is the target: what a keyword scanner cannot find, and what a model without a
+rubric misses entirely.
+
+---
+
+## How the algorithm was optimised
+
+Eleven rounds, each one measure → change → re-measure. Five shipped, six rejected on
+their own numbers.
+
+| # | Round | Measured result | Outcome |
+| --- | --- | --- | --- |
+| 1 | Drop a flag that fires on 8–16% of all sentences | Detection threshold fell 27–42%; passages found rose 11 → 13 | **Shipped** |
+| 2 | Add specificity, balanced accuracy, F-beta to the metrics | Exposed that class-C recall of 1.000 was bought with specificity of 0.550 | **Shipped** |
+| 3 | Accept named facility boundaries, not only GHG-Protocol scope terms | Accuracy 0.690 → 0.793; two thirds of the gain from code, one third from a label fix | **Shipped** |
+| 4 | Show grade fragility next to the grade | Band edges moved ±12 points flip 2 of 3 reports; the ranking never flips | **Shipped** |
+| 5 | Per-mechanism recommended action | Turns a label into a request that can be sent to investor relations | **Shipped** |
+| 6 | Feed rule flags to the model as structured hints | 20% more input tokens, 3.5 points *lower* accuracy | Rejected |
+| 7 | Context cross-check: clear a flag if the qualifier appears nearby | C balanced accuracy 0.868 → 0.697; of 8 claims cleared, 1 was right | Rejected |
+| 8 | Ensemble voting across tracks | 16 combinations tested, none beat the rule tree alone | Rejected |
+| 9 | Abstain when confidence is low | 5 confidence proxies, none beats random abstention | Rejected |
+| 10 | Unsupervised rule scoring from corpus statistics | Ranked the one provably useful rule as least suspicious | Rejected |
+| 11 | Conventional small-data ML (TF-IDF + linear SVM) | 0.483 under leave-one-out, against a 0.448 majority baseline | Rejected |
+
+Round 7 is worth keeping for its cause: *global operations* recurs every few sentences,
+so proximity never proved the qualifier bound to that figure — the pattern the rule was
+built to catch.
+
+A per-rule ablation found the tree over-specified: 15 of 26 terminals can be removed with
+**no change to any metric**, while removing the next four costs 0.103 accuracy. Rules
+that are individually insignificant are not jointly useless.
+
+---
+
+## How it was validated
+
+The validation corpus is three reports: 4,084 sentences, 390 extracted claims, 29
+blind-annotated labels. The methods below were chosen so conclusions survive that sample
+size rather than depend on it.
+
+| Method | What it protects against |
+| --- | --- |
+| Specificity and balanced accuracy, not recall alone | Recall bought by over-flagging |
+| Friedman test + Nemenyi critical difference | Declaring a winner among tied methods |
+| Pairwise McNemar with Holm correction | Multiple-comparison inflation |
+| Paired bootstrap, 2,000 resamples | Judging a rule off one point estimate |
+| Leave-one-out cross-validation | Scoring a baseline on its own training data |
+| Parameter sweeps over every threshold | A result that holds at one cut-off only |
+| Random-abstention control | Mistaking fewer answers for better answers |
+
+**Not established.** The five methods are statistically indistinguishable here: Friedman
+χ² = 4.82, p = 0.31, the whole field inside one critical difference, no pair surviving
+McNemar. The rule tree scores highest; that is not a claim of superiority.
+
+**Established.** The rule tree costs **0 model calls** against 21 per 100 claims, and
+every label carries an auditable path. Without the four-class rubric a language model
+finds **no** class-C claims at all — precision, recall and F1 exactly zero — while
+overall accuracy stays respectable, because always answering B scores well.
+
+Needing no accuracy claim at all: **57 of 59 quantified commitments cannot be
+progress-checked from the report that states them.**
+
+---
+
+## Repository
+
+```
+TextQuant/
+├── app_v2.py                  interface: analyst terminal layout
+├── app.py                     earlier single-column version, still runs
+├── run_all.sh                 pipeline; `verify` mode reproduces every number
+├── requirements.txt
+│
+├── src/
+│   ├── ingest.py              PDF → text
+│   ├── signals.py             sentence split, prose filter, 7 language signals
+│   ├── rules.py               9 accounting rules, regex only
+│   ├── anomaly.py             flag density → passages worth reading
+│   ├── extract.py             atomic claim extraction
+│   │
+│   ├── tree.py                Track R — decision tree, 26 terminals, 0 model calls
+│   ├── termstats.py           Track S — lift statistics, 0 model calls
+│   ├── llm.py                 Track D — the single cached model entry point
+│   ├── consensus.py           agreement between the three tracks
+│   │
+│   ├── evaluate.py            metrics and confusion matrix
+│   ├── stats_tests.py         Friedman, Nemenyi, McNemar, mean ranks
+│   ├── ablation.py            per-rule contribution with bootstrap intervals
+│   ├── sensitivity.py         parameter sweeps
+│   ├── abstain.py             abstention curves against a random control
+│   ├── cost.py                calls, tokens and dollars per 100 claims
+│   ├── trajectory.py          quantified commitments and their evidence
+│   ├── indicators.py          report-level indicators and grade
+│   └── pipeline.py            live path for an uploaded PDF
+│
+├── data/                      all derived data, committed
+├── cache/                     175 model responses, committed for reproducibility
+├── figures/
+└── workflow/                  the written specifications the code was built against
+```
+
+---
+
+## Running it
 
 ```bash
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/streamlit run app_v2.py
 ```
 
-That is the whole setup, and it was verified end to end: a clone into an empty directory
-plus a fresh virtualenv from `requirements.txt` starts the interface and renders every
-panel. **No API key is required** and the page works with the network
-off: every LLM call in the demo path is served from the `cache/` directory, keyed by a
-hash of the prompt. This was tested by running the app with `ANTHROPIC_API_KEY` unset.
-
-The cache is committed (175 responses, 732 KB), so the evaluation table can be
-reproduced without a key and without spending anything: `./run_all.sh` re-runs every
-LLM step against it. The calls it holds cost about $0.45 in total.
-
-Uploading your own PDF does need a key for the claim-extraction stage. Without one, the
-upload still runs the four deterministic stages (parse, rules, signals, passage
-detection) and says so rather than failing.
-
-### API keys
-
-The project calls exactly one external service: the Anthropic API, for claim extraction
-and for the LLM comparison baselines. Supply the key either as an environment variable
-or in a `.env` file at the repository root:
+No API key needed: every model call on the demo path is served from `cache/`, so the
+interface works with the network off.
 
 ```bash
-cp .env.example .env     # then fill in ANTHROPIC_API_KEY
+./run_all.sh verify     # reproduce every number above: no PDFs, no key, no spend
 ```
 
-`.env` is excluded by `.gitignore` and is loaded without any extra dependency; an already
-exported environment variable always wins. `requirements.txt` holds Python packages only
-— never credentials.
+`verify` clears `ANTHROPIC_API_KEY` first, so a cache miss fails loudly instead of
+quietly spending money. Tested by cloning into an empty directory: all 20 steps completed
+and every published figure matched.
 
-**The three source PDFs are not in this repository.** They are published corporate
-reports and are excluded by `.gitignore`. Everything derived from them — sentences,
-signals, claims, labels, metrics — is committed under `data/`, so a fresh clone runs the
-full interface without them.
+Analysing a new PDF needs a key for the extraction stage — copy `.env.example` to `.env`.
+Without one, the upload still runs the four deterministic stages and says so.
 
----
-
-## What the numbers are
-
-Evaluated on 29 human-annotated claims (A 6 / B 13 / C 10). Majority-class baseline is
-0.448.
-
-| Method | API calls | accuracy | balanced acc | C precision | C recall | C specificity |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Rule tree** | **0** | **0.793** | **0.756** | 0.667 | 1.000 | 0.737 |
-| LLM, full rubric | 21 / 100 claims | 0.690 | 0.656 | 0.636 | 0.700 | 0.789 |
-| LLM + rule hints | 21 / 100 claims | 0.655 | 0.601 | 0.538 | 0.700 | 0.684 |
-| LLM, short rubric | 21 / 100 claims | 0.586 | 0.615 | 0.000 | 0.000 | 1.000 |
-| TF-IDF + LinearSVC (LOO-CV) | 0 | 0.483 | 0.382 | 0.375 | 0.300 | 0.737 |
-
-**We do not claim the rule tree is more accurate.** A Friedman test across the 29 claims
-gives χ² = 4.82, p = 0.31; the Nemenyi critical difference is 1.13 mean-rank units and the
-whole field of five methods fits inside it. No pair survives a McNemar test with Holm
-correction (0 of 20 comparisons reach p < 0.05). At n = 29 the standard error on accuracy
-is about 0.075.
-
-What *is* established: the rule tree costs **0 API calls and ~1 ms per 100 claims**, where
-the LLM methods cost 21 calls and $0.037–$0.051 per 100 claims; every decision carries a
-root-to-leaf rule path; and it locates the passage in the report.
-
-One result does not depend on any accuracy claim. Without the four-class rubric the model
-detects **no** accounting-misleading claims at all — precision, recall and F1 are exactly
-zero while overall accuracy stays at 0.586, because "always answer B" scores well on this
-distribution. Accuracy alone hides that completely.
+Source PDFs are not in the repository (published corporate documents, excluded by
+`.gitignore`). Everything derived from them is committed, so a fresh clone runs.
 
 ---
 
-## The strongest single finding
+## Limits
 
-**57 of 59 quantified commitments cannot be progress-checked from the report that makes
-them.** A target is stated; the figures needed to measure progress against it are not in
-the same document. This is structural, label-free, and reproducible from
-`data/trajectory_audit.json`.
-
----
-
-## What we measured and then removed
-
-Five ideas were built, measured, and rejected on evidence. They are kept in the repository
-with their numbers because a negative result that cost work is still a result.
-
-| Idea | Measured outcome | Status |
-| --- | --- | --- |
-| Feed rule flags to the LLM as structured hints | 20% more input tokens, 3.5 points *lower* accuracy than the same prompt without hints | Not shipped; kept as an ablation row |
-| One near-universal flag (`SCOPE_BOUNDARY_UNCLEAR`, fires on 8–16% of sentences) | Removing it lowered the anomaly threshold 27–42% and *raised* passages found from 11 to 13 | Removed from the detector |
-| Context cross-check: clear a flag if the missing qualifier appears in nearby sentences | C balanced accuracy 0.868 → 0.821 (±1 sentence) → 0.697 (±5). Of 8 claims cleared, 1 was correct | Implemented, disabled by default (`CROSS_CHECK_ENABLED = False`) |
-| Ensemble voting across methods | 16 voting and cascade combinations tested; none beat the rule tree alone (best 0.759 vs 0.793) | Not shipped |
-| Abstention on low confidence | Five confidence proxies tested, including the tree's own CLOSED/OPEN node reliability. None beats random abstention at the 95th percentile; the best is one claim short of significance (17/20, needs 18/20) | Not shipped |
-
-The cross-check failure has a specific cause worth stating: words like `global operations`
-recur every few sentences in these reports, so proximity does not imply the qualifier
-binds to that figure — which is exactly the misleading pattern the rule was meant to catch.
-
----
-
-## What the rule layer is actually made of
-
-The decision tree has 26 terminals. A per-rule ablation with a paired bootstrap
-(`src/ablation.py`) shows how much of that is load-bearing:
-
-- **5 terminals never fire** on the 390-claim corpus.
-- **10 more fire but are never exercised by the gold set**, so their contribution is
-  unmeasured.
-- Removing all 15 changes the metrics by **exactly nothing** (26 → 12 terminals, identical
-  accuracy, recall and specificity).
-- Removing the next 4 costs 0.103 accuracy and drops C recall from 1.000 to 0.400.
-
-Only one terminal (`INTENSITY_NO_ABSOLUTE`) has a bootstrap interval excluding zero on its
-own. **Individually insignificant is not the same as jointly useless**: the four rules
-whose intervals straddle zero collectively carry a tenth of the accuracy. Single-factor
-ablation cannot see joint contribution, and an earlier draft of this README drew the wrong
-conclusion from it.
-
----
-
-## The disclosure grade, and how far to trust it
-
-Three sub-scores averaged into a letter (`src/indicators.py`). The thresholds were chosen
-by the author, not fitted to outcome data — there is no dataset of correctly graded
-reports to calibrate against.
-
-A parameter sweep (`src/sensitivity.py`) is the only honest defence available, and it says
-two different things about two different claims:
-
-- **The letter is fragile.** Shifting all three band edges by up to 12 points flips two of
-  the three reports. One report sits 3 points from a boundary. The interface shows this
-  margin next to the letter.
-- **The ordering is not.** Across every sweep — band edges, promise-balance ceiling,
-  verification target — the ranking of the three reports never changes once.
-
-One sub-score is inert: sweeping the promise-balance ceiling from 3 to 8 leaves every
-letter unchanged on this corpus. It is kept for reports with extreme promise-to-
-verification ratios, and the interface says it contributes no separation here.
-
----
-
-## How a document is processed
-
-```
-PDF
- └─ ingest            pypdf → raw text
-    └─ signals        sentence split, prose filter (4373 → 4084), 7 scalars per sentence
-       ├─ rules       9 accounting regexes per sentence                     0 LLM calls
-       ├─ anomaly     8 high-precision flags → smoothed density → mean+2σ   0 LLM calls
-       │              → 13 passages across 3 reports
-       ├─ extract     atomic claims (batched, capped at 150 sentences)      LLM
-       │  └─ tree     22 nodes / 26 terminals → label + mechanism + path    0 LLM calls
-       └─ trajectory  quantified targets, paired with observations          LLM
-          └─ indicators + grade + recommended action
-```
-
-Four mechanisms are distinguished: `UNDISCLOSED_METHOD`, `UNDISCLOSED_BOUNDARY`,
-`SELECTIVE_AGGREGATION`, `UNDEFINED_TERM`. Each one maps to a concrete request an analyst
-can send to investor relations, shown in the interface under **What to ask for**.
-
----
-
-## Reproducing
-
-```bash
-./run_all.sh verify     # reproduce every reported number: no PDFs, no key, no spend
-./run_all.sh offline    # skips the LLM steps, still needs the PDFs
-./run_all.sh            # everything, needs the PDFs and a key
-```
-
-`verify` is the one to run from a fresh clone. It skips only the two stages that need the
-source PDFs (`ingest`, `extract`) — their outputs are committed — and clears
-`ANTHROPIC_API_KEY` first, so a cache miss fails loudly instead of quietly spending money.
-This was tested by cloning into an empty directory and running it: all 20 steps completed
-and every published figure matched, including accuracy for all five methods, the ablation
-baseline, the Friedman p value and the cost table.
-
-`src/expand_gold.py` is the only module outside the script; it regenerates the blind
-annotation sheet and is run on demand.
-
----
-
-## Known limitations
-
-- **29 labelled claims.** This is the binding constraint on everything. It is why no
-  metaheuristic feature-selection search was run over the rule set: with 2²⁶ possible
-  subsets and 29 items, a wrapper search would fit noise, which the feature-selection
-  literature warns about explicitly.
-- **10 of 19 accounting rules have never been checked against a human label.** A
-  stratified annotation sheet for them is generated by `src/expand_gold.py`; it is not yet
-  filled in. The sheet is blind by construction — the answer key it writes alongside is
-  excluded from the repository and regenerated deterministically from a fixed seed.
-- **C recall is 1.000, and that is not yet falsifiable.** No gold claim exists that the
-  tree labels A and a human labels C. Four probe claims are included in the annotation
-  sheet specifically to look for such cases.
-- **Single reporting year per company.** No comparison against prior disclosures.
-- **No external evidence retrieval.** Claims are checked against the document that makes
-  them, which is why the 57-of-59 result exists. Checking against life-cycle assessments,
-  filings or certification records is the obvious next step and is not implemented.
-- **Publication dates are PDF creation dates** read from file metadata, not verified
-  publication dates. Source URLs are absent rather than guessed.
-- The label taxonomy is single-assignment. A claim that omits both a method and a boundary
-  gets one label, decided by traversal order.
-
----
-
-## Repository map
-
-| Path | What it is |
-| --- | --- |
-| `app_v2.py` | The interface (analyst terminal layout) |
-| `app.py` | Earlier single-column version, kept working |
-| `src/tree.py` | The rule decision tree, 0 LLM calls |
-| `src/rules.py` `src/signals.py` `src/anomaly.py` | Deterministic feature and passage layers |
-| `src/extract.py` `src/llm.py` | Claim extraction and the single cached LLM entry point |
-| `src/evaluate.py` `src/stats_tests.py` `src/plot_stats.py` | Metrics, significance tests, figures |
-| `src/ablation.py` `src/sensitivity.py` `src/cost.py` | Rule audit, parameter sweeps, cost accounting |
-| `src/abstain.py` `src/rule_evidence.py` | The two experiments that produced negative results |
-| `src/pipeline.py` | Live upload path |
-| `workflow/` | The written specifications the code was built against |
-| `data/` | All derived data, committed so the interface runs from a clean clone |
+- **Validation scale.** 29 blind labels. The method is general; the measured accuracy is
+  not a population estimate. No feature-selection search was run for that reason — 2²⁶
+  candidate subsets against 29 items fits noise.
+- **Rule coverage.** 10 of 19 class-C rules have never met a human label.
+  `src/expand_gold.py` generates a stratified blind sheet for them.
+- **Recall is not yet falsifiable.** No label exists where the tree says A and a human
+  says C. Four probe claims are in that sheet to look for one.
+- **Single reporting year**, so no comparison against prior disclosures.
+- **No external evidence.** Claims are checked against the document that makes them —
+  the reason the 57-of-59 result exists. Retrieval against filings and certification
+  records is the next step.
+- **One label per claim**, chosen by traversal order when several apply.
