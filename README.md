@@ -145,7 +145,7 @@ Two annotation sheets, two jobs:
 
 ## How the algorithm was optimised
 
-Eleven rounds, each one measure → change → re-measure. Five shipped, six rejected on
+Thirteen rounds, each one measure → change → re-measure. Six shipped, seven rejected on
 their own numbers.
 
 | # | Round | Measured result | Outcome |
@@ -239,6 +239,7 @@ TextQuant/
 ├── app.py                     earlier single-column version, still runs
 ├── run_all.sh                 pipeline; `verify` mode reproduces every number
 ├── requirements.txt
+├── LICENSE
 │
 ├── src/
 │   ├── ingest.py              PDF → text
@@ -272,7 +273,8 @@ TextQuant/
 │   └── annotations.csv        model pre-labels; no gold column, by design
 ├── cache/                     175 model responses, committed for reproducibility
 ├── figures/
-└── workflow/                  the written specifications the code was built against
+├── workflow/                  the written specifications the code was built against
+└── submission/                the write-up, in Markdown, Word and PDF
 ```
 
 ---
@@ -292,8 +294,8 @@ interface works with the network off.
 ```
 
 `verify` clears `ANTHROPIC_API_KEY` first, so a cache miss fails loudly instead of
-quietly spending money. Tested by cloning into an empty directory: all 20 steps completed
-and every published figure matched.
+quietly spending money. Tested by cloning into an empty directory: all 23 steps completed
+and every published number matched.
 
 Analysing a new PDF needs a key for the extraction stage — copy `.env.example` to `.env`.
 Without one, the upload still runs the four deterministic stages and says so.

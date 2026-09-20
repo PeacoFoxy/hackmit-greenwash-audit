@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 *.pdf
+!submission/*.pdf
 data/discarded/
 data/uploads/
 data/upload_history.json
@@ -9,3 +10,7 @@ data/upload_history.json
 !.env.example
 .streamlit/secrets.toml
 data/expand_key.json
+
+# Claude Code tooling: symlinks into .venv, dangling in a fresh clone
+.claude/
+.agents/

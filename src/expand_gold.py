@@ -79,9 +79,29 @@ def sample():
     return picked, by_terminal, targets
 
 
-def write(picked):
-    """The blind CSV carries no terminal or tree label; the key is stored separately."""
+def already_annotated(path):
+    """Filled labels in an existing sheet. Overwriting these would destroy annotation."""
+    if not path.exists():
+        return 0
+    with path.open(newline="", encoding="utf-8") as fh:
+        return sum(1 for r in csv.DictReader(fh) if (r.get("my_label") or "").strip())
+
+
+def write(picked, force=False):
+    """The blind CSV carries no terminal or tree label; the key is stored separately.
+
+    The sheet is written in place, so re-running this module would silently wipe work
+    that cannot be recovered: the annotation is a person reading 20 claims, and the
+    answer key is gitignored. Refuse instead, unless the caller says otherwise.
+    """
     blind = DATA / "blind_expand.csv"
+    filled = already_annotated(blind)
+    if filled and not force:
+        raise SystemExit(
+            f"{blind.name} already holds {filled} filled labels and would be overwritten.\n"
+            f"Those labels are the stratified blind test; regenerating discards them.\n"
+            f"Run `python -m src.merge_expand` to score the sheet you have, or pass "
+            f"--force to draw a new sample anyway.")
     with blind.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["claim_id", "company", "text", "my_label", "note"])
@@ -100,8 +120,9 @@ def write(picked):
 
 
 def main():
+    import sys
     picked, by_terminal, targets = sample()
-    blind, key = write(picked)
+    blind, key = write(picked, force="--force" in sys.argv[1:])
 
     print(f"{len(targets)} class-C terminals have never been tested by gold. Quota:\n")
     print(f"{'stratum':<32}{'sampled':>8}")
