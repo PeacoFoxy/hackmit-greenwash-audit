@@ -32,10 +32,39 @@ DATA = ROOT / "data"
 VALID = {"A", "B", "C", "D", "SKIP"}
 
 
+def load_key():
+    """The answer key: which terminal each sampled claim came from, and what the tree said.
+
+    It is gitignored on purpose -- it holds the tree's predictions, and an annotator who
+    reads it is no longer blind. That makes a fresh clone unable to score the sheet, so
+    when the file is absent it is derived instead: expand_gold.sample() runs off a fixed
+    SEED over committed data, and reproduces the same draw in the same order.
+
+    Verified on 2026-09-20: the regenerated key matches the committed sheet claim for
+    claim, including order. If the tree or the corpus changes the draw will move, and
+    the mismatch check below turns that into an error rather than silent nonsense.
+    """
+    path = DATA / "expand_key.json"
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8")), "file"
+    from src.expand_gold import sample
+    picked, _, _ = sample()
+    return [{"claim_id": r["claim_id"], "terminal": r["terminal"],
+             "tree_label": r["label"], "pool": r["pool"]} for r in picked], "regenerated"
+
+
 def load():
     rows = list(csv.DictReader((DATA / "blind_expand.csv").open(encoding="utf-8")))
-    key = {k["claim_id"]: k
-           for k in json.loads((DATA / "expand_key.json").read_text(encoding="utf-8"))}
+    key_rows, origin = load_key()
+    key = {k["claim_id"]: k for k in key_rows}
+
+    unknown = [r["claim_id"] for r in rows if r["claim_id"] not in key]
+    if unknown:
+        raise SystemExit(
+            f"The answer key ({origin}) does not cover {len(unknown)} claims in "
+            f"blind_expand.csv, starting with {unknown[0]}.\n"
+            f"A regenerated key only matches while the tree and the corpus are "
+            f"unchanged. Re-draw the sample and re-annotate, or restore the key file.")
     out, missing = [], 0
     for r in rows:
         lab = (r.get("my_label") or "").strip().upper()
