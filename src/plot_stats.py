@@ -100,44 +100,42 @@ def plot_cd(sig):
 
 
 # ------------------------------------------------------------------ 图 2
-def bootstrap_ci(correct, n_boot=2000, seed=0):
-    rng = np.random.default_rng(seed)
-    idx = rng.integers(0, len(correct), size=(n_boot, len(correct)))
-    means = correct[idx].mean(axis=1)
-    return np.percentile(means, [2.5, 97.5])
-
-
-def plot_metric_dots(sig, met):
-    """每个方法四个指标各一个点 + accuracy 的 bootstrap 区间。"""
+def plot_boxplot(sig):
+    """折级分布箱线图：每个方法一个箱，点是单折得分；标题给 Friedman 统计量。"""
     methods = sig["methods"]
-    preds = met["predictions"]
-    corr = {m: np.array([1 if p[m] == p["gold"] else 0 for p in preds]) for m in methods}
-    keys = [("accuracy", "Accuracy"), ("balanced_accuracy", "Balanced accuracy"),
-            ("macro_f1", "Macro F1"), ("C_f1", "F1 on technically-true claims")]
-    marks = ["o", "s", "^", "D"]
+    panels = [("accuracy", "Accuracy"), ("balanced_accuracy", "Balanced accuracy"),
+              ("C_f1", "F1 on technically-true claims")]
+    order = np.argsort(sig["fold_level"]["balanced_accuracy"]["mean_ranks"])  # 好的在左
+    labels = [SHOW.get(methods[i], methods[i]) for i in order]
 
-    fig, ax = plt.subplots(figsize=(9, 4.8))
-    x = np.arange(len(methods))
-    for (k, label), mk in zip(keys, marks):
-        ax.plot(x, [met["metrics"][m][k] for m in methods], mk, label=label,
-                markersize=7, alpha=0.85, linestyle="none")
-
-    for i, m in enumerate(methods):          # accuracy 的 95% bootstrap 区间
-        lo, hi = bootstrap_ci(corr[m])
-        ax.vlines(i, lo, hi, color=ACCENT, alpha=0.35, lw=6, zorder=0)
-
-    ax.set_xticks(x, [SHOW.get(m, m) for m in methods], rotation=18, ha="right")
-    ax.set_ylim(0, 1)
-    ax.set_ylabel("Score")
-    ax.grid(axis="y", alpha=0.2)
-    ax.legend(loc="lower right", fontsize=8, frameon=False)
-    ax.set_title("Four metrics per method; the band is a 95% bootstrap interval on accuracy\n"
-                 "The intervals overlap everywhere — consistent with the Friedman result.",
-                 fontsize=10, loc="left")
-    for side in ("top", "right"):
-        ax.spines[side].set_visible(False)
-    fig.tight_layout()
-    fig.savefig(FIGS / "method_metrics_dots.png", dpi=DPI)
+    fig, axes = plt.subplots(1, len(panels), figsize=(14, 5.2), sharey=True)
+    rng = np.random.default_rng(0)
+    for ax, (key, title) in zip(axes, panels):
+        r = sig["fold_level"][key]
+        S = np.array(r["scores"])[:, order]
+        bp = ax.boxplot(S, widths=0.6, showfliers=False, patch_artist=True,
+                        medianprops=dict(color="#222", lw=1.6))
+        for patch in bp["boxes"]:
+            patch.set(facecolor="#dbe4f7", edgecolor="#4269d0", lw=1.1)
+        for i in range(S.shape[1]):          # 单折得分，抖动后叠在箱上
+            x = np.full(S.shape[0], i + 1) + rng.normal(0, 0.06, S.shape[0])
+            ax.plot(x, S[:, i], "o", ms=3, alpha=0.35, color="#4269d0")
+        ax.set_title(f"{title}\nFriedman χ² = {r['chi2']:.1f}, p = {r['p']:.1e}",
+                     fontsize=10)
+        ax.set_xticks(range(1, len(methods) + 1), labels, rotation=22, ha="right",
+                      fontsize=8)
+        ax.grid(axis="y", alpha=0.2)
+        for side in ("top", "right"):
+            ax.spines[side].set_visible(False)
+    axes[0].set_ylabel("Score on a held-out fold")
+    axes[0].set_ylim(-0.05, 1.05)
+    fig.suptitle("Repeated stratified 5-fold resampling of the 29 gold claims "
+                 f"({sig['fold_level']['accuracy']['n_folds']} folds), methods ordered by "
+                 "mean rank\nFolds are redraws of the same 29 items, so the p values are "
+                 "optimistic; read the overlap of the boxes, not the exponent.",
+                 fontsize=10, x=0.01, ha="left")
+    fig.tight_layout(rect=(0, 0, 1, 0.9))
+    fig.savefig(FIGS / "friedman_boxplot.png", dpi=DPI)
     plt.close(fig)
 
 
@@ -184,9 +182,9 @@ def plot_mcnemar(sig):
 def main():
     sig, met = load()
     plot_cd(sig)
-    plot_metric_dots(sig, met)
+    plot_boxplot(sig)
     plot_mcnemar(sig)
-    print("→ figures/friedman_cd.png, figures/method_metrics_dots.png, "
+    print("→ figures/friedman_boxplot.png, figures/friedman_cd.png, "
           "figures/pairwise_mcnemar.png")
 
 

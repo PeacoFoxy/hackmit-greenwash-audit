@@ -79,6 +79,8 @@ def run():
     out = {"methods": methods, "correct_counts": M.sum(0).tolist(),
            "accuracy": (M.mean(0)).tolist(), "friedman": fr,
            "critical_difference": cd, "pairwise_mcnemar": pairs,
+           "fold_level": {m: fold_friedman(preds, methods, metric=m)
+                          for m in ("accuracy", "balanced_accuracy", "C_f1")},
            "note": ("Blocks are the individual gold claims; the observation is whether a "
                     "method labelled that claim correctly. With binary observations the "
                     "Friedman test coincides with Cochran's Q.")}
@@ -100,5 +102,57 @@ def run():
     return out
 
 
+# ------------------------------------------------ 折级分布（箱线图与 Friedman）
+def fold_scores(predictions, methods, metric="balanced_accuracy", k=5, repeats=10, seed=0):
+    """重复分层 k 折：每折对每个方法算一次指标，得到可画箱线图的分布。
+
+    方法不需要训练（预测已固定），折只用于重采样评估。同一批 29 条被反复切分，
+    折与折之间并不独立，因此这里的 p 值偏乐观 —— 结论以箱体重叠程度为准。
+    """
+    import warnings
+    from src.evaluate import score
+    warnings.filterwarnings("ignore", message="y_pred contains classes not in y_true")
+    rng = np.random.default_rng(seed)
+    y = np.array([p["gold"] for p in predictions])
+    idx_by_label = {lab: np.where(y == lab)[0] for lab in set(y)}
+
+    blocks = []
+    for _ in range(repeats):
+        folds = [[] for _ in range(k)]
+        for lab, idx in idx_by_label.items():          # 分层：每折内类别比例接近
+            order = rng.permutation(idx)
+            for i, j in enumerate(order):
+                folds[i % k].append(j)
+        for f in folds:
+            if len(f) < 2:
+                continue
+            row = []
+            for m in methods:
+                yt = [predictions[i]["gold"] for i in f]
+                yp = [predictions[i][m] for i in f]
+                row.append(score(yt, yp)[metric])
+            blocks.append(row)
+    return np.array(blocks)
+
+
+def fold_friedman(predictions, methods, metric="balanced_accuracy", **kw):
+    S = fold_scores(predictions, methods, metric=metric, **kw)
+    stat, p = friedmanchisquare(*[S[:, i] for i in range(S.shape[1])])
+    ranks = np.array([rankdata(-row, method="average") for row in S])
+    return {"metric": metric, "scores": S.tolist(), "chi2": float(stat), "p": float(p),
+            "n_folds": int(S.shape[0]), "mean_ranks": ranks.mean(0).tolist(),
+            "median": np.median(S, axis=0).tolist(),
+            "critical_difference": critical_difference(len(methods), S.shape[0])}
+
+
+def print_folds(out):
+    print(f"\n折级分布（重复分层 5 折 × 10 次 = {out['fold_level']['accuracy']['n_folds']} 折）")
+    for metric, r in out["fold_level"].items():
+        print(f"  {metric:<18} chi2={r['chi2']:7.2f}  p={r['p']:.2e}  "
+              f"CD={r['critical_difference']:.3f}")
+        print(f"    median: " + "  ".join(f"{m}={v:.3f}"
+              for m, v in zip(out["methods"], r["median"])))
+
+
 if __name__ == "__main__":
-    run()
+    print_folds(run())
