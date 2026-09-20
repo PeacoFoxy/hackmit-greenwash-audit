@@ -22,7 +22,7 @@ import numpy as np
 from src.termstats import RE_TOKEN, STOPWORDS
 from src.tree import TERMINALS, classify
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]   # repo root: src/experiments/ -> .
 DATA = ROOT / "data"
 
 # mechanism -> the qualifier it is missing (table name in term_risk.json)

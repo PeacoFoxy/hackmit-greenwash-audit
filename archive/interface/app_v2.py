@@ -13,12 +13,12 @@ import streamlit as st
 from src.indicators import (band_margin, cached_bundle, claims_needing_review,
                             grade_components,
                             indicators_for, promises_per_verification, verification_density)
-from src.claim_api import classify_claim, is_cached
-from src.pipeline import MAX_CLAIM_SENTENCES, analyse
+from archive.interface.claim_api import classify_claim, is_cached
+from archive.interface.pipeline import MAX_CLAIM_SENTENCES, analyse
 from src.tree import classify as tree_classify
-from src.report_map import load_regions, region_option, render_map, span_caption
-from src import history
-from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_FRAGILITY_NOTE,
+from archive.interface.report_map import load_regions, region_option, render_map, span_caption
+from archive.interface import history
+from archive.interface.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_FRAGILITY_NOTE,
                          GRADE_READINGS, GRADE_TOOLTIP, HEADLINE_STRIP, HISTORY_PANEL,
                          INDICATORS, INERT_SUBSCORE_NOTE, KEY_TERMS,
                          KEY_TERM_QUALIFIER, PASSAGE_PANEL, STAGES, TREE_MARKS,
@@ -27,7 +27,7 @@ from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_FRAGILITY_NO
                          recommended_action, say_source, say_terminal,
                          term_hover, term_pill, why_flagged)
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]   # repo root: archive/interface/ -> .
 CORPUS = ROOT / "corpus"
 DATA = ROOT / "data"
 FIGS = ROOT / "figures"

@@ -14,13 +14,13 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import streamlit as st
 
-from src.claim_api import classify_claim, is_cached
-from src.pipeline import analyse
+from archive.interface.claim_api import classify_claim, is_cached
+from archive.interface.pipeline import analyse
 from src.plot_signals import draw_overlay
-from src.ui_text import (MECHANISM_COLORS, PRESETS, label_badge, mechanism_badge,
+from archive.interface.ui_text import (MECHANISM_COLORS, PRESETS, label_badge, mechanism_badge,
                          mechanism_of_region, say_mechanism, why_flagged)
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]   # repo root: archive/interface/ -> .
 CORPUS = ROOT / "corpus"
 DATA = ROOT / "data"
 FIGS = ROOT / "figures"

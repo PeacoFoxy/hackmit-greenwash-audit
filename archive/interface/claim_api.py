@@ -11,7 +11,7 @@ import re
 
 from src.rubric import RUBRIC
 from src.llm import ask
-from src.ui_text import PRESETS
+from archive.interface.ui_text import PRESETS
 
 MODEL = "claude-sonnet-4-6"
 CACHE = "cache"

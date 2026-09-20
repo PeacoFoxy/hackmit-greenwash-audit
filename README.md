@@ -233,48 +233,64 @@ progress-checked from the report that states them.**
 
 ## Repository
 
+This submission is the algorithm and the backend. A Streamlit interface was built and
+then set aside; it lives in `archive/` so it is not mistaken for the product.
+
 ```
 TextQuant/
-├── app_v2.py                  interface: analyst terminal layout
-├── app.py                     earlier single-column version, still runs
-├── run_all.sh                 pipeline; `verify` mode reproduces every number
+├── run_all.sh                 the pipeline; `verify` reproduces every number offline
 ├── requirements.txt
+├── REFERENCES.md              the reading behind the algorithm
 ├── LICENSE
 │
-├── src/
+├── src/                       the algorithm and the backend
 │   ├── ingest.py              PDF → text
 │   ├── signals.py             sentence split, prose filter, 7 language signals
 │   ├── rules.py               9 accounting rules, regex only
+│   ├── filter.py              390 claims → the 89 worth scoring
 │   ├── anomaly.py             flag density → passages worth reading
 │   ├── extract.py             atomic claim extraction
+│   ├── segment_patch.py       windows long text for extraction
 │   │
 │   ├── tree.py                Track R — decision tree, 26 terminals, 0 model calls
 │   ├── termstats.py           Track S — lift statistics, 0 model calls
 │   ├── llm.py                 Track D — the single cached model entry point
+│   ├── rubric.py              the four-class rubric both tracks share
 │   ├── consensus.py           agreement between the three tracks
+│   ├── test_tree.py           12 regression cases from the spec, all must pass
 │   │
 │   ├── headline.py            the four corpus-level percentages above
+│   ├── indicators.py          report-level indicators and grade
 │   ├── evaluate.py            metrics and confusion matrix
 │   ├── stats_tests.py         Friedman, Nemenyi, McNemar, mean ranks
 │   ├── ablation.py            per-rule contribution with bootstrap intervals
-│   ├── sensitivity.py         parameter sweeps
-│   ├── abstain.py             abstention curves against a random control
+│   ├── sensitivity.py         parameter sweeps over every threshold
 │   ├── expand_gold.py         stratified blind sheet over never-exercised rules
 │   ├── merge_expand.py        per-rule verdicts, kept separate from the random gold
-│   ├── evidence_tier.py       the confidence proxy that failed its correct control
 │   ├── cost.py                calls, tokens and dollars per 100 claims
 │   ├── trajectory.py          quantified commitments and their evidence
-│   ├── indicators.py          report-level indicators and grade
-│   └── pipeline.py            live path for an uploaded PDF
+│   ├── coverage.py            claims that carry signal but fire no rule
+│   ├── prelabel.py            model pre-labels for the indicators, never gold
+│   ├── plot_*.py              the committed figures
+│   │
+│   └── experiments/           built, measured, rejected — and still run by `verify`
+│       ├── README.md          what each one tried and what the measurement said
+│       ├── abstain.py         5 confidence proxies, none beat random abstention
+│       ├── rule_evidence.py   unsupervised rule scoring; self-refuting
+│       └── evidence_tier.py   the proxy that failed its correct control
 │
 ├── data/                      all derived data, committed
 │   ├── gold.json              29 random blind labels — the accuracy estimate
 │   ├── blind_expand.csv       20 stratified blind labels — the per-rule test
 │   └── annotations.csv        model pre-labels; no gold column, by design
 ├── cache/                     175 model responses, committed for reproducibility
-├── figures/
-├── workflow/                  the written specifications the code was built against
-└── submission/                the write-up, in Markdown, Word and PDF
+├── figures/                   every figure the README and the write-up cite
+├── corpus/sources.json        provenance of the three reports (PDFs not committed)
+├── workflow/DECISION_TREE.md  the spec src/tree.py was built against
+│
+└── archive/                   kept as record, imported by nothing
+    ├── README.md
+    └── interface/             the Streamlit UI, both versions, and their specs
 ```
 
 ---
@@ -283,22 +299,21 @@ TextQuant/
 
 ```bash
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
-.venv/bin/streamlit run app_v2.py
-```
-
-No API key needed: every model call on the demo path is served from `cache/`, so the
-interface works with the network off.
-
-```bash
 ./run_all.sh verify     # reproduce every number above: no PDFs, no key, no spend
 ```
+
+No API key needed. Every model call on this path is served from `cache/`, so the whole
+thing runs with the network off.
 
 `verify` clears `ANTHROPIC_API_KEY` first, so a cache miss fails loudly instead of
 quietly spending money. Tested by cloning into an empty directory: all 23 steps completed
 and every published number matched.
 
 Analysing a new PDF needs a key for the extraction stage — copy `.env.example` to `.env`.
-Without one, the upload still runs the four deterministic stages and says so.
+Without one, the four deterministic stages still run.
+
+The archived interface also still runs, from the repository root:
+`.venv/bin/streamlit run archive/interface/app_v2.py`.
 
 Source PDFs are not in the repository (published corporate documents, excluded by
 `.gitignore`). Everything derived from them is committed, so a fresh clone runs.

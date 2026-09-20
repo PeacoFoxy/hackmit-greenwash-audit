@@ -7,9 +7,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
-from src.ui_text import MECHANISM_COLORS, mechanism_of_region, say_mechanism
+from archive.interface.ui_text import MECHANISM_COLORS, mechanism_of_region, say_mechanism
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]   # repo root: archive/interface/ -> .
 DATA = ROOT / "data"
 MIN_MARK_PX = 8
 

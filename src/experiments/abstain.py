@@ -28,7 +28,7 @@ from src.tree import classify
 
 warnings.filterwarnings("ignore", message="y_pred contains classes not in y_true")
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]   # repo root: src/experiments/ -> .
 DATA = ROOT / "data"
 N_RANDOM = 2000
 LLM_METHODS = ("baseline2", "pipeline", "pipeline_allflags")
