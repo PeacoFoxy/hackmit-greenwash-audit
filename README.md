@@ -178,19 +178,20 @@ can send to investor relations, shown in the interface under **What to ask for**
 ## Reproducing
 
 ```bash
-./run_all.sh            # full pipeline, needs the PDFs and an API key
-./run_all.sh offline    # deterministic layers only, no key needed
+./run_all.sh verify     # reproduce every reported number: no PDFs, no key, no spend
+./run_all.sh offline    # skips the LLM steps, still needs the PDFs
+./run_all.sh            # everything, needs the PDFs and a key
 ```
 
-`run_all.sh` regenerates the core data files but **does not cover every module**. Missing
-from it: `prelabel`, `trajectory`, `ablation`, `sensitivity`, `rule_evidence`, `cost`,
-`stats_tests`, `plot_stats`, `plot_trajectory`, `plot_discard`, `indicators`,
-`expand_gold`. Their outputs are committed, so the interface does not depend on running
-them; run each with `python -m src.<module>`.
+`verify` is the one to run from a fresh clone. It skips only the two stages that need the
+source PDFs (`ingest`, `extract`) — their outputs are committed — and clears
+`ANTHROPIC_API_KEY` first, so a cache miss fails loudly instead of quietly spending money.
+This was tested by cloning into an empty directory and running it: all 20 steps completed
+and every published figure matched, including accuracy for all five methods, the ablation
+baseline, the Friedman p value and the cost table.
 
-Since the PDFs are not in the repository, a fresh clone cannot run `run_all.sh` at all.
-It can run the interface, which was verified by cloning into a clean directory and
-starting the app with no API key.
+`src/expand_gold.py` is the only module outside the script; it regenerates the blind
+annotation sheet and is run on demand.
 
 ---
 
