@@ -11,7 +11,7 @@ import streamlit as st
 
 from src.indicators import cached_bundle, grade_components, indicators_for
 from src.report_map import load_regions, region_option, render_map, span_caption
-from src.ui_text import (KEY_TERMS, KEY_TERM_QUALIFIER, term_hover, term_pill,
+from src.ui_text import (STAGES, KEY_TERMS, KEY_TERM_QUALIFIER, term_hover, term_pill,
                          mechanism_badge, say_mechanism, why_flagged,
                          GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS,
                          GRADE_TOOLTIP, INDICATORS)
@@ -31,6 +31,12 @@ st.set_page_config(page_title="TextQuant", layout="wide")
 def load_bundles():
     """三份预加载报告，按公司切好 claims / sentences / audit。"""
     return cached_bundle()
+
+
+@st.cache_data
+def load_gaps():
+    path = DATA / "trajectory_gaps.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
 
 
 @st.cache_data
@@ -168,7 +174,21 @@ left, right = st.columns([3, 7])
 with left:
     panel("Related sources", "Up to 5 headlines with source and date; offline-safe")
     st.container(height=LEFT_SPACER_PX, border=False)   # 把执行状态推到底部
-    panel("Running", "One line per pipeline stage, then a collapsed summary with runtime")
+    with st.container(border=True):
+        st.markdown("**Running**")
+        stage_values = {
+            "sentences": sum(len(b["sentences"]) for b in bundles.values()) if not bundle
+                         else len(bundle["sentences"]),
+            "regions": len(load_regions([selected["company"]] if selected else None)),
+            "claims": len(bundle["claims"]) if bundle else sum(len(b["claims"])
+                                                               for b in bundles.values()),
+            "commitments": len(bundle["audit"]) if bundle else sum(len(b["audit"])
+                                                                   for b in bundles.values()),
+        }
+        for name, detail in STAGES:
+            st.caption(f"✓ {name} — {detail.format(**stage_values)}")
+        st.caption("Cached run — these stages were computed ahead of time and read from disk, "
+                   "so the page works with no network.")
 
 # ---------------------------------------------------------- RIGHT 70%
 with right:
@@ -199,7 +219,44 @@ with right:
     if not values:
         st.caption("Pick a company above, or upload a report, to fill these in.")
 
-    panel("Commitment trajectory", "Target vs observed pace, or the honest empty state")
+    with st.container(border=True):
+        st.markdown("**Commitment trajectory**")
+        audit = bundle["audit"] if bundle else [a for b in bundles.values() for a in b["audit"]]
+        gaps = [g for g in load_gaps()
+                if not selected or g["company"] == selected["company"]]
+        n_targets = len(audit)
+        n_zero = sum(a["reason"] == "no_observations" for a in audit)
+        n_one = sum(a["reason"] == "only_one_observation" for a in audit)
+        n_two = sum(a["outcome"] == "kept" for a in audit)
+
+        # 少于三个观测点不拟合趋势线（§4.4 / §9）
+        plottable = [g for g in gaps if g.get("observations_found", 2) >= 3]
+
+        if n_targets == 0:
+            st.caption("No quantified commitments were extracted from this report.")
+        else:
+            st.markdown(f"**{n_zero + n_one} of {n_targets} quantified commitments have no "
+                        f"trackable history in this report.** A target is stated; the figures "
+                        f"needed to check progress against it are not in the same document.")
+            st.dataframe([
+                {"observations in the same report": "none", "commitments": n_zero,
+                 "share": f"{n_zero / n_targets:.0%}"},
+                {"observations in the same report": "one", "commitments": n_one,
+                 "share": f"{n_one / n_targets:.0%}"},
+                {"observations in the same report": "two or more", "commitments": n_two,
+                 "share": f"{n_two / n_targets:.0%}"},
+            ], hide_index=True)
+
+            if plottable:
+                st.image(str(FIGS / "trajectory_gap.png"))
+            elif gaps:
+                st.caption(f"{len(gaps)} commitment(s) reached two observations — too few "
+                           "points to fit a pace line, so none is drawn. The pairs are "
+                           "listed below for inspection.")
+                for g in gaps:
+                    st.caption(f"{g['metric']}: {g['prior_year']} {g['prior_value']:g} → "
+                               f"{g['latest_year']} {g['latest_value']:g}, target "
+                               f"{g['target_value']:g}{g['unit']} by {g['target_year']}")
 
     # ---- Where to look（步骤 4：从 v1 原样移植）
     with st.container(border=True):
