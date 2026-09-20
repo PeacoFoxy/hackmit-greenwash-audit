@@ -130,3 +130,80 @@ def label_badge(label):
 def mechanism_badge(mechanism):
     color = MECHANISM_BADGE_COLOR.get(mechanism, "gray")
     return f":{color}-badge[{say_mechanism(mechanism)}]"
+
+
+# ============================================================ FRONTEND_V2 用语
+# §4.2 四个指标：标签、tooltip（含公式）、格式化
+INDICATORS = [
+    {"key": "claims_needing_review", "label": "Claims needing review",
+     "help": "Share of quantified claims that are technically true but incomplete. "
+             "Formula: C claims / (A claims + C claims) × 100.",
+     "fmt": lambda v: f"{v:.0f}%"},
+    {"key": "promises_per_verification", "label": "Promises per verification",
+     "help": "Forward-looking statements per mention of third-party assurance. "
+             "Formula: sum(future markers) / sum(verification mentions).",
+     "fmt": lambda v: f"{v:.2f}"},
+    {"key": "verification_density", "label": "Verification density",
+     "help": "Sentences between assurance mentions. "
+             "Formula: sentences / sum(verification mentions).",
+     "fmt": lambda v: f"1 in {v:.0f}"},
+    {"key": "commitments_trackable", "label": "Commitments trackable",
+     "help": "Targets with two or more observations of the same metric in the same report. "
+             "Formula: targets with ≥ 2 observations / targets × 100.",
+     "fmt": lambda v: f"{v:.0f}%"},
+]
+
+# §3.2 评级读数
+GRADE_READINGS = {
+    "A": "Figures are scoped and verifiable",
+    "B": "Mostly scoped, some gaps",
+    "C": "Technically true, materially thin",
+    "D": "Claims contradict available figures",
+}
+GRADE_BADGE_COLOR = {"A": "green", "B": "blue", "C": "orange", "D": "red"}
+GRADE_TOOLTIP = ("Measures how completely this report discloses the basis for its own figures. "
+                 "It is not a judgment of environmental performance or of the company.")
+# §5 必须逐字出现在展开块里
+GRADE_DISCLAIMER = (
+    "The thresholds in this grade were chosen by the author, not fitted to outcome data. "
+    "There is no dataset of \"correctly graded\" reports to calibrate against. The grade is a "
+    "transparent, reproducible summary of three measured quantities — not a validated rating.")
+
+# §3.4 阶段名（不是模块名）
+STAGES = [
+    ("Reading the PDF", "{sentences:,} sentences"),
+    ("Checking disclosures", "9 rules, {regions} passages flagged"),
+    ("Measuring language", "7 signals"),
+    ("Classifying claims", "{claims} claims"),
+    ("Extracting commitments", "{commitments} targets"),
+]
+
+# §4.1 关键术语词表：没有 term_risk.json 时的回落（不带 lift 着色）
+KEY_TERMS = ["matched", "carbon-free", "market-based", "location-based", "diverted",
+             "inset", "replenished", "net zero", "carbon neutral", "offset", "REC", "PPA",
+             "PUE", "water positive", "renewable energy", "intensity"]
+
+KEY_TERM_QUALIFIER = {          # 每个术语用哪一类限定语判断 lift
+    "matched": "method_stated", "carbon-free": "method_stated",
+    "market-based": "method_stated", "location-based": "method_stated",
+    "renewable energy": "method_stated", "REC": "method_stated", "PPA": "method_stated",
+    "net zero": "scope_stated", "carbon neutral": "scope_stated", "offset": "scope_stated",
+    "intensity": "scope_stated", "diverted": "verifier_named", "inset": "verifier_named",
+    "replenished": "verifier_named", "PUE": "verifier_named",
+    "water positive": "verifier_named",
+}
+
+
+def term_pill(term, lift=None, count=None):
+    """§4.1 术语药丸：lift < 1 用警示色，其余中性；无 lift 时一律中性。"""
+    if lift is None:
+        return f":gray-badge[{term}]"
+    color = "orange" if lift < 1 else "gray"
+    return f":{color}-badge[{term}]"
+
+
+def term_hover(term, lift, count, cooc):
+    if lift is None:
+        return f"{term}: appears {count} times"
+    share = f"{100 * cooc / count:.0f}%" if count else "0%"
+    return f"{term}: appears {count} times, qualifier present in {share}"

@@ -9,6 +9,9 @@ from pathlib import Path
 
 import streamlit as st
 
+from src.indicators import cached_bundle, grade_components, indicators_for
+from src.ui_text import INDICATORS
+
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
 DATA = ROOT / "data"
@@ -18,6 +21,12 @@ FIGS = ROOT / "figures"
 LEFT_SPACER_PX = 220
 
 st.set_page_config(page_title="TextQuant", layout="wide")
+
+
+@st.cache_data
+def load_bundles():
+    """三份预加载报告，按公司切好 claims / sentences / audit。"""
+    return cached_bundle()
 
 
 @st.cache_data
@@ -82,6 +91,10 @@ with bar_grade:
             st.caption("Placeholder — the full computation lands in step 3 "
                        "(FRONTEND_V2.md §5).")
 
+bundles = load_bundles()
+bundle = bundles.get(selected["company"]) if selected else None
+values = indicators_for(bundle) if bundle else None
+
 st.divider()
 
 # ============================================================ TWO COLUMNS
@@ -99,15 +112,11 @@ with right:
                              "tinted by lift")
 
     ind = st.columns(4)
-    for col, (label, helptext) in zip(ind, [
-        ("Claims needing review", "Share of quantified claims that are technically true "
-                                  "but incomplete"),
-        ("Promises per verification", "Forward-looking statements per assurance mention"),
-        ("Verification density", "Sentences between assurance mentions"),
-        ("Commitments trackable", "Targets with enough history in the same report to "
-                                  "check progress"),
-    ]):
-        col.metric(label, "—", help=helptext)
+    for col, spec in zip(ind, INDICATORS):
+        value = spec["fmt"](values[spec["key"]]) if values else "—"
+        col.metric(spec["label"], value, help=spec["help"])
+    if not values:
+        st.caption("Pick a company above, or upload a report, to fill these in.")
 
     panel("Commitment trajectory", "Target vs observed pace, or the honest empty state")
     panel("Where to look", "Report map: flagged regions by mechanism, plus the passage picker")
