@@ -1,0 +1,41 @@
+{
+ "screening": {
+  "sentences": 4084,
+  "claims_surfaced": 89,
+  "attention_pct": 2.179236043095005,
+  "reduction_pct": 97.820763956905,
+  "passages": 13,
+  "passage_sentences": 210,
+  "passage_pct": 5.142017629774731
+ },
+ "incomplete": {
+  "A": 9,
+  "B": 42,
+  "C": 38,
+  "denominator": 47,
+  "raw_pct": 80.85106382978724,
+  "from_validated_rules": 28,
+  "from_unvalidated_rules": 10,
+  "corrected_lo_pct": 45.05531914893618,
+  "corrected_hi_pct": 49.48357246342947,
+  "note": "Raw count is an upper bound. Correcting each C by the measured precision of the rule behind it (28 at 0.667, 10 at 0.25) gives 45-49%."
+ },
+ "unverifiable": {
+  "targets": 59,
+  "trackable": 2,
+  "unverifiable": 57,
+  "pct": 96.61016949152543
+ },
+ "agreement": {
+  "both_labelled": 28,
+  "agree": 22,
+  "disagree": 6,
+  "pct": 78.57142857142857,
+  "states": {
+   "RULE_ONLY": 1,
+   "CONTESTED": 6,
+   "CONFIRMED": 22,
+   "NO_TRACK_D": 60
+  }
+ }
+}

@@ -71,6 +71,7 @@ run src.cost          "cache/                  → data/cost.json              c
 run src.abstain       "metrics + tree          → data/abstain.json           abstention curves"
 run src.merge_expand  "blind_expand.csv        → gold_expand + expand_eval   per-rule blind verdicts"
 run src.evidence_tier "gold + gold_expand      → data/evidence_tier.json     confound check"
+run src.headline      "everything              → data/headline.json          4 corpus-level percentages"
 
 # ---------------------------------------------------------- Stage 9  full mode only
 if [ "$MODE" = "all" ]; then

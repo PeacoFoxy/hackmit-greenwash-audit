@@ -18,6 +18,23 @@ method, the scope boundary, the absolute total, the definition of the term.
 
 **Repository:** https://github.com/PeacoFoxy/hackmit-greenwash-audit
 
+## What it found
+
+Four numbers, one formula each, reproducible offline with no API key.
+
+| | Formula | Result |
+| :-- | :-- | --: |
+| Document that needs no analyst attention | `1 − claims surfaced / sentences` | **97.8%** |
+| Quantified commitments that cannot be progress-checked | `targets with <2 observations / targets` | **96.6%** |
+| Rule tree and language model reaching the same label | `CONFIRMED / (CONFIRMED + CONTESTED)` | **78.6%** |
+| Quantified claims technically true but missing their basis | `C / (A + C)`, precision-corrected | **45–49%** |
+
+The last one is an interval on purpose. `C / (A + C)` comes to 80.9%, but class-C
+precision is 0.667 on validated rules and 0.250 on the ten the blind test exposed, so
+quoting the raw count would carry that error into the headline. Each C is weighted by the
+measured precision of the rule behind it. It is the only one of the four that depends on
+the classifier being right — the other three are counting facts.
+
 ---
 
 # Inspiration

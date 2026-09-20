@@ -18,6 +18,24 @@ Company-agnostic by construction: the rules encode greenhouse-gas accounting con
 scope boundaries, market- versus location-based methods, intensity versus absolute
 figures — not any issuer's vocabulary. Nothing is trained on the validation corpus.
 
+### What it found
+
+Four numbers, one formula each, reproducible offline (`python -m src.headline`).
+
+| | Formula | Result |
+| --- | --- | --- |
+| Document that needs no analyst attention | `1 − claims surfaced / sentences` | **97.8%** (89 of 4,084) |
+| Quantified commitments that cannot be progress-checked | `targets with <2 observations / targets` | **96.6%** (57 of 59) |
+| Rule tree and language model reaching the same label | `CONFIRMED / (CONFIRMED + CONTESTED)` | **78.6%** (22 of 28) |
+| Quantified claims that are technically true but missing their basis | `C / (A + C)`, corrected for measured rule precision | **45–49%** |
+
+The fourth is reported as an interval, and the raw count is not the headline. `C / (A+C)`
+comes to 80.9%, but class-C precision is 0.667 on validated rules and 0.250 on the ten
+the blind test exposed — carrying the raw count forward would import that error. Each C
+is instead weighted by the measured precision of the rule that produced it. It is the
+only one of the four that depends on the classifier being right; the other three are
+counting facts.
+
 ---
 
 ## Workflow
