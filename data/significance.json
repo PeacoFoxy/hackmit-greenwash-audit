@@ -1,0 +1,141 @@
+{
+ "methods": [
+  "tree_only",
+  "baseline1",
+  "baseline2",
+  "pipeline",
+  "pipeline_allflags"
+ ],
+ "correct_counts": [
+  23,
+  17,
+  20,
+  19,
+  18
+ ],
+ "accuracy": [
+  0.7931034482758621,
+  0.5862068965517241,
+  0.6896551724137931,
+  0.6551724137931034,
+  0.6206896551724138
+ ],
+ "friedman": {
+  "chi2": 4.818181818181715,
+  "p": 0.30646698397176503,
+  "mean_ranks": [
+   2.689655172413793,
+   3.206896551724138,
+   2.9482758620689653,
+   3.0344827586206895,
+   3.1206896551724137
+  ],
+  "n_blocks": 29,
+  "k_methods": 5,
+  "unanimous_blocks": 9
+ },
+ "critical_difference": 1.1327403452050133,
+ "pairwise_mcnemar": [
+  {
+   "b01": 12,
+   "b10": 6,
+   "discordant": 18,
+   "p": 0.237884521484375,
+   "a": "tree_only",
+   "b": "baseline1",
+   "rank_gap": 0.5172413793103448,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 5,
+   "b10": 2,
+   "discordant": 7,
+   "p": 0.453125,
+   "a": "tree_only",
+   "b": "baseline2",
+   "rank_gap": 0.25862068965517215,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 5,
+   "b10": 1,
+   "discordant": 6,
+   "p": 0.21875,
+   "a": "tree_only",
+   "b": "pipeline",
+   "rank_gap": 0.34482758620689635,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 6,
+   "b10": 1,
+   "discordant": 7,
+   "p": 0.125,
+   "a": "tree_only",
+   "b": "pipeline_allflags",
+   "rank_gap": 0.43103448275862055,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 5,
+   "b10": 8,
+   "discordant": 13,
+   "p": 0.5810546875,
+   "a": "baseline1",
+   "b": "baseline2",
+   "rank_gap": 0.2586206896551726,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 6,
+   "b10": 8,
+   "discordant": 14,
+   "p": 0.79052734375,
+   "a": "baseline1",
+   "b": "pipeline",
+   "rank_gap": 0.1724137931034484,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 7,
+   "b10": 8,
+   "discordant": 15,
+   "p": 1.0,
+   "a": "baseline1",
+   "b": "pipeline_allflags",
+   "rank_gap": 0.0862068965517242,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 1,
+   "b10": 0,
+   "discordant": 1,
+   "p": 1.0,
+   "a": "baseline2",
+   "b": "pipeline",
+   "rank_gap": 0.0862068965517242,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 3,
+   "b10": 1,
+   "discordant": 4,
+   "p": 0.625,
+   "a": "baseline2",
+   "b": "pipeline_allflags",
+   "rank_gap": 0.1724137931034484,
+   "p_holm": 1.0
+  },
+  {
+   "b01": 2,
+   "b10": 1,
+   "discordant": 3,
+   "p": 1.0,
+   "a": "pipeline",
+   "b": "pipeline_allflags",
+   "rank_gap": 0.0862068965517242,
+   "p_holm": 1.0
+  }
+ ],
+ "note": "Blocks are the individual gold claims; the observation is whether a method labelled that claim correctly. With binary observations the Friedman test coincides with Cochran's Q."
+}
