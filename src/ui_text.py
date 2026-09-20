@@ -50,6 +50,30 @@ FLAG_MECHANISM = {
 }
 
 
+# 每个 v1 flag 的名词短语说明。用名词短语而非动词，计数为 1 时也不会出现主谓不一致。
+FLAG_WHY = {
+    "SCOPE2_METHOD_UNSTATED": "clean-electricity figures with no accounting method stated "
+                              "(market-based or location-based)",
+    "MATCHING_LANGUAGE": "electricity described as matched or purchased rather than consumed",
+    "OFFSET_UNDISCLOSED": "neutrality claims with no role stated for offsets",
+    "NO_BASELINE_YEAR": "percentage changes with no baseline year",
+    "GRID_MISMATCH_RISK": "purchase instruments with no grid or region named",
+    "FUTURE_PROMISE_NO_MILESTONE": "future targets with no interim milestone",
+    "CHERRY_PICKED_METRIC": "efficiency metrics not stated as fleet averages",
+    "WATER_ACCOUNTING_VAGUE": "water-positive or replenishment wording with no method named",
+}
+
+
+def why_flagged(flag_types, n_sentences):
+    """把区间的 flag 计数写成一段用户读得懂的解释。"""
+    if not flag_types:
+        return (f"These {n_sentences} sentences sit above this report's flag density, "
+                f"but no single pattern dominates.")
+    parts = [f"{n} × {FLAG_WHY.get(f, f.lower())}"
+             for f, n in sorted(flag_types.items(), key=lambda kv: (-kv[1], kv[0]))]
+    return f"Within this passage of {n_sentences} sentences — " + "; ".join(parts) + "."
+
+
 def mechanism_of_region(flag_types):
     """区间里命中最多的 flag 决定它的机制；并列时取字母序，保证渲染稳定。"""
     if not flag_types:

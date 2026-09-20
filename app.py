@@ -13,7 +13,8 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import streamlit as st
 
-from src.ui_text import (MECHANISM_COLORS, PRESETS, mechanism_of_region, say_mechanism)
+from src.ui_text import (MECHANISM_COLORS, PRESETS, mechanism_of_region, say_mechanism,
+                         why_flagged)
 
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
@@ -97,6 +98,11 @@ def region_option(r):
     return f"{r['company']} · {pct}% into report · {say_mechanism(r['mechanism'])}"
 
 
+def badge(text, color):
+    return (f"<span style='background:{color};color:white;padding:2px 10px;"
+            f"border-radius:10px;font-size:0.85em'>{text}</span>")
+
+
 def placeholder(note):
     st.info(f"_{note}_ — not built yet (FRONTEND.md build order).")
 
@@ -163,7 +169,40 @@ st.session_state.selected_region = regions[choice]
 
 st.divider()
 st.header("What this passage says, and what it leaves out")
-placeholder("Passage detail: quote with the trigger highlighted, then why it was flagged")
+
+region = st.session_state.get("selected_region")
+if not region:
+    st.info("Pick a passage above.")
+else:
+    source = next((s for s in sources if s["company"] == region["company"]), None)
+    start_pct, end_pct = (p * 100 for p in region["rel_pos"])
+
+    st.markdown(
+        badge(say_mechanism(region["mechanism"]),
+              MECHANISM_COLORS.get(region["mechanism"], "#9498a0"))
+        + f" &nbsp;**{region['company']}** &nbsp;·&nbsp; {start_pct:.0f}–{end_pct:.0f}% "
+          f"into the report &nbsp;·&nbsp; {region['n_sentences']} sentences",
+        unsafe_allow_html=True)
+
+    # 公司自己的话在前，解释在后
+    st.markdown(f"> {region['text']}")
+    st.caption("Excerpt, first 400 characters of the passage.")
+
+    st.markdown("**Why it was flagged**")
+    st.write(why_flagged(region.get("flag_types", {}), region["n_sentences"]))
+
+    if source:
+        st.caption(f"Source: {source['company']} {source['doc_type'].replace('_', ' ')} "
+                   f"({Path(source['file']).name}) · published {source['published_date']}")
+
+    with st.expander("Technical detail"):
+        st.write({"sent_id_range": [region["start_sent_id"], region["end_sent_id"]],
+                  "rel_pos": region["rel_pos"],
+                  "n_sentences": region["n_sentences"],
+                  "peak_flag_density": region["peak"],
+                  "threshold": region["threshold"],
+                  "flag_counts": region.get("flag_types", {}),
+                  "mechanism": region["mechanism"]})
 
 st.divider()
 st.header("Try a claim")
