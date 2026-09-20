@@ -9,6 +9,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_recall_fscore_support
 from src.llm import ask
+from src.rubric import RUBRIC, SHORT_RUBRIC
 from src.tree import classify as tree_classify
 
 FIG_DIR = "figures"
@@ -17,19 +18,6 @@ os.makedirs(FIG_DIR, exist_ok=True)
 BATCH = 5
 LABELS = ["A", "B", "C", "D"]
 
-SHORT_RUBRIC = """Label definitions:
-A = specific and verifiable.
-B = vague and unfalsifiable.
-C = literally true but misleading through accounting choices.
-D = contradicts other information."""
-
-RUBRIC = """Label definitions:
-A = Substantiated: concrete numbers AND states the scope or accounting method; independently verifiable.
-B = Vague: unfalsifiable rhetoric with no checkable content.
-C = Accounting_misleading: literally true but uses accounting choices to mislead, e.g. market-based
-    "matched" wording, reporting only intensity metrics without absolute amounts, no baseline year,
-    future pledges without interim milestones, or unstated coverage boundary.
-D = Contradicted: conflicts with other information."""
 
 FLAG_NOTE = """Each claim also carries rule-based hints from a regex pass: "flags" (triggered risk patterns)
 and "vagueness" (0-1, higher = vaguer).

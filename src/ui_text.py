@@ -82,12 +82,16 @@ def mechanism_of_region(flag_types):
     return FLAG_MECHANISM.get(top)
 
 
-LABEL_COLORS = {
-    "A": "#3ca951",
-    "B": "#9498a0",
-    "C": "#efb118",
-    "D": "#ff725c",
+# Streamlit 原生 badge 的颜色名（:green-badge[...]），不是 CSS 色值
+LABEL_BADGE_COLOR = {"A": "green", "B": "gray", "C": "orange", "D": "red"}
+MECHANISM_BADGE_COLOR = {
+    "UNDISCLOSED_METHOD": "blue",
+    "UNDISCLOSED_BOUNDARY": "orange",
+    "SELECTIVE_AGGREGATION": "red",
+    "UNDEFINED_TERM": "green",
 }
+
+
 
 
 def say_mechanism(mechanism):
@@ -118,3 +122,11 @@ PRESETS = [
     {"button": "Per-unit only", "expected": "C", "highlight": "per shipped unit",
      "claim": "We reduced emissions per shipped unit by 39% compared to 2019"},
 ]
+
+def label_badge(label):
+    return f":{LABEL_BADGE_COLOR.get(label, 'gray')}-badge[{say_label(label)}]"
+
+
+def mechanism_badge(mechanism):
+    color = MECHANISM_BADGE_COLOR.get(mechanism, "gray")
+    return f":{color}-badge[{say_mechanism(mechanism)}]"

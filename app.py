@@ -1,4 +1,4 @@
-"""TextQuant — Streamlit 界面。FRONTEND.md 步骤 1：骨架（页头、输入行、七个空区块）。
+"""TextQuant — Streamlit 界面。FRONTEND.md 步骤 1-4：页头、输入行、报告地图、段落详情、claim 分类器。
 
 运行: streamlit run app.py
 离线自检: env -u ANTHROPIC_API_KEY streamlit run app.py
@@ -13,12 +13,14 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import streamlit as st
 
-from src.ui_text import (MECHANISM_COLORS, PRESETS, mechanism_of_region, say_mechanism,
-                         why_flagged)
+from src.claim_api import classify_claim, is_cached
+from src.ui_text import (MECHANISM_COLORS, PRESETS, label_badge, mechanism_badge,
+                         mechanism_of_region, say_mechanism, why_flagged)
 
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
 DATA = ROOT / "data"
+FIGS = ROOT / "figures"
 MIN_MARK_PX = 8
 
 st.set_page_config(page_title="TextQuant", layout="wide")
@@ -47,6 +49,28 @@ def load_regions():
         r["mechanism"] = mechanism_of_region(r.get("flag_types", {}))
     regions.sort(key=lambda r: (r["company"], r["rel_pos"][0]))
     return regions
+
+
+@st.cache_data
+def load_company_stats():
+    """公司级 PVR 等指标，按 PVR 从高到低。"""
+    rows = json.loads((DATA / "anomaly_company.json").read_text(encoding="utf-8"))
+    return sorted(rows, key=lambda r: -r["pvr"])
+
+
+@st.cache_data
+def load_audit():
+    return json.loads((DATA / "trajectory_audit.json").read_text(encoding="utf-8"))
+
+
+@st.cache_data
+def load_gaps():
+    return json.loads((DATA / "trajectory_gaps.json").read_text(encoding="utf-8"))
+
+
+@st.cache_data
+def load_metrics():
+    return json.loads((DATA / "metrics.json").read_text(encoding="utf-8"))
 
 
 @st.cache_data
@@ -98,9 +122,19 @@ def region_option(r):
     return f"{r['company']} · {pct}% into report · {say_mechanism(r['mechanism'])}"
 
 
-def badge(text, color):
-    return (f"<span style='background:{color};color:white;padding:2px 10px;"
-            f"border-radius:10px;font-size:0.85em'>{text}</span>")
+def run_claim(text):
+    """分类一条 claim，结果存进 session_state。任何失败都转成提示，不抛 traceback。"""
+    cached = is_cached(text)
+    try:
+        r = classify_claim(text)
+        st.session_state.claim_result = {**r, "claim": text.strip()}
+    except Exception as exc:
+        st.session_state.claim_result = {
+            "error": ("Live analysis unavailable — showing nothing rather than guessing. "
+                      f"({type(exc).__name__}) "
+                      + ("This claim is not in the local cache."
+                         if not cached else "Cached result could not be read.")),
+            "claim": text.strip()}
 
 
 def placeholder(note):
@@ -177,12 +211,9 @@ else:
     source = next((s for s in sources if s["company"] == region["company"]), None)
     start_pct, end_pct = (p * 100 for p in region["rel_pos"])
 
-    st.markdown(
-        badge(say_mechanism(region["mechanism"]),
-              MECHANISM_COLORS.get(region["mechanism"], "#9498a0"))
-        + f" &nbsp;**{region['company']}** &nbsp;·&nbsp; {start_pct:.0f}–{end_pct:.0f}% "
-          f"into the report &nbsp;·&nbsp; {region['n_sentences']} sentences",
-        unsafe_allow_html=True)
+    st.markdown(f"{mechanism_badge(region['mechanism'])} &nbsp; **{region['company']}** "
+                f"· {start_pct:.0f}–{end_pct:.0f}% into the report "
+                f"· {region['n_sentences']} sentences")
 
     # 公司自己的话在前，解释在后
     st.markdown(f"> {region['text']}")
@@ -206,21 +237,139 @@ else:
 
 st.divider()
 st.header("Try a claim")
-st.caption("Presets: " + " · ".join(p["button"] for p in PRESETS))
-placeholder("Claim classifier: four presets from cache plus a free-text box")
+st.caption("The four presets read from the local cache, so they work with no network. "
+           "Free text is a live call.")
 
+with st.container(horizontal=True):
+    for i, p in enumerate(PRESETS):
+        if st.button(p["button"], key=f"preset_{i}"):
+            run_claim(p["claim"])
+
+free_text = st.text_area("Or paste a claim", height=80,
+                         placeholder="Paste one sentence from a sustainability report …")
+if st.button("Classify", key="classify_free"):
+    if free_text.strip():
+        run_claim(free_text)
+    else:
+        st.info("Paste a claim first, or press one of the presets.")
+
+result = st.session_state.get("claim_result")
+if result and result.get("error"):
+    st.warning(result["error"])
+elif result:
+    st.markdown(f"> {result['claim']}")
+    st.markdown(label_badge(result["label"])
+                + ("  :gray-badge[from cache]" if result["cached"] else ""))
+    st.write(result["reasoning"])
+    with st.expander("Raw model output"):
+        st.code(result["raw"], language="json")
+
+# ---------------------------------------------------- 4 · cross-company signals
 st.divider()
 st.header("How the three reports compare")
-placeholder("Cross-company signals: promises per verification, three-panel figure")
 
+company_stats = load_company_stats()
+for col, s in zip(st.columns(len(company_stats)), company_stats):
+    col.metric("Promises per verification", f"{s['pvr']:.2f}", label_visibility="visible",
+               help=f"{s['future_total']} forward-looking markers, "
+                    f"{s['verification_total']} verification mentions")
+    col.caption(s["company"])
+
+most, least = company_stats[0], company_stats[-1]
+st.caption(
+    f"{most['company']} makes a forward-looking claim every {most['future_interval']:.0f} "
+    f"sentences and mentions third-party verification every "
+    f"{most['verification_interval']:.0f}. {least['company']} is the reverse: every "
+    f"{least['future_interval']:.0f} sentences against every "
+    f"{least['verification_interval']:.0f}."
+)
+
+st.image(str(FIGS / "sig_overlay_all.png"))
+st.caption("Promises in blue, third-party verification in green, on shared axes. Two reports "
+           "pivot to verification in the back half; the third has no such section.")
+
+# ------------------------------------------------ 5 · commitment verifiability
 st.divider()
 st.header("Can these commitments be progress-checked?")
-placeholder("Commitment verifiability: the 57-of-59 headline and the bar chart")
 
+audit = load_audit()
+n_targets = len(audit)
+n_zero = sum(a["reason"] == "no_observations" for a in audit)
+n_one = sum(a["reason"] == "only_one_observation" for a in audit)
+n_kept = sum(a["outcome"] == "kept" for a in audit)
+n_untrackable = n_zero + n_one
+
+st.subheader(f"{n_untrackable} of {n_targets} quantified commitments cannot be "
+             f"progress-checked from the report that makes them.")
+
+st.dataframe([
+    {"observations found in the same report": "none",
+     "commitments": n_zero, "share": f"{n_zero / n_targets:.0%}"},
+    {"observations found in the same report": "one",
+     "commitments": n_one, "share": f"{n_one / n_targets:.0%}"},
+    {"observations found in the same report": "two (enough to measure pace)",
+     "commitments": n_kept, "share": f"{n_kept / n_targets:.0%}"},
+], hide_index=True)
+
+st.image(str(FIGS / "commitment_verifiability.png"))
+
+with st.expander(f"The {n_kept} that did produce a trajectory are extraction errors"):
+    for g in load_gaps():
+        st.markdown(f"**{g['company']} — {g['metric']}**  \n"
+                    f"{g['prior_year']}: {g['prior_value']:g} → {g['latest_year']}: "
+                    f"{g['latest_value']:g}, target {g['target_value']:g}{g['unit']} "
+                    f"by {g['target_year']} · status `{g['status']}`")
+    st.write("The extractor read a baseline-relative reduction as a level, and a prior-year "
+             "achieved value as a target. That is the same ambiguity the rule layer exists to "
+             "detect — a figure whose boundary is not stated can be read two ways. Counting "
+             "these as real trajectories would overstate what the corpus supports, so the "
+             "honest figure is zero verifiable trajectories out of "
+             f"{n_targets} commitments.")
+
+# ------------------------------------------------------------ 6 · evaluation
 st.divider()
 st.header("How it was evaluated")
-placeholder("Ablation table, confusion matrix, three short paragraphs")
 
+metrics = load_metrics()
+st.dataframe([{"method": m,
+               "accuracy": round(v["accuracy"], 3),
+               "macro F1": round(v["macro_f1"], 3),
+               "F1 on technically-true claims": round(v["C_f1"], 3),
+               "API calls": "0" if m == "tree_only" else "1 per claim"}
+              for m, v in metrics["metrics"].items()], hide_index=True)
+
+st.image(str(FIGS / "confusion.png"))
+
+b1, b2 = metrics["metrics"]["baseline1"], metrics["metrics"]["baseline2"]
+pipe = metrics["metrics"]["pipeline"]
+st.write(
+    f"Ground truth is {metrics['n']} claims blind-annotated by one person against a written "
+    "rubric. The annotator saw the claim text only — no rule output, no model output."
+)
+st.write(
+    f"Without the rubric the model detects **zero** accounting-misleading claims "
+    f"(F1 {b1['C_f1']:.3f}). Given the same rubric it reaches {b2['C_f1']:.3f}. The knowledge "
+    "the model lacks is not in the sentence; it is in how carbon accounting works."
+)
+st.write(
+    f"Adding the regex flags on top of the rubric did not help — F1 {pipe['C_f1']:.3f} against "
+    f"{b2['C_f1']:.3f}, which at n={metrics['n']} is a difference of one claim. That null "
+    "result is reported rather than buried. The rules layer earns its place elsewhere: it runs "
+    "with no API calls, it explains itself, and it is what finds the passages in section one."
+)
+
+# ------------------------------------------------------ 7 · what this is not
 st.divider()
 st.header("What this does not claim")
-placeholder("Limitations, stated on screen rather than buried in the README")
+st.markdown("""
+- Ground truth is one annotator. Three of five pipeline layers need no labels at all, which is why.
+- n=29 scored items. A three-point accuracy difference is one item and means nothing.
+- No evidence retrieval. Label D is structurally unreachable — zero instances, and it could not
+  have been otherwise.
+- The rules encode power-procurement carbon accounting. They do not transfer to other sectors.
+  The architecture does.
+- This measures disclosure form, not corporate conduct. It does not establish that any company
+  is misleading anyone.
+- PVR is a candidate factor. It has never been tested against returns, restatements, or
+  regulatory outcomes.
+""")

@@ -1,6 +1,13 @@
 {
  "n": 29,
  "metrics": {
+  "tree_only": {
+   "accuracy": 0.6896551724137931,
+   "macro_f1": 0.5954106280193235,
+   "C_precision": 0.5,
+   "C_recall": 1.0,
+   "C_f1": 0.6666666666666666
+  },
   "baseline1": {
    "accuracy": 0.6206896551724138,
    "macro_f1": 0.49417249417249415,
@@ -68,6 +75,7 @@
   {
    "claim_id": "amzn_sr_304",
    "gold": "A",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "C",
    "pipeline": "C",
@@ -76,6 +84,7 @@
   {
    "claim_id": "goog_sr_134",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "A",
    "pipeline": "A",
@@ -84,6 +93,7 @@
   {
    "claim_id": "amzn_sr_362",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -92,6 +102,7 @@
   {
    "claim_id": "msft_sr_146",
    "gold": "B",
+   "tree_only": "C",
    "baseline1": "B",
    "baseline2": "C",
    "pipeline": "C",
@@ -100,6 +111,7 @@
   {
    "claim_id": "goog_sr_089",
    "gold": "B",
+   "tree_only": "C",
    "baseline1": "B",
    "baseline2": "A",
    "pipeline": "A",
@@ -108,6 +120,7 @@
   {
    "claim_id": "goog_sr_105",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "A",
    "baseline2": "A",
    "pipeline": "C",
@@ -116,6 +129,7 @@
   {
    "claim_id": "amzn_sr_385",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -124,6 +138,7 @@
   {
    "claim_id": "goog_sr_061",
    "gold": "A",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "C",
    "pipeline": "C",
@@ -132,6 +147,7 @@
   {
    "claim_id": "goog_sr_074",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -140,6 +156,7 @@
   {
    "claim_id": "amzn_sr_342",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -148,6 +165,7 @@
   {
    "claim_id": "amzn_sr_316",
    "gold": "A",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "A",
    "pipeline": "C",
@@ -156,6 +174,7 @@
   {
    "claim_id": "goog_sr_071",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -164,6 +183,7 @@
   {
    "claim_id": "amzn_sr_297",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "C",
    "pipeline": "C",
@@ -172,6 +192,7 @@
   {
    "claim_id": "amzn_sr_337",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "A",
    "baseline2": "B",
    "pipeline": "B",
@@ -180,6 +201,7 @@
   {
    "claim_id": "msft_sr_150",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "C",
    "pipeline": "C",
@@ -188,6 +210,7 @@
   {
    "claim_id": "amzn_sr_292",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "C",
    "pipeline": "C",
@@ -196,6 +219,7 @@
   {
    "claim_id": "goog_sr_004",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "A",
    "pipeline": "A",
@@ -204,6 +228,7 @@
   {
    "claim_id": "amzn_sr_301",
    "gold": "A",
+   "tree_only": "A",
    "baseline1": "A",
    "baseline2": "A",
    "pipeline": "A",
@@ -212,6 +237,7 @@
   {
    "claim_id": "goog_sr_052",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "B",
    "baseline2": "C",
    "pipeline": "C",
@@ -220,6 +246,7 @@
   {
    "claim_id": "goog_sr_034",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -228,6 +255,7 @@
   {
    "claim_id": "goog_sr_096",
    "gold": "B",
+   "tree_only": "C",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -236,6 +264,7 @@
   {
    "claim_id": "goog_sr_016",
    "gold": "A",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "A",
    "pipeline": "A",
@@ -244,6 +273,7 @@
   {
    "claim_id": "goog_sr_073",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "B",
    "baseline2": "C",
    "pipeline": "C",
@@ -252,6 +282,7 @@
   {
    "claim_id": "amzn_sr_303",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "D",
    "baseline2": "C",
    "pipeline": "C",
@@ -260,6 +291,7 @@
   {
    "claim_id": "msft_sr_235",
    "gold": "C",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "A",
    "pipeline": "A",
@@ -268,6 +300,7 @@
   {
    "claim_id": "goog_sr_042",
    "gold": "A",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "C",
    "pipeline": "C",
@@ -276,6 +309,7 @@
   {
    "claim_id": "msft_sr_197",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
@@ -284,6 +318,7 @@
   {
    "claim_id": "amzn_sr_323",
    "gold": "A",
+   "tree_only": "C",
    "baseline1": "A",
    "baseline2": "C",
    "pipeline": "C",
@@ -292,6 +327,7 @@
   {
    "claim_id": "msft_sr_227",
    "gold": "B",
+   "tree_only": "B",
    "baseline1": "B",
    "baseline2": "B",
    "pipeline": "B",
