@@ -153,10 +153,6 @@ def run_claim(text):
             "claim": text.strip()}
 
 
-def placeholder(note):
-    st.info(f"_{note}_ — not built yet (FRONTEND.md build order).")
-
-
 # ------------------------------------------------------------------ HEADER
 st.title("TextQuant")
 st.markdown(

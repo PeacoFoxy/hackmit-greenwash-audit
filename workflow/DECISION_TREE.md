@@ -3,7 +3,8 @@
 Implementation spec for `src/tree.py`, `src/termstats.py` and `src/consensus.py`.
 Replaces the flat flag list in `src/rules.py` and the single-shot LLM classifier.
 
-Status: **spec, not implemented.**
+Status: **built.** `src/tree.py`, `src/termstats.py` and `src/consensus.py`
+implement this spec. Its sec. 10 regression set runs as `src/test_tree.py`.
 
 ---
 

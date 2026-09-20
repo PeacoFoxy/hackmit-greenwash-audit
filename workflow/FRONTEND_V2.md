@@ -3,7 +3,8 @@
 Redesign of `app.py`. Replaces the single-column scrolling page with a
 two-column terminal: input and process on the left, analysis on the right.
 
-Status: **spec, not implemented.**
+Status: **built.** `app_v2.py` implements this spec; the corpus-level headline
+strip above the two columns was added afterwards and is not described here.
 
 Supersedes `FRONTEND.md` §3 and §4. Everything in `FRONTEND.md` §2 (language
 rules) and §5 (offline safety) still applies unchanged.

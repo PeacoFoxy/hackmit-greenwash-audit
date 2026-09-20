@@ -2,7 +2,8 @@
 
 Implementation spec for `app.py`. First version of the user-facing interface.
 
-Status: **spec, not implemented.**
+Status: **built, then superseded.** `app.py` implements this spec and still runs.
+`FRONTEND_V2.md` replaced its layout; its sec. 2 language rules are still in force.
 
 ---
 
