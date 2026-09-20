@@ -52,7 +52,7 @@ def main(per_doc=45):
                         "company": d["company"], "ticker": d["ticker"],
                         "text": c["text"], "topic": c.get("topic", "other"),
                         "source_id": d["id"], "source_url": d["url"],
-                        "source_date": d["published_date"]})
+                        "source_date": d.get("pdf_created")})
             except Exception as e:
                 print(f"  parse fail: {e}")
     json.dump(claims, open("data/claims.json", "w"), ensure_ascii=False, indent=1)

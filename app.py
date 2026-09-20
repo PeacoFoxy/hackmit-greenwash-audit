@@ -197,7 +197,7 @@ elif query and selected is None:
             + ". Anything else, upload the PDF above.")
 elif selected:
     st.success(f"Loaded {selected['company']} — {selected['doc_type'].replace('_', ' ')}, "
-               f"published {selected['published_date']}")
+               f"{selected.get('title') or ''}")
 elif analyze:
     st.info("Type a company or ticker first, or upload a PDF.")
 
@@ -268,7 +268,7 @@ else:
                    "no publication date available)")
     elif source:
         st.caption(f"Source: {source['company']} {source['doc_type'].replace('_', ' ')} "
-                   f"({Path(source['file']).name}) · published {source['published_date']}")
+                   f"({Path(source['file']).name})")
 
     with st.expander("Technical detail"):
         st.write({"sent_id_range": [region["start_sent_id"], region["end_sent_id"]],

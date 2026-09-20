@@ -24,7 +24,8 @@ from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_FRAGILITY_NO
                          KEY_TERM_QUALIFIER, PASSAGE_PANEL, STAGES, TREE_MARKS,
                          WORK_TREE, label_badge, mechanism_badge,
                          mechanism_of_region, say_margin, say_mechanism, say_span,
-                         say_terminal, term_hover, term_pill, why_flagged)
+                         recommended_action, say_source, say_terminal,
+                         term_hover, term_pill, why_flagged)
 
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
@@ -157,9 +158,7 @@ with bar_input:
                 "PDF, or try one of: "
                 + ", ".join(s["company"] for s in sources) + ".")
     elif selected:
-        st.success(f"Loaded {selected['company']} — "
-                   f"{selected['doc_type'].replace('_', ' ')}, "
-                   f"published {selected['published_date']}")
+        st.success(f"Loaded {selected.get('title') or selected['company']}")
     elif analyze:
         st.info("Type a company or ticker first, or upload a PDF.")
 
@@ -393,6 +392,10 @@ with right:
                 st.caption(PASSAGE_PANEL["rule_only"])
             if res["span"]:
                 st.caption(f"Triggered on {say_span(res['span'])}")
+            action = recommended_action(tree["mechanism"], tree["terminal"])
+            if action:
+                st.markdown("**What to ask for**")
+                st.write(action)
             if res["terms"]:
                 st.markdown(" ".join(term_pill(t["term"], t["lift"]) for t in res["terms"]))
             else:
@@ -420,14 +423,15 @@ with right:
             st.caption("Excerpt, first 400 characters of the passage.")
             st.markdown("**Why it was flagged**")
             st.write(why_flagged(region.get("flag_types", {}), region["n_sentences"]))
+            action = recommended_action(region.get("mechanism"))
+            if action:
+                st.markdown("**What to ask for**")
+                st.write(action)
             if uploaded:
                 st.caption(f"Source: {uploaded['filename']} (uploaded this session; "
                            "no publication date available)")
             elif source:
-                st.caption(f"Source: {source['company']} "
-                           f"{source['doc_type'].replace('_', ' ')} "
-                           f"({Path(source['file']).name}) · published "
-                           f"{source['published_date']}")
+                st.caption(say_source(source))
             with st.expander("Technical detail"):
                 st.write({"sent_id_range": [region["start_sent_id"], region["end_sent_id"]],
                           "rel_pos": region["rel_pos"], "peak_flag_density": region["peak"],

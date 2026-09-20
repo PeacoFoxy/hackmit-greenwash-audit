@@ -287,3 +287,62 @@ INERT_SUBSCORE_NOTE = (
     "every letter on this corpus unchanged. It is kept because a report with a very high "
     "promise-to-verification ratio should still be penalised, but on these three reports "
     "it contributes no separation.")
+
+
+# ------------------------------------------------------------- 文档来源描述
+def say_source(src):
+    """来源行。只说文件里可核实的东西：标题、文件名、PDF 创建日期。
+
+    出版日期我们没有核实过，所以不声称。PDF 创建日期取自文件元数据，通常接近但不等于
+    出版日期，措辞上必须区分 —— 之前这里写的是编造的 published 2025-01-01。
+    """
+    bits = [src.get("title") or src["company"]]
+    from pathlib import Path
+    bits.append(Path(src["file"]).name)
+    if src.get("pdf_created"):
+        bits.append(f"PDF created {src['pdf_created']}")
+    return "Source: " + " · ".join(bits)
+
+
+# ------------------------------------------- 建议动作：机制 → 分析师下一步要什么
+# 每条都必须是「可以发给 IR 的一句具体请求」，不是「需要进一步调查」这种空话。
+ACTION_BY_MECHANISM = {
+    "UNDISCLOSED_METHOD":
+        "Ask which accounting method produced the figure, and request the other one: "
+        "market-based and location-based emissions differ, and only one is usually shown.",
+    "UNDISCLOSED_BOUNDARY":
+        "Ask which entities the figure covers — owned sites, leased sites, the value "
+        "chain — and whether that boundary is the same one used last year.",
+    "SELECTIVE_AGGREGATION":
+        "Request the absolute figure alongside the per-unit one, on the same boundary. "
+        "Intensity can fall while the absolute total rises.",
+    "UNDEFINED_TERM":
+        "Ask for the definition the company applies to the term and who verified it "
+        "against that definition.",
+}
+
+# 少数终点有更具体的请求，覆盖机制默认值
+ACTION_BY_TERMINAL = {
+    "INTENSITY_NO_ABSOLUTE":
+        "Request the absolute tonnage for the same period and boundary. A 39% fall per "
+        "unit is compatible with a rise in total emissions if volume grew.",
+    "NO_BASELINE_YEAR":
+        "Ask which baseline year the reduction is measured against, and whether the "
+        "baseline has been restated since it was set.",
+    "FUTURE_PROMISE_NO_MILESTONE":
+        "Ask for the interim milestones between now and the target year, and what was "
+        "achieved against last year's milestone.",
+    "MARKET_BASED_IMPLIED":
+        "Ask whether the match is hourly or annual, and in which grids the certificates "
+        "were retired. An annual national match can coexist with fossil-powered hours.",
+    "PROPRIETARY_METRIC":
+        "Ask for the formula behind the metric and whether any third party has audited "
+        "it. A company-defined index cannot be compared across issuers.",
+}
+
+
+def recommended_action(mechanism=None, terminal=None):
+    """给分析师的下一步。没有对应机制时返回 None，界面就不显示这一块。"""
+    if terminal and terminal in ACTION_BY_TERMINAL:
+        return ACTION_BY_TERMINAL[terminal]
+    return ACTION_BY_MECHANISM.get(mechanism)
