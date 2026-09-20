@@ -1,3 +1,4 @@
+"""把长文本切成可送 LLM 的候选段落。被 extract.py 使用，不单独运行。"""
 import re, json
 
 SIGNALS = re.compile(

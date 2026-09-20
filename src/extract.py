@@ -1,3 +1,4 @@
+"""Stage 3b：LLM 把长文本切成原子 claim。data/corpus.json → data/claims.json。[LLM]"""
 import json, re, os
 from src.llm import ask
 from src.segment_patch import windows

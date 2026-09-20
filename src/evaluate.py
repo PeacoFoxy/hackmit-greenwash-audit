@@ -1,10 +1,15 @@
+"""Stage 6：在 gold 集上对比五种方法，输出指标表与混淆矩阵。
+
+data/gold.json + data/candidates.json → data/metrics.json + figures/confusion.png。
+tree_only 零调用，其余四种走 LLM（命中缓存则不发请求）。
+"""
 import json, os, re
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_recall_fscore_support
 from src.llm import ask
-from src.rules_v2 import classify as tree_classify
+from src.tree import classify as tree_classify
 
 FIG_DIR = "figures"
 os.makedirs(FIG_DIR, exist_ok=True)

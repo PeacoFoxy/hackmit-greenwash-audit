@@ -1,0 +1,7071 @@
+{
+ "high_risk_threshold": 0.7,
+ "claims": [
+  {
+   "claim_id": "goog_sr_004",
+   "company": "Alphabet",
+   "text": "Google signed its first power purchase agreement in 2010.",
+   "track_R": {
+    "label": "C",
+    "terminal": "INSTRUMENT_NO_METHOD",
+    "mechanism": "UNDISCLOSED_METHOD",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "energy"
+     },
+     {
+      "node": "T5",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T5a",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T5b",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "power purchase"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.8575,
+    "contributing_terms": [
+     {
+      "term": "agreement",
+      "lift": 0.0,
+      "count": 30,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "first",
+      "lift": 0.0,
+      "count": 73,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "purchase",
+      "lift": 0.0,
+      "count": 28,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "signed",
+      "lift": 0.0,
+      "count": 30,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "power",
+      "lift": 0.4016,
+      "count": 144,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "RULE_ONLY",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 1
+   }
+  },
+  {
+   "claim_id": "amzn_sr_316",
+   "company": "Amazon",
+   "text": "Amazon expanded its existing nuclear energy relationship with Talen Energy, which will provide 1,900 MW of carbon-free nuclear power through 2042.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "will"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4218,
+    "contributing_terms": [
+     {
+      "term": "existing",
+      "lift": 0.0,
+      "count": 34,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "nuclear",
+      "lift": 0.0,
+      "count": 33,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "power",
+      "lift": 0.0,
+      "count": 144,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "expanded",
+      "lift": 0.336,
+      "count": 55,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONTESTED",
+    "label": null,
+    "labels_reported": [
+     "C",
+     "A"
+    ],
+    "triage_rank": 2
+   }
+  },
+  {
+   "claim_id": "msft_sr_235",
+   "company": "Microsoft",
+   "text": "Microsoft Devices supply chain transitioned from palletized containers to loose-loaded containers for ocean shipments of Xbox consoles from contract manufacturers, driving emissions savings of 136 mtCO2e through load optimization.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3779,
+    "contributing_terms": [
+     {
+      "term": "savings",
+      "lift": 0.0,
+      "count": 24,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "shipments",
+      "lift": 0.0,
+      "count": 14,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "shipments",
+      "lift": 0.0,
+      "count": 14,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "driving",
+      "lift": 0.336,
+      "count": 60,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONTESTED",
+    "label": null,
+    "labels_reported": [
+     "C",
+     "A"
+    ],
+    "triage_rank": 3
+   }
+  },
+  {
+   "claim_id": "goog_sr_134",
+   "company": "Alphabet",
+   "text": "Alphabet uses a 25-year estimated lifespan for solar panels in both annual and lifetime emissions reduction methods.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3414,
+    "contributing_terms": [
+     {
+      "term": "alphabet",
+      "lift": 0.0,
+      "count": 104,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "both",
+      "lift": 0.0,
+      "count": 91,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "estimated",
+      "lift": 0.0,
+      "count": 39,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "panels",
+      "lift": 0.0,
+      "count": 12,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "panels",
+      "lift": 0.0,
+      "count": 12,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONTESTED",
+    "label": null,
+    "labels_reported": [
+     "C",
+     "A"
+    ],
+    "triage_rank": 4
+   }
+  },
+  {
+   "claim_id": "goog_sr_096",
+   "company": "Alphabet",
+   "text": "Category 1 (Purchased goods and services) includes upstream emissions from manufacturing consumer devices and spare parts, Alphabet's food program, and additional goods and services purchased for operations.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2677,
+    "contributing_terms": [
+     {
+      "term": "additional",
+      "lift": 0.0,
+      "count": 59,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "alphabet",
+      "lift": 0.0,
+      "count": 104,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "category",
+      "lift": 0.0,
+      "count": 39,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "consumer",
+      "lift": 0.0,
+      "count": 34,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "goods",
+      "lift": 0.0,
+      "count": 38,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONTESTED",
+    "label": null,
+    "labels_reported": [
+     "C",
+     "B"
+    ],
+    "triage_rank": 5
+   }
+  },
+  {
+   "claim_id": "goog_sr_089",
+   "company": "Alphabet",
+   "text": "Alphabet accounts for all emissions from operations over which it has operational control, including data centers, offices, and other assets.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "all"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1378,
+    "contributing_terms": [
+     {
+      "term": "alphabet",
+      "lift": 0.0,
+      "count": 104,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "centers",
+      "lift": 0.4145,
+      "count": 163,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "data centers",
+      "lift": 0.5215,
+      "count": 134,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "including",
+      "lift": 0.6367,
+      "count": 199,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "operational",
+      "lift": 0.672,
+      "count": 86,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONTESTED",
+    "label": null,
+    "labels_reported": [
+     "C",
+     "A"
+    ],
+    "triage_rank": 6
+   }
+  },
+  {
+   "claim_id": "goog_sr_016",
+   "company": "Alphabet",
+   "text": "In 2024, Alphabet reduced its data center energy emissions by 12% compared to 2023.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1264,
+    "contributing_terms": [
+     {
+      "term": "alphabet",
+      "lift": 0.0,
+      "count": 104,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "energy emissions",
+      "lift": 0.504,
+      "count": 11,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "center energy",
+      "lift": 0.576,
+      "count": 10,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "center energy emissions",
+      "lift": 0.576,
+      "count": 8,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "data center energy",
+      "lift": 0.576,
+      "count": 10,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONTESTED",
+    "label": null,
+    "labels_reported": [
+     "C",
+     "A"
+    ],
+    "triage_rank": 7
+   }
+  },
+  {
+   "claim_id": "goog_sr_105",
+   "company": "Alphabet",
+   "text": "We calculate electricity procured from renewable sources (%) on an annual basis by dividing the megawatt-hours of renewable electricity procured by the total megawatt-hours of electricity consumed by our global operations.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "We"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3333,
+    "contributing_terms": [
+     {
+      "term": "annual",
+      "lift": 0.0,
+      "count": 57,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "basis",
+      "lift": 0.0,
+      "count": 17,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "consumed",
+      "lift": 0.0,
+      "count": 21,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "global",
+      "lift": 1.0652,
+      "count": 317,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "renewable",
+      "lift": 1.1136,
+      "count": 96,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONTESTED",
+    "label": null,
+    "labels_reported": [
+     "B",
+     "A"
+    ],
+    "triage_rank": 8
+   }
+  },
+  {
+   "claim_id": "goog_sr_073",
+   "company": "Alphabet",
+   "text": "Optimizations to Google's standard data center design collectively have the potential to reduce the embodied carbon emissions intensity of a data center building by around 9%.",
+   "track_R": {
+    "label": "C",
+    "terminal": "INTENSITY_NO_ABSOLUTE",
+    "mechanism": "SELECTIVE_AGGREGATION",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "9"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "intensity"
+     },
+     {
+      "node": "T6a2",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2862,
+    "contributing_terms": [
+     {
+      "term": "around",
+      "lift": 0.0,
+      "count": 54,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "around",
+      "lift": 0.0,
+      "count": 54,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "potential",
+      "lift": 0.0,
+      "count": 70,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "standard",
+      "lift": 0.0,
+      "count": 36,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "google",
+      "lift": 0.2127,
+      "count": 244,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 9
+   }
+  },
+  {
+   "claim_id": "amzn_sr_292",
+   "company": "Amazon",
+   "text": "Amazon has reduced emissions per shipped unit by 7% compared to 2024.",
+   "track_R": {
+    "label": "C",
+    "terminal": "INTENSITY_NO_ABSOLUTE",
+    "mechanism": "SELECTIVE_AGGREGATION",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "7"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "per shipped"
+     },
+     {
+      "node": "T6a2",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1771,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "per",
+      "lift": 0.504,
+      "count": 41,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.5915,
+      "count": 305,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "reduced",
+      "lift": 0.8961,
+      "count": 37,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "compared",
+      "lift": 1.2733,
+      "count": 44,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 10
+   }
+  },
+  {
+   "claim_id": "amzn_sr_303",
+   "company": "Amazon",
+   "text": "We reduced emissions per shipped unit by 7% compared to 2024.",
+   "track_R": {
+    "label": "C",
+    "terminal": "INTENSITY_NO_ABSOLUTE",
+    "mechanism": "SELECTIVE_AGGREGATION",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "We"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "7"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "per shipped"
+     },
+     {
+      "node": "T6a2",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.075,
+    "contributing_terms": [
+     {
+      "term": "per",
+      "lift": 0.504,
+      "count": 41,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "reduced",
+      "lift": 0.8961,
+      "count": 37,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "compared",
+      "lift": 1.2733,
+      "count": 44,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "emissions",
+      "lift": 1.3979,
+      "count": 454,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "emissions",
+      "lift": 1.7054,
+      "count": 454,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 11
+   }
+  },
+  {
+   "claim_id": "amzn_sr_304",
+   "company": "Amazon",
+   "text": "We reduced emissions per shipped unit by 39% compared to 2019.",
+   "track_R": {
+    "label": "C",
+    "terminal": "INTENSITY_NO_ABSOLUTE",
+    "mechanism": "SELECTIVE_AGGREGATION",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "We"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "3"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "per shipped"
+     },
+     {
+      "node": "T6a2",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.075,
+    "contributing_terms": [
+     {
+      "term": "per",
+      "lift": 0.504,
+      "count": 41,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "reduced",
+      "lift": 0.8961,
+      "count": 37,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "compared",
+      "lift": 1.2733,
+      "count": 44,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "emissions",
+      "lift": 1.3979,
+      "count": 454,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "emissions",
+      "lift": 1.7054,
+      "count": 454,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 12
+   }
+  },
+  {
+   "claim_id": "goog_sr_042",
+   "company": "Alphabet",
+   "text": "By 2020, we had already reached 94% plastic-free packaging.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "we"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "By 2020"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5968,
+    "contributing_terms": [
+     {
+      "term": "packaging",
+      "lift": 0.4032,
+      "count": 133,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 13
+   }
+  },
+  {
+   "claim_id": "amzn_sr_323",
+   "company": "Amazon",
+   "text": "In 2025, Amazon's inset projects helped reduce emissions by 199,400 metric tons of CO₂e.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5732,
+    "contributing_terms": [
+     {
+      "term": "co",
+      "lift": 0.0,
+      "count": 22,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "helped",
+      "lift": 0.0,
+      "count": 19,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "metric",
+      "lift": 0.0,
+      "count": 68,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "metric tons",
+      "lift": 0.0,
+      "count": 55,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "reduce emissions",
+      "lift": 0.0,
+      "count": 19,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 14
+   }
+  },
+  {
+   "claim_id": "goog_sr_052",
+   "company": "Alphabet",
+   "text": "Alphabet has an aspiration to help individuals, cities, and other partners collectively reduce 1 gigaton of carbon equivalent emissions annually by 2030.",
+   "track_R": {
+    "label": "C",
+    "terminal": "TARGET_SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "by 2030"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "annually"
+     },
+     {
+      "node": "T3a",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4583,
+    "contributing_terms": [
+     {
+      "term": "alphabet",
+      "lift": 0.0,
+      "count": 104,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "annually",
+      "lift": 0.0,
+      "count": 28,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "annually",
+      "lift": 0.0,
+      "count": 28,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "cities",
+      "lift": 0.0,
+      "count": 30,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "cities",
+      "lift": 0.0,
+      "count": 30,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 15
+   }
+  },
+  {
+   "claim_id": "amzn_sr_297",
+   "company": "Amazon",
+   "text": "Amazon matched 100% of the electricity consumed by its global operations with renewable energy by 2025, five years ahead of its original target of 2030.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "by 2025"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4545,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.0,
+      "count": 305,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "consumed",
+      "lift": 0.0,
+      "count": 21,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "five",
+      "lift": 0.0,
+      "count": 31,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "matched",
+      "lift": 0.0,
+      "count": 11,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "years",
+      "lift": 0.0,
+      "count": 95,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 16
+   }
+  },
+  {
+   "claim_id": "msft_sr_150",
+   "company": "Microsoft",
+   "text": "Microsoft's alternative fuel and logistics efforts have reduced emissions by over 17,000 metric tons of CO2.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3297,
+    "contributing_terms": [
+     {
+      "term": "metric",
+      "lift": 0.0,
+      "count": 68,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "metric tons",
+      "lift": 0.0,
+      "count": 55,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "tons",
+      "lift": 0.0,
+      "count": 61,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "metric tons",
+      "lift": 0.218,
+      "count": 55,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "tons",
+      "lift": 0.295,
+      "count": 61,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 17
+   }
+  },
+  {
+   "claim_id": "msft_sr_146",
+   "company": "Microsoft",
+   "text": "Select large-scale Microsoft suppliers are required to transition to 100% carbon-free electricity for their delivered goods and services.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2918,
+    "contributing_terms": [
+     {
+      "term": "goods",
+      "lift": 0.0,
+      "count": 38,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "goods and services",
+      "lift": 0.0,
+      "count": 13,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "transition",
+      "lift": 0.0,
+      "count": 49,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "carbon-free",
+      "lift": 0.3506,
+      "count": 91,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 18
+   }
+  },
+  {
+   "claim_id": "goog_sr_061",
+   "company": "Alphabet",
+   "text": "In 2024, Google achieved approximately 66% global average carbon-free energy across its data centers and offices.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "C",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2451,
+    "contributing_terms": [
+     {
+      "term": "carbon-free energy",
+      "lift": 0.1613,
+      "count": 52,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "global",
+      "lift": 0.2057,
+      "count": 317,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "google",
+      "lift": 0.2127,
+      "count": 244,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "average",
+      "lift": 0.3368,
+      "count": 46,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "carbon-free",
+      "lift": 0.3506,
+      "count": 91,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 19
+   }
+  },
+  {
+   "claim_id": "goog_sr_034",
+   "company": "Alphabet",
+   "text": "Ironwood is Alphabet's most powerful, capable and energy efficient TPU yet, designed to power thinking, inferential AI models at scale.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.7598,
+    "contributing_terms": [
+     {
+      "term": "ai",
+      "lift": 0.0,
+      "count": 357,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "designed",
+      "lift": 0.0,
+      "count": 35,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "efficient",
+      "lift": 0.0,
+      "count": 40,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "models",
+      "lift": 0.0,
+      "count": 64,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "most",
+      "lift": 0.0,
+      "count": 93,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 20
+   }
+  },
+  {
+   "claim_id": "amzn_sr_342",
+   "company": "Amazon",
+   "text": "Amazon's water replenishment projects restore watersheds and bring clean water, sanitation, and hygiene services to water-stressed communities.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.7591,
+    "contributing_terms": [
+     {
+      "term": "bring",
+      "lift": 0.0,
+      "count": 26,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "clean",
+      "lift": 0.0,
+      "count": 185,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "clean water",
+      "lift": 0.0,
+      "count": 12,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "communities",
+      "lift": 0.0,
+      "count": 155,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "replenishment",
+      "lift": 0.0,
+      "count": 64,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 21
+   }
+  },
+  {
+   "claim_id": "msft_sr_197",
+   "company": "Microsoft",
+   "text": "Microsoft invests in solutions such as rainwater harvesting, groundwater replenishment, and irrigation modernization.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.7006,
+    "contributing_terms": [
+     {
+      "term": "harvesting",
+      "lift": 0.0,
+      "count": 21,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "rainwater",
+      "lift": 0.0,
+      "count": 18,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "rainwater harvesting",
+      "lift": 0.0,
+      "count": 13,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "replenishment",
+      "lift": 0.0,
+      "count": 64,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0961,
+      "count": 366,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 22
+   }
+  },
+  {
+   "claim_id": "amzn_sr_337",
+   "company": "Amazon",
+   "text": "In Mississippi, U.S., Amazon became the first data center operator to commit to reclaimed water for cooling.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5124,
+    "contributing_terms": [
+     {
+      "term": "became",
+      "lift": 0.0,
+      "count": 9,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "cooling",
+      "lift": 0.0,
+      "count": 86,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reclaimed",
+      "lift": 0.0,
+      "count": 13,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reclaimed water",
+      "lift": 0.0,
+      "count": 10,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water for cooling",
+      "lift": 0.0,
+      "count": 14,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 23
+   }
+  },
+  {
+   "claim_id": "msft_sr_227",
+   "company": "Microsoft",
+   "text": "By harvesting and recertifying decommissioned server components no longer available on the market, we are meeting new demand while reducing waste.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "we"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3742,
+    "contributing_terms": [
+     {
+      "term": "demand",
+      "lift": 0.0,
+      "count": 78,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "new",
+      "lift": 0.1792,
+      "count": 270,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "waste",
+      "lift": 0.2016,
+      "count": 308,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "available",
+      "lift": 1.1201,
+      "count": 103,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "market",
+      "lift": 1.1521,
+      "count": 90,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 24
+   }
+  },
+  {
+   "claim_id": "amzn_sr_362",
+   "company": "Amazon",
+   "text": "Where eliminating single-use plastics is not yet feasible, Amazon works to increase the proportion of recycled content in its plastic materials.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3144,
+    "contributing_terms": [
+     {
+      "term": "recycled",
+      "lift": 0.0,
+      "count": 65,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "materials",
+      "lift": 0.8766,
+      "count": 136,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "where",
+      "lift": 1.2407,
+      "count": 196,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "not",
+      "lift": 1.4934,
+      "count": 161,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 25
+   }
+  },
+  {
+   "claim_id": "goog_sr_071",
+   "company": "Alphabet",
+   "text": "The standardized nature of Google's data center designs allows reduction of the materials required for construction.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.205,
+    "contributing_terms": [
+     {
+      "term": "nature",
+      "lift": 0.0,
+      "count": 47,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "required",
+      "lift": 0.0,
+      "count": 19,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "google",
+      "lift": 0.9496,
+      "count": 244,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "center",
+      "lift": 1.0415,
+      "count": 127,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "data center",
+      "lift": 1.1958,
+      "count": 110,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 26
+   }
+  },
+  {
+   "claim_id": "amzn_sr_385",
+   "company": "Amazon",
+   "text": "Amazon encourages suppliers to reduce consumption of water within their operations and supply chain.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1843,
+    "contributing_terms": [
+     {
+      "term": "consumption",
+      "lift": 0.3363,
+      "count": 103,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water",
+      "lift": 0.3636,
+      "count": 450,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reduce",
+      "lift": 0.5293,
+      "count": 166,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "operations",
+      "lift": 0.9278,
+      "count": 205,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "chain",
+      "lift": 1.5792,
+      "count": 215,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 27
+   }
+  },
+  {
+   "claim_id": "goog_sr_074",
+   "company": "Alphabet",
+   "text": "The use of low-carbon construction materials is part of Google's work to reduce data center construction emissions.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "B",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1663,
+    "contributing_terms": [
+     {
+      "term": "part",
+      "lift": 0.0,
+      "count": 56,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "google",
+      "lift": 0.2127,
+      "count": 244,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "construction",
+      "lift": 0.3674,
+      "count": 77,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "google",
+      "lift": 0.448,
+      "count": 244,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "work",
+      "lift": 0.448,
+      "count": 132,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 28
+   }
+  },
+  {
+   "claim_id": "amzn_sr_301",
+   "company": "Amazon",
+   "text": "Emissions from our direct operations increased 2% compared to 2024, while we delivered more packages to more customers.",
+   "track_R": {
+    "label": "A",
+    "terminal": "SUBSTANTIATED_EMISSIONS",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "our"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "direct operations"
+     },
+     {
+      "node": "T6b",
+      "reliability": "OPEN",
+      "answer": "no"
+     },
+     {
+      "node": "T6c",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": "A",
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.0441,
+    "contributing_terms": [
+     {
+      "term": "customers",
+      "lift": 0.576,
+      "count": 119,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "delivered",
+      "lift": 0.8065,
+      "count": 19,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "compared",
+      "lift": 1.2733,
+      "count": 44,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "delivered",
+      "lift": 1.3472,
+      "count": 19,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "emissions",
+      "lift": 1.3979,
+      "count": 454,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "CONFIRMED",
+    "label": "A",
+    "labels_reported": null,
+    "triage_rank": 29
+   }
+  },
+  {
+   "claim_id": "msft_sr_168",
+   "company": "Microsoft",
+   "text": "Chip-level liquid cooling eliminates the need for evaporation to align with Microsoft's water positive 2030 commitment.",
+   "track_R": {
+    "label": "C",
+    "terminal": "WATER_TERM_UNDEFINED",
+    "mechanism": "UNDEFINED_TERM",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "water"
+     },
+     {
+      "node": "T7",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "water positive"
+     },
+     {
+      "node": "T7m",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.7368,
+    "contributing_terms": [
+     {
+      "term": "align",
+      "lift": 0.0,
+      "count": 32,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "cooling",
+      "lift": 0.0,
+      "count": 86,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "positive",
+      "lift": 0.0,
+      "count": 42,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water positive",
+      "lift": 0.0,
+      "count": 25,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0961,
+      "count": 366,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 30
+   }
+  },
+  {
+   "claim_id": "amzn_sr_339",
+   "company": "Amazon",
+   "text": "At the end of 2025, we had invested in 45 replenishment projects globally.",
+   "track_R": {
+    "label": "C",
+    "terminal": "WATER_TERM_UNDEFINED",
+    "mechanism": "UNDEFINED_TERM",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "we"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "water"
+     },
+     {
+      "node": "T7",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "replenishment"
+     },
+     {
+      "node": "T7m",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6124,
+    "contributing_terms": [
+     {
+      "term": "invested",
+      "lift": 0.0,
+      "count": 20,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "replenishment",
+      "lift": 0.0,
+      "count": 64,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "replenishment projects",
+      "lift": 0.0,
+      "count": 19,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "globally",
+      "lift": 0.5567,
+      "count": 59,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "projects",
+      "lift": 0.7687,
+      "count": 177,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 31
+   }
+  },
+  {
+   "claim_id": "goog_sr_107",
+   "company": "Alphabet",
+   "text": "To achieve our 100% renewable energy match, we first consider both our on-site renewable electricity generation and the renewable electricity already in the electric grids where our facilities are located.",
+   "track_R": {
+    "label": "C",
+    "terminal": "MARKET_BASED_IMPLIED",
+    "mechanism": "UNDISCLOSED_METHOD",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "our"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "energy"
+     },
+     {
+      "node": "T5",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T5a",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "match"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4615,
+    "contributing_terms": [
+     {
+      "term": "achieve",
+      "lift": 0.0,
+      "count": 35,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "both",
+      "lift": 0.0,
+      "count": 91,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "electric",
+      "lift": 0.0,
+      "count": 46,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "first",
+      "lift": 0.0,
+      "count": 73,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "grids",
+      "lift": 0.0,
+      "count": 36,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 32
+   }
+  },
+  {
+   "claim_id": "goog_sr_108",
+   "company": "Alphabet",
+   "text": "We then procure renewable electricity through contractual instruments to achieve our 100% renewable energy match.",
+   "track_R": {
+    "label": "C",
+    "terminal": "MARKET_BASED_IMPLIED",
+    "mechanism": "UNDISCLOSED_METHOD",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "We"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "energy"
+     },
+     {
+      "node": "T5",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T5a",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "match"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4286,
+    "contributing_terms": [
+     {
+      "term": "achieve",
+      "lift": 0.0,
+      "count": 35,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "match",
+      "lift": 0.0,
+      "count": 16,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "then",
+      "lift": 0.0,
+      "count": 27,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "energy",
+      "lift": 1.0911,
+      "count": 580,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "renewable",
+      "lift": 1.1136,
+      "count": 96,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 33
+   }
+  },
+  {
+   "claim_id": "amzn_sr_295",
+   "company": "Amazon",
+   "text": "100% of the electricity consumed by Amazon was matched with renewable energy sources in 2025.",
+   "track_R": {
+    "label": "C",
+    "terminal": "MARKET_BASED_IMPLIED",
+    "mechanism": "UNDISCLOSED_METHOD",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "energy"
+     },
+     {
+      "node": "T5",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T5a",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "matched"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4286,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.0,
+      "count": 305,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "consumed",
+      "lift": 0.0,
+      "count": 21,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "matched",
+      "lift": 0.0,
+      "count": 11,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "energy",
+      "lift": 1.0911,
+      "count": 580,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "renewable",
+      "lift": 1.1136,
+      "count": 96,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 34
+   }
+  },
+  {
+   "claim_id": "amzn_sr_296",
+   "company": "Amazon",
+   "text": "Amazon matched 100% of its electricity consumption with renewable energy for the third consecutive year in 2025.",
+   "track_R": {
+    "label": "C",
+    "terminal": "MARKET_BASED_IMPLIED",
+    "mechanism": "UNDISCLOSED_METHOD",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "energy"
+     },
+     {
+      "node": "T5",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T5a",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "matched"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2222,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.0,
+      "count": 305,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "matched",
+      "lift": 0.0,
+      "count": 11,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "energy",
+      "lift": 1.0911,
+      "count": 580,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "renewable",
+      "lift": 1.1136,
+      "count": 96,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "year",
+      "lift": 1.3611,
+      "count": 116,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 35
+   }
+  },
+  {
+   "claim_id": "amzn_sr_293",
+   "company": "Amazon",
+   "text": "Amazon has reduced emissions per shipped unit by 39% compared to 2019.",
+   "track_R": {
+    "label": "C",
+    "terminal": "INTENSITY_NO_ABSOLUTE",
+    "mechanism": "SELECTIVE_AGGREGATION",
+    "severity": 3,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "3"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "per shipped"
+     },
+     {
+      "node": "T6a2",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1771,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "per",
+      "lift": 0.504,
+      "count": 41,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.5915,
+      "count": 305,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "reduced",
+      "lift": 0.8961,
+      "count": 37,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "compared",
+      "lift": 1.2733,
+      "count": 44,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 36
+   }
+  },
+  {
+   "claim_id": "amzn_sr_340",
+   "company": "Amazon",
+   "text": "We expect our 45 replenishment projects will collectively return more than 18 billion liters of water annually once completed.",
+   "track_R": {
+    "label": "C",
+    "terminal": "TARGET_SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "We"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "4"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "expect"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "annually"
+     },
+     {
+      "node": "T3a",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.7953,
+    "contributing_terms": [
+     {
+      "term": "billion",
+      "lift": 0.0,
+      "count": 47,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "billion liters",
+      "lift": 0.0,
+      "count": 7,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "completed",
+      "lift": 0.0,
+      "count": 12,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "expect",
+      "lift": 0.0,
+      "count": 18,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "liters",
+      "lift": 0.0,
+      "count": 17,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 37
+   }
+  },
+  {
+   "claim_id": "goog_sr_084",
+   "company": "Alphabet",
+   "text": "In 2022, Google co-founded Frontier, an advance market commitment that will accelerate the development of carbon removal technologies by guaranteeing future demand.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "will"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.667,
+    "contributing_terms": [
+     {
+      "term": "accelerate",
+      "lift": 0.0,
+      "count": 92,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "accelerate",
+      "lift": 0.0,
+      "count": 92,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "commitment",
+      "lift": 0.0,
+      "count": 48,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "demand",
+      "lift": 0.0,
+      "count": 78,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "demand",
+      "lift": 0.0,
+      "count": 78,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 38
+   }
+  },
+  {
+   "claim_id": "msft_sr_198",
+   "company": "Microsoft",
+   "text": "Microsoft set its water replenishment target in 2020.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "target"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6606,
+    "contributing_terms": [
+     {
+      "term": "replenishment",
+      "lift": 0.0,
+      "count": 64,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water replenishment",
+      "lift": 0.0,
+      "count": 31,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0961,
+      "count": 366,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water",
+      "lift": 0.3636,
+      "count": 450,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "set",
+      "lift": 0.5765,
+      "count": 44,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 39
+   }
+  },
+  {
+   "claim_id": "amzn_sr_285",
+   "company": "Amazon",
+   "text": "Amazon's water replenishment projects have helped it get 75% of the way toward its goal to be water positive by 2030.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "7"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "by 2030"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6556,
+    "contributing_terms": [
+     {
+      "term": "helped",
+      "lift": 0.0,
+      "count": 19,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "positive",
+      "lift": 0.0,
+      "count": 42,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "replenishment",
+      "lift": 0.0,
+      "count": 64,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "replenishment projects",
+      "lift": 0.0,
+      "count": 19,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "toward",
+      "lift": 0.0,
+      "count": 65,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 40
+   }
+  },
+  {
+   "claim_id": "amzn_sr_326",
+   "company": "Amazon",
+   "text": "The Amazon Sustainability Accelerator supports start-ups tackling energy, water, and waste challenges, with select companies piloting their innovations in Amazon's European operations in 2025.",
+   "track_R": {
+    "label": "C",
+    "terminal": "WASTE_BOUNDARY_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "waste"
+     },
+     {
+      "node": "T8",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T8b",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5794,
+    "contributing_terms": [
+     {
+      "term": "innovations",
+      "lift": 0.0,
+      "count": 29,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "sustainability",
+      "lift": 0.1008,
+      "count": 313,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "water",
+      "lift": 0.1531,
+      "count": 450,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "waste",
+      "lift": 0.2016,
+      "count": 308,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 41
+   }
+  },
+  {
+   "claim_id": "amzn_sr_315",
+   "company": "Amazon",
+   "text": "Amazon has made an investment in SMR developer X-energy to help bring 5 GW of new nuclear energy to the U.S. grid by 2039.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "5"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "by 2039"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.579,
+    "contributing_terms": [
+     {
+      "term": "bring",
+      "lift": 0.0,
+      "count": 26,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "gw",
+      "lift": 0.0,
+      "count": 26,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "gw of new",
+      "lift": 0.0,
+      "count": 6,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "investment",
+      "lift": 0.0,
+      "count": 42,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "nuclear",
+      "lift": 0.0,
+      "count": 33,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 42
+   }
+  },
+  {
+   "claim_id": "amzn_sr_353",
+   "company": "Amazon",
+   "text": "In 2025, 2% of Amazon's waste was diverted through incineration with energy recovery.",
+   "track_R": {
+    "label": "C",
+    "terminal": "WASTE_BOUNDARY_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "waste"
+     },
+     {
+      "node": "T8",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "diverted"
+     },
+     {
+      "node": "T8a",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "incineration"
+     },
+     {
+      "node": "T8b",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5204,
+    "contributing_terms": [
+     {
+      "term": "waste",
+      "lift": 0.2016,
+      "count": 308,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "energy",
+      "lift": 1.0278,
+      "count": 580,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 43
+   }
+  },
+  {
+   "claim_id": "msft_sr_212",
+   "company": "Microsoft",
+   "text": "Microsoft's 13 access initiatives, when fully implemented, will serve over 1.6 million people across Brazil, India, Indonesia, Mexico, Chile, the United States, Malaysia, Kenya, and Nigeria.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "will"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5101,
+    "contributing_terms": [
+     {
+      "term": "brazil",
+      "lift": 0.0,
+      "count": 13,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "fully",
+      "lift": 0.0,
+      "count": 18,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "india",
+      "lift": 0.0,
+      "count": 44,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "million people",
+      "lift": 0.0,
+      "count": 17,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "people",
+      "lift": 0.0,
+      "count": 80,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 44
+   }
+  },
+  {
+   "claim_id": "msft_sr_175",
+   "company": "Microsoft",
+   "text": "In 2024, Microsoft signed four groundbreaking PPAs with Engie requiring that 100% of photovoltaic modules—from construction through end of life—will be reused or recycled.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "will"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4477,
+    "contributing_terms": [
+     {
+      "term": "recycled",
+      "lift": 0.0,
+      "count": 65,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "life",
+      "lift": 0.8961,
+      "count": 64,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "construction",
+      "lift": 1.1761,
+      "count": 77,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 45
+   }
+  },
+  {
+   "claim_id": "goog_sr_083",
+   "company": "Alphabet",
+   "text": "In 2021, Google joined the UN Race to Zero Campaign, the largest ever alliance committed to halving emissions by 2030 and achieving net-zero emissions by no later than 2050.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "committed to"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4257,
+    "contributing_terms": [
+     {
+      "term": "achieving",
+      "lift": 0.0,
+      "count": 32,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "achieving",
+      "lift": 0.0,
+      "count": 32,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "committed",
+      "lift": 0.0,
+      "count": 45,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "google",
+      "lift": 0.2127,
+      "count": 244,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "zero",
+      "lift": 0.336,
+      "count": 64,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 46
+   }
+  },
+  {
+   "claim_id": "goog_sr_062",
+   "company": "Alphabet",
+   "text": "Google aims to run on 24/7 carbon-free energy on every grid where it operates by 2030.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "aims to"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4219,
+    "contributing_terms": [
+     {
+      "term": "every",
+      "lift": 0.0,
+      "count": 53,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "grid",
+      "lift": 0.0,
+      "count": 116,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "grid",
+      "lift": 0.0,
+      "count": 116,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "carbon-free energy",
+      "lift": 0.1613,
+      "count": 52,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "google",
+      "lift": 0.2127,
+      "count": 244,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 47
+   }
+  },
+  {
+   "claim_id": "amzn_sr_324",
+   "company": "Amazon",
+   "text": "Amazon co-founded The Climate Pledge in 2019 as a commitment for companies to reach net-zero carbon emissions by 2040.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "by 2040"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3796,
+    "contributing_terms": [
+     {
+      "term": "climate pledge",
+      "lift": 0.0,
+      "count": 32,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "commitment",
+      "lift": 0.0,
+      "count": 48,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "companies",
+      "lift": 0.0,
+      "count": 58,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "pledge",
+      "lift": 0.0,
+      "count": 41,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 48
+   }
+  },
+  {
+   "claim_id": "msft_sr_170",
+   "company": "Microsoft",
+   "text": "In 2024, Microsoft introduced a new target requiring suppliers to transition to 100% carbon-free electricity for goods and services delivered to Microsoft by 2030.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "target"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3036,
+    "contributing_terms": [
+     {
+      "term": "goods",
+      "lift": 0.0,
+      "count": 38,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "goods and services",
+      "lift": 0.0,
+      "count": 13,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "transition",
+      "lift": 0.0,
+      "count": 49,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "new",
+      "lift": 0.1792,
+      "count": 270,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 49
+   }
+  },
+  {
+   "claim_id": "amzn_sr_290",
+   "company": "Amazon",
+   "text": "Amazon's goal is to reach net-zero carbon emissions across its global operations by 2040.",
+   "track_R": {
+    "label": "C",
+    "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "by 2040"
+     },
+     {
+      "node": "T3",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2584,
+    "contributing_terms": [
+     {
+      "term": "goal",
+      "lift": 0.0,
+      "count": 44,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "global",
+      "lift": 0.2057,
+      "count": 317,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "carbon emissions",
+      "lift": 0.5052,
+      "count": 59,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "carbon",
+      "lift": 0.5459,
+      "count": 377,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 50
+   }
+  },
+  {
+   "claim_id": "msft_sr_214",
+   "company": "Microsoft",
+   "text": "Improvements surfaced in our 2022 audit eliminated 90% of excess water use instances.",
+   "track_R": {
+    "label": "C",
+    "terminal": "WATER_BOUNDARY_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "our"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "water"
+     },
+     {
+      "node": "T7",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T7a",
+      "reliability": "OPEN",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1833,
+    "contributing_terms": [
+     {
+      "term": "water",
+      "lift": 0.3636,
+      "count": 450,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "use",
+      "lift": 0.9031,
+      "count": 305,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water use",
+      "lift": 1.6143,
+      "count": 48,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "improvements",
+      "lift": 3.5873,
+      "count": 33,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 51
+   }
+  },
+  {
+   "claim_id": "goog_sr_001",
+   "company": "Alphabet",
+   "text": "Google reduced data center energy emissions by 12% in 2024.",
+   "track_R": {
+    "label": "C",
+    "terminal": "SCOPE_UNSTATED",
+    "mechanism": "UNDISCLOSED_BOUNDARY",
+    "severity": 2,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1534,
+    "contributing_terms": [
+     {
+      "term": "google",
+      "lift": 0.2127,
+      "count": 244,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "google",
+      "lift": 0.448,
+      "count": 244,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "energy emissions",
+      "lift": 0.504,
+      "count": 11,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "center energy",
+      "lift": 0.576,
+      "count": 10,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "center energy emissions",
+      "lift": 0.576,
+      "count": 8,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "C",
+    "labels_reported": null,
+    "triage_rank": 52
+   }
+  },
+  {
+   "claim_id": "amzn_sr_357",
+   "company": "Amazon",
+   "text": "Amazon focuses on avoiding unnecessary packaging when possible.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.7865,
+    "contributing_terms": [
+     {
+      "term": "avoiding",
+      "lift": 0.0,
+      "count": 14,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "packaging",
+      "lift": 0.4032,
+      "count": 133,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 53
+   }
+  },
+  {
+   "claim_id": "goog_sr_002",
+   "company": "Alphabet",
+   "text": "Google signed contracts for 8 GW of new clean energy generation in 2024.",
+   "track_R": {
+    "label": "A",
+    "terminal": "SUBSTANTIATED_OTHER",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Google"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "8"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "other_capacity"
+     },
+     {
+      "node": "T10",
+      "reliability": "OPEN",
+      "answer": "no"
+     },
+     {
+      "node": "T10a",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "in 2024"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.7447,
+    "contributing_terms": [
+     {
+      "term": "clean",
+      "lift": 0.0,
+      "count": 185,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "clean energy",
+      "lift": 0.0,
+      "count": 133,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "clean energy generation",
+      "lift": 0.0,
+      "count": 7,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "contracts",
+      "lift": 0.0,
+      "count": 17,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "energy generation",
+      "lift": 0.0,
+      "count": 9,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "A",
+    "labels_reported": null,
+    "triage_rank": 54
+   }
+  },
+  {
+   "claim_id": "amzn_sr_360",
+   "company": "Amazon",
+   "text": "Amazon is improving the recycled content in its packaging materials.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6966,
+    "contributing_terms": [
+     {
+      "term": "improving",
+      "lift": 0.0,
+      "count": 76,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "recycled",
+      "lift": 0.0,
+      "count": 65,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "packaging",
+      "lift": 0.4032,
+      "count": 133,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "materials",
+      "lift": 0.8766,
+      "count": 136,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 55
+   }
+  },
+  {
+   "claim_id": "goog_sr_031",
+   "company": "Alphabet",
+   "text": "Alphabet developed a free Energy Assessment tool designed to help supplier facility managers identify energy efficiency opportunities across their operations.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6933,
+    "contributing_terms": [
+     {
+      "term": "designed",
+      "lift": 0.0,
+      "count": 35,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "developed",
+      "lift": 0.0,
+      "count": 57,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "efficiency",
+      "lift": 0.0,
+      "count": 145,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "energy efficiency",
+      "lift": 0.0,
+      "count": 36,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "help",
+      "lift": 0.0,
+      "count": 183,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 56
+   }
+  },
+  {
+   "claim_id": "msft_sr_195",
+   "company": "Microsoft",
+   "text": "Microsoft funds projects that restore, reuse, and reduce freshwater consumption in water-stressed locations where we operate.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6772,
+    "contributing_terms": [
+     {
+      "term": "freshwater",
+      "lift": 0.0,
+      "count": 23,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "operate",
+      "lift": 0.0,
+      "count": 46,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "restore",
+      "lift": 0.0,
+      "count": 20,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reuse",
+      "lift": 0.0,
+      "count": 58,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "where we operate",
+      "lift": 0.0,
+      "count": 17,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 57
+   }
+  },
+  {
+   "claim_id": "msft_sr_278",
+   "company": "Microsoft",
+   "text": "Microsoft has developed a functional printed circuit board prototype that demonstrates how vitrimers can facilitate component disassembly, recycling, and reuse.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6418,
+    "contributing_terms": [
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "how",
+      "lift": 0.4032,
+      "count": 147,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 58
+   }
+  },
+  {
+   "claim_id": "amzn_sr_384",
+   "company": "Amazon",
+   "text": "Amazon encourages suppliers to reduce consumption of energy within their operations and supply chain.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.6,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.0,
+      "count": 305,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "chain",
+      "lift": 0.0,
+      "count": 215,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "suppliers",
+      "lift": 0.0,
+      "count": 161,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "supply",
+      "lift": 0.0,
+      "count": 232,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "supply chain",
+      "lift": 0.0,
+      "count": 171,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 59
+   }
+  },
+  {
+   "claim_id": "amzn_sr_359",
+   "company": "Amazon",
+   "text": "Amazon prioritizes paper packaging designed to work with local residential recycling systems.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5823,
+    "contributing_terms": [
+     {
+      "term": "local",
+      "lift": 0.0,
+      "count": 112,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "packaging",
+      "lift": 0.4032,
+      "count": 133,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "work",
+      "lift": 0.448,
+      "count": 132,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "systems",
+      "lift": 1.0081,
+      "count": 120,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 60
+   }
+  },
+  {
+   "claim_id": "amzn_sr_380",
+   "company": "Amazon",
+   "text": "Amazon's commuter benefits reduce transportation costs while supporting environmental sustainability.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5821,
+    "contributing_terms": [
+     {
+      "term": "benefits",
+      "lift": 0.0,
+      "count": 56,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "environmental sustainability",
+      "lift": 0.0,
+      "count": 93,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "transportation",
+      "lift": 0.0,
+      "count": 61,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "supporting",
+      "lift": 0.5045,
+      "count": 86,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reduce",
+      "lift": 0.5293,
+      "count": 166,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 61
+   }
+  },
+  {
+   "claim_id": "goog_sr_018",
+   "company": "Alphabet",
+   "text": "In 2024, Alphabet signed contracts to purchase over 8 GW of additional clean energy generation, the largest annual total in its history and twice the volume contracted the prior year.",
+   "track_R": {
+    "label": "A",
+    "terminal": "SUBSTANTIATED_OTHER",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "other_capacity"
+     },
+     {
+      "node": "T10",
+      "reliability": "OPEN",
+      "answer": "no"
+     },
+     {
+      "node": "T10a",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "In 2024"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5781,
+    "contributing_terms": [
+     {
+      "term": "clean",
+      "lift": 0.0,
+      "count": 185,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "clean energy",
+      "lift": 0.0,
+      "count": 133,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "clean energy generation",
+      "lift": 0.0,
+      "count": 7,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "contracted",
+      "lift": 0.0,
+      "count": 35,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "contracts",
+      "lift": 0.0,
+      "count": 17,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "A",
+    "labels_reported": null,
+    "triage_rank": 62
+   }
+  },
+  {
+   "claim_id": "msft_sr_148",
+   "company": "Microsoft",
+   "text": "Renewable diesel is now in use in Microsoft's road freight operations in Europe and California.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.577,
+    "contributing_terms": [
+     {
+      "term": "diesel",
+      "lift": 0.0,
+      "count": 15,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "europe",
+      "lift": 0.0,
+      "count": 72,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0,
+      "count": 366,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "renewable diesel",
+      "lift": 0.0,
+      "count": 10,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "use",
+      "lift": 0.9608,
+      "count": 305,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 63
+   }
+  },
+  {
+   "claim_id": "amzn_sr_281",
+   "company": "Amazon",
+   "text": "Amazon is one of the most energy-efficient data center operators in the world.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5714,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.0,
+      "count": 305,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "most",
+      "lift": 0.0,
+      "count": 93,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "one",
+      "lift": 0.0,
+      "count": 94,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "world",
+      "lift": 0.0,
+      "count": 106,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "data",
+      "lift": 2.1987,
+      "count": 523,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 64
+   }
+  },
+  {
+   "claim_id": "goog_sr_029",
+   "company": "Alphabet",
+   "text": "Alphabet is advancing solar aggregation and piloting investments in new clean energy projects in Asia Pacific.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.5406,
+    "contributing_terms": [
+     {
+      "term": "advancing",
+      "lift": 0.0,
+      "count": 98,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "energy projects",
+      "lift": 0.0,
+      "count": 16,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "new",
+      "lift": 0.0,
+      "count": 270,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "new clean",
+      "lift": 0.0,
+      "count": 12,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "new clean energy",
+      "lift": 0.0,
+      "count": 11,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 65
+   }
+  },
+  {
+   "claim_id": "msft_sr_279",
+   "company": "Microsoft",
+   "text": "Microsoft has developed generative AI methods for design of next-generation vitrimers with enhanced strength, flexibility, and recyclability.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4721,
+    "contributing_terms": [
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "design",
+      "lift": 0.3666,
+      "count": 86,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "ai",
+      "lift": 0.432,
+      "count": 357,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "methods",
+      "lift": 3.0242,
+      "count": 23,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 66
+   }
+  },
+  {
+   "claim_id": "amzn_sr_299",
+   "company": "Amazon",
+   "text": "Amazon makes substantial investments in building new energy generation and transmission infrastructure.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4444,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.0,
+      "count": 305,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "energy generation",
+      "lift": 0.0,
+      "count": 9,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "infrastructure",
+      "lift": 0.0,
+      "count": 112,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "new",
+      "lift": 0.0,
+      "count": 270,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "energy",
+      "lift": 1.0911,
+      "count": 580,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 67
+   }
+  },
+  {
+   "claim_id": "msft_sr_196",
+   "company": "Microsoft",
+   "text": "Microsoft invests in water solutions across approximately 40 priority locations worldwide.",
+   "track_R": {
+    "label": "A",
+    "terminal": "SUBSTANTIATED_WATER",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "4"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "water"
+     },
+     {
+      "node": "T7",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T7a",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "worldwide"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4424,
+    "contributing_terms": [
+     {
+      "term": "approximately",
+      "lift": 0.0,
+      "count": 44,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0961,
+      "count": 366,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water",
+      "lift": 0.3636,
+      "count": 450,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "across",
+      "lift": 0.5942,
+      "count": 319,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "worldwide",
+      "lift": 0.8496,
+      "count": 33,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "A",
+    "labels_reported": null,
+    "triage_rank": 68
+   }
+  },
+  {
+   "claim_id": "goog_sr_117",
+   "company": "Alphabet",
+   "text": "Alphabet utilizes the operational control approach, as defined by the GHG Protocol, to establish relevant operations for emissions, energy, and water metrics at Alphabet's owned and leased data centers, offices, and other assets.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4394,
+    "contributing_terms": [
+     {
+      "term": "approach",
+      "lift": 0.0,
+      "count": 127,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "assets",
+      "lift": 0.0,
+      "count": 25,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "control",
+      "lift": 0.0,
+      "count": 27,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "ghg protocol",
+      "lift": 0.0,
+      "count": 8,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "leased",
+      "lift": 0.0,
+      "count": 10,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 69
+   }
+  },
+  {
+   "claim_id": "amzn_sr_320",
+   "company": "Amazon",
+   "text": "Amazon worked to support jurisdictional efforts to reduce deforestation in Southeast Asia and Brazil.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4371,
+    "contributing_terms": [
+     {
+      "term": "asia",
+      "lift": 0.0,
+      "count": 33,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "brazil",
+      "lift": 0.0,
+      "count": 13,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "efforts",
+      "lift": 0.2562,
+      "count": 194,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reduce",
+      "lift": 0.5293,
+      "count": 166,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "support",
+      "lift": 0.7175,
+      "count": 161,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 70
+   }
+  },
+  {
+   "claim_id": "msft_sr_238",
+   "company": "Microsoft",
+   "text": "Nature-based design solutions such as native landscaping, stormwater management, and biodiversity enhancements are reducing Microsoft's environmental footprint at datacenters.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.4244,
+    "contributing_terms": [
+     {
+      "term": "datacenters",
+      "lift": 0.0,
+      "count": 75,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "nature-based",
+      "lift": 0.0,
+      "count": 11,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0961,
+      "count": 366,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "biodiversity",
+      "lift": 0.4484,
+      "count": 96,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "environmental",
+      "lift": 0.6023,
+      "count": 288,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 71
+   }
+  },
+  {
+   "claim_id": "msft_sr_171",
+   "company": "Microsoft",
+   "text": "Microsoft is deploying electric vehicle trucking in the United States, Asia, and Europe for more sustainable logistics operations.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3993,
+    "contributing_terms": [
+     {
+      "term": "asia",
+      "lift": 0.0,
+      "count": 33,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "electric",
+      "lift": 0.0,
+      "count": 46,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "vehicle",
+      "lift": 0.0,
+      "count": 31,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0961,
+      "count": 366,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "united",
+      "lift": 0.7508,
+      "count": 67,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 72
+   }
+  },
+  {
+   "claim_id": "msft_sr_184",
+   "company": "Microsoft",
+   "text": "Microsoft participates in the IMEC Sustainable Semiconductor Technologies and Systems program, which assesses and works to reduce the environmental impacts of semiconductor manufacturing.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3836,
+    "contributing_terms": [
+     {
+      "term": "technologies",
+      "lift": 0.0,
+      "count": 115,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.0961,
+      "count": 366,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "systems",
+      "lift": 0.3844,
+      "count": 120,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reduce",
+      "lift": 0.5293,
+      "count": 166,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "environmental",
+      "lift": 0.6023,
+      "count": 288,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 73
+   }
+  },
+  {
+   "claim_id": "amzn_sr_335",
+   "company": "Amazon",
+   "text": "In Hong Kong, China, Amazon achieved policy breakthroughs with the Water Supplies Department to allow reclaimed water use in cooling towers, which had previously been restricted to fresh water only.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3641,
+    "contributing_terms": [
+     {
+      "term": "cooling",
+      "lift": 0.0,
+      "count": 86,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "policy",
+      "lift": 0.0,
+      "count": 75,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reclaimed",
+      "lift": 0.0,
+      "count": 13,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "reclaimed water",
+      "lift": 0.0,
+      "count": 10,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "water",
+      "lift": 0.3636,
+      "count": 450,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 74
+   }
+  },
+  {
+   "claim_id": "amzn_sr_282",
+   "company": "Amazon",
+   "text": "Amazon is an early investor in new technologies like small modular reactors (SMRs).",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3573,
+    "contributing_terms": [
+     {
+      "term": "small",
+      "lift": 0.0,
+      "count": 27,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "technologies",
+      "lift": 0.0,
+      "count": 115,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "new",
+      "lift": 0.8561,
+      "count": 270,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "like",
+      "lift": 1.1133,
+      "count": 127,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "amazon",
+      "lift": 1.8796,
+      "count": 305,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 75
+   }
+  },
+  {
+   "claim_id": "amzn_sr_287",
+   "company": "Amazon",
+   "text": "Amazon constructed its first delivery station using mass timber.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3462,
+    "contributing_terms": [
+     {
+      "term": "mass timber",
+      "lift": 0.0,
+      "count": 7,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "timber",
+      "lift": 0.0,
+      "count": 9,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "delivery",
+      "lift": 0.5765,
+      "count": 51,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "using",
+      "lift": 1.2744,
+      "count": 188,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "mass",
+      "lift": 1.3452,
+      "count": 15,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 76
+   }
+  },
+  {
+   "claim_id": "amzn_sr_358",
+   "company": "Amazon",
+   "text": "Amazon focuses on reducing delivery packaging volume and weight.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3399,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "packaging",
+      "lift": 0.4032,
+      "count": 133,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "reducing",
+      "lift": 1.2903,
+      "count": 129,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "delivery",
+      "lift": 2.6882,
+      "count": 51,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 77
+   }
+  },
+  {
+   "claim_id": "msft_sr_182",
+   "company": "Microsoft",
+   "text": "Microsoft's approach of using excess datacenter heat to power DAC systems has shown promise in offsetting the carbon footprint of AI workloads.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.3339,
+    "contributing_terms": [
+     {
+      "term": "power",
+      "lift": 0.0,
+      "count": 144,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "systems",
+      "lift": 0.0,
+      "count": 120,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "using",
+      "lift": 0.0,
+      "count": 188,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "datacenter",
+      "lift": 0.3666,
+      "count": 63,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 78
+   }
+  },
+  {
+   "claim_id": "amzn_sr_363",
+   "company": "Amazon",
+   "text": "Amazon collaborated with the National Renewable Energy Laboratory to develop a novel recycling technology.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.295,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "technology",
+      "lift": 0.288,
+      "count": 124,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "energy",
+      "lift": 1.0278,
+      "count": 580,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "renewable",
+      "lift": 1.4231,
+      "count": 96,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "renewable energy",
+      "lift": 1.6129,
+      "count": 68,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 79
+   }
+  },
+  {
+   "claim_id": "amzn_sr_389",
+   "company": "Amazon",
+   "text": "Amazon supports supplier decarbonization actions through a procurement training program designed to equip procurement teams with tools and knowledge needed to effectively engage suppliers on carbon emissions reductions.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2808,
+    "contributing_terms": [
+     {
+      "term": "emissions reductions",
+      "lift": 0.0,
+      "count": 33,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "reductions",
+      "lift": 0.2887,
+      "count": 50,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "reductions",
+      "lift": 0.4839,
+      "count": 50,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "carbon emissions",
+      "lift": 0.5052,
+      "count": 59,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 80
+   }
+  },
+  {
+   "claim_id": "msft_sr_191",
+   "company": "Microsoft",
+   "text": "Microsoft is incorporating low-carbon requirements for materials and equipment in datacenter construction into its contracts.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Microsoft"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2734,
+    "contributing_terms": [
+     {
+      "term": "microsoft",
+      "lift": 0.3132,
+      "count": 366,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "datacenter",
+      "lift": 0.3666,
+      "count": 63,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "construction",
+      "lift": 0.3674,
+      "count": 77,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "low-carbon",
+      "lift": 0.672,
+      "count": 23,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "materials",
+      "lift": 0.6736,
+      "count": 136,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 81
+   }
+  },
+  {
+   "claim_id": "amzn_sr_311",
+   "company": "Amazon",
+   "text": "In 2025, Amazon's data centers achieved a global PUE of 1.14.",
+   "track_R": {
+    "label": "A",
+    "terminal": "SUBSTANTIATED_METRIC",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "2"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "efficiency"
+     },
+     {
+      "node": "T9",
+      "reliability": "OPEN",
+      "answer": "no"
+     },
+     {
+      "node": "T9a",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "global"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2619,
+    "contributing_terms": [
+     {
+      "term": "pue",
+      "lift": 0.0,
+      "count": 24,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "global",
+      "lift": 0.1804,
+      "count": 317,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "global",
+      "lift": 0.2057,
+      "count": 317,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "achieved",
+      "lift": 0.448,
+      "count": 55,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "A",
+    "labels_reported": null,
+    "triage_rank": 82
+   }
+  },
+  {
+   "claim_id": "goog_sr_106",
+   "company": "Alphabet",
+   "text": "Renewable electricity procured includes contractual instruments, on-site renewable electricity generation, and renewable electricity in the electric grids where our facilities are located.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "our"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.25,
+    "contributing_terms": [
+     {
+      "term": "electric",
+      "lift": 0.0,
+      "count": 46,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "grids",
+      "lift": 0.0,
+      "count": 36,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "renewable",
+      "lift": 1.1136,
+      "count": 96,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "generation",
+      "lift": 1.3611,
+      "count": 53,
+      "qualifier": "method_stated"
+     },
+     {
+      "term": "electricity",
+      "lift": 1.9029,
+      "count": 205,
+      "qualifier": "method_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 83
+   }
+  },
+  {
+   "claim_id": "msft_sr_230",
+   "company": "Microsoft",
+   "text": "We are creating a direct channel with global recycling partners to help achieve best-in-class recycling efficiencies across material types.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "We"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.2298,
+    "contributing_terms": [
+     {
+      "term": "global",
+      "lift": 0.2057,
+      "count": 317,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "help",
+      "lift": 0.5259,
+      "count": 183,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "achieve",
+      "lift": 0.8065,
+      "count": 35,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "across",
+      "lift": 0.853,
+      "count": 319,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "partners",
+      "lift": 1.7532,
+      "count": 104,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 84
+   }
+  },
+  {
+   "claim_id": "goog_sr_088",
+   "company": "Alphabet",
+   "text": "Alphabet uses the operational control approach to define its organizational boundary for GHG emissions accounting.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Alphabet"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1833,
+    "contributing_terms": [
+     {
+      "term": "alphabet",
+      "lift": 0.0,
+      "count": 104,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "ghg emissions",
+      "lift": 0.0,
+      "count": 20,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "ghg",
+      "lift": 0.6218,
+      "count": 45,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "operational",
+      "lift": 0.672,
+      "count": 86,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "approach",
+      "lift": 0.7116,
+      "count": 127,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 85
+   }
+  },
+  {
+   "claim_id": "amzn_sr_387",
+   "company": "Amazon",
+   "text": "Amazon encourages suppliers to reduce generation of waste within their operations and supply chain.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1561,
+    "contributing_terms": [
+     {
+      "term": "waste",
+      "lift": 0.2016,
+      "count": 308,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "reduce",
+      "lift": 1.0081,
+      "count": 166,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "supply",
+      "lift": 1.0856,
+      "count": 232,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "supply chain",
+      "lift": 1.283,
+      "count": 171,
+      "qualifier": "scope_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 86
+   }
+  },
+  {
+   "claim_id": "amzn_sr_386",
+   "company": "Amazon",
+   "text": "Amazon encourages suppliers to reduce generation of greenhouse gas emissions within their operations and supply chain.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1086,
+    "contributing_terms": [
+     {
+      "term": "amazon",
+      "lift": 0.2372,
+      "count": 305,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "supply",
+      "lift": 0.5389,
+      "count": 232,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "suppliers",
+      "lift": 0.5575,
+      "count": 161,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "amazon",
+      "lift": 0.5915,
+      "count": 305,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "supply chain",
+      "lift": 0.7029,
+      "count": 171,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 87
+   }
+  },
+  {
+   "claim_id": "amzn_sr_302",
+   "company": "Amazon",
+   "text": "Emissions from our direct operations represent 19% of our carbon footprint.",
+   "track_R": {
+    "label": "A",
+    "terminal": "SUBSTANTIATED_EMISSIONS",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "our"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "1"
+     },
+     {
+      "node": "T2",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T4",
+      "reliability": "CLOSED",
+      "answer": "emissions"
+     },
+     {
+      "node": "T6",
+      "reliability": "CLOSED",
+      "answer": "no"
+     },
+     {
+      "node": "T6s",
+      "reliability": "CLOSED",
+      "answer": "yes",
+      "span": "direct operations"
+     },
+     {
+      "node": "T6b",
+      "reliability": "OPEN",
+      "answer": "no"
+     },
+     {
+      "node": "T6c",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.1039,
+    "contributing_terms": [
+     {
+      "term": "represent",
+      "lift": 0.0,
+      "count": 28,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "carbon",
+      "lift": 0.5459,
+      "count": 377,
+      "qualifier": "scope_stated"
+     },
+     {
+      "term": "carbon",
+      "lift": 1.286,
+      "count": 377,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "emissions",
+      "lift": 1.3979,
+      "count": 454,
+      "qualifier": "baseline_stated"
+     },
+     {
+      "term": "carbon footprint",
+      "lift": 1.5156,
+      "count": 40,
+      "qualifier": "baseline_stated"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "A",
+    "labels_reported": null,
+    "triage_rank": 88
+   }
+  },
+  {
+   "claim_id": "amzn_sr_388",
+   "company": "Amazon",
+   "text": "Amazon encourages suppliers to reduce generation of hazardous materials within their operations and supply chain.",
+   "track_R": {
+    "label": "B",
+    "terminal": "VAGUE_NO_QUANTITY",
+    "mechanism": null,
+    "severity": null,
+    "path": [
+     {
+      "node": "T0",
+      "reliability": "OPEN",
+      "answer": "yes",
+      "span": "Amazon"
+     },
+     {
+      "node": "T1",
+      "reliability": "CLOSED",
+      "answer": "no"
+     }
+    ]
+   },
+   "track_D": {
+    "label": null,
+    "confidence": null,
+    "reasoning": null
+   },
+   "track_S": {
+    "risk": 0.0774,
+    "contributing_terms": [
+     {
+      "term": "reduce",
+      "lift": 0.5293,
+      "count": 166,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "generation",
+      "lift": 0.7687,
+      "count": 53,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "operations",
+      "lift": 0.9278,
+      "count": 205,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "materials",
+      "lift": 1.5017,
+      "count": 136,
+      "qualifier": "verifier_named"
+     },
+     {
+      "term": "chain",
+      "lift": 1.5792,
+      "count": 215,
+      "qualifier": "verifier_named"
+     }
+    ]
+   },
+   "consensus": {
+    "state": "NO_TRACK_D",
+    "label": "B",
+    "labels_reported": null,
+    "triage_rank": 89
+   }
+  }
+ ]
+}

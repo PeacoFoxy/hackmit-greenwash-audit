@@ -1,5 +1,5 @@
-"""§8 回归集：12 条来自语料的用例，每条断言终点与 label。"""
-from src.rules_v2 import classify
+"""§10 回归集：12 条来自语料的用例，每条断言终点与 label。"""
+from src.tree import classify
 
 CASES = [
     ("Amazon matched 100% of the electricity consumed by its global operations with renewable energy",
@@ -39,9 +39,11 @@ def run():
         print(f"[{mark}] {text[:62]}")
         if not ok:
             print(f"       want {want_terminal}/{want_label}, got {r['terminal']}/{r['label']}")
-        print(f"       {' → '.join(r['path'])}")
-        if r["evidence_span"]:
-            print(f"       span: {r['evidence_span']!r}")
+        trace = " → ".join(f"{n['node']}[{n['reliability'][0]}]:{n['answer']}" for n in r["path"])
+        print(f"       {trace}")
+        spans = [n["span"] for n in r["path"] if "span" in n]
+        if spans:
+            print(f"       span: {spans[-1]!r}")
     print(f"\n{passed}/{len(CASES)} passed")
     return passed == len(CASES)
 

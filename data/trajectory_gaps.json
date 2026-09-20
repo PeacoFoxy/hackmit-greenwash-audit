@@ -1,0 +1,51 @@
+[
+  {
+    "company": "Amazon",
+    "metric": "emissions per shipped unit reduction",
+    "unit": "%",
+    "target_value": 7.0,
+    "target_year": 2025,
+    "source_claim_ids": [
+      "amzn_sr_292",
+      "amzn_sr_303",
+      "amzn_sr_00133",
+      "amzn_sr_00133"
+    ],
+    "prior_year": 2019,
+    "prior_value": 39.0,
+    "latest_year": 2024,
+    "latest_value": 7.0,
+    "gap": 0.0,
+    "years_left": 1,
+    "required_pace": 0.0,
+    "achieved_pace": -6.4,
+    "pace_ratio": null,
+    "projected_year": null,
+    "shortfall_years": null,
+    "status": "UNDEFINED"
+  },
+  {
+    "company": "Amazon",
+    "metric": "waste diverted from landfill",
+    "unit": "%",
+    "target_value": 84.0,
+    "target_year": 2025,
+    "source_claim_ids": [
+      "amzn_sr_351",
+      "amzn_sr_00430",
+      "amzn_sr_00430"
+    ],
+    "prior_year": 2023,
+    "prior_value": 84.0,
+    "latest_year": 2024,
+    "latest_value": 85.0,
+    "gap": -1.0,
+    "years_left": 1,
+    "required_pace": -1.0,
+    "achieved_pace": 1.0,
+    "pace_ratio": -1.0,
+    "projected_year": null,
+    "shortfall_years": null,
+    "status": "MOVING_AWAY"
+  }
+]

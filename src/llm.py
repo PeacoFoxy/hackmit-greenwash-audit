@@ -1,3 +1,4 @@
+"""全项目唯一的 LLM 入口：带磁盘缓存 + 重试。缓存命中不发请求，断网也能复现结果。"""
 import os, json, hashlib, time
 from anthropic import Anthropic
 

@@ -1,3 +1,8 @@
+"""标注辅助：LLM 对候选 claim 做四类初标，供人工复核。
+
+data/candidates.json → data/prelabels.json + data/annotations.csv（gold_label 留空）。[LLM]
+初标不能代替人工复核——标注集若由 LLM 生成，准确率对比自证无效。
+"""
 import csv, json, os, re
 from collections import Counter
 from src.llm import ask

@@ -1,3 +1,4 @@
+"""PDF → 纯文本。corpus/*.pdf + corpus/sources.json → data/corpus.json。"""
 import json, os
 from pypdf import PdfReader
 

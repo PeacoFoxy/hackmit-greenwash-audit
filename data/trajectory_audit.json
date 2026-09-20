@@ -1,0 +1,911 @@
+[
+  {
+    "company": "Alphabet",
+    "metric": "data center energy emissions reduction",
+    "target_value": 12.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_001",
+      "goog_sr_016"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "new clean energy contracts signed",
+    "target_value": 8.0,
+    "target_unit": "GW",
+    "target_year": 2024,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_002"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "clean energy brought online",
+    "target_value": 2.5,
+    "target_unit": "GW",
+    "target_year": 2024,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_003"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "data center electricity consumption increase",
+    "target_value": 27.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_017"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "clean energy contracts signed",
+    "target_value": 8.0,
+    "target_unit": "GW",
+    "target_year": 2024,
+    "domain": "energy",
+    "observations_found": 1,
+    "observation_years": [
+      2010
+    ],
+    "source_claim_ids": [
+      "goog_sr_018"
+    ],
+    "outcome": "discarded",
+    "reason": "only_one_observation"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "cumulative clean energy agreements signed",
+    "target_value": 22.0,
+    "target_unit": "GW",
+    "target_year": 2024,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_019"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "overall water consumption increase",
+    "target_value": 28.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "water",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_038"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "food waste diverted from landfill",
+    "target_value": 85.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_041"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "plastic-free packaging achieved",
+    "target_value": 94.0,
+    "target_unit": "%",
+    "target_year": 2020,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_042"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "collective carbon emissions reduction",
+    "target_value": 1.0,
+    "target_unit": "GtCO2e",
+    "target_year": 2030,
+    "domain": "emissions",
+    "observations_found": 1,
+    "observation_years": [
+      2024
+    ],
+    "source_claim_ids": [
+      "goog_sr_052"
+    ],
+    "outcome": "discarded",
+    "reason": "only_one_observation"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "global average carbon-free energy",
+    "target_value": 66.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_061"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "ambition-based emissions reduction vs counterfactual",
+    "target_value": 66.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_065"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "total ambition-based emissions",
+    "target_value": 11500000.0,
+    "target_unit": "tCO2e",
+    "target_year": 2024,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_066"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "combined scope 1 and scope 2 market-based emissions",
+    "target_value": 3100000.0,
+    "target_unit": "tCO2e",
+    "target_year": 2024,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_067"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "scope 3 ambition-based emissions",
+    "target_value": 8400000.0,
+    "target_unit": "tCO2e",
+    "target_year": 2024,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_068"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "emissions reduction target",
+    "target_value": 50.0,
+    "target_unit": "%",
+    "target_year": 2030,
+    "domain": "emissions",
+    "observations_found": 1,
+    "observation_years": [
+      2024
+    ],
+    "source_claim_ids": [
+      "goog_sr_083"
+    ],
+    "outcome": "discarded",
+    "reason": "only_one_observation"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "net-zero emissions target",
+    "target_value": 0.0,
+    "target_unit": "tCO2e",
+    "target_year": 2050,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_083"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Alphabet",
+    "metric": "total electricity consumption",
+    "target_value": 160.0,
+    "target_unit": "MWh",
+    "target_year": 2023,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "goog_sr_133"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Microsoft",
+    "metric": "Scope 1 and 2 emissions reduction from 2020 baseline",
+    "target_value": 29.9,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "msft_sr_144"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Microsoft",
+    "metric": "Scope 3 emissions increase from 2020 baseline",
+    "target_value": 26.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "msft_sr_145"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Microsoft",
+    "metric": "supplier carbon-free electricity",
+    "target_value": 100.0,
+    "target_unit": "%",
+    "target_year": 2030,
+    "domain": "energy",
+    "observations_found": 1,
+    "observation_years": [
+      2024
+    ],
+    "source_claim_ids": [
+      "msft_sr_170"
+    ],
+    "outcome": "discarded",
+    "reason": "only_one_observation"
+  },
+  {
+    "company": "Microsoft",
+    "metric": "PV module reuse or recycling",
+    "target_value": 100.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "msft_sr_175"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Microsoft",
+    "metric": "carbon removal delivery",
+    "target_value": 100000.0,
+    "target_unit": "tCO2e",
+    "target_year": 2030,
+    "domain": "emissions",
+    "observations_found": 1,
+    "observation_years": [
+      2024
+    ],
+    "source_claim_ids": [
+      "msft_sr_178"
+    ],
+    "outcome": "discarded",
+    "reason": "only_one_observation"
+  },
+  {
+    "company": "Microsoft",
+    "metric": "excess water use instances eliminated",
+    "target_value": 90.0,
+    "target_unit": "%",
+    "target_year": 2022,
+    "domain": "water",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "msft_sr_214"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Microsoft",
+    "metric": "new owned datacenters with durable serviceware",
+    "target_value": 100.0,
+    "target_unit": "%",
+    "target_year": 2024,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "msft_sr_225"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "water positive progress",
+    "target_value": 75.0,
+    "target_unit": "%",
+    "target_year": 2030,
+    "domain": "water",
+    "observations_found": 1,
+    "observation_years": [
+      2025
+    ],
+    "source_claim_ids": [
+      "amzn_sr_285"
+    ],
+    "outcome": "discarded",
+    "reason": "only_one_observation"
+  },
+  {
+    "company": "Amazon",
+    "metric": "net-zero carbon emissions",
+    "target_value": 0.0,
+    "target_unit": "tCO2e",
+    "target_year": 2040,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_290"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "emissions per shipped unit reduction",
+    "target_value": 7.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 2,
+    "observation_years": [
+      2019,
+      2024
+    ],
+    "source_claim_ids": [
+      "amzn_sr_292",
+      "amzn_sr_303"
+    ],
+    "outcome": "kept",
+    "reason": null
+  },
+  {
+    "company": "Amazon",
+    "metric": "renewable energy match percentage",
+    "target_value": 100.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_295",
+      "amzn_sr_296",
+      "amzn_sr_297"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "direct operations emissions increase",
+    "target_value": 2.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_301"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "renewable natural gas purchased",
+    "target_value": 39500000.0,
+    "target_unit": "gallons",
+    "target_year": 2025,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_305"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "Whole Foods stores using natural or lower-GWP refrigerants",
+    "target_value": 342.0,
+    "target_unit": "stores",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_307"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "Whole Foods stores using natural refrigerants only",
+    "target_value": 29.0,
+    "target_unit": "stores",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_308"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "Whole Foods stores using combination of natural and other refrigerants",
+    "target_value": 20.0,
+    "target_unit": "stores",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_309"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "Whole Foods stores using other lower-GWP refrigerants",
+    "target_value": 293.0,
+    "target_unit": "stores",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_310"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "Amazon data center global PUE",
+    "target_value": 1.14,
+    "target_unit": "PUE",
+    "target_year": 2025,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_311"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "countries with ISO 50001 certified data centers",
+    "target_value": 35.0,
+    "target_unit": "countries",
+    "target_year": 2025,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_314"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "new nuclear energy capacity from SMR investment",
+    "target_value": 5000.0,
+    "target_unit": "MW",
+    "target_year": 2039,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_315"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "carbon-free nuclear power from Talen Energy",
+    "target_value": 1900.0,
+    "target_unit": "MW",
+    "target_year": 2042,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_316"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "Amazon buildings using AI tools for HVAC and water monitoring",
+    "target_value": 820.0,
+    "target_unit": "buildings",
+    "target_year": 2025,
+    "domain": "energy",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_317"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "Amazon buildings using AI tools for refrigeration monitoring",
+    "target_value": 81.0,
+    "target_unit": "buildings",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_318"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "inset project emission reductions",
+    "target_value": 199400.0,
+    "target_unit": "tCO2e",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_323"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "net-zero carbon emissions commitment",
+    "target_value": 0.0,
+    "target_unit": "tCO2e",
+    "target_year": 2040,
+    "domain": "emissions",
+    "observations_found": 1,
+    "observation_years": [
+      2025
+    ],
+    "source_claim_ids": [
+      "amzn_sr_324"
+    ],
+    "outcome": "discarded",
+    "reason": "only_one_observation"
+  },
+  {
+    "company": "Amazon",
+    "metric": "cooling water use reduction",
+    "target_value": 938000000.0,
+    "target_unit": "liters",
+    "target_year": 2025,
+    "domain": "water",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_332"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "global data center Water Use Effectiveness (WUE)",
+    "target_value": 0.12,
+    "target_unit": "liters per kWh",
+    "target_year": 2025,
+    "domain": "water",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_333"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "global data center WUE improvement from 2021",
+    "target_value": 52.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "water",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_334"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "water replenishment projects",
+    "target_value": 45.0,
+    "target_unit": "projects",
+    "target_year": 2025,
+    "domain": "water",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_339"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "water replenished to communities",
+    "target_value": 9400000000.0,
+    "target_unit": "liters",
+    "target_year": 2025,
+    "domain": "water",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_341"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "new hard drives purchase avoided",
+    "target_value": 1000000.0,
+    "target_unit": "units",
+    "target_year": 2023,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_349"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "waste reduction per shipped unit",
+    "target_value": 5.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_350"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "waste diverted from landfill",
+    "target_value": 84.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "waste",
+    "observations_found": 2,
+    "observation_years": [
+      2023,
+      2024
+    ],
+    "source_claim_ids": [
+      "amzn_sr_351"
+    ],
+    "outcome": "kept",
+    "reason": null
+  },
+  {
+    "company": "Amazon",
+    "metric": "waste diverted via recycling or composting",
+    "target_value": 82.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_352"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "waste diverted via incineration with energy recovery",
+    "target_value": 2.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_353"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "waste to landfill or incineration without energy recovery",
+    "target_value": 16.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_354"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "organic products share at Whole Foods Market",
+    "target_value": 34.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_367"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "organic fresh produce share at Whole Foods Market",
+    "target_value": 61.0,
+    "target_unit": "%",
+    "target_year": 2025,
+    "domain": "waste",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_368"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "reconstructed prairie acres in wilding pilot",
+    "target_value": 1000.0,
+    "target_unit": "acres",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_369"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "trusted certifications in Climate Pledge Friendly program",
+    "target_value": 62.0,
+    "target_unit": "certifications",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_374"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  },
+  {
+    "company": "Amazon",
+    "metric": "new certifications added to Climate Pledge Friendly portfolio",
+    "target_value": 5.0,
+    "target_unit": "certifications",
+    "target_year": 2025,
+    "domain": "emissions",
+    "observations_found": 0,
+    "observation_years": [],
+    "source_claim_ids": [
+      "amzn_sr_375"
+    ],
+    "outcome": "discarded",
+    "reason": "no_observations"
+  }
+]
