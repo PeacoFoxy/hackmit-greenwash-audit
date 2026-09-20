@@ -1,4 +1,4 @@
-"""TextQuant — Streamlit 界面。FRONTEND.md 步骤 1-4：页头、输入行、报告地图、段落详情、claim 分类器。
+"""TextQuant — Streamlit 界面。FRONTEND.md 步骤 1-8：预加载三份报告 + 上传 PDF 实时管线。
 
 运行: streamlit run app.py
 离线自检: env -u ANTHROPIC_API_KEY streamlit run app.py
@@ -14,6 +14,8 @@ from matplotlib.lines import Line2D
 import streamlit as st
 
 from src.claim_api import classify_claim, is_cached
+from src.pipeline import analyse
+from src.plot_signals import draw_overlay
 from src.ui_text import (MECHANISM_COLORS, PRESETS, label_badge, mechanism_badge,
                          mechanism_of_region, say_mechanism, why_flagged)
 
@@ -77,6 +79,15 @@ def load_metrics():
 def load_sentence_counts():
     rows = json.loads((DATA / "signals.json").read_text(encoding="utf-8"))
     return Counter(r["company"] for r in rows)
+
+
+@st.cache_data(show_spinner=False)
+def analyse_upload(file_bytes, filename, _on_stage=None):
+    """按文件内容缓存：同一份 PDF 再传一次是瞬时的。_on_stage 不参与缓存键。"""
+    result = analyse(file_bytes, filename, on_stage=_on_stage)
+    for r in result["regions"]:
+        r["mechanism"] = mechanism_of_region(r.get("flag_types", {}))
+    return result
 
 
 def render_map(regions, counts):
@@ -164,9 +175,22 @@ with col_up:
 st.caption("Preloaded: " + " · ".join(s["company"] for s in sources))
 
 selected = resolve(query, sources)
+uploaded = None
 if upload is not None:
-    st.warning("Upload analysis is not wired up yet — it is the last build step. "
-               "The three preloaded reports work today.")
+    with st.status(f"Analysing {upload.name}", expanded=True) as status:
+        try:
+            uploaded = analyse_upload(upload.getvalue(), upload.name,
+                                      _on_stage=lambda n, d: st.write(f"**{n}** — {d}"))
+            if uploaded.get("extract_error"):
+                st.write("**Classifying claims** — live extraction unavailable; the rule "
+                         "layers above still ran with no network.")
+            status.update(label=f"{upload.name}: {uploaded['n_sentences']:,} sentences, "
+                                f"{len(uploaded['regions'])} passages to review",
+                          state="complete")
+        except Exception as exc:
+            status.update(label="Could not read that PDF", state="error")
+            st.warning(f"Upload analysis failed ({type(exc).__name__}). "
+                       "The three preloaded reports below still work.")
 elif query and selected is None:
     st.info("No report loaded for that name. Preloaded reports: "
             + ", ".join(f"{s['company']} ({s['ticker']})" for s in sources)
@@ -180,26 +204,43 @@ elif analyze:
 st.divider()
 
 # ------------------------------------------------------------- SECTION 1-7
-regions = load_regions()
-counts = load_sentence_counts()
+# 上传成功时整页改看上传件，否则走预加载路径（两条路都必须能用）
+if uploaded:
+    regions = uploaded["regions"]
+    counts = Counter({uploaded["company"]: uploaded["n_sentences"]})
+    st.caption(f"Showing your upload: {uploaded['filename']}. "
+               "Reload the page to go back to the preloaded reports.")
+else:
+    regions = load_regions()
+    counts = load_sentence_counts()
 
-st.header(f"{len(regions)} passages need review")
-st.caption(f"Out of {sum(counts.values()):,} sentences across {len(counts)} reports.")
+has_regions = bool(regions)
+if not has_regions:
+    st.header("No passages crossed the review threshold")
+    st.caption(f"Out of {sum(counts.values()):,} sentences. The flag density in this report "
+               "never rose two standard deviations above its own mean.")
+else:
+    st.header(f"{len(regions)} passages need review")
+    st.caption(f"Out of {sum(counts.values()):,} sentences across {len(counts)} "
+               f"report{'s' if len(counts) > 1 else ''}.")
 
-st.pyplot(render_map(regions, counts), width="stretch")
+if has_regions:
+    st.pyplot(render_map(regions, counts), width="stretch")
 
-spans = [(r["rel_pos"][1] - r["rel_pos"][0]) * 100 for r in regions]
-st.caption(
-    f"Each block marks a run of sentences where accounting-disclosure flags cluster. "
-    f"True spans run from {min(spans):.1f}% to {max(spans):.1f}% of a report "
-    f"({min(r['n_sentences'] for r in regions)}–{max(r['n_sentences'] for r in regions)} "
-    f"sentences); narrow blocks are widened to {MIN_MARK_PX}px so they stay visible."
-)
+    spans = [(r["rel_pos"][1] - r["rel_pos"][0]) * 100 for r in regions]
+    st.caption(
+        f"Each block marks a run of sentences where accounting-disclosure flags cluster. "
+        f"True spans run from {min(spans):.1f}% to {max(spans):.1f}% of a report "
+        f"({min(r['n_sentences'] for r in regions)}–{max(r['n_sentences'] for r in regions)} "
+        f"sentences); narrow blocks are widened to {MIN_MARK_PX}px so they stay visible."
+    )
 
-choice = st.selectbox("Jump to a passage", options=range(len(regions)),
-                      format_func=lambda i: region_option(regions[i]),
-                      key="region_choice")
-st.session_state.selected_region = regions[choice]
+    choice = st.selectbox("Jump to a passage", options=range(len(regions)),
+                          format_func=lambda i: region_option(regions[i]),
+                          key=f"region_choice_{'upload' if uploaded else 'preloaded'}")
+    st.session_state.selected_region = regions[choice]
+else:
+    st.session_state.selected_region = None
 
 st.divider()
 st.header("What this passage says, and what it leaves out")
@@ -222,7 +263,10 @@ else:
     st.markdown("**Why it was flagged**")
     st.write(why_flagged(region.get("flag_types", {}), region["n_sentences"]))
 
-    if source:
+    if uploaded:
+        st.caption(f"Source: {uploaded['filename']} (uploaded this session; "
+                   "no publication date available)")
+    elif source:
         st.caption(f"Source: {source['company']} {source['doc_type'].replace('_', ' ')} "
                    f"({Path(source['file']).name}) · published {source['published_date']}")
 
@@ -268,6 +312,22 @@ elif result:
 st.divider()
 st.header("How the three reports compare")
 
+if uploaded:
+    st.caption("Computed from your upload. The preloaded three-report comparison is only "
+               "available for the bundled reports.")
+    us = uploaded["company_stats"][0]
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Promises per verification", f"{us['pvr']:.2f}")
+    c2.metric("Sentences per forward-looking claim", f"{us['future_interval']:.0f}")
+    c3.metric("Sentences per verification mention", f"{us['verification_interval']:.0f}")
+
+    fig, ax = plt.subplots(figsize=(10, 3.4))
+    draw_overlay(ax, uploaded["rows"], uploaded["company"], legend=True)
+    ax.set_xlabel("Relative position in report")
+    fig.tight_layout()
+    st.pyplot(fig, width="stretch")
+    st.caption("Promises in blue, third-party verification in green, for this report only.")
+
 company_stats = load_company_stats()
 for col, s in zip(st.columns(len(company_stats)), company_stats):
     col.metric("Promises per verification", f"{s['pvr']:.2f}", label_visibility="visible",
@@ -284,6 +344,7 @@ st.caption(
     f"{least['verification_interval']:.0f}."
 )
 
+st.markdown("**The three preloaded reports**" if uploaded else "")
 st.image(str(FIGS / "sig_overlay_all.png"))
 st.caption("Promises in blue, third-party verification in green, on shared axes. Two reports "
            "pivot to verification in the back half; the third has no such section.")
@@ -292,6 +353,12 @@ st.caption("Promises in blue, third-party verification in green, on shared axes.
 st.divider()
 st.header("Can these commitments be progress-checked?")
 
+if uploaded:
+    st.subheader(f"{uploaded['n_commitments']} quantified commitments found in this report.")
+    st.write("Checking whether each one can be progress-checked needs the trajectory pass "
+             "(two LLM stages over the whole document). That runs offline on the preloaded "
+             "reports below; it is not run for uploads.")
+
 audit = load_audit()
 n_targets = len(audit)
 n_zero = sum(a["reason"] == "no_observations" for a in audit)
@@ -299,6 +366,7 @@ n_one = sum(a["reason"] == "only_one_observation" for a in audit)
 n_kept = sum(a["outcome"] == "kept" for a in audit)
 n_untrackable = n_zero + n_one
 
+st.markdown("**The three preloaded reports**" if uploaded else "")
 st.subheader(f"{n_untrackable} of {n_targets} quantified commitments cannot be "
              f"progress-checked from the report that makes them.")
 
