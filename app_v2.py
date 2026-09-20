@@ -11,7 +11,8 @@ import streamlit as st
 
 from src.indicators import cached_bundle, grade_components, indicators_for
 from src.report_map import load_regions, region_option, render_map, span_caption
-from src.ui_text import (mechanism_badge, say_mechanism, why_flagged,
+from src.ui_text import (KEY_TERMS, KEY_TERM_QUALIFIER, term_hover, term_pill,
+                         mechanism_badge, say_mechanism, why_flagged,
                          GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS,
                          GRADE_TOOLTIP, INDICATORS)
 
@@ -30,6 +31,34 @@ st.set_page_config(page_title="TextQuant", layout="wide")
 def load_bundles():
     """三份预加载报告，按公司切好 claims / sentences / audit。"""
     return cached_bundle()
+
+
+@st.cache_data
+def load_term_risk():
+    """Track S 的 lift 表。没跑过就返回 None，药丸退化为不着色。"""
+    path = DATA / "term_risk.json"
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def key_terms_present(sentences, term_risk):
+    """§4.1：本报告里出现、且承载量化声明的会计术语。"""
+    blob = " ".join(s["text"] for s in sentences).lower()
+    out = []
+    for term in KEY_TERMS:
+        n = blob.count(term.lower())
+        if not n:
+            continue
+        lift = cooc = None
+        if term_risk:
+            q = KEY_TERM_QUALIFIER.get(term, "verifier_named")
+            row = next((r for r in term_risk["terms"].get(q, [])
+                        if r["term"] == term.lower()), None)
+            if row:
+                lift, cooc = row["lift"], row["cooc"]
+        out.append({"term": term, "count": n, "lift": lift, "cooc": cooc})
+    return sorted(out, key=lambda t: (t["lift"] if t["lift"] is not None else 9, -t["count"]))
 
 
 @st.cache_data
@@ -143,8 +172,25 @@ with left:
 
 # ---------------------------------------------------------- RIGHT 70%
 with right:
-    panel("Key terms found", "Pills for accounting terms carrying quantified claims, "
-                             "tinted by lift")
+    with st.container(border=True):
+        st.markdown("**Key terms found**")
+        term_risk = load_term_risk()
+        sents = bundle["sentences"] if bundle else [s for b in bundles.values()
+                                                    for s in b["sentences"]]
+        terms = key_terms_present(sents, term_risk)
+        if terms:
+            st.markdown(" ".join(term_pill(t["term"], t["lift"]) for t in terms))
+            with st.expander("What the colours mean"):
+                st.caption("Amber marks a term that usually appears without the qualifier "
+                           "it needs — the method, the scope or the verifier. Grey marks a "
+                           "term that normally travels with its qualifier."
+                           if term_risk else
+                           "Language statistics have not been computed for this report, so "
+                           "the pills are not tinted.")
+                for t in terms:
+                    st.caption(term_hover(t["term"], t["lift"], t["count"], t["cooc"]))
+        else:
+            st.caption("No accounting terms from the vocabulary appear in this report.")
 
     ind = st.columns(4)
     for col, spec in zip(ind, INDICATORS):
