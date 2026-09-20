@@ -207,3 +207,21 @@ def term_hover(term, lift, count, cooc):
         return f"{term}: appears {count} times"
     share = f"{100 * cooc / count:.0f}%" if count else "0%"
     return f"{term}: appears {count} times, qualifier present in {share}"
+
+
+# ---------------------------------------------- 段落分析面板（右栏，粘贴原文）
+PASSAGE_PANEL = {
+    "title": "Analyse a passage",
+    "hint": "Paste a sentence or short passage from any report. Ctrl+Enter to run.",
+    "placeholder": "e.g. We matched 100% of our electricity consumption with renewable "
+                   "energy purchases in 2024.",
+    "empty": "Nothing analysed yet.",
+    "rule_only": "Rule layer only — the one-line reading needs a network call, which is "
+                 "not available right now.",
+    "no_terms": "No accounting terms from the vocabulary appear in this passage.",
+}
+
+
+def say_span(span):
+    """终点命中的原文片段，用引号包起来给用户看。"""
+    return f"“{span}”" if span else None

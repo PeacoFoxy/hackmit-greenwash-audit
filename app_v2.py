@@ -12,13 +12,14 @@ import streamlit as st
 
 from src.indicators import (cached_bundle, claims_needing_review, grade_components,
                             indicators_for, promises_per_verification, verification_density)
+from src.claim_api import classify_claim, is_cached
 from src.pipeline import MAX_CLAIM_SENTENCES, analyse
+from src.tree import classify as tree_classify
 from src.report_map import load_regions, region_option, render_map, span_caption
-from src.ui_text import mechanism_of_region
-from src.ui_text import (STAGES, KEY_TERMS, KEY_TERM_QUALIFIER, term_hover, term_pill,
-                         mechanism_badge, say_mechanism, why_flagged,
-                         GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS,
-                         GRADE_TOOLTIP, INDICATORS)
+from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS, GRADE_TOOLTIP,
+                         INDICATORS, KEY_TERMS, KEY_TERM_QUALIFIER, PASSAGE_PANEL, STAGES,
+                         label_badge, mechanism_badge, mechanism_of_region, say_mechanism,
+                         say_span, say_terminal, term_hover, term_pill, why_flagged)
 
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
@@ -48,6 +49,21 @@ def analyse_upload(file_bytes, filename, _on_stage=None, _on_partial=None):
     """按文件字节缓存，同一份 PDF 再传是瞬时的。下划线参数不参与缓存键。"""
     return tag_mechanisms(analyse(file_bytes, filename,
                                   on_stage=_on_stage, on_partial=_on_partial))
+
+
+def analyse_passage(text):
+    """规则树（零调用）+ 可选的一句话理由 + 该段命中的关键术语。任何失败都不抛。"""
+    tree = tree_classify(text)
+    spans = [n["span"] for n in tree["path"] if "span" in n]
+    out = {"text": text, "tree": tree, "span": spans[-1] if spans else None,
+           "terms": key_terms_present([{"text": text}], load_term_risk()),
+           "reasoning": None, "llm_label": None, "cached": is_cached(text)}
+    try:
+        r = classify_claim(text)
+        out["reasoning"], out["llm_label"] = r["reasoning"], r["label"]
+    except Exception:
+        pass   # 断网或无 key：只给规则树结论
+    return out
 
 
 def upload_indicators(result):
@@ -379,6 +395,41 @@ with right:
         else:
             st.markdown("**No passages crossed the review threshold**")
             st.session_state.selected_region = None
+
+    # ---- Analyse a passage（粘贴原文，规则树零调用 + 可选 LLM 理由）
+    with st.container(border=True):
+        st.markdown(f"**{PASSAGE_PANEL['title']}**")
+        st.caption(PASSAGE_PANEL["hint"])
+        pasted = st.text_area("Passage", height=90, label_visibility="collapsed",
+                              placeholder=PASSAGE_PANEL["placeholder"],
+                              key="passage_text")
+        go = st.button("Analyse passage", key="passage_go")
+
+        if go and pasted.strip():
+            st.session_state.passage_result = analyse_passage(pasted.strip())
+        elif go:
+            st.caption("Paste a passage first.")
+
+        res = st.session_state.get("passage_result")
+        if res:
+            tree = res["tree"]
+            st.markdown(f"{label_badge(tree['label'])} &nbsp; "
+                        f"{say_terminal(tree['terminal'], tree['mechanism'])}")
+            if res.get("reasoning"):
+                st.write(res["reasoning"])
+            else:
+                st.caption(PASSAGE_PANEL["rule_only"])
+            if res["span"]:
+                st.caption(f"Triggered on {say_span(res['span'])}")
+            if res["terms"]:
+                st.markdown(" ".join(term_pill(t["term"], t["lift"]) for t in res["terms"]))
+            else:
+                st.caption(PASSAGE_PANEL["no_terms"])
+            with st.expander("Technical detail"):
+                st.write({"terminal": tree["terminal"], "mechanism": tree["mechanism"],
+                          "severity": tree["severity"], "label": tree["label"],
+                          "path": [f"{n['node']}:{n['answer']}" for n in tree["path"]],
+                          "llm_label": res.get("llm_label"), "cached": res.get("cached")})
 
     # ---- Selected passage（步骤 4：顺序不变，公司自己的话在前）
     with st.container(border=True):
