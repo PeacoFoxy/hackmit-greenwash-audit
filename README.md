@@ -252,6 +252,7 @@ TextQuant/
 │   ├── llm.py                 Track D — the single cached model entry point
 │   ├── consensus.py           agreement between the three tracks
 │   │
+│   ├── headline.py            the four corpus-level percentages above
 │   ├── evaluate.py            metrics and confusion matrix
 │   ├── stats_tests.py         Friedman, Nemenyi, McNemar, mean ranks
 │   ├── ablation.py            per-rule contribution with bootstrap intervals

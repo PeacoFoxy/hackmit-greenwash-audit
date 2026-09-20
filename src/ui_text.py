@@ -362,3 +362,35 @@ def recommended_action(mechanism=None, terminal=None):
     if terminal and terminal in ACTION_BY_TERMINAL:
         return ACTION_BY_TERMINAL[terminal]
     return ACTION_BY_MECHANISM.get(mechanism)
+
+
+# ------------------------------------- corpus-level headline strip (src/headline.py)
+# Four ratios shown above the per-report panels. Each tooltip carries the formula, so a
+# viewer can check the arithmetic without leaving the page. The fourth is deliberately a
+# range: it is the only one of the four that depends on the classifier being right.
+HEADLINE_STRIP = {
+    "title": "Across every report analysed",
+    "hint": "Four ratios, one formula each. Reproduce them with `python -m src.headline`.",
+    "screening": {
+        "label": "Needs no analyst attention",
+        "help": "1 − claims surfaced / sentences. Where the system points, not a "
+                "guarantee that the rest is clean.",
+    },
+    "unverifiable": {
+        "label": "Commitments not progress-checkable",
+        "help": "Targets with fewer than two observations of the same metric, over all "
+                "targets extracted. A matter of fact, not of judgment.",
+    },
+    "agreement": {
+        "label": "Rule tree agrees with the model",
+        "help": "CONFIRMED / (CONFIRMED + CONTESTED), over the claims both tracks "
+                "actually labelled.",
+    },
+    "incomplete": {
+        "label": "True but missing their basis",
+        "help": "C / (A + C). The raw count is 80.9%, but class-C precision is 0.667 on "
+                "validated rules and 0.250 on the ten a blind test exposed, so each C is "
+                "weighted by the measured precision of the rule behind it. The only one "
+                "of the four that depends on the classifier being right.",
+    },
+}

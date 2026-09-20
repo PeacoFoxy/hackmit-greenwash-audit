@@ -19,7 +19,7 @@ from src.tree import classify as tree_classify
 from src.report_map import load_regions, region_option, render_map, span_caption
 from src import history
 from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_FRAGILITY_NOTE,
-                         GRADE_READINGS, GRADE_TOOLTIP, HISTORY_PANEL,
+                         GRADE_READINGS, GRADE_TOOLTIP, HEADLINE_STRIP, HISTORY_PANEL,
                          INDICATORS, INERT_SUBSCORE_NOTE, KEY_TERMS,
                          KEY_TERM_QUALIFIER, PASSAGE_PANEL, STAGES, TREE_MARKS,
                          WORK_TREE, label_badge, mechanism_badge,
@@ -222,6 +222,40 @@ def render_grade(slot, grade, subject, blocked=None):
             st.warning(GRADE_DISCLAIMER)
 
 st.divider()
+
+
+# ==================================================== CORPUS-LEVEL HEADLINE STRIP
+@st.cache_data(show_spinner=False)
+def load_headline():
+    """Four corpus-level ratios. Absent until src/headline.py has been run."""
+    p = ROOT / "data" / "headline.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+
+
+hl = load_headline()
+if hl:
+    st.caption(HEADLINE_STRIP["title"], help=HEADLINE_STRIP["hint"])
+    cells = st.columns(4)
+    facts = [
+        ("screening", f"{hl['screening']['reduction_pct']:.1f}%",
+         f"{hl['screening']['claims_surfaced']} of "
+         f"{hl['screening']['sentences']:,} sentences surfaced"),
+        ("unverifiable", f"{hl['unverifiable']['pct']:.1f}%",
+         f"{hl['unverifiable']['unverifiable']} of {hl['unverifiable']['targets']} targets"),
+        ("agreement", f"{hl['agreement']['pct']:.1f}%",
+         f"{hl['agreement']['agree']} of {hl['agreement']['both_labelled']} claims "
+         f"both tracks labelled"),
+        # Shown as an interval on purpose; see HEADLINE_STRIP["incomplete"]["help"].
+        ("incomplete", f"{hl['incomplete']['corrected_lo_pct']:.0f}–"
+                       f"{hl['incomplete']['corrected_hi_pct']:.0f}%",
+         f"raw {hl['incomplete']['raw_pct']:.1f}%, corrected for rule precision"),
+    ]
+    for col, (key, value, sub) in zip(cells, facts):
+        with col:
+            st.metric(HEADLINE_STRIP[key]["label"], value,
+                      help=HEADLINE_STRIP[key]["help"], border=True)
+            st.caption(sub)
+    st.divider()
 
 # ============================================================ TWO COLUMNS
 left, right = st.columns([3, 7])
