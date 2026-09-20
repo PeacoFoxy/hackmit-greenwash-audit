@@ -29,6 +29,35 @@ LABEL_NAMES = {
     "D": "Contradicted",
 }
 
+# 四类机制的配色（报告地图的色块、图例共用）
+MECHANISM_COLORS = {
+    "UNDISCLOSED_METHOD": "#4269d0",
+    "UNDISCLOSED_BOUNDARY": "#efb118",
+    "SELECTIVE_AGGREGATION": "#ff725c",
+    "UNDEFINED_TERM": "#3ca951",
+}
+
+# v1 flag（异常区间用的就是它）→ 机制。区间按出现最多的 flag 归类。
+FLAG_MECHANISM = {
+    "SCOPE2_METHOD_UNSTATED": "UNDISCLOSED_METHOD",
+    "MATCHING_LANGUAGE": "UNDISCLOSED_METHOD",
+    "OFFSET_UNDISCLOSED": "UNDISCLOSED_METHOD",
+    "NO_BASELINE_YEAR": "UNDISCLOSED_BOUNDARY",
+    "GRID_MISMATCH_RISK": "UNDISCLOSED_BOUNDARY",
+    "FUTURE_PROMISE_NO_MILESTONE": "UNDISCLOSED_BOUNDARY",
+    "CHERRY_PICKED_METRIC": "SELECTIVE_AGGREGATION",
+    "WATER_ACCOUNTING_VAGUE": "UNDEFINED_TERM",
+}
+
+
+def mechanism_of_region(flag_types):
+    """区间里命中最多的 flag 决定它的机制；并列时取字母序，保证渲染稳定。"""
+    if not flag_types:
+        return None
+    top = max(sorted(flag_types), key=lambda f: flag_types[f])
+    return FLAG_MECHANISM.get(top)
+
+
 LABEL_COLORS = {
     "A": "#3ca951",
     "B": "#9498a0",

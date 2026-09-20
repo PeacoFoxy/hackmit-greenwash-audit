@@ -4,14 +4,21 @@
 离线自检: env -u ANTHROPIC_API_KEY streamlit run app.py
 """
 import json
+from collections import Counter
 from pathlib import Path
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import streamlit as st
 
-from src.ui_text import PRESETS
+from src.ui_text import (MECHANISM_COLORS, PRESETS, mechanism_of_region, say_mechanism)
 
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
+DATA = ROOT / "data"
+MIN_MARK_PX = 8
 
 st.set_page_config(page_title="TextQuant", layout="wide")
 
@@ -30,6 +37,64 @@ def resolve(query, sources):
         if q in (s["company"].lower(), s["ticker"].lower()):
             return s
     return None
+
+
+@st.cache_data
+def load_regions():
+    regions = json.loads((DATA / "anomaly_regions.json").read_text(encoding="utf-8"))
+    for r in regions:
+        r["mechanism"] = mechanism_of_region(r.get("flag_types", {}))
+    regions.sort(key=lambda r: (r["company"], r["rel_pos"][0]))
+    return regions
+
+
+@st.cache_data
+def load_sentence_counts():
+    rows = json.loads((DATA / "signals.json").read_text(encoding="utf-8"))
+    return Counter(r["company"] for r in rows)
+
+
+def render_map(regions, counts):
+    """每家一条 0→1 的横条，命中区间画成色块。窄区间加宽到 8px 以便点选。"""
+    companies = list(counts)
+    fig, ax = plt.subplots(figsize=(10, 0.9 * len(companies) + 1.1))
+    ax.set_xlim(0, 1)
+    ax.set_ylim(-0.6, len(companies) - 0.4)
+
+    # 先布局再量轴宽，才能把 8px 换算成数据单位
+    fig.canvas.draw()
+    ax_px = ax.get_window_extent(fig.canvas.get_renderer()).width
+    min_w = MIN_MARK_PX / ax_px if ax_px else 0.006
+
+    for y, company in enumerate(companies):
+        ax.barh(y, 1.0, height=0.34, color="#e9ecef", zorder=1)
+        for r in regions:
+            if r["company"] != company:
+                continue
+            start, end = r["rel_pos"]
+            width = max(end - start, min_w)
+            ax.barh(y, width, left=start, height=0.34, zorder=2,
+                    color=MECHANISM_COLORS.get(r["mechanism"], "#9498a0"))
+
+    ax.set_yticks(range(len(companies)), companies)
+    ax.invert_yaxis()   # 第一家排在最上，符合阅读顺序
+    ax.set_xticks([0, 1], ["start of report", "end"])
+    ax.tick_params(axis="x", length=0)
+    for side in ("top", "right", "left", "bottom"):
+        ax.spines[side].set_visible(False)
+
+    seen = [m for m in MECHANISM_COLORS if any(r["mechanism"] == m for r in regions)]
+    ax.legend([Line2D([0], [0], color=MECHANISM_COLORS[m], lw=7) for m in seen],
+              [say_mechanism(m) for m in seen],
+              loc="upper center", bbox_to_anchor=(0.5, -0.12),
+              ncol=len(seen) or 1, frameon=False, fontsize=9)
+    fig.tight_layout()
+    return fig
+
+
+def region_option(r):
+    pct = round(r["rel_pos"][0] * 100)
+    return f"{r['company']} · {pct}% into report · {say_mechanism(r['mechanism'])}"
 
 
 def placeholder(note):
@@ -51,7 +116,7 @@ with col_q:
     query = st.text_input("Company or ticker", placeholder="Alphabet, MSFT, AMZN …",
                           label_visibility="collapsed")
 with col_go:
-    analyze = st.button("Analyze", use_container_width=True)
+    analyze = st.button("Analyze", width="stretch")
 with col_up:
     upload = st.file_uploader("Or upload a PDF report", type="pdf",
                               label_visibility="collapsed")
@@ -75,8 +140,26 @@ elif analyze:
 st.divider()
 
 # ------------------------------------------------------------- SECTION 1-7
-st.header("Which passages need review")
-placeholder("Report map: one strip per company, marks coloured by mechanism")
+regions = load_regions()
+counts = load_sentence_counts()
+
+st.header(f"{len(regions)} passages need review")
+st.caption(f"Out of {sum(counts.values()):,} sentences across {len(counts)} reports.")
+
+st.pyplot(render_map(regions, counts), width="stretch")
+
+spans = [(r["rel_pos"][1] - r["rel_pos"][0]) * 100 for r in regions]
+st.caption(
+    f"Each block marks a run of sentences where accounting-disclosure flags cluster. "
+    f"True spans run from {min(spans):.1f}% to {max(spans):.1f}% of a report "
+    f"({min(r['n_sentences'] for r in regions)}–{max(r['n_sentences'] for r in regions)} "
+    f"sentences); narrow blocks are widened to {MIN_MARK_PX}px so they stay visible."
+)
+
+choice = st.selectbox("Jump to a passage", options=range(len(regions)),
+                      format_func=lambda i: region_option(regions[i]),
+                      key="region_choice")
+st.session_state.selected_region = regions[choice]
 
 st.divider()
 st.header("What this passage says, and what it leaves out")
