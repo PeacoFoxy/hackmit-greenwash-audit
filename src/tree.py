@@ -70,8 +70,14 @@ RE_MILESTONE = rx(r"\binterim\b|\bannual(?:ly)?\b|\beach\s+year\b|\bevery\s+year
                   r"\bmilestones?\b|\bthird[-\s]party\s+validated\b|\bSBTi\b")
 RE_TWO_DATES = rx(r"\bby\s+20\d{2}\b.*\bby\s+20\d{2}\b")
 
+# scope 既可以用 GHG Protocol 术语表达，也可以用一个明确命名的设施/业务边界表达
+# （"data center emissions"、"our fleet"、"global operations"）。后者同样是可核对的口径，
+# 只认前者会把 goog_sr_016 这类已说明边界的 claim 误判为 C。
 RE_SCOPE = rx(r"\bscopes?\s*[123]\b|\bscope\s*1\s*(?:and|&|,)\s*2\b|\bdirect\s+operations\b|"
-              r"\bvalue\s+chain\b|\bindirect\s+emissions\b")
+              r"\bvalue\s+chain\b|\bindirect\s+emissions\b|"
+              r"\bdata\s?cent(?:er|re)s?\b|\bfleet[-\s]?wide\b|\bour\s+fleet\b|"
+              r"\b(?:global|worldwide|company[-\s]wide)\s+operations\b|"
+              r"\bowned\s+and\s+operated\b|\boperational\s+control\b")
 RE_BASELINE = rx(r"\bbase(?:line)?\s+year\b|\bbaseline\b|"
                  r"\b(?:since|from|vs\.?|versus|compared\s+(?:to|with)|against|relative\s+to)\s+"
                  r"(?:our\s+|the\s+)?(?:19|20)\d{2}\b")
@@ -225,8 +231,71 @@ DOMAIN_OF_NODE = {"T5": "energy", "T6": "emissions", "T7": "water",
                   "T8": "waste", "T9": "efficiency", "T10": "other"}
 
 
-def classify(text, claim_id=None):
-    """从 T0 遍历到终点，返回 §8 的 track_R 结构。"""
+# ------------------------------------------------- 交叉核查（cross-check）
+# 结构借自 Hicks 等（PMC11404377）：模型先标，再由负责该类别的一方逐条核查并修正。
+# 这里的"负责人"是每个机制自己的独立检查器：树说某项披露缺失，检查器反过来问
+# "这项披露真的不在句子里吗"。命中就撤销 C，并把撤销理由记进路径。
+RE_METHOD_ANY = rx(r"\b(?:market|location)[-\s]based\b|\bgrid[-\s]supplied\b|"
+                   r"\bon[-\s]site\s+(?:solar|wind|generation)\b|"
+                   r"\bretired\s+(?:RECs?|certificates?)\b|\bhourly\s+match\w*|"
+                   r"\b24/7\s+carbon[-\s]free\b")
+RE_BOUNDARY_ANY = rx(r"\bscopes?\s*[123]\b|\bdata\s?cent(?:er|re)s?\b|\bfleet\b|"
+                     r"\bportfolio\b|\bglobal(?:ly)?\b|\bworldwide\b|"
+                     r"\ball\s+(?:of\s+our\s+)?(?:facilities|sites|operations)\b|"
+                     r"\bdirect\s+operations\b|\bvalue\s+chain\b|"
+                     r"\bowned\s+and\s+operated\b|\boperational\s+control\b")
+RE_ABSOLUTE_ANY = rx(r"\b\d[\d,.]*\s*(?:mt|kt|t|tonnes?|tons?|metric\s+tons?|MWh|GWh|"
+                     r"TWh|liters?|litres?|gallons?)\b|\babsolute\b|"
+                     r"\btotal\s+\w*\s?emissions\b")
+RE_DEFINITION_ANY = rx(r"\bdefined\s+as\b|\bcalculated\s+as\b|\bmethodolog\w*|"
+                       r"\bratio\s+of\b|\bmeasures?\s+the\b|\bGHG\s+Protocol\b|"
+                       r"\bin\s+line\s+with\s+\w+\s+guidance\b")
+
+CROSS_CHECKS = {
+    "UNDISCLOSED_METHOD": ("method is stated in other words", RE_METHOD_ANY),
+    "UNDISCLOSED_BOUNDARY": ("coverage is stated in other words", RE_BOUNDARY_ANY),
+    "SELECTIVE_AGGREGATION": ("an absolute or fleet-wide figure is present", RE_ABSOLUTE_ANY),
+    "UNDEFINED_TERM": ("the term is defined or a methodology is referenced",
+                       RE_DEFINITION_ANY),
+}
+
+# sev 3 的终点是术语事实（matched / 只报强度），不接受撤销；只核查 sev 1-2。
+CROSS_CHECK_MAX_SEVERITY = 2
+
+# 默认关闭。2026-09-20 在 29 条 gold 上实测（窗口 ±1/±3/±5）：
+#   关闭    acc 0.793  C_spec 0.737  C_rec 1.000  C_BA 0.868
+#   ±1 句   acc 0.724  C_spec 0.842  C_rec 0.800  C_BA 0.821   撤销 4 条，0 条正确
+#   ±5 句   acc 0.655  C_spec 0.895  C_rec 0.500  C_BA 0.697   撤销 8 条，1 条正确
+# specificity 上升但 recall 掉得更快。原因：报告里 global / data centers / our operations
+# 这类口径词每隔几句就出现一次，"出现在附近"不等于"绑定到这个数字" —— 而这正是 C 类
+# 要抓的误导形态。保留实现与数据，供扩大语料后复测。
+CROSS_CHECK_ENABLED = False
+
+
+def cross_check(text, terminal, context=None):
+    """返回 (是否撤销, 理由, 命中片段)。只对 C 且 severity <= 2 的终点生效。
+
+    核查的输入必须与树不同，否则只是换一组同义词重读同一句（实测 390 条里 0 次触发）。
+    这里用的是**文档上下文**：句级的树看不到前后文，但读者看得到 —— 如果被指缺失的口径
+    就写在邻近句子里，那它并没有缺失。context 为空时退化为不撤销。
+    """
+    label, mechanism, severity = TERMINALS[terminal]
+    if label != "C" or severity is None or severity > CROSS_CHECK_MAX_SEVERITY:
+        return False, None, None
+    if not context or not CROSS_CHECK_ENABLED:
+        return False, None, None
+    reason, rx_check = CROSS_CHECKS.get(mechanism, (None, None))
+    if not rx_check:
+        return False, None, None
+    m = rx_check.search(context)
+    return (bool(m), reason, m.group(0) if m else None)
+
+
+def classify(text, claim_id=None, context=None):
+    """从 T0 遍历到终点，返回 §8 的 track_R 结构。
+
+    context 是这句话在原文里的邻近段落（前后各若干句）。给了就启用交叉核查。
+    """
     path, node, domain = [], "T0", None
     while node not in TERMINALS:
         n = NODES[node]
@@ -242,7 +311,15 @@ def classify(text, claim_id=None):
             path.append({"node": "T4", "reliability": "CLOSED", "answer": domain})
 
     label, mechanism, severity = TERMINALS[node]
+
+    cleared, reason, span = cross_check(text, node, context)
+    if cleared:
+        path.append({"node": "XC", "reliability": "OPEN", "answer": "cleared",
+                     "span": span, "reason": reason})
+        label = "A"
+
     return {"claim_id": claim_id, "label": label, "terminal": node,
+            "cross_checked": cleared, "cross_check_reason": reason,
             "mechanism": mechanism, "severity": severity,
             "domain": domain or DOMAIN_OF_NODE.get(path[-1]["node"][:2]),
             "decided_by": path[-1]["reliability"], "path": path}

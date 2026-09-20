@@ -7,7 +7,9 @@ import json, os, re
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_recall_fscore_support
+from sklearn.metrics import (accuracy_score, balanced_accuracy_score, confusion_matrix,
+                             f1_score, fbeta_score, multilabel_confusion_matrix,
+                             precision_recall_fscore_support)
 from src.llm import ask
 from src.rubric import RUBRIC, SHORT_RUBRIC
 from src.tree import classify as tree_classify
@@ -110,13 +112,51 @@ def classify(method, claims):
     return out
 
 
+def per_class(y_true, y_pred, label):
+    """单类的 TP/FP/FN/TN 及其派生指标（定义取自 Hicks 等，PMC11404377）。
+
+    precision = TP/(TP+FP)          recall = TP/(TP+FN)
+    specificity = TN/(TN+FP)        F_b = (1+b²)·P·R / (b²·P + R)
+    """
+    labels = sorted(set(y_true) | set(y_pred))
+    if label not in labels:
+        return None
+    m = multilabel_confusion_matrix(y_true, y_pred, labels=labels)[labels.index(label)]
+    tn, fp, fn, tp = int(m[0, 0]), int(m[0, 1]), int(m[1, 0]), int(m[1, 1])
+    p = tp / (tp + fp) if tp + fp else 0.0
+    r = tp / (tp + fn) if tp + fn else 0.0
+    spec = tn / (tn + fp) if tn + fp else 0.0
+
+    def fb(b):
+        denom = b * b * p + r
+        return (1 + b * b) * p * r / denom if denom else 0.0
+
+    return {"tp": tp, "fp": fp, "fn": fn, "tn": tn,
+            "precision": p, "recall": r, "specificity": spec,
+            "balanced_accuracy": (r + spec) / 2,
+            "f1": fb(1.0), "f0.5": fb(0.5), "f2": fb(2.0)}
+
+
 def score(y_true, y_pred):
-    present = sorted(set(y_true))  # macro F1 只对 gold 中出现的类别取平均
-    p, r, f, _ = precision_recall_fscore_support(
-        y_true, y_pred, labels=["C"], average=None, zero_division=0)
-    return {"accuracy": accuracy_score(y_true, y_pred),
-            "macro_f1": f1_score(y_true, y_pred, labels=present, average="macro", zero_division=0),
-            "C_precision": float(p[0]), "C_recall": float(r[0]), "C_f1": float(f[0])}
+    present = sorted(set(y_true))  # macro 只对 gold 中出现的类别取平均
+    c = per_class(y_true, y_pred, "C") or {k: 0.0 for k in
+                                           ("precision", "recall", "specificity", "f1",
+                                            "f0.5", "f2", "balanced_accuracy")}
+    out = {"accuracy": accuracy_score(y_true, y_pred),
+           # 多类 BA = 各类 recall 的宏平均，对类别不均衡更公允
+           "balanced_accuracy": balanced_accuracy_score(y_true, y_pred),
+           "macro_f1": f1_score(y_true, y_pred, labels=present, average="macro",
+                                zero_division=0),
+           "macro_f0.5": fbeta_score(y_true, y_pred, beta=0.5, labels=present,
+                                     average="macro", zero_division=0),
+           "macro_f2": fbeta_score(y_true, y_pred, beta=2.0, labels=present,
+                                   average="macro", zero_division=0),
+           "C_precision": c["precision"], "C_recall": c["recall"],
+           "C_specificity": c["specificity"], "C_f1": c["f1"],
+           "C_f0.5": c["f0.5"], "C_f2": c["f2"],
+           "C_balanced_accuracy": c["balanced_accuracy"]}
+    out["per_class"] = {lab: per_class(y_true, y_pred, lab) for lab in present}
+    return out
 
 
 def plot_confusion(y_true, y_pred, path):
@@ -157,10 +197,14 @@ def main():
         preds[m] = classify(m, claims)
         metrics[m] = score(y_true, preds[m])
 
-    cols = ["accuracy", "macro_f1", "C_precision", "C_recall", "C_f1"]
-    print("\n" + f"{'method':<19}" + "".join(f"{c:>13}" for c in cols))
+    cols = ["accuracy", "balanced_accuracy", "macro_f1",
+            "C_precision", "C_recall", "C_specificity", "C_f1", "C_f2"]
+    head = {"accuracy": "acc", "balanced_accuracy": "BA", "macro_f1": "macroF1",
+            "C_precision": "C_prec", "C_recall": "C_rec", "C_specificity": "C_spec",
+            "C_f1": "C_F1", "C_f2": "C_F2"}
+    print("\n" + f"{'method':<19}" + "".join(f"{head[c]:>9}" for c in cols))
     for m, s in metrics.items():
-        print(f"{m:<19}" + "".join(f"{s[c]:>13.3f}" for c in cols))
+        print(f"{m:<19}" + "".join(f"{s[c]:>9.3f}" for c in cols))
 
     labels, cm = plot_confusion(y_true, preds["pipeline"], os.path.join(FIG_DIR, "confusion.png"))
     json.dump({"n": len(gold), "metrics": metrics,

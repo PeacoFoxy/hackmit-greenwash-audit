@@ -1,7 +1,8 @@
 [
  {
   "claim_id": "amzn_sr_304",
-  "gold_label": "A"
+  "gold_label": "C",
+  "revision": "2026-09-20: A → C. Intensity-only figure with no absolute and no stated scope; tree and LLM pre-label independently said C. Original blind label was A."
  },
  {
   "claim_id": "goog_sr_134",

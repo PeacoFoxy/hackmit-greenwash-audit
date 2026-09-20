@@ -12,8 +12,9 @@ CASES = [
      "SUBSTANTIATED_EMISSIONS", "A"),
     ("We reduced emissions per shipped unit by 39% compared to 2019",
      "INTENSITY_NO_ABSOLUTE", "C"),
+    # 边界已命名（data center）+ 基准年 2023 → A。gold 为 A，2026-09-20 修正期望值。
     ("In 2024, Alphabet reduced its data center energy emissions by 12% compared to 2023",
-     "SCOPE_UNSTATED", "C"),
+     "SUBSTANTIATED_EMISSIONS", "A"),
     ("In Asia Pacific, Alphabet's regional average Google CFE was 12%",
      "PROPRIETARY_METRIC", "C"),
     ("In 2024, we diverted 85% of food waste from landfill through composting",
