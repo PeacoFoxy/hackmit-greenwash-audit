@@ -83,11 +83,20 @@ def extract_claims(rows, company, progress=None):
     return claims, len(pool)
 
 
-def analyse(pdf_bytes, filename, company=None, on_stage=None, extract=True):
-    """完整上传管线。on_stage(name, detail) 用于界面进度显示。"""
-    def stage(name, detail):
+def analyse(pdf_bytes, filename, company=None, on_stage=None, extract=True, on_partial=None):
+    """完整上传管线。
+
+    on_stage(name, detail) 更新进度行；on_partial(dict) 在每个阶段完成时交出累计结果，
+    调用方据此做渐进渲染 —— 后面的阶段失败时，前面的结果不会丢。
+    """
+    partial = {}
+
+    def stage(name, detail, **fields):
+        partial.update(fields)
         if on_stage:
             on_stage(name, detail)
+        if on_partial:
+            on_partial(dict(partial))
 
     company = company or Path(filename).stem
     source_id = re.sub(r"\W+", "_", Path(filename).stem).lower()[:24] or "upload"
@@ -101,18 +110,21 @@ def analyse(pdf_bytes, filename, company=None, on_stage=None, extract=True):
         Path(tmp).unlink(missing_ok=True)
 
     rows = build_rows(text, company, source_id)
-    stage("Reading the PDF", f"{len(rows):,} sentences found")
+    stage("Reading the PDF", f"{len(rows):,} sentences",
+          company=company, source_id=source_id, filename=filename,
+          rows=rows, n_sentences=len(rows))
 
     n_flagged = sum(1 for r in rows if rule_flags(r["text"]))
-    stage("Checking accounting disclosures",
-          f"9 rules applied, {n_flagged} sentences hit at least one")
-    stage("Measuring language patterns", "7 signals computed per sentence")
+    stage("Checking disclosures", f"9 rules, {n_flagged} sentences hit at least one",
+          n_flagged=n_flagged)
+    stage("Measuring language", "7 signals per sentence")
 
     groups = {company: rows}
     regions = find_regions(groups)
-    stage("Finding passages to review", f"{len(regions)} regions flagged")
+    stage("Finding passages", f"{len(regions)} passages flagged", regions=regions)
 
     stats = company_stats(groups)
+    partial["company_stats"] = stats
 
     claims, n_pool, extract_error = [], 0, None
     if extract:
@@ -123,15 +135,15 @@ def analyse(pdf_bytes, filename, company=None, on_stage=None, extract=True):
 
     labelled = [{**c, **{k: v for k, v in tree_classify(c["text"], c["claim_id"]).items()
                          if k != "claim_id"}} for c in claims]
-    detail = (f"{len(labelled)} claims labelled from the first {n_pool} qualifying sentences"
-              if labelled else "extraction unavailable — rule layers above still apply")
-    stage("Classifying claims", detail)
+    detail = (f"{len(labelled)} claims from the first {n_pool} qualifying sentences "
+              f"(cap {MAX_CLAIM_SENTENCES})"
+              if labelled else "extraction unavailable — the rule stages above still apply")
+    stage("Classifying claims", detail, claims=labelled, n_claim_pool=n_pool,
+          extract_error=extract_error)
 
     commitments = [r for r in rows
                    if RE_TARGET_YEAR.search(r["text"]) and RE_DIGIT.search(r["text"])]
+    stage("Extracting commitments", f"{len(commitments)} targets",
+          n_commitments=len(commitments))
 
-    return {"company": company, "source_id": source_id, "filename": filename,
-            "n_sentences": len(rows), "rows": rows, "regions": regions,
-            "company_stats": stats, "claims": labelled, "n_claim_pool": n_pool,
-            "n_commitments": len(commitments), "extract_error": extract_error,
-            "max_claim_sentences": MAX_CLAIM_SENTENCES}
+    return {**partial, "max_claim_sentences": MAX_CLAIM_SENTENCES}

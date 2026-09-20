@@ -5,6 +5,7 @@ v1 的 app.py 保持可用，两者并存直到 v2 完成。
 离线自检: env -u ANTHROPIC_API_KEY streamlit run app_v2.py
 """
 import json
+import time
 from pathlib import Path
 
 import streamlit as st
@@ -36,13 +37,17 @@ def load_bundles():
     return cached_bundle()
 
 
-@st.cache_data(show_spinner=False)
-def analyse_upload(file_bytes, filename, _on_stage=None):
-    """按文件字节缓存，同一份 PDF 再传是瞬时的。_on_stage 不参与缓存键。"""
-    result = analyse(file_bytes, filename, on_stage=_on_stage)
-    for r in result["regions"]:
+def tag_mechanisms(result):
+    for r in result.get("regions", []):
         r["mechanism"] = mechanism_of_region(r.get("flag_types", {}))
     return result
+
+
+@st.cache_data(show_spinner=False)
+def analyse_upload(file_bytes, filename, _on_stage=None, _on_partial=None):
+    """按文件字节缓存，同一份 PDF 再传是瞬时的。下划线参数不参与缓存键。"""
+    return tag_mechanisms(analyse(file_bytes, filename,
+                                  on_stage=_on_stage, on_partial=_on_partial))
 
 
 def upload_indicators(result):
@@ -200,21 +205,41 @@ with left:
         st.markdown("**Running**")
         if upload is not None:
             lines = st.container()
+            t0 = time.perf_counter()
+
             def stage(name, detail):
                 lines.caption(f"✓ {name} — {detail}")
+
+            def keep_partial(partial):
+                # 每个阶段完成就落到 session state：后面的阶段炸了，前面的照样能渲染
+                st.session_state.upload_partial = tag_mechanisms(partial)
+
+            uploaded, failed_stage = None, None
             try:
-                uploaded = analyse_upload(upload.getvalue(), upload.name, _on_stage=stage)
+                uploaded = analyse_upload(upload.getvalue(), upload.name,
+                                          _on_stage=stage, _on_partial=keep_partial)
                 st.session_state.upload_result = uploaded
-                if uploaded.get("extract_error"):
-                    lines.caption("○ Classifying claims — live extraction unavailable; "
-                                  "the rule stages above still ran with no network")
-                else:
-                    lines.caption(f"Claim extraction was capped at the first "
-                                  f"{MAX_CLAIM_SENTENCES} qualifying sentences.")
-                st.caption(f"Cached by file contents — re-uploading {upload.name} is instant.")
             except Exception as exc:
-                st.caption(f"○ Could not read that PDF ({type(exc).__name__}).")
-                st.session_state.upload_result = None
+                uploaded = st.session_state.get("upload_partial")
+                st.session_state.upload_result = uploaded
+                failed_stage = type(exc).__name__
+                st.warning(
+                    f"The analysis stopped during processing ({failed_stage}). "
+                    + ("Partial results are on the right: "
+                       f"{uploaded.get('n_sentences', 0):,} sentences, "
+                       f"{len(uploaded.get('regions', []))} passages."
+                       if uploaded else "No stage completed, so nothing is shown."))
+
+            if uploaded and uploaded.get("extract_error"):
+                lines.caption("○ Classifying claims — live extraction unavailable")
+                st.warning("Claim classification could not run (no network or no API key). "
+                           "Everything above it is rule-based and already on the right: "
+                           "the report map, key terms, and three of the four indicators.")
+            if uploaded:
+                st.caption(f"Claim extraction is capped at the first {MAX_CLAIM_SENTENCES} "
+                           f"qualifying sentences. Finished in "
+                           f"{time.perf_counter() - t0:.1f}s; cached by file contents, so "
+                           f"re-uploading {upload.name} is instant.")
         else:
             stage_values = {
                 "sentences": sum(len(b["sentences"]) for b in bundles.values()) if not bundle
