@@ -26,6 +26,10 @@ panel. **No API key is required** and the page works with the network
 off: every LLM call in the demo path is served from the `cache/` directory, keyed by a
 hash of the prompt. This was tested by running the app with `ANTHROPIC_API_KEY` unset.
 
+The cache is committed (175 responses, 732 KB), so the evaluation table can be
+reproduced without a key and without spending anything: `./run_all.sh` re-runs every
+LLM step against it. The calls it holds cost about $0.45 in total.
+
 Uploading your own PDF does need a key for the claim-extraction stage. Without one, the
 upload still runs the four deterministic stages (parse, rules, signals, passage
 detection) and says so rather than failing.
