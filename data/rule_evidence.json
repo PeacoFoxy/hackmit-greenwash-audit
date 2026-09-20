@@ -62,7 +62,7 @@
    "mechanism": "UNDISCLOSED_BOUNDARY",
    "qualifier": "scope_stated",
    "n": 2,
-   "median_support": 0.8107200000000001,
+   "median_support": 0.81072,
    "percentile": 26.385224274406333,
    "gold_covered": true,
    "reading": "indistinguishable from corpus"
@@ -132,7 +132,7 @@
    "mechanism": "UNDEFINED_TERM",
    "qualifier": "verifier_named",
    "n": 5,
-   "median_support": 1.7500714285714287,
+   "median_support": 1.7500714285714285,
    "percentile": 93.58974358974359,
    "gold_covered": false,
    "reading": "vocabulary is usually qualified"
@@ -142,7 +142,7 @@
    "mechanism": "SELECTIVE_AGGREGATION",
    "qualifier": "baseline_stated",
    "n": 6,
-   "median_support": 2.7003600000000003,
+   "median_support": 2.70036,
    "percentile": 97.87798408488064,
    "gold_covered": true,
    "reading": "vocabulary is usually qualified"

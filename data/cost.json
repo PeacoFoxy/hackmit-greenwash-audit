@@ -7,7 +7,7 @@
   "output": 15.0
  },
  "chars_per_token": 4.0,
- "tree_seconds_for_n": 0.0004570419987430796,
+ "tree_seconds_for_n": 0.0003819999983534217,
  "per_100": [
   {
    "method": "tree_only",
@@ -15,13 +15,13 @@
    "in_tok": 0,
    "out_tok": 0,
    "usd": 0.0,
-   "sec": 0.0004570419987430796,
+   "sec": 0.0003819999983534217,
    "missing": 0,
    "calls_per_100": 0.0,
    "in_tok_per_100": 0.0,
    "out_tok_per_100": 0.0,
    "usd_per_100": 0.0,
-   "sec_per_100": 0.0015760068922175158
+   "sec_per_100": 0.0013172413736324885
   },
   {
    "method": "baseline1",

@@ -50,7 +50,13 @@ def measure_llm(method, claims):
 
 
 def measure_tree(claims, repeats=5):
-    """Wall-clock for the rule tree, minimum over repeats to exclude scheduling noise."""
+    """Wall-clock for the rule tree, minimum over repeats to exclude scheduling noise.
+
+    This is the one value in data/ that differs between two runs on identical input,
+    because it measures the machine rather than the data. Everything else the pipeline
+    writes is byte-identical run to run, which was checked by running `run_all.sh
+    verify` twice and diffing every JSON and CSV. No reported number depends on it.
+    """
     best = float("inf")
     for _ in range(repeats):
         t0 = time.perf_counter()

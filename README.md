@@ -309,6 +309,20 @@ thing runs with the network off.
 quietly spending money. Tested by cloning into an empty directory: all 23 steps completed
 and every published number matched.
 
+Reproducibility here means byte-identical, not just close. Running `verify` twice and
+diffing every file it writes turned up three modules whose output drifted on identical
+input: all three iterated a Python `set`, whose order is hash-randomised per process, and
+one of them was feeding that order into a seeded RNG, which made the seed useless. Fixed
+and re-checked. The only value that still differs between runs is a wall-clock timing in
+`data/cost.json`, which measures the machine rather than the data.
+
+Reproducibility here means byte-identical, not just close. Running `verify` twice and
+diffing every file it writes turned up three modules whose output drifted on identical
+input: all three iterated a Python `set`, whose order is hash-randomised per process, and
+one of them was feeding that order into a seeded RNG, which made the seed useless. Fixed
+and re-checked. The only value that still differs between runs is a wall-clock timing in
+`data/cost.json`, which measures the machine rather than the data.
+
 Analysing a new PDF needs a key for the extraction stage — copy `.env.example` to `.env`.
 Without one, the four deterministic stages still run.
 

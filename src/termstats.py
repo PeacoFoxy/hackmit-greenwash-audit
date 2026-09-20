@@ -87,7 +87,10 @@ def build_table(sentences):
         seen = set()
         for n in range(1, MAX_N + 1):
             seen.update(ngrams(toks, n))
-        for t in seen:
+        # sorted(), not the set itself: Python randomises string hashing per process,
+        # so iterating `seen` would give term_sents a different insertion order on every
+        # run, and that order leaks into any downstream tie-break.
+        for t in sorted(seen):
             term_sents.setdefault(t, []).append(i)
 
     base, table = {}, {}
@@ -149,8 +152,11 @@ def main():
            "base_rates": {q: round(b, 4) for q, b in base.items()},
            "terms": {}}
     for q in QUALIFIERS:
+        # The term is the final key so the order is total. Without it, two terms tying
+        # on both lift and in_topic kept dict order, which was hash-randomised, and the
+        # file differed between runs on identical input.
         ranked = sorted(((t, r) for t, r in table.items() if r["lift"].get(q) is not None),
-                        key=lambda kv: (kv[1]["lift"][q], -kv[1]["in_topic"][q]))
+                        key=lambda kv: (kv[1]["lift"][q], -kv[1]["in_topic"][q], kv[0]))
         out["terms"][q] = [{"term": t, "lift": r["lift"][q], "count": r["count"],
                             "in_topic": r["in_topic"][q], "cooc": r["cooc"][q]}
                            for t, r in ranked]

@@ -121,7 +121,10 @@ def fold_scores(predictions, methods, metric="balanced_accuracy", k=5, repeats=1
     warnings.filterwarnings("ignore", message="y_pred contains classes not in y_true")
     rng = np.random.default_rng(seed)
     y = np.array([p["gold"] for p in predictions])
-    idx_by_label = {lab: np.where(y == lab)[0] for lab in set(y)}
+    # sorted(): the loop below draws from `rng` once per label, so a hash-randomised
+    # set order would consume the seeded stream differently on every run and the seed
+    # would buy nothing.
+    idx_by_label = {lab: np.where(y == lab)[0] for lab in sorted(set(y))}
 
     blocks = []
     for _ in range(repeats):

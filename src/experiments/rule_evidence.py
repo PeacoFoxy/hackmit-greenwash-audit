@@ -41,8 +41,10 @@ def lift_maps(table):
 
 def support(text, lut):
     """Qualifier support: mean lift over content words. None when too few words match."""
-    hits = [lut[t] for t in {w for w in RE_TOKEN.findall(text.lower())
-                             if w not in STOPWORDS} if t in lut]
+    # sorted(): float addition is not associative, so summing a hash-randomised set
+    # gave a different last digit on every run.
+    hits = [lut[t] for t in sorted({w for w in RE_TOKEN.findall(text.lower())
+                                    if w not in STOPWORDS}) if t in lut]
     return float(np.mean(hits)) if len(hits) >= MIN_TOKENS else None
 
 
