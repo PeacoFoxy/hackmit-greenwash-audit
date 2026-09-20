@@ -103,7 +103,12 @@ def main():
     gold = {}
     if os.path.exists(path):
         with open(path, newline="", encoding="utf-8") as f:
-            gold = {r["claim_id"]: r.get("gold_label", "") for r in csv.DictReader(f)}
+            # 只保留与 llm_label 不同的人工标注。相同的几乎一定是把初标复制过来了，
+            # 留着会让评测变成拿模型答案考模型自己。
+            gold = {r["claim_id"]: r.get("gold_label", "")
+                    for r in csv.DictReader(f)
+                    if r.get("gold_label", "").strip()
+                    and r.get("gold_label", "").strip() != r.get("llm_label", "").strip()}
 
     cols = ["claim_id", "company", "text", "flags", "vagueness",
             "llm_label", "llm_reason", "gold_label"]
