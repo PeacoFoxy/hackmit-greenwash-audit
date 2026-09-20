@@ -29,43 +29,64 @@ turns a wait into a demonstration of depth.
 
 ## 2. Layout
 
-`st.columns([3, 7])`. Left column is sticky context, right column is analysis.
+A full-width top bar above both columns, then `st.columns([3, 7])`. The top bar
+carries the two things that apply to the whole page — what is loaded, and the
+verdict on it. Left column is sticky context, right column is analysis.
 
 ```
-┌────────────────────────┬──────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────────────────────┐
+│ TOP BAR  full width                                                   │
+│ ┌───────────────────────────────┐  ┌────────────────────────────────┐ │
+│ │ Company / ticker              │  │  DISCLOSURE GRADE        C     │ │
+│ │ [_______________________] [→] │  │  technically true,             │ │
+│ │ or upload a PDF               │  │  materially thin               │ │
+│ └───────────────────────────────┘  └────────────────────────────────┘ │
+├────────────────────────┬──────────────────────────────────────────────┤
 │ LEFT  30%              │ RIGHT  70%                                   │
 │                        │                                              │
 │ ┌────────────────────┐ │ ┌──────────────────────────────────────────┐ │
-│ │ Company / ticker   │ │ │  KEY TERMS FOUND                         │ │
-│ │ [____________] [→] │ │ │  matched · carbon-free · diverted ·      │ │
-│ │ or upload a PDF    │ │ │  inset · replenished · net zero          │ │
-│ └────────────────────┘ │ └──────────────────────────────────────────┘ │
-│                        │                                              │
-│ ┌────────────────────┐ │ ┌────────┬────────┬────────┬──────────────┐ │
-│ │   DISCLOSURE       │ │ │ Claims │ Promise│ Verif. │ Commitments  │ │
-│ │     GRADE          │ │ │ needing│  per   │ density│  trackable   │ │
-│ │       C            │ │ │ review │ verif. │        │              │ │
-│ │  technically true, │ │ │  31%   │  4.86  │ 1 in 30│    3%        │ │
-│ │  materially thin   │ │ └────────┴────────┴────────┴──────────────┘ │
+│ │ RELATED SOURCES    │ │ │  KEY TERMS FOUND                         │ │
+│ │ · headline one     │ │ │  matched · carbon-free · diverted ·      │ │
+│ │ · headline two     │ │ │  inset · replenished · net zero          │ │
+│ │ · headline three   │ │ └──────────────────────────────────────────┘ │
 │ └────────────────────┘ │                                              │
+│                        │ ┌────────┬────────┬────────┬──────────────┐ │
+│                        │ │ Claims │ Promise│ Verif. │ Commitments  │ │
+│                        │ │ needing│  per   │ density│  trackable   │ │
+│         (space)        │ │ review │ verif. │        │              │ │
+│                        │ │  31%   │  4.86  │ 1 in 30│    3%        │ │
+│                        │ └────────┴────────┴────────┴──────────────┘ │
+│                        │                                              │
 │                        │ ┌──────────────────────────────────────────┐ │
-│ ┌────────────────────┐ │ │  WHERE TO LOOK                           │ │
-│ │ RELATED SOURCES    │ │ │  ▁▁█▁▁▁▁██▁▁▁▁▁█▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁█▁▁     │ │
-│ │ · headline one     │ │ │  13 passages · click to read             │ │
-│ │ · headline two     │ │ └──────────────────────────────────────────┘ │
-│ │ · headline three   │ │                                              │
-│ └────────────────────┘ │ ┌──────────────────────────────────────────┐ │
 │                        │ │  COMMITMENT TRAJECTORY                   │ │
-│ ┌────────────────────┐ │ │  target vs observed pace                 │ │
-│ │ RUNNING            │ │ │  or the honest empty state               │ │
-│ │ ✓ Reading PDF      │ │ └──────────────────────────────────────────┘ │
-│ │ ✓ 4,084 sentences  │ │                                              │
-│ │ ✓ 9 rules applied  │ │ ┌──────────────────────────────────────────┐ │
-│ │ ⟳ Classifying…     │ │ │  SELECTED PASSAGE                        │ │
-│ │ ○ Trajectory       │ │ │  quote, then why, then source            │ │
-│ └────────────────────┘ │ └──────────────────────────────────────────┘ │
+│                        │ │  target vs observed pace                 │ │
+│                        │ │  or the honest empty state               │ │
+│ ┌────────────────────┐ │ └──────────────────────────────────────────┘ │
+│ │ RUNNING            │ │                                              │
+│ │ ✓ Reading PDF      │ │ ┌──────────────────────────────────────────┐ │
+│ │ ✓ 4,084 sentences  │ │ │  WHERE TO LOOK                           │ │
+│ │ ✓ 9 rules applied  │ │ │  ▁▁█▁▁▁▁██▁▁▁▁▁█▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁█▁▁     │ │
+│ │ ⟳ Classifying…     │ │ │  13 passages · click to read             │ │
+│ │ ○ Trajectory       │ │ └──────────────────────────────────────────┘ │
+│ └────────────────────┘ │                                              │
+│  pinned to the bottom  │ ┌──────────────────────────────────────────┐ │
+│                        │ │  SELECTED PASSAGE                        │ │
+│                        │ │  quote, then why, then source            │ │
+│                        │ └──────────────────────────────────────────┘ │
 └────────────────────────┴──────────────────────────────────────────────┘
 ```
+
+Two consequences of moving input and grade into the top bar:
+
+- §3.1 and §3.2 still define the input and the grade; they now render in the
+  top bar rather than the left column. Their content rules are unchanged.
+- The left column holds exactly two blocks: related sources at the top,
+  execution status pinned at the bottom, with the gap between them left empty.
+  The status block is the last thing on screen at the end of a run, which is
+  where the eye lands when the analysis finishes.
+
+Right-column order is: key terms, four indicators, commitment trajectory,
+report map, selected passage.
 
 Below the fold, unchanged from v1: how it was evaluated, and what this does not
 claim. Those stay — they are the credibility of everything above.
