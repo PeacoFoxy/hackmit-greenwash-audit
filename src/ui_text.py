@@ -225,3 +225,39 @@ PASSAGE_PANEL = {
 def say_span(span):
     """终点命中的原文片段，用引号包起来给用户看。"""
     return f"“{span}”" if span else None
+
+
+# ------------------------------------------------- 工作树（“跑到哪一步”的可视化）
+# 每个阶段：(标题, 子项, 与 pipeline stage 名的对应)
+WORK_TREE = [
+    ("Read the document",
+     ["Pull text out of the PDF", "Repair line breaks, drop contents pages and tables"],
+     "Reading the PDF"),
+    ("Check the disclosures",
+     ["Nine accounting rules per sentence", "Method, boundary, baseline, offsets, water, waste"],
+     "Checking disclosures"),
+    ("Measure the language",
+     ["Seven signals per sentence", "Vagueness, hedging, promises, verification"],
+     "Measuring language"),
+    ("Find passages to review",
+     ["Flag density against the report's own baseline", "Runs of five sentences or more"],
+     "Finding passages"),
+    ("Classify the claims",
+     ["Atomic claims from the first 150 qualifying sentences",
+      "Decision tree: method, coverage, aggregation, undefined term"],
+     "Classifying claims"),
+    ("Summarise",
+     ["Four indicators", "Disclosure grade from three measured quantities"],
+     "Extracting commitments"),
+]
+
+TREE_MARKS = {"done": ":green[●]", "running": ":orange[◐]", "pending": ":gray[○]",
+              "failed": ":red[✕]"}
+
+HISTORY_PANEL = {
+    "title": "Analysed documents",
+    "empty": "Nothing analysed yet. Upload a PDF above and it will be listed here.",
+    "hint": "Every document analysed in this browser, newest first. Pick one to load its "
+            "result without re-running the pipeline.",
+    "partial": "partial — classification did not run",
+}

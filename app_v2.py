@@ -16,7 +16,8 @@ from src.claim_api import classify_claim, is_cached
 from src.pipeline import MAX_CLAIM_SENTENCES, analyse
 from src.tree import classify as tree_classify
 from src.report_map import load_regions, region_option, render_map, span_caption
-from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS, GRADE_TOOLTIP,
+from src import history
+from src.ui_text import (HISTORY_PANEL, TREE_MARKS, WORK_TREE, GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS, GRADE_TOOLTIP,
                          INDICATORS, KEY_TERMS, KEY_TERM_QUALIFIER, PASSAGE_PANEL, STAGES,
                          label_badge, mechanism_badge, mechanism_of_region, say_mechanism,
                          say_span, say_terminal, term_hover, term_pill, why_flagged)
@@ -215,63 +216,27 @@ left, right = st.columns([3, 7])
 
 # ----------------------------------------------------------- LEFT 30%
 with left:
-    panel("Related sources", "Up to 5 headlines with source and date; offline-safe")
-    st.container(height=LEFT_SPACER_PX, border=False)   # 把执行状态推到底部
     with st.container(border=True):
-        st.markdown("**Running**")
-        if upload is not None:
-            lines = st.container()
-            t0 = time.perf_counter()
-
-            def stage(name, detail):
-                lines.caption(f"✓ {name} — {detail}")
-
-            def keep_partial(partial):
-                # 每个阶段完成就落到 session state：后面的阶段炸了，前面的照样能渲染
-                st.session_state.upload_partial = tag_mechanisms(partial)
-
-            uploaded, failed_stage = None, None
-            try:
-                uploaded = analyse_upload(upload.getvalue(), upload.name,
-                                          _on_stage=stage, _on_partial=keep_partial)
-                st.session_state.upload_result = uploaded
-            except Exception as exc:
-                uploaded = st.session_state.get("upload_partial")
-                st.session_state.upload_result = uploaded
-                failed_stage = type(exc).__name__
-                st.warning(
-                    f"The analysis stopped during processing ({failed_stage}). "
-                    + ("Partial results are on the right: "
-                       f"{uploaded.get('n_sentences', 0):,} sentences, "
-                       f"{len(uploaded.get('regions', []))} passages."
-                       if uploaded else "No stage completed, so nothing is shown."))
-
-            if uploaded and uploaded.get("extract_error"):
-                lines.caption("○ Classifying claims — live extraction unavailable")
-                st.warning("Claim classification could not run (no network or no API key). "
-                           "Everything above it is rule-based and already on the right: "
-                           "the report map, key terms, and three of the four indicators.")
-            if uploaded:
-                st.caption(f"Claim extraction is capped at the first {MAX_CLAIM_SENTENCES} "
-                           f"qualifying sentences. Finished in "
-                           f"{time.perf_counter() - t0:.1f}s; cached by file contents, so "
-                           f"re-uploading {upload.name} is instant.")
+        st.markdown(f"**{HISTORY_PANEL['title']}**")
+        st.caption(HISTORY_PANEL["hint"])
+        entries = history.load_index()
+        if not entries:
+            st.caption(HISTORY_PANEL["empty"])
         else:
-            stage_values = {
-                "sentences": sum(len(b["sentences"]) for b in bundles.values()) if not bundle
-                             else len(bundle["sentences"]),
-                "regions": len(load_regions([selected["company"]] if selected else None)),
-                "claims": len(bundle["claims"]) if bundle else sum(len(b["claims"])
-                                                                   for b in bundles.values()),
-                "commitments": len(bundle["audit"]) if bundle else sum(len(b["audit"])
-                                                                       for b in bundles.values()),
-            }
-            for name, detail in STAGES:
-                st.caption(f"✓ {name} — {detail.format(**stage_values)}")
-            st.caption("Cached run — these stages were computed ahead of time and read from "
-                       "disk, so the page works with no network.")
+            for e in entries[:8]:
+                grade_txt = f" · grade {e['grade']}" if e.get("grade") else ""
+                flag = f" · {HISTORY_PANEL['partial']}" if e.get("partial") else ""
+                if st.button(e["filename"], key=f"hist_{e['hash']}", width="stretch"):
+                    st.session_state.active_hash = e["hash"]
+                    loaded = history.load(e["hash"])
+                    st.session_state.upload_result = tag_mechanisms(loaded) if loaded else None
+                    st.rerun()
+                st.caption(f"{e['analysed_at']} · {e['sentences']:,} sentences · "
+                           f"{e['passages']} passages{grade_txt}{flag}")
 
-uploaded = st.session_state.get("upload_result") if upload is not None else None
+uploaded = st.session_state.get("upload_result")
+if upload is None and not st.session_state.get("active_hash"):
+    uploaded = None
 values = (upload_indicators(uploaded) if uploaded
           else (indicators_for(bundle) if bundle else None))
 # 没有 claim 时 completeness 的分母为空，公式会退化成满分 —— 宁可不给字母
@@ -465,9 +430,72 @@ with right:
 
 # ============================================================ BELOW THE FOLD
 st.divider()
+st.header("How the analysis runs")
+st.caption("Every stage is deterministic except claim extraction. The marker shows where "
+           "the current run is.")
+tree_slot = st.container()
+
+
+def render_tree(slot, state):
+    """state: {stage_name: done|running|pending|failed}。渲染整棵树，当前阶段高亮。"""
+    with slot:
+        for title, children, stage_name in WORK_TREE:
+            mark = TREE_MARKS[state.get(stage_name, "pending")]
+            st.markdown(f"{mark} **{title}**")
+            for child in children:
+                st.caption(f"　　{child}")
+
+
+tree_state = st.session_state.get("tree_state", {})
+render_tree(tree_slot, tree_state)
+
+st.divider()
 st.header("How it was evaluated")
 panel("Ablation table and confusion matrix", "Carried over from v1 unchanged")
 
 st.divider()
 st.header("What this does not claim")
 panel("Limitations", "Carried over from v1 unchanged")
+
+# ======================================================= UPLOAD RUN (last)
+# 管线放在最后跑：工作树已经在屏幕上，阶段逐个点亮；跑完 rerun，让上方面板拿到数据。
+if upload is not None:
+    file_bytes = upload.getvalue()
+    h = history.file_hash(file_bytes)
+    if st.session_state.get("active_hash") != h:
+        state = {name: "pending" for _, _, name in WORK_TREE}
+        order = [name for _, _, name in WORK_TREE]
+
+        def on_stage(name, detail):
+            if name in state:
+                state[name] = "done"
+                nxt = order.index(name) + 1
+                if nxt < len(order):
+                    state[order[nxt]] = "running"
+            tree_slot.empty()
+            render_tree(tree_slot, state)
+
+        state[order[0]] = "running"
+        tree_slot.empty()
+        render_tree(tree_slot, state)
+
+        try:
+            result = analyse_upload(file_bytes, upload.name, _on_stage=on_stage,
+                                    _on_partial=lambda p: st.session_state.__setitem__(
+                                        "upload_partial", tag_mechanisms(p)))
+            g = (grade_components(result["claims"], result["rows"])
+                 if result.get("claims") else None)
+            history.save(result, file_bytes, g["letter"] if g else None)
+            st.session_state.update(upload_result=result, active_hash=h,
+                                    tree_state={n: "done" for n in order})
+        except Exception as exc:
+            partial = st.session_state.get("upload_partial")
+            for name in order:
+                if state.get(name) == "running":
+                    state[name] = "failed"
+            st.session_state.update(upload_result=partial, active_hash=h, tree_state=state)
+            st.warning(f"The analysis stopped during processing ({type(exc).__name__}). "
+                       + (f"Partial results are above: {partial.get('n_sentences', 0):,} "
+                          f"sentences, {len(partial.get('regions', []))} passages."
+                          if partial else "No stage completed."))
+        st.rerun()
