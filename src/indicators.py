@@ -47,6 +47,22 @@ PVR_FLOOR, PVR_CEIL = 1.0, 5.0     # PVR <= floor 得 100，>= ceil 得 0
 VERIF_TARGET = 5.0                 # 每 100 句达到这个数量的第三方核验提及得 100
 
 
+def band_margin(score, bands=None):
+    """离最近一条带边界还有多少分，以及越过它会变成哪个字母。
+
+    敏感性扫描显示评级带平移 ±12 分内就有公司翻转（见 src/sensitivity.py），所以
+    字母必须和它的脆弱程度一起显示，不能单独示人。
+    """
+    bands = bands or GRADE_BANDS
+    below = {bands[i][0]: (bands[i + 1][1] if i + 1 < len(bands) else "D")
+             for i in range(len(bands))}
+    edge = min((cut for cut, _ in bands), key=lambda e: abs(e - score))
+    letter_at = dict((cut, g) for cut, g in bands)
+    return {"edge": edge, "margin": abs(score - edge),
+            "would_become": letter_at[edge] if score < edge else below[edge],
+            "direction": "up" if score < edge else "down"}
+
+
 def grade_components(claims, sentences, pvr_floor=PVR_FLOOR, pvr_ceil=PVR_CEIL,
                      verif_target=VERIF_TARGET, bands=None):
     """三个子分（各 0-100）及其输入，全部可在界面展开核对。

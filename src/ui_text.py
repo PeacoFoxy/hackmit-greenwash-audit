@@ -261,3 +261,29 @@ HISTORY_PANEL = {
             "result without re-running the pipeline.",
     "partial": "partial — classification did not run",
 }
+
+
+# ------------------------------------- 评级脆弱度与子分说明（敏感性分析的界面出口）
+def say_margin(m, n_subscores=3):
+    """把 band_margin 的结果写成一句给人看的话。
+
+    总分是三个子分的平均，所以总分要动 margin 分，单个子分得动 margin × 3 分 ——
+    直接写总分差距会让评级显得比实际更脆。
+    """
+    verb = "below" if m["direction"] == "up" else "above"
+    need = m["margin"] * n_subscores
+    return (f"{m['margin']:.0f} points {verb} the {m['would_become']} boundary: "
+            f"a {need:.0f}-point move in any single sub-score flips the letter.")
+
+
+GRADE_FRAGILITY_NOTE = (
+    "The letter is not robust. Moving all three band edges by up to 12 points flips two "
+    "of the three reports; the ranking between them never changes. Read the ordering, "
+    "not the letter.")
+
+# 惰性子分：扫描区间内不影响任何公司的字母，必须在展开块里说明，不能默认它在起作用
+INERT_SUBSCORE_NOTE = (
+    "Promise balance does not discriminate here: sweeping its ceiling from 3 to 8 leaves "
+    "every letter on this corpus unchanged. It is kept because a report with a very high "
+    "promise-to-verification ratio should still be penalised, but on these three reports "
+    "it contributes no separation.")

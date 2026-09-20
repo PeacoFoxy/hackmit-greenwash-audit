@@ -10,17 +10,21 @@ from pathlib import Path
 
 import streamlit as st
 
-from src.indicators import (cached_bundle, claims_needing_review, grade_components,
+from src.indicators import (band_margin, cached_bundle, claims_needing_review,
+                            grade_components,
                             indicators_for, promises_per_verification, verification_density)
 from src.claim_api import classify_claim, is_cached
 from src.pipeline import MAX_CLAIM_SENTENCES, analyse
 from src.tree import classify as tree_classify
 from src.report_map import load_regions, region_option, render_map, span_caption
 from src import history
-from src.ui_text import (HISTORY_PANEL, TREE_MARKS, WORK_TREE, GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS, GRADE_TOOLTIP,
-                         INDICATORS, KEY_TERMS, KEY_TERM_QUALIFIER, PASSAGE_PANEL, STAGES,
-                         label_badge, mechanism_badge, mechanism_of_region, say_mechanism,
-                         say_span, say_terminal, term_hover, term_pill, why_flagged)
+from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_FRAGILITY_NOTE,
+                         GRADE_READINGS, GRADE_TOOLTIP, HISTORY_PANEL,
+                         INDICATORS, INERT_SUBSCORE_NOTE, KEY_TERMS,
+                         KEY_TERM_QUALIFIER, PASSAGE_PANEL, STAGES, TREE_MARKS,
+                         WORK_TREE, label_badge, mechanism_badge,
+                         mechanism_of_region, say_margin, say_mechanism, say_span,
+                         say_terminal, term_hover, term_pill, why_flagged)
 
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
@@ -174,6 +178,7 @@ def render_grade(slot, grade, subject, blocked=None):
             letter_col.markdown(f"# :{GRADE_BADGE_COLOR[grade['letter']]}[{grade['letter']}]")
             read_col.write(GRADE_READINGS[grade["letter"]])
             read_col.caption(f"Score {grade['score']:.0f} of 100 — {subject}")
+            read_col.caption(say_margin(band_margin(grade["score"])))
         else:
             letter_col.markdown("# —")
             read_col.write(blocked or "No report selected yet.")
@@ -203,6 +208,8 @@ def render_grade(slot, grade, subject, blocked=None):
                 st.write(f"Mean of the three: **{grade['score']:.1f}** → grade "
                          f"**{grade['letter']}**. Bands: 75 and above A, 55 and above B, "
                          "35 and above C, below 35 D.")
+                st.caption(INERT_SUBSCORE_NOTE)
+                st.caption(GRADE_FRAGILITY_NOTE)
                 st.caption("B-class and skipped claims are excluded from completeness: it "
                            "measures quantified claims only. Commitment trackability is "
                            "deliberately excluded — it was near zero for every reference "
