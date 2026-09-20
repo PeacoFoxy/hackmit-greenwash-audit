@@ -10,7 +10,8 @@ from pathlib import Path
 import streamlit as st
 
 from src.indicators import cached_bundle, grade_components, indicators_for
-from src.ui_text import INDICATORS
+from src.ui_text import (GRADE_BADGE_COLOR, GRADE_DISCLAIMER, GRADE_READINGS,
+                         GRADE_TOOLTIP, INDICATORS)
 
 ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus"
@@ -78,22 +79,54 @@ with bar_input:
     elif analyze:
         st.info("Type a company or ticker first, or upload a PDF.")
 
-with bar_grade:
-    with st.container(border=True):
-        st.caption("Disclosure grade",
-                   help="Measures how completely this report discloses the basis for its own "
-                        "figures. It is not a judgment of environmental performance or of "
-                        "the company.")
-        grade_letter, grade_read = st.columns([1, 3], vertical_alignment="center")
-        grade_letter.markdown("# —")
-        grade_read.write("No report selected yet.")
-        with st.expander("How this grade is computed"):
-            st.caption("Placeholder — the full computation lands in step 3 "
-                       "(FRONTEND_V2.md §5).")
-
 bundles = load_bundles()
 bundle = bundles.get(selected["company"]) if selected else None
 values = indicators_for(bundle) if bundle else None
+grade = grade_components(bundle["claims"], bundle["sentences"]) if bundle else None
+
+with bar_grade:
+    with st.container(border=True):
+        st.caption("Disclosure grade", help=GRADE_TOOLTIP)
+        letter_col, read_col = st.columns([1, 3], vertical_alignment="center")
+        if grade:
+            letter_col.markdown(f"# :{GRADE_BADGE_COLOR[grade['letter']]}[{grade['letter']}]")
+            read_col.write(GRADE_READINGS[grade["letter"]])
+            read_col.caption(f"Score {grade['score']:.0f} of 100 — "
+                             f"{selected['company']} {selected['doc_type'].replace('_', ' ')}")
+        else:
+            letter_col.markdown("# —")
+            read_col.write("No report selected yet.")
+
+        with st.expander("How this grade is computed"):
+            if grade:
+                i = grade["inputs"]
+                st.dataframe([
+                    {"sub-score": "Completeness",
+                     "formula": "(1 − C_rate) × 100",
+                     "inputs": f"{i['C_claims']} of {i['quantified_claims']} quantified claims "
+                               f"are technically true but incomplete (C_rate "
+                               f"{i['C_rate']:.2f})",
+                     "value": round(grade["completeness"], 1)},
+                    {"sub-score": "Promise balance",
+                     "formula": "clamp((5 − PVR) / 4, 0, 1) × 100",
+                     "inputs": f"PVR {i['pvr']:.2f}; 1 or below scores 100, 5 or above "
+                               f"scores 0",
+                     "value": round(grade["promise_balance"], 1)},
+                    {"sub-score": "Verification",
+                     "formula": "clamp(mentions per 100 sentences / 5, 0, 1) × 100",
+                     "inputs": f"{i['verification_mentions']} mentions across "
+                               f"{i['sentences']:,} sentences "
+                               f"({i['verif_per_100_sentences']:.2f} per 100)",
+                     "value": round(grade["verification"], 1)},
+                ], hide_index=True)
+                st.write(f"Mean of the three: **{grade['score']:.1f}** → grade "
+                         f"**{grade['letter']}**. Bands: 75 and above A, 55 and above B, "
+                         "35 and above C, below 35 D.")
+                st.caption("B-class and skipped claims are excluded from completeness: it "
+                           "measures quantified claims only. Commitment trackability is "
+                           "deliberately excluded — it was near zero for every reference "
+                           "report, so it carries no information.")
+            st.warning(GRADE_DISCLAIMER)
 
 st.divider()
 
