@@ -1,0 +1,371 @@
+{
+ "defaults": {
+  "bands": [
+   [
+    75,
+    "A"
+   ],
+   [
+    55,
+    "B"
+   ],
+   [
+    35,
+    "C"
+   ]
+  ],
+  "pvr_floor": 1.0,
+  "pvr_ceil": 5.0,
+  "verif_target": 5.0,
+  "anomaly_k": 2.0
+ },
+ "margins": [
+  {
+   "company": "Amazon",
+   "score": 71.66666666666667,
+   "grade": "B",
+   "nearest_edge": 75,
+   "margin": 3.3333333333333286,
+   "pvr": 0.504
+  },
+  {
+   "company": "Microsoft",
+   "score": 40.22912612362154,
+   "grade": "C",
+   "nearest_edge": 35,
+   "margin": 5.2291261236215405,
+   "pvr": 4.863636363636363
+  },
+  {
+   "company": "Alphabet",
+   "score": 87.10526315789474,
+   "grade": "A",
+   "nearest_edge": 75,
+   "margin": 12.10526315789474,
+   "pvr": 1.1473684210526316
+  }
+ ],
+ "sweeps": {
+  "band_shift": [
+   {
+    "shift": -12.0,
+    "Alphabet": "A",
+    "Amazon": "A",
+    "Microsoft": "C"
+   },
+   {
+    "shift": -10.0,
+    "Alphabet": "A",
+    "Amazon": "A",
+    "Microsoft": "C"
+   },
+   {
+    "shift": -8.0,
+    "Alphabet": "A",
+    "Amazon": "A",
+    "Microsoft": "C"
+   },
+   {
+    "shift": -6.0,
+    "Alphabet": "A",
+    "Amazon": "A",
+    "Microsoft": "C"
+   },
+   {
+    "shift": -4.0,
+    "Alphabet": "A",
+    "Amazon": "A",
+    "Microsoft": "C"
+   },
+   {
+    "shift": -2.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "shift": 0.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "shift": 2.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "shift": 4.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "shift": 6.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "shift": 8.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "shift": 10.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "shift": 12.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   }
+  ],
+  "pvr_ceil": [
+   {
+    "pvr_ceil": 3.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 3.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 4.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 4.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 5.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 5.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 6.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 6.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 7.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 7.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "pvr_ceil": 8.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   }
+  ],
+  "verif_target": [
+   {
+    "verif_target": 2.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 2.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 3.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 3.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 4.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 4.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 5.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 5.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 6.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 6.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "C"
+   },
+   {
+    "verif_target": 7.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "verif_target": 7.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "verif_target": 8.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "verif_target": 8.5,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "verif_target": 9.0,
+    "Alphabet": "A",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "verif_target": 9.5,
+    "Alphabet": "B",
+    "Amazon": "B",
+    "Microsoft": "D"
+   },
+   {
+    "verif_target": 10.0,
+    "Alphabet": "B",
+    "Amazon": "B",
+    "Microsoft": "D"
+   }
+  ],
+  "anomaly_k": [
+   {
+    "k": 1.0,
+    "Alphabet": 11,
+    "Amazon": 5,
+    "Microsoft": 6
+   },
+   {
+    "k": 1.25,
+    "Alphabet": 11,
+    "Amazon": 5,
+    "Microsoft": 6
+   },
+   {
+    "k": 1.5,
+    "Alphabet": 10,
+    "Amazon": 3,
+    "Microsoft": 6
+   },
+   {
+    "k": 1.75,
+    "Alphabet": 6,
+    "Amazon": 3,
+    "Microsoft": 5
+   },
+   {
+    "k": 2.0,
+    "Alphabet": 6,
+    "Amazon": 3,
+    "Microsoft": 4
+   },
+   {
+    "k": 2.25,
+    "Alphabet": 5,
+    "Amazon": 3,
+    "Microsoft": 4
+   },
+   {
+    "k": 2.5,
+    "Alphabet": 3,
+    "Amazon": 2,
+    "Microsoft": 3
+   },
+   {
+    "k": 2.75,
+    "Alphabet": 3,
+    "Amazon": 2,
+    "Microsoft": 3
+   },
+   {
+    "k": 3.0,
+    "Alphabet": 1,
+    "Amazon": 1,
+    "Microsoft": 2
+   },
+   {
+    "k": 3.25,
+    "Alphabet": 1,
+    "Amazon": 1,
+    "Microsoft": 2
+   },
+   {
+    "k": 3.5,
+    "Alphabet": 1,
+    "Amazon": 1,
+    "Microsoft": 1
+   }
+  ]
+ },
+ "note": "Whole curves are reported, not the argmax. The thresholds were chosen by the author; this analysis shows how far a conclusion survives when they move, it does not justify the specific values."
+}

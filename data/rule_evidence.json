@@ -1,0 +1,202 @@
+{
+ "min_tokens": 2,
+ "qualifier_of": {
+  "UNDISCLOSED_METHOD": "method_stated",
+  "UNDISCLOSED_BOUNDARY": "scope_stated",
+  "SELECTIVE_AGGREGATION": "baseline_stated",
+  "UNDEFINED_TERM": "verifier_named"
+ },
+ "rules": [
+  {
+   "terminal": "WATER_TERM_UNDEFINED",
+   "mechanism": "UNDEFINED_TERM",
+   "qualifier": "verifier_named",
+   "n": 2,
+   "median_support": 0.4641942857142857,
+   "percentile": 15.384615384615385,
+   "gold_covered": false,
+   "reading": "gap is systematic"
+  },
+  {
+   "terminal": "INSTRUMENT_NO_METHOD",
+   "mechanism": "UNDISCLOSED_METHOD",
+   "qualifier": "method_stated",
+   "n": 1,
+   "median_support": 0.14254999999999998,
+   "percentile": 17.21311475409836,
+   "gold_covered": true,
+   "reading": "gap is systematic"
+  },
+  {
+   "terminal": "WASTE_BOUNDARY_UNSTATED",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 6,
+   "median_support": 0.5038208333333334,
+   "percentile": 17.678100263852244,
+   "gold_covered": false,
+   "reading": "gap is systematic"
+  },
+  {
+   "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 16,
+   "median_support": 0.5617964285714285,
+   "percentile": 22.691292875989447,
+   "gold_covered": true,
+   "reading": "gap is systematic"
+  },
+  {
+   "terminal": "TARGET_SCOPE_UNSTATED",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 2,
+   "median_support": 0.580305,
+   "percentile": 23.7467018469657,
+   "gold_covered": true,
+   "reading": "gap is systematic"
+  },
+  {
+   "terminal": "CHERRY_PICKED_METRIC",
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "qualifier": "baseline_stated",
+   "n": 1,
+   "median_support": 0.60207,
+   "percentile": 24.137931034482758,
+   "gold_covered": false,
+   "reading": "gap is systematic"
+  },
+  {
+   "terminal": "UNSCOPED_FIGURE",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 7,
+   "median_support": 0.7875599999999999,
+   "percentile": 43.79947229551451,
+   "gold_covered": false,
+   "reading": "indistinguishable from corpus"
+  },
+  {
+   "terminal": "WATER_BOUNDARY_UNSTATED",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 5,
+   "median_support": 0.8641,
+   "percentile": 50.65963060686016,
+   "gold_covered": false,
+   "reading": "indistinguishable from corpus"
+  },
+  {
+   "terminal": "SCOPE_UNSTATED",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 11,
+   "median_support": 0.8809125,
+   "percentile": 51.71503957783641,
+   "gold_covered": true,
+   "reading": "indistinguishable from corpus"
+  },
+  {
+   "terminal": "MARKET_BASED_IMPLIED",
+   "mechanism": "UNDISCLOSED_METHOD",
+   "qualifier": "method_stated",
+   "n": 4,
+   "median_support": 0.8873357142857143,
+   "percentile": 53.278688524590166,
+   "gold_covered": false,
+   "reading": "indistinguishable from corpus"
+  },
+  {
+   "terminal": "METHOD_UNSTATED",
+   "mechanism": "UNDISCLOSED_METHOD",
+   "qualifier": "method_stated",
+   "n": 4,
+   "median_support": 0.9528785714285714,
+   "percentile": 55.19125683060109,
+   "gold_covered": false,
+   "reading": "indistinguishable from corpus"
+  },
+  {
+   "terminal": "NO_BASELINE_YEAR",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 1,
+   "median_support": 1.0563,
+   "percentile": 67.01846965699208,
+   "gold_covered": false,
+   "reading": "indistinguishable from corpus"
+  },
+  {
+   "terminal": "PROPRIETARY_METRIC",
+   "mechanism": "UNDEFINED_TERM",
+   "qualifier": "verifier_named",
+   "n": 5,
+   "median_support": 1.7500714285714285,
+   "percentile": 93.58974358974359,
+   "gold_covered": false,
+   "reading": "vocabulary is usually qualified"
+  },
+  {
+   "terminal": "INTENSITY_NO_ABSOLUTE",
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "qualifier": "baseline_stated",
+   "n": 6,
+   "median_support": 2.70036,
+   "percentile": 97.87798408488064,
+   "gold_covered": true,
+   "reading": "vocabulary is usually qualified"
+  },
+  {
+   "terminal": "GRID_MISMATCH_RISK",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 0,
+   "median_support": null,
+   "percentile": null,
+   "gold_covered": false,
+   "reading": "never fires"
+  },
+  {
+   "terminal": "COVERAGE_UNSTATED",
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "qualifier": "scope_stated",
+   "n": 0,
+   "median_support": null,
+   "percentile": null,
+   "gold_covered": false,
+   "reading": "never fires"
+  },
+  {
+   "terminal": "OFFSET_UNDISCLOSED",
+   "mechanism": "UNDISCLOSED_METHOD",
+   "qualifier": "method_stated",
+   "n": 0,
+   "median_support": null,
+   "percentile": null,
+   "gold_covered": false,
+   "reading": "never fires"
+  },
+  {
+   "terminal": "DIVERSION_UNDEFINED",
+   "mechanism": "UNDEFINED_TERM",
+   "qualifier": "verifier_named",
+   "n": 0,
+   "median_support": null,
+   "percentile": null,
+   "gold_covered": false,
+   "reading": "never fires"
+  },
+  {
+   "terminal": "REGIONAL_ONLY",
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "qualifier": "baseline_stated",
+   "n": 0,
+   "median_support": null,
+   "percentile": null,
+   "gold_covered": false,
+   "reading": "never fires"
+  }
+ ],
+ "note": "Unsupervised evidence only. A low percentile says the vocabulary a rule keys on usually appears without its qualifier in this corpus; it does not say a human annotator would label those claims C."
+}

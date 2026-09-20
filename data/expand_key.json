@@ -1,0 +1,122 @@
+[
+ {
+  "claim_id": "goog_sr_091",
+  "terminal": "UNSCOPED_FIGURE",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "amzn_sr_296",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "tree_label": "C",
+  "pool": "candidates"
+ },
+ {
+  "claim_id": "goog_sr_065",
+  "terminal": "CHERRY_PICKED_METRIC",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "goog_sr_108",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "tree_label": "C",
+  "pool": "candidates"
+ },
+ {
+  "claim_id": "goog_sr_028",
+  "terminal": "PROPRIETARY_METRIC",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "msft_sr_204",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "goog_sr_017",
+  "terminal": "METHOD_UNSTATED",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "amzn_sr_314",
+  "terminal": "METHOD_UNSTATED",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "msft_sr_148",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "tree_label": "B",
+  "pool": "candidates"
+ },
+ {
+  "claim_id": "amzn_sr_339",
+  "terminal": "WATER_TERM_UNDEFINED",
+  "tree_label": "C",
+  "pool": "candidates"
+ },
+ {
+  "claim_id": "goog_sr_041",
+  "terminal": "SUBSTANTIATED_WASTE",
+  "tree_label": "A",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "goog_sr_019",
+  "terminal": "UNSCOPED_FIGURE",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "amzn_sr_353",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "tree_label": "C",
+  "pool": "candidates"
+ },
+ {
+  "claim_id": "amzn_sr_348",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "msft_sr_234",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "tree_label": "B",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "goog_sr_027",
+  "terminal": "PROPRIETARY_METRIC",
+  "tree_label": "C",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "goog_sr_141",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "tree_label": "A",
+  "pool": "flagged_only"
+ },
+ {
+  "claim_id": "msft_sr_168",
+  "terminal": "WATER_TERM_UNDEFINED",
+  "tree_label": "C",
+  "pool": "candidates"
+ },
+ {
+  "claim_id": "msft_sr_214",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "tree_label": "C",
+  "pool": "candidates"
+ },
+ {
+  "claim_id": "goog_sr_001",
+  "terminal": "NO_BASELINE_YEAR",
+  "tree_label": "C",
+  "pool": "candidates"
+ }
+]

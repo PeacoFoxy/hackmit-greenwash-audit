@@ -42,22 +42,31 @@ def clamp(x, lo=0.0, hi=1.0):
     return max(lo, min(hi, x))
 
 
-def grade_components(claims, sentences):
-    """三个子分（各 0-100）及其输入，全部可在界面展开核对。"""
+# 三个子分的可调参数。默认值即 FRONTEND_V2 §5 公布的那组，敏感性分析扫描它们。
+PVR_FLOOR, PVR_CEIL = 1.0, 5.0     # PVR <= floor 得 100，>= ceil 得 0
+VERIF_TARGET = 5.0                 # 每 100 句达到这个数量的第三方核验提及得 100
+
+
+def grade_components(claims, sentences, pvr_floor=PVR_FLOOR, pvr_ceil=PVR_CEIL,
+                     verif_target=VERIF_TARGET, bands=None):
+    """三个子分（各 0-100）及其输入，全部可在界面展开核对。
+
+    参数可覆盖，供 src/sensitivity.py 扫描；默认值与界面展示的一致。
+    """
     scored = [c for c in claims if c.get("label") in ("A", "C")]
     n_c = sum(c.get("label") == "C" for c in scored)
     c_rate = n_c / max(len(scored), 1)
     completeness = (1 - c_rate) * 100
 
     pvr = promises_per_verification(sentences)
-    promise_balance = clamp((5 - pvr) / 4) * 100
+    promise_balance = clamp((pvr_ceil - pvr) / (pvr_ceil - pvr_floor)) * 100
 
     v = sum(s["verification"] for s in sentences)
     verif_per_100 = 100 * v / max(len(sentences), 1)
-    verification = clamp(verif_per_100 / 5) * 100
+    verification = clamp(verif_per_100 / verif_target) * 100
 
     score = (completeness + promise_balance + verification) / 3
-    letter = next((g for cut, g in GRADE_BANDS if score >= cut), "D")
+    letter = next((g for cut, g in (bands or GRADE_BANDS) if score >= cut), "D")
     return {
         "completeness": completeness, "promise_balance": promise_balance,
         "verification": verification, "score": score, "letter": letter,

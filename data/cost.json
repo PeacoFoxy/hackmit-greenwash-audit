@@ -1,0 +1,84 @@
+{
+ "n_claims": 29,
+ "batch": 5,
+ "model": "claude-sonnet-4-6",
+ "price_per_mtok": {
+  "input": 3.0,
+  "output": 15.0
+ },
+ "chars_per_token": 4.0,
+ "tree_seconds_for_n": 0.00040904200432123616,
+ "per_100": [
+  {
+   "method": "tree_only",
+   "calls": 0,
+   "in_tok": 0,
+   "out_tok": 0,
+   "usd": 0.0,
+   "sec": 0.00040904200432123616,
+   "missing": 0,
+   "calls_per_100": 0.0,
+   "in_tok_per_100": 0.0,
+   "out_tok_per_100": 0.0,
+   "usd_per_100": 0.0,
+   "sec_per_100": 0.001410489670073228
+  },
+  {
+   "method": "baseline1",
+   "calls": 6,
+   "in_tok": 2107.5,
+   "out_tok": 284.25,
+   "usd": 0.01058625,
+   "sec": null,
+   "missing": 0,
+   "calls_per_100": 20.689655172413794,
+   "in_tok_per_100": 7267.241379310344,
+   "out_tok_per_100": 980.1724137931034,
+   "usd_per_100": 0.03650431034482758,
+   "sec_per_100": null
+  },
+  {
+   "method": "baseline2",
+   "calls": 6,
+   "in_tok": 2619.0,
+   "out_tok": 284.25,
+   "usd": 0.01212075,
+   "sec": null,
+   "missing": 0,
+   "calls_per_100": 20.689655172413794,
+   "in_tok_per_100": 9031.03448275862,
+   "out_tok_per_100": 980.1724137931034,
+   "usd_per_100": 0.041795689655172406,
+   "sec_per_100": null
+  },
+  {
+   "method": "pipeline",
+   "calls": 6,
+   "in_tok": 3428.0,
+   "out_tok": 284.25,
+   "usd": 0.01454775,
+   "sec": null,
+   "missing": 0,
+   "calls_per_100": 20.689655172413794,
+   "in_tok_per_100": 11820.689655172413,
+   "out_tok_per_100": 980.1724137931034,
+   "usd_per_100": 0.05016465517241379,
+   "sec_per_100": null
+  },
+  {
+   "method": "pipeline_allflags",
+   "calls": 6,
+   "in_tok": 3513.5,
+   "out_tok": 284.25,
+   "usd": 0.014804250000000001,
+   "sec": null,
+   "missing": 0,
+   "calls_per_100": 20.689655172413794,
+   "in_tok_per_100": 12115.51724137931,
+   "out_tok_per_100": 980.1724137931034,
+   "usd_per_100": 0.05104913793103449,
+   "sec_per_100": null
+  }
+ ],
+ "note": "Token counts are estimated from the real cached prompt and response text at ~4 characters per token; they are not billing figures. Wall-clock is reported only for the deterministic path, where it is reproducible; LLM latency depends on the network and is not compared."
+}

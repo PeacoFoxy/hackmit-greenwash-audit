@@ -79,6 +79,8 @@ def run():
     out = {"methods": methods, "correct_counts": M.sum(0).tolist(),
            "accuracy": (M.mean(0)).tolist(), "friedman": fr,
            "critical_difference": cd, "pairwise_mcnemar": pairs,
+           "per_dataset_ranks": {m: per_dataset_ranks(preds, methods, metric=m)
+                                 for m in ("balanced_accuracy", "C_balanced_accuracy")},
            "fold_level": {m: fold_friedman(preds, methods, metric=m)
                           for m in ("accuracy", "balanced_accuracy", "C_f1")},
            "note": ("Blocks are the individual gold claims; the observation is whether a "
@@ -154,5 +156,56 @@ def print_folds(out):
               for m, v in zip(out["methods"], r["median"])))
 
 
+
+
+# ------------------------------------------------ 分数据集 mean-rank（Abualigah 表 4/5）
+def per_dataset_ranks(predictions, methods, metric="balanced_accuracy"):
+    """把每家公司当一个数据集，按 Abualigah 等的格式给出每列排名、求和、均值、总排名。
+
+    他们用 7-8 个数据集；我们只有 3 个，每个约 10 条，因此名次很噪。这张表的用途是
+    看**排名是否跨公司一致**，不是宣称某个方法更好 —— 一致性本身是比单点分数更强的证据。
+    """
+    import warnings
+
+    from src.evaluate import score
+    warnings.filterwarnings("ignore", message="y_pred contains classes not in y_true")
+
+    groups = {}
+    for p in predictions:
+        groups.setdefault(p["claim_id"].split("_")[0], []).append(p)
+
+    per_ds, scores = {}, {}
+    for ds, rows in sorted(groups.items()):
+        s = [score([r["gold"] for r in rows], [r[m] for r in rows])[metric] for m in methods]
+        scores[ds] = s
+        per_ds[ds] = rankdata([-v for v in s], method="average").tolist()  # 1 = 最好
+
+    summation = [sum(per_ds[ds][i] for ds in per_ds) for i in range(len(methods))]
+    mean_rank = [v / len(per_ds) for v in summation]
+    final = rankdata(mean_rank, method="min").tolist()
+    return {"metric": metric, "datasets": sorted(groups),
+            "n_per_dataset": {ds: len(r) for ds, r in groups.items()},
+            "scores": scores, "ranks": per_ds, "summation": summation,
+            "mean_rank": mean_rank, "final_ranking": final,
+            "unanimous": len({tuple(per_ds[ds]) for ds in per_ds}) == 1}
+
+
+def print_ranks(r, methods):
+    ds = r["datasets"]
+    print(f"\n分数据集 mean-rank（metric = {r['metric']}，每家 n = "
+          + ", ".join(f"{d}:{r['n_per_dataset'][d]}" for d in ds) + "）")
+    print(f"{'method':<20}" + "".join(f"{d[:8]:>10}" for d in ds)
+          + f"{'sum':>7}{'mean':>7}{'rank':>6}")
+    for i, m in enumerate(methods):
+        print(f"{m:<20}"
+              + "".join(f"{r['ranks'][d][i]:>10.1f}" for d in ds)
+              + f"{r['summation'][i]:>7.1f}{r['mean_rank'][i]:>7.2f}"
+              + f"{r['final_ranking'][i]:>6}")
+    print("  每家公司的名次向量" + ("完全一致" if r["unanimous"] else "并不一致"))
+
+
 if __name__ == "__main__":
-    print_folds(run())
+    _out = run()
+    for _m in _out["per_dataset_ranks"].values():
+        print_ranks(_m, _out["methods"])
+    print_folds(_out)

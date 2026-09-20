@@ -1,0 +1,344 @@
+{
+ "metric": "C_balanced_accuracy",
+ "baseline": 0.868421052631579,
+ "n_gold": 29,
+ "n_all": 390,
+ "n_boot": 2000,
+ "utilisation": {
+  "SKIP": 243,
+  "VAGUE_NO_QUANTITY": 43,
+  "FUTURE_PROMISE_NO_MILESTONE": 17,
+  "TARGET_SCOPE_UNSTATED": 2,
+  "SUBSTANTIATED_TARGET": 0,
+  "MARKET_BASED_IMPLIED": 4,
+  "INSTRUMENT_NO_METHOD": 1,
+  "METHOD_UNSTATED": 4,
+  "GRID_MISMATCH_RISK": 0,
+  "COVERAGE_UNSTATED": 0,
+  "SUBSTANTIATED_ENERGY": 0,
+  "SCOPE_UNSTATED": 11,
+  "INTENSITY_NO_ABSOLUTE": 6,
+  "NO_BASELINE_YEAR": 1,
+  "OFFSET_UNDISCLOSED": 0,
+  "SUBSTANTIATED_EMISSIONS": 10,
+  "WATER_TERM_UNDEFINED": 2,
+  "WATER_BOUNDARY_UNSTATED": 5,
+  "SUBSTANTIATED_WATER": 1,
+  "DIVERSION_UNDEFINED": 0,
+  "WASTE_BOUNDARY_UNSTATED": 6,
+  "SUBSTANTIATED_WASTE": 4,
+  "PROPRIETARY_METRIC": 5,
+  "REGIONAL_ONLY": 0,
+  "CHERRY_PICKED_METRIC": 1,
+  "SUBSTANTIATED_METRIC": 7,
+  "UNSCOPED_FIGURE": 7,
+  "SUBSTANTIATED_OTHER": 10
+ },
+ "ablations": [
+  {
+   "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 17,
+   "fires_gold": 3,
+   "delta": 0.002631578947368318,
+   "ci": [
+    -0.125,
+    0.10526315789473695
+   ],
+   "accuracy_after": 0.8275862068965517,
+   "C_spec_after": 0.8421052631578947,
+   "C_rec_after": 0.9,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "UNSCOPED_FIGURE",
+   "severity": 1,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 7,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "WASTE_BOUNDARY_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 6,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "WATER_BOUNDARY_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 5,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "PROPRIETARY_METRIC",
+   "severity": 3,
+   "mechanism": "UNDEFINED_TERM",
+   "fires_all": 5,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "MARKET_BASED_IMPLIED",
+   "severity": 3,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 4,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "METHOD_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 4,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "WATER_TERM_UNDEFINED",
+   "severity": 3,
+   "mechanism": "UNDEFINED_TERM",
+   "fires_all": 2,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "NO_BASELINE_YEAR",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 1,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "CHERRY_PICKED_METRIC",
+   "severity": 3,
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "fires_all": 1,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "untested by gold"
+  },
+  {
+   "terminal": "GRID_MISMATCH_RISK",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "COVERAGE_UNSTATED",
+   "severity": 1,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "OFFSET_UNDISCLOSED",
+   "severity": 3,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "DIVERSION_UNDEFINED",
+   "severity": 3,
+   "mechanism": "UNDEFINED_TERM",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "REGIONAL_ONLY",
+   "severity": 2,
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "accuracy_after": 0.7931034482758621,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "TARGET_SCOPE_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 2,
+   "fires_gold": 1,
+   "delta": -0.050000000000000044,
+   "ci": [
+    -0.16666666666666663,
+    0.0
+   ],
+   "accuracy_after": 0.7586206896551724,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 0.9,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "INSTRUMENT_NO_METHOD",
+   "severity": 3,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 1,
+   "fires_gold": 1,
+   "delta": -0.050000000000000044,
+   "ci": [
+    -0.16666666666666674,
+    0.0
+   ],
+   "accuracy_after": 0.7586206896551724,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 0.9,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "SCOPE_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 11,
+   "fires_gold": 6,
+   "delta": -0.07105263157894748,
+   "ci": [
+    -0.25,
+    0.08830213903743281
+   ],
+   "accuracy_after": 0.7241379310344828,
+   "C_spec_after": 0.8947368421052632,
+   "C_rec_after": 0.7,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "INTENSITY_NO_ABSOLUTE",
+   "severity": 3,
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "fires_all": 6,
+   "fires_gold": 4,
+   "delta": -0.20000000000000007,
+   "ci": [
+    -0.35730519480519485,
+    -0.049886363636364194
+   ],
+   "accuracy_after": 0.6551724137931034,
+   "C_spec_after": 0.7368421052631579,
+   "C_rec_after": 0.6,
+   "verdict": "earns its place"
+  }
+ ],
+ "note": "Single-factor ablation with a paired bootstrap interval. No subset search is performed: with 29 labelled claims a wrapper search would overfit the gold set (Abiodun et al. 2021, sec. 5.v)."
+}
