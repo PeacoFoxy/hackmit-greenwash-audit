@@ -84,6 +84,8 @@ def write(picked):
         for r in picked:
             w.writerow([r["claim_id"], r["company"], r["text"], "", ""])
 
+    # 答案键不进仓库（.gitignore）：它含树的预测，看到就不盲了。
+    # 需要时用固定种子 SEED 重跑本模块即可完全复现。
     key = DATA / "expand_key.json"
     key.write_text(json.dumps(
         [{"claim_id": r["claim_id"], "terminal": r["terminal"],

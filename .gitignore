@@ -9,3 +9,4 @@ data/upload_history.json
 .env.*
 !.env.example
 .streamlit/secrets.toml
+data/expand_key.json
