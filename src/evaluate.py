@@ -1,9 +1,12 @@
-import json, re
+import json, os, re
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_recall_fscore_support
 from src.llm import ask
+
+FIG_DIR = "figures"
+os.makedirs(FIG_DIR, exist_ok=True)
 
 BATCH = 5
 LABELS = ["A", "B", "C", "D"]
@@ -45,17 +48,23 @@ Output ONLY a raw JSON array. No markdown fences, no analysis, no preamble.
 Format: [{"claim_id":"...","label":"A"}]"""
 
 
-def item(c, with_hints):
+METHODS = ["baseline1", "baseline2", "pipeline", "pipeline_allflags"]
+
+
+def item(c, hint_mode):
+    """hint_mode: None 不给提示 / 'precise' 只给高精度 flag / 'all' 给全部 flag。"""
     d = {"claim_id": c["claim_id"], "text": c["text"]}
-    if with_hints:
-        d["flags"] = [f for f in c["flags"] if f in PRECISE_FLAGS]
+    if hint_mode:
+        d["flags"] = (c["flags"] if hint_mode == "all"
+                      else [f for f in c["flags"] if f in PRECISE_FLAGS])
         d["vagueness"] = c["vagueness"]
     return json.dumps(d, ensure_ascii=False)
 
 
 def build_prompt(method, batch):
-    hints = method == "pipeline"
-    claims = "\n".join(item(c, hints) for c in batch)
+    hint_mode = {"pipeline": "precise", "pipeline_allflags": "all"}.get(method)
+    hints = hint_mode is not None
+    claims = "\n".join(item(c, hint_mode) for c in batch)
     rubric = SHORT_RUBRIC if method == "baseline1" else RUBRIC
     head = "Classify each corporate environmental claim below as A, B, C, or D.\n\n" + rubric
     if hints:
@@ -146,23 +155,23 @@ def main():
     print(f"Evaluating on {len(gold)} claims")
 
     metrics, preds = {}, {}
-    for m in ["baseline1", "baseline2", "pipeline"]:
+    for m in METHODS:
         print(f"running {m} ...")
         preds[m] = classify(m, claims)
         metrics[m] = score(y_true, preds[m])
 
     cols = ["accuracy", "macro_f1", "C_precision", "C_recall", "C_f1"]
-    print("\n" + f"{'method':<11}" + "".join(f"{c:>13}" for c in cols))
+    print("\n" + f"{'method':<19}" + "".join(f"{c:>13}" for c in cols))
     for m, s in metrics.items():
-        print(f"{m:<11}" + "".join(f"{s[c]:>13.3f}" for c in cols))
+        print(f"{m:<19}" + "".join(f"{s[c]:>13.3f}" for c in cols))
 
-    labels, cm = plot_confusion(y_true, preds["pipeline"], "data/confusion.png")
+    labels, cm = plot_confusion(y_true, preds["pipeline"], os.path.join(FIG_DIR, "confusion.png"))
     json.dump({"n": len(gold), "metrics": metrics,
                "pipeline_confusion": {"labels": labels, "matrix": cm},
                "predictions": [{"claim_id": g["claim_id"], "gold": g["gold_label"],
                                 **{m: preds[m][i] for m in preds}} for i, g in enumerate(gold)]},
               open("data/metrics.json", "w"), ensure_ascii=False, indent=1)
-    print("\n→ data/metrics.json, data/confusion.png")
+    print("\n→ data/metrics.json, figures/confusion.png")
 
 
 if __name__ == "__main__":

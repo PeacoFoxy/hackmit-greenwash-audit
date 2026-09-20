@@ -1,0 +1,236 @@
+[
+ {
+  "company": "Alphabet",
+  "threshold": 0.3945,
+  "start_sent_id": "goog_sr_00001",
+  "end_sent_id": "goog_sr_00005",
+  "n_sentences": 5,
+  "rel_pos": [
+   0.0006,
+   0.0031
+  ],
+  "peak": 0.5,
+  "flag_types": {
+   "NO_BASELINE_YEAR": 1
+  },
+  "text": "These three topics—energy, AI, and resilience—are the key themes of this year’s report. Within these pages, we detail our 2024 progress, offering our perspective and insights from a year marked by unprecedented global change driven by AI, energy demand, policy, and more. Energy We reduced our data center energy emissions by 12%, even with growing energy demands. Reliable and abundant energy can he"
+ },
+ {
+  "company": "Alphabet",
+  "threshold": 0.3945,
+  "start_sent_id": "goog_sr_00009",
+  "end_sent_id": "goog_sr_00020",
+  "n_sentences": 12,
+  "rel_pos": [
+   0.0056,
+   0.0125
+  ],
+  "peak": 0.5,
+  "flag_types": {
+   "SCOPE2_METHOD_UNSTATED": 2,
+   "MATCHING_LANGUAGE": 1,
+   "NO_BASELINE_YEAR": 1,
+   "FUTURE_PROMISE_NO_MILESTONE": 1
+  },
+  "text": "Since then, from 2010 to 2024, we’ve signed more than 170 agreements to purchase over 22 GW of clean en ergy generation,2 similar to Portugal’s total renewable energy in 2024.3 In 2024 alone, Google signed contracts to purchase over 8 GW of additional clean energy generation 4—the largest annual total in our history and twice the volume we contracted for the prior year. We’ve maintained a 100% ren"
+ },
+ {
+  "company": "Alphabet",
+  "threshold": 0.3945,
+  "start_sent_id": "goog_sr_00770",
+  "end_sent_id": "goog_sr_00790",
+  "n_sentences": 21,
+  "rel_pos": [
+   0.4822,
+   0.4947
+  ],
+  "peak": 0.6,
+  "flag_types": {
+   "SCOPE2_METHOD_UNSTATED": 7,
+   "FUTURE_PROMISE_NO_MILESTONE": 2,
+   "MATCHING_LANGUAGE": 2,
+   "NO_BASELINE_YEAR": 1
+  },
+  "text": "This may drive non-linear growth in energy demand, which makes our future energy needs and emissions trajectories more difficult to predict. 3. Policy uncertainty: Shifts in climate- and energy-related policies and regulations introduce significant uncertainty. This policy instability poses new challenges to our planning and progress as it’s anticipated to impact clean energy supply and developmen"
+ },
+ {
+  "company": "Alphabet",
+  "threshold": 0.3945,
+  "start_sent_id": "goog_sr_00843",
+  "end_sent_id": "goog_sr_00870",
+  "n_sentences": 28,
+  "rel_pos": [
+   0.5279,
+   0.5448
+  ],
+  "peak": 0.55,
+  "flag_types": {
+   "FUTURE_PROMISE_NO_MILESTONE": 5,
+   "WATER_ACCOUNTING_VAGUE": 4,
+   "NO_BASELINE_YEAR": 3,
+   "OFFSET_UNDISCLOSED": 1
+  },
+  "text": "Emissions primarily come from the embodied carbon of construction materials, such as steel and concrete, as well as from vehicles and generators used during construction. In 2024, emissions from data center construction increased 54% year-on-year, reaching approximately 1.6 million tCO2e and representing 19% of our total 2024 ambition-based scope 3 emissions. Our data center construction emissions"
+ },
+ {
+  "company": "Alphabet",
+  "threshold": 0.3945,
+  "start_sent_id": "goog_sr_01202",
+  "end_sent_id": "goog_sr_01207",
+  "n_sentences": 6,
+  "rel_pos": [
+   0.7527,
+   0.7558
+  ],
+  "peak": 0.4,
+  "flag_types": {
+   "SCOPE2_METHOD_UNSTATED": 1,
+   "MATCHING_LANGUAGE": 1
+  },
+  "text": "We calculate electricity procured from renewable sources (%) on an annual basis by dividing the megawatt-hours of renewable electricity procured (i.e., through contractual instruments, on-site renewable electricity generation, and renewable electricity in the electric grids where our facilities are located) by the total megawatt-hours of electricity consumed by our global operations. The numerator"
+ },
+ {
+  "company": "Alphabet",
+  "threshold": 0.3945,
+  "start_sent_id": "goog_sr_01559",
+  "end_sent_id": "goog_sr_01571",
+  "n_sentences": 13,
+  "rel_pos": [
+   0.9762,
+   0.9837
+  ],
+  "peak": 0.5,
+  "flag_types": {
+   "FUTURE_PROMISE_NO_MILESTONE": 3,
+   "OFFSET_UNDISCLOSED": 2,
+   "CHERRY_PICKED_METRIC": 1,
+   "SCOPE2_METHOD_UNSTATED": 1
+  },
+  "text": "For both PUE and machine hardware efficiency, we assume additional energy consumption in the avoided baseline scenario would not have been matched with additional clean energy procurement. Refer to endnote 49 for the calculation of avoided emissions from our carbon-free energy procurement. The data and claims have not been verified by an independent third-party. 120 Currently, SBTi validates near-"
+ },
+ {
+  "company": "Microsoft",
+  "threshold": 0.5743,
+  "start_sent_id": "msft_sr_00123",
+  "end_sent_id": "msft_sr_00136",
+  "n_sentences": 14,
+  "rel_pos": [
+   0.0941,
+   0.1041
+  ],
+  "peak": 0.75,
+  "flag_types": {
+   "FUTURE_PROMISE_NO_MILESTONE": 8,
+   "SCOPE2_METHOD_UNSTATED": 4,
+   "GRID_MISMATCH_RISK": 2,
+   "MATCHING_LANGUAGE": 1
+  },
+  "text": "At Microsoft, we are continuously reassessing and adjusting our strategy to drive the highest impact toward our 2030 commitments and beyond. Microsoft sustainability Carbon Water Waste EcosystemsOverview Customer sustainability Global sustainability Appendix 10 2025 Environmental Sustainability Report Our targets and progress Carbon negative By 2030, Microsoft will cut its emissions by more than h"
+ },
+ {
+  "company": "Microsoft",
+  "threshold": 0.5743,
+  "start_sent_id": "msft_sr_00239",
+  "end_sent_id": "msft_sr_00250",
+  "n_sentences": 12,
+  "rel_pos": [
+   0.1829,
+   0.1913
+  ],
+  "peak": 0.7,
+  "flag_types": {
+   "SCOPE2_METHOD_UNSTATED": 5,
+   "FUTURE_PROMISE_NO_MILESTONE": 3,
+   "GRID_MISMATCH_RISK": 2
+  },
+  "text": "Notable market expansions include: • Brookfield Renewable Energy Framework— a framework to deliver more than 10.5 GW in the United States and Europe over the next five years. • Wisconsin PPA with National Grid Renewables—a 250-megawatt (MW) agreement to support this growing datacenter region, including a $15 million community benefit fund for environmental resilience initiatives. Microsoft also br"
+ },
+ {
+  "company": "Microsoft",
+  "threshold": 0.5743,
+  "start_sent_id": "msft_sr_00395",
+  "end_sent_id": "msft_sr_00420",
+  "n_sentences": 26,
+  "rel_pos": [
+   0.3022,
+   0.3213
+  ],
+  "peak": 1.0,
+  "flag_types": {
+   "WATER_ACCOUNTING_VAGUE": 16,
+   "FUTURE_PROMISE_NO_MILESTONE": 6,
+   "NO_BASELINE_YEAR": 1
+  },
+  "text": "Across approximately 40 priority locations worldwide, we invest in solutions such as rainwater harvesting, groundwater replenishment, and irrigation modernization, delivering measurable social and environmental benefits while addressing local water challenges. As we progress, our water positive strategy is evolving—integrating new ideas, technologies, and approaches to address global water challen"
+ },
+ {
+  "company": "Microsoft",
+  "threshold": 0.5743,
+  "start_sent_id": "msft_sr_00427",
+  "end_sent_id": "msft_sr_00447",
+  "n_sentences": 21,
+  "rel_pos": [
+   0.3267,
+   0.342
+  ],
+  "peak": 0.9,
+  "flag_types": {
+   "WATER_ACCOUNTING_VAGUE": 12,
+   "NO_BASELINE_YEAR": 5,
+   "FUTURE_PROMISE_NO_MILESTONE": 1
+  },
+  "text": "To address these challenges, Microsoft has implemented a proactive and strategic approach for our water portfolio: 1 Build a diverse portfolio. We mitigate risk by diversifying across a variety of locations, project types, and partners, ensuring resilience against variability. 2 Invest early. By building a robust portfolio early, we create the runway needed to achieve our replenishment target by 2"
+ },
+ {
+  "company": "Amazon",
+  "threshold": 0.4116,
+  "start_sent_id": "amzn_sr_00171",
+  "end_sent_id": "amzn_sr_00199",
+  "n_sentences": 29,
+  "rel_pos": [
+   0.1453,
+   0.1691
+  ],
+  "peak": 0.9,
+  "flag_types": {
+   "SCOPE2_METHOD_UNSTATED": 14,
+   "FUTURE_PROMISE_NO_MILESTONE": 7,
+   "MATCHING_LANGUAGE": 2,
+   "CHERRY_PICKED_METRIC": 1
+  },
+  "text": "The AWS Energy Management System program standardizes our continual energy efficiency improvement efforts globally. Amazon data centers and services in 35 countries—including all of our data centers in Europe, the Middle East, and Africa (EMEA), Singapore, and Indonesia —were ISO 50001 Energy Management certified in 2025. Learn more about AWS regional PUE and ISO 50001 At our data centers, new com"
+ },
+ {
+  "company": "Amazon",
+  "threshold": 0.4116,
+  "start_sent_id": "amzn_sr_00277",
+  "end_sent_id": "amzn_sr_00288",
+  "n_sentences": 12,
+  "rel_pos": [
+   0.2353,
+   0.2447
+  ],
+  "peak": 0.5,
+  "flag_types": {
+   "WATER_ACCOUNTING_VAGUE": 6,
+   "FUTURE_PROMISE_NO_MILESTONE": 2
+  },
+  "text": "Amazon is working to support a more resilient and water- secu re future by reducing our global water footprint and prioritizing action to address water scarcity, access, and quality challenges, emphasizing regions of our operations with high and extreme water stress. We have conducted comprehensive water risk assessments, using tools such as the World Resources Institute’s (WRI) Aqueduct Water Ris"
+ },
+ {
+  "company": "Amazon",
+  "threshold": 0.4116,
+  "start_sent_id": "amzn_sr_00318",
+  "end_sent_id": "amzn_sr_00328",
+  "n_sentences": 11,
+  "rel_pos": [
+   0.2702,
+   0.2787
+  ],
+  "peak": 0.65,
+  "flag_types": {
+   "WATER_ACCOUNTING_VAGUE": 6
+  },
+  "text": "We achieved this progress by scaling on-site efficiency, water reuse initiatives, and increasing the size of our water replenishment portfolio in India. Where water use is unavoidable in our direct operations, we work to reduce water usage by installing smart meters at key buildings to monitor and optimize water use, guided by our Smart Metering Playbook . These meters enable early leak detection "
+ }
+]

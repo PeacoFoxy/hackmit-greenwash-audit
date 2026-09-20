@@ -1,7 +1,7 @@
 import os, json, hashlib, time
 from anthropic import Anthropic
 
-client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"], timeout=120.0)
+client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""), timeout=120.0)
 CACHE = "cache"
 os.makedirs(CACHE, exist_ok=True)
 

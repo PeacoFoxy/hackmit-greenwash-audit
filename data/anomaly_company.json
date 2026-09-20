@@ -1,32 +1,86 @@
-{
- "Alphabet": {
-  "vagueness": 0.11741059456501844,
-  "numeric": -0.18697027038539846,
-  "hedge": -0.7973961220012515,
-  "future": -0.5508469006043555,
-  "flags": 0.8081117370153773,
-  "verification": -0.23175394179314707,
-  "specificity": 1.134556943119307,
-  "composite": 0.10937008435153794
+[
+ {
+  "company": "Alphabet",
+  "sentences": 1598,
+  "future_total": 109,
+  "verification_total": 95,
+  "future_interval": 14.66,
+  "verification_interval": 16.82,
+  "pvr": 1.147,
+  "means": {
+   "vagueness": 0.521,
+   "numeric": 3.0515,
+   "hedge": 0.1302,
+   "future": 0.0682,
+   "flags": 0.2879,
+   "verification": 0.0594,
+   "specificity": 0.5907
+  },
+  "z": {
+   "vagueness": 0.117,
+   "numeric": -0.187,
+   "hedge": -0.797,
+   "future": -0.551,
+   "flags": 0.808,
+   "verification": -0.232,
+   "specificity": 1.135
+  },
+  "composite": -1.139
  },
- "Microsoft": {
-  "vagueness": 1.1618113119851385,
-  "numeric": -1.1205089252095455,
-  "hedge": -0.6127956172316253,
-  "future": 1.4034419375683276,
-  "flags": 0.6010393980434265,
-  "verification": -1.0923107143668482,
-  "specificity": -1.2984318702026119,
-  "composite": 0.6725749464746668
+ {
+  "company": "Microsoft",
+  "sentences": 1308,
+  "future_total": 214,
+  "verification_total": 44,
+  "future_interval": 6.11,
+  "verification_interval": 29.73,
+  "pvr": 4.864,
+  "means": {
+   "vagueness": 0.5326,
+   "numeric": 2.7657,
+   "hedge": 0.1353,
+   "future": 0.1636,
+   "flags": 0.2791,
+   "verification": 0.0336,
+   "specificity": 0.5271
+  },
+  "z": {
+   "vagueness": 1.162,
+   "numeric": -1.121,
+   "hedge": -0.613,
+   "future": 1.403,
+   "flags": 0.601,
+   "verification": -1.092,
+   "specificity": -1.298
+  },
+  "composite": 6.065
  },
- "Amazon": {
-  "vagueness": -1.279221906550137,
-  "numeric": 1.3074791955949425,
-  "hedge": 1.410191739232878,
-  "future": -0.8525950369639718,
-  "flags": -1.4091511350588077,
-  "verification": 1.3240646561599951,
-  "specificity": 0.16387492708330903,
-  "composite": -0.7819450308262008
+ {
+  "company": "Amazon",
+  "sentences": 1178,
+  "future_total": 63,
+  "verification_total": 125,
+  "future_interval": 18.7,
+  "verification_interval": 9.42,
+  "pvr": 0.504,
+  "means": {
+   "vagueness": 0.5055,
+   "numeric": 3.5088,
+   "hedge": 0.1919,
+   "future": 0.0535,
+   "flags": 0.1935,
+   "verification": 0.1061,
+   "specificity": 0.5654
+  },
+  "z": {
+   "vagueness": -1.279,
+   "numeric": 1.307,
+   "hedge": 1.41,
+   "future": -0.853,
+   "flags": -1.409,
+   "verification": 1.324,
+   "specificity": 0.164
+  },
+  "composite": -4.926
  }
-}
+]

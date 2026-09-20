@@ -21,6 +21,13 @@
    "C_precision": 0.46153846153846156,
    "C_recall": 0.6666666666666666,
    "C_f1": 0.5454545454545454
+  },
+  "pipeline_allflags": {
+   "accuracy": 0.5862068965517241,
+   "macro_f1": 0.5497835497835498,
+   "C_precision": 0.46153846153846156,
+   "C_recall": 0.6666666666666666,
+   "C_f1": 0.5454545454545454
   }
  },
  "pipeline_confusion": {
@@ -63,203 +70,232 @@
    "gold": "A",
    "baseline1": "A",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "goog_sr_134",
    "gold": "C",
    "baseline1": "A",
    "baseline2": "A",
-   "pipeline": "A"
+   "pipeline": "A",
+   "pipeline_allflags": "A"
   },
   {
    "claim_id": "amzn_sr_362",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "msft_sr_146",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "goog_sr_089",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "A",
-   "pipeline": "A"
+   "pipeline": "A",
+   "pipeline_allflags": "A"
   },
   {
    "claim_id": "goog_sr_105",
    "gold": "B",
    "baseline1": "A",
    "baseline2": "A",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "amzn_sr_385",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "goog_sr_061",
    "gold": "A",
    "baseline1": "A",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "goog_sr_074",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "amzn_sr_342",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "amzn_sr_316",
    "gold": "A",
    "baseline1": "A",
    "baseline2": "A",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "goog_sr_071",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "amzn_sr_297",
    "gold": "C",
    "baseline1": "A",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "amzn_sr_337",
    "gold": "B",
    "baseline1": "A",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "msft_sr_150",
    "gold": "C",
    "baseline1": "A",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "amzn_sr_292",
    "gold": "C",
    "baseline1": "A",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "goog_sr_004",
    "gold": "C",
    "baseline1": "A",
    "baseline2": "A",
-   "pipeline": "A"
+   "pipeline": "A",
+   "pipeline_allflags": "A"
   },
   {
    "claim_id": "amzn_sr_301",
    "gold": "A",
    "baseline1": "A",
    "baseline2": "A",
-   "pipeline": "A"
+   "pipeline": "A",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "goog_sr_052",
    "gold": "C",
    "baseline1": "B",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "goog_sr_034",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "goog_sr_096",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "A"
   },
   {
    "claim_id": "goog_sr_016",
    "gold": "A",
    "baseline1": "A",
    "baseline2": "A",
-   "pipeline": "A"
+   "pipeline": "A",
+   "pipeline_allflags": "A"
   },
   {
    "claim_id": "goog_sr_073",
    "gold": "C",
    "baseline1": "B",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "amzn_sr_303",
    "gold": "C",
    "baseline1": "D",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "msft_sr_235",
    "gold": "C",
    "baseline1": "A",
    "baseline2": "A",
-   "pipeline": "A"
+   "pipeline": "A",
+   "pipeline_allflags": "A"
   },
   {
    "claim_id": "goog_sr_042",
    "gold": "A",
    "baseline1": "A",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "A"
   },
   {
    "claim_id": "msft_sr_197",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   },
   {
    "claim_id": "amzn_sr_323",
    "gold": "A",
    "baseline1": "A",
    "baseline2": "C",
-   "pipeline": "C"
+   "pipeline": "C",
+   "pipeline_allflags": "C"
   },
   {
    "claim_id": "msft_sr_227",
    "gold": "B",
    "baseline1": "B",
    "baseline2": "B",
-   "pipeline": "B"
+   "pipeline": "B",
+   "pipeline_allflags": "B"
   }
  ]
 }
