@@ -1,4 +1,5 @@
-"""四类标注 rubric。evaluate.py 与界面共用同一份文本，改动会同时影响两边的缓存键。"""
+"""The four-class rubric. evaluate.py and the interface share this exact text, so any
+edit changes the cache keys on both sides."""
 
 RUBRIC = """Label definitions:
 A = Substantiated: concrete numbers AND states the scope or accounting method; independently verifiable.

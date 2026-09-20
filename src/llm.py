@@ -1,4 +1,5 @@
-"""全项目唯一的 LLM 入口：带磁盘缓存 + 重试。缓存命中不发请求，断网也能复现结果。"""
+"""The single model entry point for the project: disk cache plus retries. A cache hit
+sends nothing, so results reproduce with the network off."""
 import os, json, hashlib, time
 from pathlib import Path
 
@@ -6,7 +7,8 @@ from anthropic import Anthropic
 
 
 def _load_env(path=Path(__file__).resolve().parent.parent / ".env"):
-    """读项目根目录的 .env。不引入依赖；已存在的环境变量优先，文件缺失就跳过。"""
+    """Read .env from the project root. No dependency; an exported variable wins, and a
+    missing file is simply skipped."""
     if not path.exists():
         return
     for line in path.read_text(encoding="utf-8").splitlines():
@@ -25,7 +27,7 @@ os.makedirs(CACHE, exist_ok=True)
 
 
 def ask(prompt, system="", model="claude-sonnet-4-6", max_tokens=2000, tries=3):
-    """带磁盘缓存 + 重试的 LLM 调用。缓存命中不发请求。"""
+    """Model call with disk cache and retries. A cache hit sends no request."""
     key = hashlib.md5((model + system + prompt).encode()).hexdigest()
     path = os.path.join(CACHE, f"{key}.json")
     if os.path.exists(path):
@@ -45,6 +47,6 @@ def ask(prompt, system="", model="claude-sonnet-4-6", max_tokens=2000, tries=3):
             return text
         except Exception as e:
             last = e
-            print(f"  (重试 {i+1}/{tries}: {type(e).__name__})")
+            print(f"  (retry {i+1}/{tries}: {type(e).__name__})")
             time.sleep(2 * (i + 1))
     raise last

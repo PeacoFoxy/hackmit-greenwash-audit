@@ -1,7 +1,9 @@
-"""Track S — 统计层。从 4,084 句语料学 term × qualifier 的 lift。零 LLM 调用。
+"""Track S -- the statistical layer. Learns term x qualifier lift from the 4,084-sentence
+corpus. Zero LLM calls.
 
-lift(t, Q) = P(Q | t) / P(Q)。lift < 1 表示该词出现时，限定语系统性地不在场。
-这是语料的统计属性，不是谁写的规则。
+lift(t, Q) = P(Q | t) / P(Q). A lift below 1 means that when this term appears, the
+qualifier is systematically absent. That is a statistical property of the corpus, not a
+rule anyone wrote.
 """
 import json
 import re
@@ -13,8 +15,8 @@ from src.tree import (RE_BASELINE, RE_METHOD, RE_SCOPE, RE_VERIFIER, route_domai
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
-MIN_COUNT = 5        # 进入 lift 表的最低出现次数
-REPORT_COUNT = 10    # 打印/下结论的最低出现次数
+MIN_COUNT = 5        # minimum occurrences to enter the lift table
+REPORT_COUNT = 10    # minimum occurrences before printing or drawing a conclusion
 MAX_N = 3
 
 QUALIFIERS = {
@@ -24,8 +26,10 @@ QUALIFIERS = {
     "verifier_named": RE_VERIFIER,
 }
 
-# 每类限定语只在相关话题的子语料里算 lift。否则基准率极低（method_stated 仅 0.83%），
-# 任何与该话题无关的词都自动 lift=0，排名反映的是"不谈这个话题"而不是"缺少限定语"。
+# Each qualifier class is scored only within the sub-corpus on its own topic. Otherwise
+# the base rate is tiny (method_stated is just 0.83%), every word unrelated to the topic
+# lands at lift=0 automatically, and the ranking measures "does not discuss this topic"
+# rather than "lacks the qualifier".
 TOPIC = {
     "method_stated": re.compile(
         r"\belectricity\b|\benergy\b|\bpower\b|\brenewable\w*|\bclean\s+power\b", re.I),
@@ -36,7 +40,7 @@ TOPIC = {
     "verifier_named": re.compile(r"\d", re.I),
 }
 
-# 各域相关的限定语类（§5 per-claim risk）
+# Qualifier classes relevant to each domain (sec. 5, per-claim risk)
 DOMAIN_QUALIFIERS = {
     "energy": ["method_stated"],
     "emissions": ["scope_stated", "baseline_stated"],
@@ -64,7 +68,7 @@ def tokens(text):
 
 
 def ngrams(toks, n):
-    """n-gram，首尾词不得为停用词（避免 'of the' 这类）。"""
+    """n-grams whose first and last word are not stopwords (keeps out things like 'of the')."""
     for i in range(len(toks) - n + 1):
         g = toks[i:i + n]
         if g[0] in STOPWORDS or g[-1] in STOPWORDS:
@@ -75,7 +79,8 @@ def ngrams(toks, n):
 
 
 def build_table(sentences):
-    """返回 {term: {count, lift/cooc/in_topic: {Q: ...}}}，每类限定语在其话题子语料内计算。"""
+    """Returns {term: {count, lift/cooc/in_topic: {Q: ...}}}; each qualifier class is
+    computed inside its own topic sub-corpus."""
     term_sents = {}
     for i, s in enumerate(sentences):
         toks = tokens(s)
@@ -87,7 +92,8 @@ def build_table(sentences):
 
     base, table = {}, {}
     for q, qrx in QUALIFIERS.items():
-        # 子语料再要求含数字：限定语只在报数时才被期待，叙述句不该进分母
+        # The sub-corpus also requires a number: a qualifier is only expected when a
+        # figure is being reported, so narrative sentences should not enter the denominator
         topic = [i for i, s in enumerate(sentences)
                  if TOPIC[q].search(s) and RE_HAS_DIGIT.search(s)]
         tset = set(topic)
@@ -108,7 +114,8 @@ def build_table(sentences):
 
 
 def risk(text, table, domain=None):
-    """§5 per-claim risk：claim 中出现的词，在相关限定语上 (1 - min(lift,1)) 的均值。"""
+    """Per-claim risk (sec. 5): mean of (1 - min(lift, 1)) over the claim's terms, across
+    the qualifiers relevant to its domain."""
     if domain is None:
         domain = route_domain(text)[1]
     qs = DOMAIN_QUALIFIERS.get(domain, ["verifier_named"])

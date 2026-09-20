@@ -1,6 +1,7 @@
-"""上传历史：记录每一份分析过的文档，并把结果存下来，重开页面还能点回去看。
+"""Upload history: record every analysed document and keep its result, so the page can
+be reopened and the analysis revisited.
 
-data/uploads/<hash>.json 存完整结果，data/upload_history.json 存索引。
+data/uploads/<hash>.json holds the full result; data/upload_history.json is the index.
 """
 import hashlib
 import json
@@ -27,7 +28,8 @@ def load_index():
 
 
 def save(result, file_bytes, grade=None):
-    """写结果 + 追加索引。同一份文件重传只更新时间戳，不重复入列。"""
+    """Write the result and prepend to the index. Re-uploading a file only updates its
+    timestamp; it is not listed twice."""
     STORE.mkdir(parents=True, exist_ok=True)
     h = file_hash(file_bytes)
     (STORE / f"{h}.json").write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
@@ -60,7 +62,7 @@ def load(h):
 
 
 def forget(h):
-    """从索引里移除一条（结果文件一并删除）。"""
+    """Drop one entry from the index and delete its result file."""
     (STORE / f"{h}.json").unlink(missing_ok=True)
     INDEX.write_text(json.dumps([e for e in load_index() if e["hash"] != h],
                                 ensure_ascii=False, indent=1), encoding="utf-8")

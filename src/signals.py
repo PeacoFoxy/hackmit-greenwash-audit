@@ -1,4 +1,5 @@
-"""句级标量信号：把每份报告切成句子，对每句算七个可解释的标量。纯确定性，不调 LLM。"""
+"""Sentence-level scalar signals: split each report into sentences and compute seven
+interpretable scalars per sentence. Fully deterministic, no LLM calls."""
 import json
 import random
 import re
@@ -38,12 +39,13 @@ RE_VERIFY = re.compile(
 
 
 def is_prose(s):
-    """判断是否为正常英文散句，用于滤掉目录、标题、页眉和表格残留。"""
+    """Is this ordinary English prose? Used to drop contents pages, headings, running heads
+    and table debris."""
     return drop_reason(s) is None
 
 
 def drop_reason(s):
-    """返回丢弃原因；None 表示保留。"""
+    """Returns the reason for dropping the sentence; None means keep it."""
     if len(s) < MIN_LEN:
         return "too_short"
     if len(s) > MAX_LEN:
@@ -61,11 +63,12 @@ def drop_reason(s):
     if len(RE_NUMBER.findall(s)) / len(words) > 0.30:
         return "numeric_dense"
 
-    # 有句末标点且够长的句子视为散文，不再用大写词比例判死
+    # A long enough sentence with terminal punctuation counts as prose; do not kill it
+    # on the ratio of capitalised words alone
     if not (s.rstrip()[-1:] in ".!?" and len(words) >= 8):
-        cap = [bool(w[:1].isupper()) for w in words[1:]]  # 句首本就该大写，排除
+        cap = [bool(w[:1].isupper()) for w in words[1:]]  # skip word 1: it should be capitalised
         run, in_run = 0, 0
-        for c in cap + [False]:  # 末尾补一个 False 以结算最后一段
+        for c in cap + [False]:  # trailing False so the last run gets counted
             if c:
                 run += 1
             else:
@@ -78,7 +81,7 @@ def drop_reason(s):
 
 def sentences(text):
     t = text or ""
-    t = re.sub(r"(?<=[a-z])\n(?=[a-z])", " ", t)  # 先合并断行，再归一化空白
+    t = re.sub(r"(?<=[a-z])\n(?=[a-z])", " ", t)  # join broken lines first, then normalise whitespace
     t = re.sub(r"\s+", " ", t)
     return [s.strip() for s in SPLIT.split(t)]
 
@@ -118,21 +121,21 @@ def main():
             (reasons if r else kept).append((s, r) if r else s)
         dropped += reasons
         raw_total += len(sents)
-        print(f"{d['id']}: {len(sents)} 句 → 保留 {len(kept)}")
+        print(f"{d['id']}: {len(sents)} sentences -> kept {len(kept)}")
         for i, s in enumerate(kept):
             rows.append({"sent_id": f"{d['id']}_{i:05d}", "company": d["company"],
                          "source_id": d["id"], "text": s, **signals(s)})
 
-    print(f"\n原始 {raw_total} 句，保留 {len(rows)} 句，丢弃 {len(dropped)} 句 "
+    print(f"\n{raw_total} raw sentences, kept {len(rows)}, dropped {len(dropped)} "
           f"({len(dropped) / raw_total * 100:.1f}%)")
-    print("丢弃分布:")
+    print("Dropped by reason:")
     for reason, n in Counter(r for _, r in dropped).most_common():
         print(f"  {reason:<18}{n}")
 
-    rnd = random.Random(0)  # 固定种子，抽样可复现
-    pools = [("保留样例", [r["text"] for r in rows]),
-             ("丢弃样例", [s for s, _ in dropped]),
-             ("cap_runs 丢弃样例", [s for s, r in dropped if r == "cap_runs"])]
+    rnd = random.Random(0)  # fixed seed so the samples are reproducible
+    pools = [("kept examples", [r["text"] for r in rows]),
+             ("dropped examples", [s for s, _ in dropped]),
+             ("cap_runs dropped examples", [s for s, r in dropped if r == "cap_runs"])]
     for title, pool in pools:
         print(f"\n--- {title} ({len(pool)}) ---")
         for s in rnd.sample(pool, min(5, len(pool))):
@@ -142,7 +145,7 @@ def main():
         json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
 
     keys = ["vagueness", "numeric", "hedge", "future", "flags", "verification", "specificity"]
-    print(f"\n共 {len(rows)} 句 → data/signals.json")
+    print(f"\n{len(rows)} sentences total -> data/signals.json")
     print(f"{'signal':<14}{'mean':>9}{'min':>8}{'max':>8}")
     for k in keys:
         vals = [r[k] for r in rows]
@@ -154,7 +157,8 @@ WINDOW = 20
 
 
 def add_smoothing(window=WINDOW):
-    """按公司分组（保持原顺序），对七条信号各算窗口滑动平均，并加相对位置字段。"""
+    """Group by company (original order preserved), take a moving average of each of the
+    seven signals, and add a relative-position field."""
     import numpy as np
 
     root = Path(__file__).resolve().parent.parent
@@ -170,7 +174,7 @@ def add_smoothing(window=WINDOW):
         n = len(g)
         for i, r in enumerate(g):
             r["rel_pos"] = round(i / (n - 1), 4) if n > 1 else 0.0
-        norm = np.convolve(np.ones(n), kernel, mode="same")  # 边界只对实际存在的样本取平均
+        norm = np.convolve(np.ones(n), kernel, mode="same")  # at the edges, average only over real samples
         for k in SIGNAL_KEYS:
             sm = np.convolve(np.array([r[k] for r in g], dtype=float), kernel, mode="same") / norm
             for r, v in zip(g, sm):
@@ -178,8 +182,8 @@ def add_smoothing(window=WINDOW):
 
     path.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    print(f"\n滑动平均窗口 {window} → data/signals.json")
-    print(f"{'company':<12}{'句数':>8}{'rel_pos 范围':>22}")
+    print(f"\nmoving-average window {window} -> data/signals.json")
+    print(f"{'company':<12}{'sents':>8}{'rel_pos range':>22}")
     for company, g in groups.items():
         lo, hi = min(r["rel_pos"] for r in g), max(r["rel_pos"] for r in g)
         print(f"{company:<12}{len(g):>8}{f'{lo:.4f} – {hi:.4f}':>20}")

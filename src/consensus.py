@@ -1,6 +1,8 @@
-"""Consensus 层 — 合并三条 track，分配状态并排序。零 LLM 调用（track D 读已有预测）。
+"""Consensus layer: merge the three tracks, assign a state, rank. No model calls
+(track D reads predictions that already exist).
 
-不做加权、不按置信度挑赢家（§4）：两条都报出来，分歧的排在最前。
+No weighting and no confidence-based winner (spec sec. 4): both readings are reported,
+and disagreements are ranked first.
 """
 import json
 from collections import Counter
@@ -12,27 +14,28 @@ from src.tree import classify as tree_classify
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
-# risk_S 的"高"阈值。规格未给定，这里取一个固定值并在输出里标注，便于复核。
+# "High" threshold for risk_S. The spec does not fix one, so a constant is used and
+# recorded in the output so a reviewer can check it.
 HIGH_RISK = 0.70
 
 
 def load_track_d():
-    """track D = evaluate.py 里的 baseline2。目前只有 gold 集那 29 条有预测。"""
+    """Track D is baseline2 from evaluate.py. Only the 29 gold claims have predictions."""
     m = json.loads((DATA / "metrics.json").read_text(encoding="utf-8"))
     return {p["claim_id"]: p.get("baseline2") for p in m["predictions"] if p.get("baseline2")}
 
 
 def state_of(r, d, risk_s):
-    """§4 状态机。特例先于一般分歧判定。"""
+    """State machine from spec sec. 4. Special cases are checked before general disagreement."""
     if d is None:
         return "NO_TRACK_D", r["label"]
     if r["label"] == d:
         return "CONFIRMED", d
     if r["severity"] == 3 and r["decided_by"] == "CLOSED" and d == "A":
-        return "RULE_ONLY", "C"          # 术语事实，树不被推翻
+        return "RULE_ONLY", "C"          # terminology fact; the tree is not overruled
     if r["label"] == "A" and d == "C" and risk_s is not None and risk_s >= HIGH_RISK:
-        return "NOVEL", "C"              # 树无分支 + 模型怀疑 + 语料佐证 → 候选新规则
-    return "CONTESTED", None             # 两个 label 都报出，不合成
+        return "NOVEL", "C"              # no tree branch + model suspects + corpus agrees
+    return "CONTESTED", None             # report both labels, synthesise neither
 
 
 def main():
@@ -59,7 +62,7 @@ def main():
                           "labels_reported": [r["label"], d] if st == "CONTESTED" else None},
         })
 
-    # 分歧优先，其次按严重度，再按 risk
+    # Disagreement first, then severity, then risk
     prio = {"CONTESTED": 0, "RULE_ONLY": 0, "NOVEL": 0, "CONFIRMED": 1, "NO_TRACK_D": 2}
     out.sort(key=lambda o: (prio[o["consensus"]["state"]],
                             -(o["track_R"]["severity"] or 0),
@@ -81,7 +84,7 @@ def main():
     print(f"{len(out)} claims → data/consensus.json")
     print("state:", dict(Counter(o["consensus"]["state"] for o in out)))
 
-    # §4 的拆分表：只有 gold 集那些有真值
+    # Breakdown from spec sec. 4; only gold claims have ground truth
     gold = {g["claim_id"]: g["gold_label"] for g in json.loads(
         (DATA / "gold.json").read_text(encoding="utf-8")) if g["gold_label"] != "SKIP"}
     scored = [o for o in out if o["claim_id"] in gold and o["track_D"]["label"]]
@@ -102,8 +105,8 @@ def main():
         d_ = lambda o: o["track_D"]["label"]
         print(f"{st:<12}{len(grp):>4}{f(acc(grp, r_)):>8}{f(acc(grp, d_)):>8}"
               f"{len(nb):>9}{f(acc(nb, r_)):>8}{f(acc(nb, d_)):>8}")
-    print("\n两条 track 分开报，口径一致；CONFIRMED 状态下两者必然相同。")
-    print(f"NOVEL → data/candidate_rules.json ({len(novel)} 条)")
+    print("\nBoth tracks are reported separately on the same basis; under CONFIRMED they agree by definition.")
+    print(f"NOVEL -> data/candidate_rules.json ({len(novel)} claims)")
 
 
 if __name__ == "__main__":

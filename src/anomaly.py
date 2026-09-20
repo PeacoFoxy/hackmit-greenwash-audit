@@ -1,4 +1,4 @@
-"""公司级 PVR / z-score 与段落级 flag 异常区间检测。纯确定性，不调 LLM。"""
+"""Company-level PVR / z-scores and passage-level flag-density anomalies. Deterministic, no model calls."""
 import json
 from collections import Counter
 from pathlib import Path
@@ -15,12 +15,14 @@ DATA = ROOT / "data"
 FIGS = ROOT / "figures"
 
 SIGNAL_KEYS = ["vagueness", "numeric", "hedge", "future", "flags", "verification", "specificity"]
-# composite 越高越可疑：模糊/话术/承诺/规则命中为正，数字/核验/具体性为负
+# Higher composite = more suspect: vagueness, hedging, promises and rule hits count
+# positive; figures, verification mentions and specificity count negative.
 COMPOSITE_SIGN = {"vagueness": +1, "hedge": +1, "future": +1, "flags": +1,
                   "numeric": -1, "verification": -1, "specificity": -1}
 MIN_REGION = 5
 SMOOTH_WINDOW = 20
-# 与 evaluate.py 的 PRECISE_FLAGS 一致：SCOPE_BOUNDARY_UNCLEAR 误报率太高，不计入密度
+# Same set as PRECISE_FLAGS in evaluate.py: SCOPE_BOUNDARY_UNCLEAR fires far too widely
+# to carry information, so it is excluded from the density.
 PRECISE_FLAGS = {
     "SCOPE2_METHOD_UNSTATED", "MATCHING_LANGUAGE", "OFFSET_UNDISCLOSED", "NO_BASELINE_YEAR",
     "GRID_MISMATCH_RISK", "CHERRY_PICKED_METRIC", "WATER_ACCOUNTING_VAGUE",
@@ -42,7 +44,7 @@ def company_stats(groups):
              for c, g in groups.items()}
     companies = list(groups)
 
-    # z-score 在公司之间横向比较（n=3，用总体标准差）
+    # z-scores compare companies against each other (n=3, population standard deviation)
     z = {c: {} for c in companies}
     for k in SIGNAL_KEYS:
         vals = np.array([means[c][k] for c in companies])
@@ -73,7 +75,7 @@ def company_stats(groups):
 
 
 def smooth(values, window=SMOOTH_WINDOW):
-    """滑动平均，边界只对实际存在的样本取平均。"""
+    """Moving average; at the edges it averages only over samples that exist."""
     v = np.asarray(values, dtype=float)
     kernel = np.ones(window) / window
     norm = np.convolve(np.ones(len(v)), kernel, mode="same")
@@ -83,12 +85,13 @@ def smooth(values, window=SMOOTH_WINDOW):
 def regions(groups):
     out = []
     for c, g in groups.items():
-        # 本地重算密度，只数高精度 flag；signals.json 保持不变（画图仍用全量）
+        # Recompute density locally over high-precision flags only. signals.json is left
+        # untouched, because the plots still use the full flag set.
         per_sent = [[f for f in rule_flags(r["text"]) if f in PRECISE_FLAGS] for r in g]
         vals = smooth([len(f) for f in per_sent])
         thr = float(vals.mean() + 2 * vals.std())
         hot = vals > thr
-        print(f"{c}  阈值 {thr:.3f}（仅高精度 flag）")
+        print(f"{c}  threshold {thr:.3f} (high-precision flags only)")
 
         i, found = 0, 0
         while i < len(hot):
@@ -99,7 +102,8 @@ def regions(groups):
             while j < len(hot) and hot[j]:
                 j += 1
             types = Counter(f for fs in per_sent[i:j] for f in fs)
-            # 平滑窗口会让邻近高峰渗进无命中的区间；这种区间点开是空的，属于假阳性
+            # Smoothing lets a nearby peak bleed into a stretch with no hits at all.
+            # Such a passage opens empty, so it is a false positive.
             if j - i >= MIN_REGION and types:
                 seg = g[i:j]
                 text = " ".join(r["text"] for r in seg)
@@ -114,12 +118,12 @@ def regions(groups):
                 })
                 found += 1
                 print(f"  [{found}] {seg[0]['sent_id']} → {seg[-1]['sent_id']}  "
-                      f"{len(seg)} 句, rel {seg[0]['rel_pos']:.3f}–{seg[-1]['rel_pos']:.3f}, "
-                      f"峰值 {out[-1]['peak']:.3f}")
+                      f"{len(seg)} sent, rel {seg[0]['rel_pos']:.3f}–{seg[-1]['rel_pos']:.3f}, "
+                      f"peak {out[-1]['peak']:.3f}")
                 for f, n in types.most_common():
                     print(f"        {f:<30}{n}")
             i = j
-        print(f"  → {found} 个区间\n")
+        print(f"  -> {found} passages\n")
     return out
 
 
@@ -146,7 +150,7 @@ def main():
     (DATA / "anomaly_company.json").write_text(
         json.dumps(stats, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    print(f"{'company':<12}{'PVR':>8}{'future/句':>11}{'verif/句':>11}{'composite':>11}")
+    print(f"{'company':<12}{'PVR':>8}{'future/sent':>13}{'verif/sent':>12}{'composite':>11}")
     for s in stats:
         print(f"{s['company']:<12}{s['pvr']:>8.2f}{s['future_total']:>11}"
               f"{s['verification_total']:>11}{s['composite']:>11.2f}")

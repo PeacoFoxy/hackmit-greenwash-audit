@@ -1,4 +1,4 @@
-"""报告地图与段落详情的渲染件，供 app_v2 使用（app.py 保持原样不动）。"""
+"""Renderers for the report map and passage detail, used by app_v2 (app.py is untouched)."""
 import json
 from pathlib import Path
 
@@ -25,13 +25,14 @@ def load_regions(companies=None):
 
 
 def render_map(regions, counts):
-    """每家一条 0→1 的横条，命中区间画成色块。窄区间加宽到 8px 以便点选。"""
+    """One 0-to-1 strip per report, flagged passages drawn as blocks. Narrow passages are
+    widened to 8px so they stay clickable."""
     companies = list(counts)
     fig, ax = plt.subplots(figsize=(10, 0.85 * len(companies) + 1.0))
     ax.set_xlim(0, 1)
     ax.set_ylim(-0.6, len(companies) - 0.4)
 
-    fig.canvas.draw()   # 先布局再量轴宽，才能把 8px 换算成数据单位
+    fig.canvas.draw()   # lay out first, then measure the axis to convert 8px to data units
     ax_px = ax.get_window_extent(fig.canvas.get_renderer()).width
     min_w = MIN_MARK_PX / ax_px if ax_px else 0.006
 

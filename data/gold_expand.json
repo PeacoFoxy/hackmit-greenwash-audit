@@ -1,0 +1,182 @@
+[
+ {
+  "claim_id": "goog_sr_091",
+  "gold_label": "B",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "UNSCOPED_FIGURE",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "amzn_sr_296",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "stratum": "untested_terminal",
+  "pool": "candidates",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_065",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "CHERRY_PICKED_METRIC",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_108",
+  "gold_label": "C",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "MARKET_BASED_IMPLIED",
+  "stratum": "untested_terminal",
+  "pool": "candidates",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_028",
+  "gold_label": "B",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "PROPRIETARY_METRIC",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "msft_sr_204",
+  "gold_label": "B",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_017",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "METHOD_UNSTATED",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "amzn_sr_314",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "METHOD_UNSTATED",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "msft_sr_148",
+  "gold_label": "B",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "stratum": "negative_probe",
+  "pool": "candidates",
+  "note": ""
+ },
+ {
+  "claim_id": "amzn_sr_339",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "WATER_TERM_UNDEFINED",
+  "stratum": "untested_terminal",
+  "pool": "candidates",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_041",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "SUBSTANTIATED_WASTE",
+  "stratum": "negative_probe",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_019",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "UNSCOPED_FIGURE",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "amzn_sr_353",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "stratum": "untested_terminal",
+  "pool": "candidates",
+  "note": ""
+ },
+ {
+  "claim_id": "amzn_sr_348",
+  "gold_label": "C",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "WASTE_BOUNDARY_UNSTATED",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "msft_sr_234",
+  "gold_label": "B",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "VAGUE_NO_QUANTITY",
+  "stratum": "negative_probe",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_027",
+  "gold_label": "C",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "PROPRIETARY_METRIC",
+  "stratum": "untested_terminal",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_141",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "SUBSTANTIATED_METRIC",
+  "stratum": "negative_probe",
+  "pool": "flagged_only",
+  "note": ""
+ },
+ {
+  "claim_id": "msft_sr_168",
+  "gold_label": "C",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "WATER_TERM_UNDEFINED",
+  "stratum": "untested_terminal",
+  "pool": "candidates",
+  "note": ""
+ },
+ {
+  "claim_id": "msft_sr_214",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "WATER_BOUNDARY_UNSTATED",
+  "stratum": "untested_terminal",
+  "pool": "candidates",
+  "note": ""
+ },
+ {
+  "claim_id": "goog_sr_001",
+  "gold_label": "A",
+  "source": "stratified_expand_2026-09-20",
+  "terminal": "NO_BASELINE_YEAR",
+  "stratum": "untested_terminal",
+  "pool": "candidates",
+  "note": ""
+ }
+]

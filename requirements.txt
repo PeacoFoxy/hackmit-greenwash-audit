@@ -1,4 +1,4 @@
-# 生成自实际 import，版本为开发时验证过的版本
+# Generated from the actual imports; versions are the ones verified during development.
 anthropic>=1.7.0
 matplotlib>=3.11.0
 numpy>=2.4.0

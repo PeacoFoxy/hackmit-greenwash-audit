@@ -1,11 +1,12 @@
-"""成本与耗时对比：每 100 条 claim 的 API 调用数、token、美元、墙钟时间。
+"""Cost and latency: API calls, tokens, dollars and wall-clock per 100 claims.
 
-这批论文都会报 execution time / memory（Purushothaman 等 2020 Table 4；Abualigah &
-Khader 2017 Table 7），因为在同等效果下资源消耗本身就是结论的一部分。我们的对照更极端：
-规则树是 0 次调用。
+This literature always reports execution time and memory (Purushothaman et al. 2020,
+Table 4; Abualigah & Khader 2017, Table 7), because at comparable quality the resource
+cost is part of the conclusion. Our contrast is starker: the rule tree makes 0 calls.
 
-token 由缓存里的真实 prompt / response 字符数估算（约 4 字符 ≈ 1 token），不是猜的；
-但它是估算，不是计费口径，表里标明。
+Token counts are estimated from the real cached prompt and response text at roughly
+4 characters per token. They are measured, not guessed, but they are an estimate and not
+a billing figure, and the table says so.
 """
 import hashlib
 import json
@@ -21,7 +22,7 @@ DATA = ROOT / "data"
 CACHE = ROOT / "cache"
 
 MODEL = "claude-sonnet-4-6"
-PRICE_IN, PRICE_OUT = 3.0, 15.0        # 美元 / 百万 token（Sonnet 公布价）
+PRICE_IN, PRICE_OUT = 3.0, 15.0        # USD per million tokens (published Sonnet price)
 CHARS_PER_TOKEN = 4.0
 
 
@@ -34,7 +35,7 @@ def cache_lookup(prompt, system=SYSTEM, model=MODEL):
 
 
 def measure_llm(method, claims):
-    """重建 evaluate.py 会发的每一条 prompt，从缓存里读真实字符数。"""
+    """Rebuild every prompt evaluate.py would send and read its real size from the cache."""
     calls = in_chars = out_chars = missing = 0
     for i in range(0, len(claims), BATCH):
         prompt = build_prompt(method, claims[i:i + BATCH])
@@ -49,7 +50,7 @@ def measure_llm(method, claims):
 
 
 def measure_tree(claims, repeats=5):
-    """规则树的墙钟时间，取多轮最小值（排除调度噪声）。"""
+    """Wall-clock for the rule tree, minimum over repeats to exclude scheduling noise."""
     best = float("inf")
     for _ in range(repeats):
         t0 = time.perf_counter()
@@ -60,7 +61,8 @@ def measure_tree(claims, repeats=5):
 
 
 def run():
-    # 批次内容必须与 evaluate.py 逐字一致，否则缓存键对不上：它按 gold.json 的顺序组批
+    # Batches must match evaluate.py exactly or the cache keys will not line up:
+    # it batches in the order of gold.json, not candidates.json.
     cands = {c["claim_id"]: c
              for c in json.loads((DATA / "candidates.json").read_text(encoding="utf-8"))}
     gold = [g for g in json.loads((DATA / "gold.json").read_text(encoding="utf-8"))
@@ -99,7 +101,7 @@ def run():
     (DATA / "cost.json").write_text(json.dumps(out, ensure_ascii=False, indent=1),
                                     encoding="utf-8")
 
-    print(f"按 {n} 条 gold 实测，折算到每 100 条 claim（{MODEL}，batch={BATCH}）\n")
+    print(f"Measured on {n} gold claims, scaled to 100 ({MODEL}, batch={BATCH})\n")
     print(f"{'method':<20}{'calls':>7}{'in tok':>10}{'out tok':>9}{'USD':>9}{'wall':>10}")
     for r in out["per_100"]:
         wall = f"{r['sec_per_100']*1000:.0f} ms" if r["sec_per_100"] is not None else "network"
@@ -107,8 +109,8 @@ def run():
               f"{r['out_tok_per_100']:>9,.0f}{r['usd_per_100']:>9.4f}{wall:>10}")
     miss = sum(r["missing"] for r in rows)
     if miss:
-        print(f"\n{miss} 个批次不在缓存里，其 token 记为 0，上表偏低。")
-    print("\ntoken 由缓存中真实 prompt/response 字符数估算（约 4 字符 ≈ 1 token），非计费口径。")
+        print(f"\n{miss} batches are not in the cache; their tokens count as 0, so the table is low.")
+    print("\nTokens estimated from real cached text at ~4 chars/token; not a billing figure.")
     print("→ data/cost.json")
     return out
 

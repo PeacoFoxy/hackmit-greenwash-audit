@@ -1,6 +1,8 @@
-"""FRONTEND_V2 §6 的四个指标 + §5 的披露评级。缓存路径与上传路径共用同一份实现。
+"""The four indicators from FRONTEND_V2 sec. 6 and the disclosure grade from sec. 5.
+The preloaded path and the upload path share this one implementation.
 
-输入是 dict（data/*.json 的原始结构），不是对象；公式与 §6 逐字一致。
+Inputs are plain dicts in the shape of data/*.json, not objects; the formulas follow
+sec. 6 to the letter.
 """
 import json
 from pathlib import Path
@@ -8,10 +10,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
-GRADE_BANDS = [(75, "A"), (55, "B"), (35, "C")]   # 低于 35 为 D
+GRADE_BANDS = [(75, "A"), (55, "B"), (35, "C")]   # below 35 is D
 
 
-# ------------------------------------------------------------------ §6 指标
+# ------------------------------------------------------------ sec. 6 indicators
 def claims_needing_review(claims):
     """% of quantified claims that are technically true but incomplete."""
     scored = [c for c in claims if c.get("label") in ("A", "C")]
@@ -37,21 +39,22 @@ def commitments_trackable(audit):
     return 100 * n_two / max(len(audit), 1)
 
 
-# ------------------------------------------------------------- §5 披露评级
+# --------------------------------------------------------- sec. 5 disclosure grade
 def clamp(x, lo=0.0, hi=1.0):
     return max(lo, min(hi, x))
 
 
-# 三个子分的可调参数。默认值即 FRONTEND_V2 §5 公布的那组，敏感性分析扫描它们。
-PVR_FLOOR, PVR_CEIL = 1.0, 5.0     # PVR <= floor 得 100，>= ceil 得 0
-VERIF_TARGET = 5.0                 # 每 100 句达到这个数量的第三方核验提及得 100
+# Tunable parameters of the three sub-scores. The defaults are the published set from
+# FRONTEND_V2 sec. 5; src/sensitivity.py sweeps them.
+PVR_FLOOR, PVR_CEIL = 1.0, 5.0     # PVR <= floor scores 100, >= ceil scores 0
+VERIF_TARGET = 5.0                 # assurance mentions per 100 sentences that score 100
 
 
 def band_margin(score, bands=None):
-    """离最近一条带边界还有多少分，以及越过它会变成哪个字母。
+    """Distance to the nearest band edge, and which letter crossing it would produce.
 
-    敏感性扫描显示评级带平移 ±12 分内就有公司翻转（见 src/sensitivity.py），所以
-    字母必须和它的脆弱程度一起显示，不能单独示人。
+    The sweeps show that moving the band edges by ±12 points already flips reports (see
+    src/sensitivity.py), so the letter must never be shown without its fragility.
     """
     bands = bands or GRADE_BANDS
     below = {bands[i][0]: (bands[i + 1][1] if i + 1 < len(bands) else "D")
@@ -65,9 +68,10 @@ def band_margin(score, bands=None):
 
 def grade_components(claims, sentences, pvr_floor=PVR_FLOOR, pvr_ceil=PVR_CEIL,
                      verif_target=VERIF_TARGET, bands=None):
-    """三个子分（各 0-100）及其输入，全部可在界面展开核对。
+    """The three sub-scores (0-100 each) and their inputs, all inspectable in the UI.
 
-    参数可覆盖，供 src/sensitivity.py 扫描；默认值与界面展示的一致。
+    Parameters can be overridden so src/sensitivity.py can sweep them; the defaults are
+    exactly what the interface displays.
     """
     scored = [c for c in claims if c.get("label") in ("A", "C")]
     n_c = sum(c.get("label") == "C" for c in scored)
@@ -92,13 +96,13 @@ def grade_components(claims, sentences, pvr_floor=PVR_FLOOR, pvr_ceil=PVR_CEIL,
     }
 
 
-# ----------------------------------------------------------------- 数据装载
+# ------------------------------------------------------------------- data loading
 def load_json(name):
     return json.loads((DATA / name).read_text(encoding="utf-8"))
 
 
 def cached_bundle():
-    """预加载路径：按公司切好 claims / sentences / audit。"""
+    """Preloaded path: claims / sentences / audit split by company."""
     claims = [{**c, "label": c.get("llm_label")} for c in load_json("prelabels.json")]
     sentences = load_json("signals.json")
     audit = load_json("trajectory_audit.json")
@@ -110,7 +114,7 @@ def cached_bundle():
 
 
 def indicators_for(bundle):
-    """四个指标打包，供 st.metric 直接使用。"""
+    """The four indicators, packaged for st.metric."""
     return {
         "claims_needing_review": claims_needing_review(bundle["claims"]),
         "promises_per_verification": promises_per_verification(bundle["sentences"]),

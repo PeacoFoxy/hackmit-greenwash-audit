@@ -1,7 +1,7 @@
-"""Stage 6：在 gold 集上对比五种方法，输出指标表与混淆矩阵。
+"""Stage 6: compare five methods on the gold set; emit the metrics table and confusion matrix.
 
-data/gold.json + data/candidates.json → data/metrics.json + figures/confusion.png。
-tree_only 零调用，其余四种走 LLM（命中缓存则不发请求）。
+data/gold.json + data/candidates.json → data/metrics.json + figures/confusion.png
+tree_only makes no model calls; the other four do, served from the cache when available.
 """
 import json, os, re
 import matplotlib
@@ -27,7 +27,7 @@ These flags are heuristic signals, not conclusions. A flag suggests where to loo
 by itself make a claim misleading. If the claim states its scope or method clearly despite a
 flag, label it A."""
 
-# SCOPE_BOUNDARY_UNCLEAR 误报率太高，不喂给模型
+# SCOPE_BOUNDARY_UNCLEAR fires far too widely to be a useful hint, so it is withheld
 PRECISE_FLAGS = {
     "SCOPE2_METHOD_UNSTATED", "MATCHING_LANGUAGE", "OFFSET_UNDISCLOSED", "NO_BASELINE_YEAR",
     "GRID_MISMATCH_RISK", "CHERRY_PICKED_METRIC", "WATER_ACCOUNTING_VAGUE",
@@ -48,7 +48,7 @@ METHODS = ["tree_only", "baseline1", "baseline2", "pipeline", "pipeline_allflags
 
 
 def item(c, hint_mode):
-    """hint_mode: None 不给提示 / 'precise' 只给高精度 flag / 'all' 给全部 flag。"""
+    """hint_mode: None = no hints / 'precise' = high-precision flags only / 'all' = every flag."""
     d = {"claim_id": c["claim_id"], "text": c["text"]}
     if hint_mode:
         d["flags"] = (c["flags"] if hint_mode == "all"
@@ -69,7 +69,7 @@ def build_prompt(method, batch):
 
 
 def parse_json(raw):
-    """逐级降级解析：整体 JSON → 首个 [...] → 逐条正则抓取。全失败返回 []。"""
+    """Three-tier parse: whole JSON -> first [...] -> per-item regex. Returns [] if all fail."""
     s = (raw or "").strip()
     s = re.sub(r"^```(?:json)?\s*|\s*```$", "", s, flags=re.I).strip()
     try:
@@ -94,7 +94,7 @@ def parse_json(raw):
 
 
 def classify(method, claims):
-    if method == "tree_only":  # 纯规则树，零 LLM 调用
+    if method == "tree_only":  # pure rule tree, no model calls
         return [tree_classify(c["text"], c["claim_id"])["label"] for c in claims]
 
     preds = {}
@@ -113,7 +113,8 @@ def classify(method, claims):
 
 
 def per_class(y_true, y_pred, label):
-    """单类的 TP/FP/FN/TN 及其派生指标（定义取自 Hicks 等，PMC11404377）。
+    """TP/FP/FN/TN for one class and the metrics derived from them (definitions from
+    Hicks et al., PMC11404377).
 
     precision = TP/(TP+FP)          recall = TP/(TP+FN)
     specificity = TN/(TN+FP)        F_b = (1+b²)·P·R / (b²·P + R)
@@ -138,12 +139,12 @@ def per_class(y_true, y_pred, label):
 
 
 def score(y_true, y_pred):
-    present = sorted(set(y_true))  # macro 只对 gold 中出现的类别取平均
+    present = sorted(set(y_true))  # macro averages only over classes present in gold
     c = per_class(y_true, y_pred, "C") or {k: 0.0 for k in
                                            ("precision", "recall", "specificity", "f1",
                                             "f0.5", "f2", "balanced_accuracy")}
     out = {"accuracy": accuracy_score(y_true, y_pred),
-           # 多类 BA = 各类 recall 的宏平均，对类别不均衡更公允
+           # multi-class BA = macro average of per-class recall; fairer under imbalance
            "balanced_accuracy": balanced_accuracy_score(y_true, y_pred),
            "macro_f1": f1_score(y_true, y_pred, labels=present, average="macro",
                                 zero_division=0),

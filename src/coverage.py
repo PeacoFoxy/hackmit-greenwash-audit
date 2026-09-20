@@ -1,4 +1,5 @@
-"""规则覆盖缺口：找出带定量信号却零命中的 claim，让 LLM 指出规则层不认识的术语。"""
+"""Rule coverage gaps: find claims that carry quantitative signal but fire no rule, and
+ask the model which vocabulary the rule layer does not recognise."""
 import json
 import re
 from collections import Counter, defaultdict
@@ -66,7 +67,7 @@ def residual(claims):
 
 
 def parse_json(raw):
-    """逐级降级解析：整体 JSON → 首个 [...] → 逐条正则抓取。全失败返回 []。"""
+    """Three-tier parse: whole JSON -> first [...] -> per-item regex. Returns [] if all fail."""
     s = re.sub(r"^```(?:json)?\s*|\s*```$", "", (raw or "").strip(), flags=re.I).strip()
     try:
         out = json.loads(s)
@@ -90,30 +91,30 @@ def parse_json(raw):
 
 
 def consolidate():
-    """第二阶段：把候选术语归并成 5 到 8 条可复用规则，并归入四种机制之一。"""
+    """Stage two: consolidate candidate terms into 5-8 reusable rules, one mechanism each."""
     gaps = json.load(open("data/coverage_gaps.json"))["gaps"]
     terms = [g["term"] for g in gaps]
-    print(f"\n归并 {len(terms)} 个候选术语 ...")
+    print(f"\nConsolidating {len(terms)} candidate terms ...")
 
     raw = ask(CONSOLIDATE_PROMPT.format(candidates="\n".join(f"- {t}" for t in terms)),
               system=SYSTEM, max_tokens=4000)
     rules = [r for r in parse_json(raw) if isinstance(r, dict) and r.get("rule_name")]
     for r in rules:
         if r.get("mechanism") not in MECHANISMS:
-            print(f"  [warn] 未知 mechanism: {r.get('mechanism')!r} ({r['rule_name']})")
+            print(f"  [warn] unknown mechanism: {r.get('mechanism')!r} ({r['rule_name']})")
 
     absorbed = {c for r in rules for c in r.get("absorbed_candidates", [])}
     json.dump({"n_candidates": len(terms), "n_rules": len(rules),
                "discarded": [t for t in terms if t not in absorbed], "rules": rules},
               open("data/proposed_rules.json", "w"), ensure_ascii=False, indent=1)
 
-    print(f"\n{len(rules)} 条规则 → data/proposed_rules.json\n")
+    print(f"\n{len(rules)} rules -> data/proposed_rules.json\n")
     for r in rules:
         print(f"[{r.get('mechanism', '?')}] {r['rule_name']}")
         print(f"    {r.get('detects', '')}")
         print(f"    triggers: {', '.join(r.get('trigger_terms', [])[:8])}")
         print(f"    absorbs {len(r.get('absorbed_candidates', []))} candidates\n")
-    print(f"未被吸收的候选: {len(terms) - len(absorbed & set(terms))}")
+    print(f"candidates not absorbed: {len(terms) - len(absorbed & set(terms))}")
     return rules
 
 
@@ -121,7 +122,7 @@ def main():
     claims = json.load(open("data/flagged.json"))
     res = residual(claims)
     print(f"residual set: {len(res)} / {len(claims)} claims "
-          f"({len(res) / len(claims) * 100:.1f}%) — 有数字、无 flag")
+          f"({len(res) / len(claims) * 100:.1f}%) -- has figures, fires no flag")
 
     counts = Counter()
     details = defaultdict(lambda: {"why": [], "examples": []})
@@ -130,7 +131,7 @@ def main():
         items = "\n".join(
             json.dumps({"claim_id": c["claim_id"], "text": c["text"]}, ensure_ascii=False)
             for c in batch)
-        print(f"batch {i // BATCH + 1}/{-(-len(res) // BATCH)} ({len(batch)} 条)")
+        print(f"batch {i // BATCH + 1}/{-(-len(res) // BATCH)} ({len(batch)} claims)")
         for r in parse_json(ask(PROMPT.format(claims=items), system=SYSTEM)):
             if not isinstance(r, dict) or not r.get("term"):
                 continue
@@ -150,7 +151,7 @@ def main():
               open("data/coverage_gaps.json", "w"), ensure_ascii=False, indent=1)
 
     by_id = {c["claim_id"]: c for c in claims}
-    print(f"\n共 {len(gaps)} 个候选术语 → data/coverage_gaps.json\n")
+    print(f"\n{len(gaps)} candidate terms -> data/coverage_gaps.json\n")
     print(f"{'term':<38}{'n':>4}  example")
     for g in gaps[:15]:
         ex = g["example_claim_ids"][0] if g["example_claim_ids"] else ""
@@ -160,6 +161,6 @@ def main():
 
 if __name__ == "__main__":
     import sys
-    if "consolidate" not in sys.argv[1:]:  # 只跑第二阶段：python -m src.coverage consolidate
+    if "consolidate" not in sys.argv[1:]:  # stage two only: python -m src.coverage consolidate
         main()
     consolidate()

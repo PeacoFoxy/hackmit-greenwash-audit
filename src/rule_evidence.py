@@ -1,16 +1,18 @@
-"""无标签证据：gold 没覆盖到的规则，是否指向语料里真实的系统性缺口。
+"""Label-free evidence: do the rules the gold set misses point at a real systematic gap?
 
-Abualigah & Khader（2017）用 MAD 作为**无监督** fitness，在没有类别标签的情况下给特征
-打分。我们已经有一个等价物 —— Track S 的 lift，所以不需要再引入一个优化算法，只需要把
-它当 fitness 用：
+Abualigah & Khader (2017) use MAD as an *unsupervised* fitness, scoring features without
+any class labels. We already have an equivalent in Track S lift, so no new optimisation
+algorithm is needed; the lift table is simply used as the fitness:
 
-  qualifier support(claim) = 该 claim 的内容词在 lift 表里的平均 lift
+  qualifier support(claim) = mean lift of the claim's content words
 
-lift 低 = 这些词在语料里通常**不带**它该带的限定语（方法 / 口径 / 核验方）。若某终点触
-发的 claim 普遍落在低分位，说明它指向的是一个系统性缺口，而不是偶发个例 —— 这条证据不
-需要任何人工标注。
+Low lift means those words usually appear in this corpus *without* the qualifier they
+need (method, boundary, verifier). If the claims a terminal fires on sit in a low
+percentile, the rule is pointing at a systematic gap rather than an isolated case, and
+that evidence costs no annotation.
 
-它不能替代 gold：低分位只说明"这类表述在本语料里普遍缺限定语"，不说明"标注者会判它为 C"。
+It does not replace gold. A low percentile says this phrasing usually lacks its
+qualifier here; it does not say an annotator would label those claims C.
 """
 import json
 from pathlib import Path
@@ -23,14 +25,14 @@ from src.tree import TERMINALS, classify
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
-# 机制 → 它缺的那类限定语（term_risk.json 的表名）
+# mechanism -> the qualifier it is missing (table name in term_risk.json)
 QUALIFIER_OF = {
     "UNDISCLOSED_METHOD": "method_stated",
     "UNDISCLOSED_BOUNDARY": "scope_stated",
     "SELECTIVE_AGGREGATION": "baseline_stated",
     "UNDEFINED_TERM": "verifier_named",
 }
-MIN_TOKENS = 2       # 少于这么多词命中 lift 表的 claim 不参与打分
+MIN_TOKENS = 2       # claims matching fewer words than this are not scored
 
 
 def lift_maps(table):
@@ -38,7 +40,7 @@ def lift_maps(table):
 
 
 def support(text, lut):
-    """claim 的 qualifier support：内容词平均 lift。命中太少返回 None。"""
+    """Qualifier support: mean lift over content words. None when too few words match."""
     hits = [lut[t] for t in {w for w in RE_TOKEN.findall(text.lower())
                              if w not in STOPWORDS} if t in lut]
     return float(np.mean(hits)) if len(hits) >= MIN_TOKENS else None
@@ -63,7 +65,7 @@ def run():
             continue
         q = QUALIFIER_OF[mech]
         lut = luts[q]
-        # 参照分布：全语料在同一张 lift 表下的 support
+        # Reference distribution: the whole corpus scored against the same lift table
         allv = [v for v in (support(r["text"], lut) for r in rows) if v is not None]
         mine = [v for v in (support(r["text"], lut) for r in rows
                             if r["terminal"] == term) if v is not None]
@@ -92,7 +94,7 @@ def run():
     (DATA / "rule_evidence.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1),
                                              encoding="utf-8")
 
-    print("未标注证据：每条 C 规则触发的 claim 在语料 qualifier-support 分布中的位置\n")
+    print("Label-free evidence: where each C rule's claims sit in the corpus distribution\n")
     print(f"{'terminal':<30}{'qualifier':<17}{'n':>4}{'median':>9}{'pctile':>8}"
           f"{'gold':>6}  reading")
     for r in out:

@@ -1,31 +1,33 @@
 #!/usr/bin/env bash
-# 三种模式：
-#   ./run_all.sh          全部。需要 corpus/*.pdf 和 ANTHROPIC_API_KEY
-#   ./run_all.sh offline  跳过需要新 LLM 调用的步骤，但仍需 PDF（从 ingest 开始）
-#   ./run_all.sh verify   只跑不依赖 PDF 的步骤，复现所有已报告的数字
+# Three modes:
+#   ./run_all.sh          everything. Needs corpus/*.pdf and ANTHROPIC_API_KEY
+#   ./run_all.sh offline  skips steps that need new model calls, still needs the PDFs
+#   ./run_all.sh verify   only the steps that need no PDF; reproduces every reported number
 #
-# verify 是给拿到这个仓库的人用的：PDF 因版权不入库，但派生数据和 LLM 响应缓存都在，
-# 所以对照表、消融、敏感性、统计检验全都能零成本重跑。该模式会主动清空 API key —
-# 任何缓存未命中都立刻失败，而不是静默发请求。这样"零成本可复现"是被强制的，不是声称的。
+# verify is for whoever clones this repository. The PDFs are not committed (published
+# corporate documents), but the derived data and the model-response cache are, so the
+# comparison table, ablation, sensitivity sweeps and significance tests all re-run at zero
+# cost. The mode clears the API key first, so a cache miss fails immediately instead of
+# quietly sending a request: reproducibility is enforced here, not asserted.
 set -euo pipefail
 
 PY=.venv/bin/python
 MODE="${1:-all}"
 
-run() {  # run <module> <说明>
+run() {  # run <module> <description>
   echo ""
   echo "=== $1  — $2"
   $PY -m "$1"
 }
 
 if [ "$MODE" = "verify" ]; then
-  export ANTHROPIC_API_KEY=""     # 强制走缓存；未命中即失败
-  echo "verify 模式：不使用 PDF，不发任何网络请求（API key 已清空）"
+  export ANTHROPIC_API_KEY=""     # force the cache; a miss is a failure
+  echo "verify mode: no PDFs, no network requests (API key cleared)"
 fi
 
-# ---------------------------------------------------------- Stage 1-2 摄入
-# 仅这两步需要原始 PDF / 新 LLM 调用，verify 模式跳过（产物 data/corpus.json
-# 与 data/claims.json 已入库）。
+# ---------------------------------------------------------- Stage 1-2  ingest
+# Only these two need the source PDFs or new model calls, so verify skips them; their
+# outputs (data/corpus.json, data/claims.json) are committed.
 if [ "$MODE" != "verify" ]; then
   run src.ingest "corpus/*.pdf                → data/corpus.json"
   if [ "$MODE" != "offline" ]; then
@@ -33,42 +35,44 @@ if [ "$MODE" != "verify" ]; then
   fi
 fi
 
-# ---------------------------------------------------------- Stage 3 特征与候选
-run src.rules   "data/claims.json             → data/flagged.json           390 条，9 条规则"
+# ---------------------------------------------------------- Stage 3  features
+run src.rules   "data/claims.json             → data/flagged.json           390 claims, 9 rules"
 run src.filter  "data/flagged.json            → data/candidates.json        390 → 89"
-run src.signals "data/corpus.json             → data/signals.json           4084 句 × 7 标量"
+run src.signals "data/corpus.json             → data/signals.json           4084 sentences x 7 signals"
 
-# ---------------------------------------------------------- Stage 4 无监督分析
-run src.anomaly      "data/signals.json       → anomaly_*.json + anomaly_pvr.png   13 个段落"
+# ---------------------------------------------------------- Stage 4  unsupervised
+run src.anomaly      "data/signals.json       → anomaly_*.json + anomaly_pvr.png   13 passages"
 run src.plot_signals "data/signals.json       → figures/sig_*.png"
 
-# ---------------------------------------------------------- Stage 5 分类三轨
-run src.test_tree "§10 回归集 12 条，必须全过"
-run src.tree      "data/flagged.json          → data/track_r.json           Track R, 0 调用"
-run src.termstats "data/signals.json          → data/term_risk.json         Track S, 0 调用"
-run src.consensus "R + D + S                  → data/consensus.json         共识层, 0 调用"
+# ---------------------------------------------------------- Stage 5  three tracks
+run src.test_tree "12 regression cases from spec sec.10, all must pass"
+run src.tree      "data/flagged.json          → data/track_r.json           Track R, 0 model calls"
+run src.termstats "data/signals.json          → data/term_risk.json         Track S, 0 model calls"
+run src.consensus "R + D + S                  → data/consensus.json         consensus layer, 0 calls"
 
-# ---------------------------------------------------------- Stage 6 轨迹（需 LLM）
+# ---------------------------------------------------------- Stage 6  trajectory (model)
 if [ "$MODE" = "all" ]; then
   run src.trajectory "data/corpus.json         → trajectories/gaps/audit     [LLM]"
 fi
 run src.plot_trajectory "trajectory_gaps.json → figures/trajectory_gap.png"
 run src.plot_discard    "trajectory_audit.json → figures/commitment_verifiability.png"
 
-# ---------------------------------------------------------- Stage 7 评测与统计
-run src.evaluate    "data/gold.json           → metrics.json + confusion.png   [缓存]"
+# ---------------------------------------------------------- Stage 7  evaluation
+run src.evaluate    "data/gold.json           → metrics.json + confusion.png   [cached]"
 run src.stats_tests "data/metrics.json        → data/significance.json       Friedman/McNemar"
 run src.plot_stats  "data/significance.json   → figures/friedman_*.png"
 
-# ---------------------------------------------------------- Stage 8 审计层
-run src.indicators    "prelabels + signals + audit → 四指标与评级"
-run src.ablation      "gold + flagged          → data/ablation.json          逐规则消融"
-run src.sensitivity   "参数扫描                 → data/sensitivity.json"
-run src.rule_evidence "term_risk + flagged     → data/rule_evidence.json     无监督证据"
-run src.cost          "cache/                  → data/cost.json              成本核算"
-run src.abstain       "metrics + tree          → data/abstain.json           弃答曲线"
+# ---------------------------------------------------------- Stage 8  audit layer
+run src.indicators    "prelabels + signals + audit -> four indicators and grade"
+run src.ablation      "gold + flagged          → data/ablation.json          per-rule ablation"
+run src.sensitivity   "parameter sweeps         -> data/sensitivity.json"
+run src.rule_evidence "term_risk + flagged     → data/rule_evidence.json     unsupervised evidence"
+run src.cost          "cache/                  → data/cost.json              cost accounting"
+run src.abstain       "metrics + tree          → data/abstain.json           abstention curves"
+run src.merge_expand  "blind_expand.csv        → gold_expand + expand_eval   per-rule blind verdicts"
+run src.evidence_tier "gold + gold_expand      → data/evidence_tier.json     confound check"
 
-# ---------------------------------------------------------- Stage 9 仅完整模式
+# ---------------------------------------------------------- Stage 9  full mode only
 if [ "$MODE" = "all" ]; then
   run src.prelabel "data/candidates.json       → data/prelabels.json         [LLM]"
   run src.coverage "data/flagged.json          → coverage_gaps.json          [LLM]"
@@ -76,7 +80,7 @@ fi
 
 echo ""
 case "$MODE" in
-  verify)  echo "verify 完成：以上全部未使用 PDF、未发网络请求。" ;;
-  offline) echo "offline 完成。跳过: extract / trajectory / prelabel / coverage（需 API key）" ;;
-  *)       echo "完成。" ;;
+  verify)  echo "verify complete: no PDF was read and no network request was sent." ;;
+  offline) echo "offline complete. Skipped: extract / trajectory / prelabel / coverage (need a key)" ;;
+  *)       echo "Done." ;;
 esac

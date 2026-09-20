@@ -46,6 +46,8 @@
     -0.125,
     0.10526315789473695
    ],
+   "p_harmful": 0.524,
+   "p_helpful": 0.4255,
    "accuracy_after": 0.8275862068965517,
    "C_spec_after": 0.8421052631578947,
    "C_rec_after": 0.9,
@@ -62,6 +64,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -78,6 +82,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -94,6 +100,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -110,6 +118,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -126,6 +136,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -142,6 +154,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -158,6 +172,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -174,6 +190,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -190,6 +208,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -206,6 +226,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -222,6 +244,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -238,6 +262,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -254,6 +280,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -270,6 +298,8 @@
     0.0,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
    "accuracy_after": 0.7931034482758621,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 1.0,
@@ -286,10 +316,12 @@
     -0.16666666666666663,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.638,
    "accuracy_after": 0.7586206896551724,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 0.9,
-   "verdict": "not separable from zero"
+   "verdict": "no resample favours dropping it"
   },
   {
    "terminal": "INSTRUMENT_NO_METHOD",
@@ -302,10 +334,12 @@
     -0.16666666666666674,
     0.0
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.6435,
    "accuracy_after": 0.7586206896551724,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 0.9,
-   "verdict": "not separable from zero"
+   "verdict": "no resample favours dropping it"
   },
   {
    "terminal": "SCOPE_UNSTATED",
@@ -318,6 +352,8 @@
     -0.25,
     0.08830213903743281
    ],
+   "p_harmful": 0.1995,
+   "p_helpful": 0.8,
    "accuracy_after": 0.7241379310344828,
    "C_spec_after": 0.8947368421052632,
    "C_rec_after": 0.7,
@@ -334,11 +370,15 @@
     -0.35730519480519485,
     -0.049886363636364194
    ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.982,
    "accuracy_after": 0.6551724137931034,
    "C_spec_after": 0.7368421052631579,
    "C_rec_after": 0.6,
    "verdict": "earns its place"
   }
  ],
- "note": "Single-factor ablation with a paired bootstrap interval. No subset search is performed: with 29 labelled claims a wrapper search would overfit the gold set (Abiodun et al. 2021, sec. 5.v)."
+ "note": "Single-factor ablation with a paired bootstrap interval. No subset search is performed: with this few labelled claims a wrapper search would overfit the gold set (Abiodun et al. 2021, sec. 5.v).",
+ "gold_source": "random29",
+ "caveat": null
 }

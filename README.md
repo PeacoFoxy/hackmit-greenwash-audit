@@ -77,6 +77,52 @@ Graded alignment, modelled on credit-rating scales rather than a binary verdict.
 Class C is the target: what a keyword scanner cannot find, and what a model without a
 rubric misses entirely.
 
+### Four ways text defeats a reader
+
+Each track exists because a different one of these breaks a different method.
+
+| Challenge | What it looks like here | Which track absorbs it |
+| --- | --- | --- |
+| **Biased training data** | A model trained on disclosure learns the register of disclosure, and fluent hedging reads as substantiated | **R** is not trained at all. Its rules encode GHG-accounting concepts, so they cannot inherit a corpus's habits |
+| **Misinterpretation** | *100% renewable* is literally true on a market-based basis and false on a location-based one. Both readings are defensible; only one is checkable | **R**'s root-to-leaf path names which reading it took, so a wrong one is visible rather than silent |
+| **New vocabulary** | Every issuer coins terms — *carbon-free energy percentage*, *water positive*. A fixed keyword list ages out within one reporting cycle | **S** learns term × qualifier lift from the document's own corpus, so an unseen term still gets scored on whether its qualifier travels with it |
+| **Tone of voice** | Confident prose and cautious prose can carry identical information content; rhetoric is not evidence | The rubric grades on *what is disclosed*, never on how assertively. A confident sentence with no boundary is still C |
+
+No track handles all four. That is the argument for running them in parallel and treating
+their agreement as the confidence signal, rather than picking a winner.
+
+---
+
+## How the data is used
+
+**Nothing is fitted to the labels.** There is no training split, because there is no
+training.
+
+| Stage | What it consumes | Labels involved |
+| --- | --- | --- |
+| **Track R** (rule tree) | nothing — the rules are written from GHG Protocol concepts | none |
+| **Track S** (lift table) | the 4,084-sentence corpus, unsupervised | none |
+| **Track D** (language model) | a pre-trained model, zero-shot with the four-class rubric | none — no fine-tuning, no few-shot examples |
+| **Predicting** on a new upload | the same three tracks, unchanged | none |
+| **Testing** | 29 randomly drawn claims, blind-annotated | held out, used only to score |
+| **Round 11's supervised control** (TF-IDF + linear SVM) | the only component that trains | leave-one-out, so it never scores on what it fitted |
+
+This removes the usual leakage channel and leaves a subtler one, which is worth naming:
+**the author saw the gold set while writing the rules.** Round 3 below changed a regex
+after reading the errors it produced, and gained 0.103 accuracy. That gain is fitted to
+those 29 claims in the human-in-the-loop sense, however the code is structured — which is
+why the rules were then tested against claims drawn to a quota over the rules the gold
+set had never exercised (Round 12), and why that test is reported separately and never
+averaged in.
+
+Two annotation sheets, two jobs:
+
+- `data/blind30.csv`, `data/blind_expand.csv` — the annotator sees claim text and nothing
+  else. No model label, no rule terminal, no flags. This is the only source of gold.
+- `data/annotations.csv` — the model's pre-labels, which feed the report-level
+  indicators. It has no gold column, by construction: it used to have a blank one, and
+  all 89 rows came back matching the model's own answer.
+
 ---
 
 ## How the algorithm was optimised
@@ -97,22 +143,41 @@ their own numbers.
 | 9 | Abstain when confidence is low | 5 confidence proxies, none beats random abstention | Rejected |
 | 10 | Unsupervised rule scoring from corpus statistics | Ranked the one provably useful rule as least suspicious | Rejected |
 | 11 | Conventional small-data ML (TF-IDF + linear SVM) | 0.483 under leave-one-out, against a 0.448 majority baseline | Rejected |
+| 12 | Blind-annotate 20 claims drawn to a quota over the rules gold had never exercised | Rules with prior evidence: C precision 0.667. Rules with none: **0.250** (Fisher p = 0.024) | **Shipped** as a measurement |
+| 13 | Use "has this rule ever been checked?" as a confidence proxy | Beats the naive control (0.806 vs p95 0.710) and fails the correct one | Rejected |
 
 Round 7 is worth keeping for its cause: *global operations* recurs every few sentences,
 so proximity never proved the qualifier bound to that figure — the pattern the rule was
 built to catch.
 
+Round 13 is worth keeping for a different reason: the first control said it worked. The
+tier is nearly collinear with which sample a claim came from, and the two samples differ
+in accuracy by design, so resampling the pooled set lets the control draw a favourable
+mix. Holding the source composition fixed removes the effect entirely. The result is
+reported as untestable on this data, not as a win.
+
 A per-rule ablation found the tree over-specified: 15 of 26 terminals can be removed with
 **no change to any metric**, while removing the next four costs 0.103 accuracy. Rules
 that are individually insignificant are not jointly useless.
+
+Re-run once the stratified labels gave those rules any coverage at all, the picture
+sharpens. Of 19 class-C terminals: 5 never fire on 390 claims; 5 fire but **not one of
+2,000 bootstrap resamples favours keeping them**; 1 (intensity reported without an
+absolute) earns its place with an interval clear of zero; the rest are ties. All of them
+are still in the tree. Each of the five rests on one or two labels, drawn by a quota
+designed to test that rule — enough to stop calling them validated, not enough to delete
+them on. They are documented here instead, which is the same standard applied to the five
+dead rules.
 
 ---
 
 ## How it was validated
 
-The validation corpus is three reports: 4,084 sentences, 390 extracted claims, 29
-blind-annotated labels. The methods below were chosen so conclusions survive that sample
-size rather than depend on it.
+The validation corpus is three reports: 4,084 sentences, 390 extracted claims, and 49
+blind-annotated labels in two sets that are never averaged together — 29 drawn at random,
+which is what estimates accuracy, and 20 drawn to a per-terminal quota, which is what
+measures individual rules. The methods below were chosen so conclusions survive that
+sample size rather than depend on it.
 
 | Method | What it protects against |
 | --- | --- |
@@ -123,6 +188,9 @@ size rather than depend on it.
 | Leave-one-out cross-validation | Scoring a baseline on its own training data |
 | Parameter sweeps over every threshold | A result that holds at one cut-off only |
 | Random-abstention control | Mistaking fewer answers for better answers |
+| Stratified sampling over never-exercised rules | Rules whose accuracy was unmeasured being read as adequate |
+| Source-stratified resampling control | A confidence signal that is really a sampling artefact |
+| Blind annotation sheets with no model output | An annotator anchored on the answer being scored |
 
 **Not established.** The five methods are statistically indistinguishable here: Friedman
 χ² = 4.82, p = 0.31, the whole field inside one critical difference, no pair surviving
@@ -132,6 +200,13 @@ McNemar. The rule tree scores highest; that is not a claim of superiority.
 every label carries an auditable path. Without the four-class rubric a language model
 finds **no** class-C claims at all — precision, recall and F1 exactly zero — while
 overall accuracy stays respectable, because always answering B scores well.
+
+**Established, and unflattering.** The rules that had evidence behind them reach class-C
+precision of 0.667. The ten that had never been exercised by a gold label reach **0.250**
+on 16 blind judgments (Fisher exact, p = 0.024). Of the 12 disagreements, 9 are claims
+the tree called incomplete that the annotator read as substantiated. Those rules touch 10
+of 89 scored claims, so the effect on the headline is small — but "never measured" turned
+out to mean "measurably worse", not "probably fine".
 
 Needing no accuracy claim at all: **57 of 59 quantified commitments cannot be
 progress-checked from the report that states them.**
@@ -164,12 +239,18 @@ TextQuant/
 │   ├── ablation.py            per-rule contribution with bootstrap intervals
 │   ├── sensitivity.py         parameter sweeps
 │   ├── abstain.py             abstention curves against a random control
+│   ├── expand_gold.py         stratified blind sheet over never-exercised rules
+│   ├── merge_expand.py        per-rule verdicts, kept separate from the random gold
+│   ├── evidence_tier.py       the confidence proxy that failed its correct control
 │   ├── cost.py                calls, tokens and dollars per 100 claims
 │   ├── trajectory.py          quantified commitments and their evidence
 │   ├── indicators.py          report-level indicators and grade
 │   └── pipeline.py            live path for an uploaded PDF
 │
 ├── data/                      all derived data, committed
+│   ├── gold.json              29 random blind labels — the accuracy estimate
+│   ├── blind_expand.csv       20 stratified blind labels — the per-rule test
+│   └── annotations.csv        model pre-labels; no gold column, by design
 ├── cache/                     175 model responses, committed for reproducibility
 ├── figures/
 └── workflow/                  the written specifications the code was built against
@@ -205,13 +286,20 @@ Source PDFs are not in the repository (published corporate documents, excluded b
 
 ## Limits
 
-- **Validation scale.** 29 blind labels. The method is general; the measured accuracy is
-  not a population estimate. No feature-selection search was run for that reason — 2²⁶
-  candidate subsets against 29 items fits noise.
-- **Rule coverage.** 10 of 19 class-C rules have never met a human label.
-  `src/expand_gold.py` generates a stratified blind sheet for them.
-- **Recall is not yet falsifiable.** No label exists where the tree says A and a human
-  says C. Four probe claims are in that sheet to look for one.
+- **Validation scale.** 29 random blind labels. The method is general; the measured
+  accuracy is not a population estimate. No feature-selection search was run for that
+  reason — 2²⁶ candidate subsets against 29 items fits noise.
+- **Rule coverage is now measured, and it is poor.** The 10 class-C rules with no prior
+  coverage score 0.250 precision against 0.667 for the rest. They stay in the tree
+  because 1–2 labels each cannot justify deleting them; they are not to be read as
+  validated.
+- **Recall survived its first real attempt to break it.** Four probe claims the tree
+  calls A or B were annotated blind; none turned out to be a missed flag. Four probes
+  cannot establish recall of 1.000 — they can only fail to refute it, which is what
+  happened.
+- **One confidence signal remains untestable here.** Whether a rule has ever been
+  checked is collinear with which sample its claims came from, so this data cannot
+  separate the two. Testing it needs more *random* annotation, not more strata.
 - **Single reporting year**, so no comparison against prior disclosures.
 - **No external evidence.** Claims are checked against the document that makes them —
   the reason the 57-of-59 result exists. Retrieval against filings and certification

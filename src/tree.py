@@ -1,7 +1,9 @@
-"""Track R — 规则决策树。零 LLM 调用。
+"""Track R -- the rule decision tree. Zero LLM calls.
 
-每个节点标注 CLOSED / OPEN：CLOSED 表示概念有固定的术语表，正则未命中基本等于概念缺失；
-OPEN 表示说法多样，未命中只是弱证据。标注本身预测该节点在哪里会与 track D 分歧。
+Every node is annotated CLOSED or OPEN. CLOSED means the concept has a fixed vocabulary,
+so a regex miss is close to proof that the concept is absent. OPEN means the phrasing
+varies and a miss is only weak evidence. The annotation is itself a prediction of where
+this track will disagree with track D.
 """
 import json
 import re
@@ -54,12 +56,12 @@ def rx(p):
     return re.compile(p, I)
 
 
-# --------------------------------------------------------------- 节点正则
+# -------------------------------------------------------------- node regexes
 RE_SELF = rx(r"\b(?:we|we'?re|our|us|microsoft|alphabet|google|amazon|aws)\b")
 RE_ASSERT = rx(r"\b(?:reduc|achiev|deliver|match|power|offset|remov|eliminat|will|commit|"
                r"reach|maintain|operat|invest|contract|sourc|replenish|recycl|divert|avoid|"
                r"sign|run|ran|cut|increas|decreas)\w*")
-# 报数句（"our X was 12%"）没有主张动词，但仍是自述业绩
+# A reporting sentence ("our X was 12%") has no assertion verb but still claims performance
 RE_COPULA = rx(r"\b(?:was|were|is|are)\b|\breach(?:ed|es)\b|\btotal(?:ed|led|s)\b|"
                r"\bstood\s+at\b|\brepresents?\b|\bremains?\b")
 
@@ -70,9 +72,10 @@ RE_MILESTONE = rx(r"\binterim\b|\bannual(?:ly)?\b|\beach\s+year\b|\bevery\s+year
                   r"\bmilestones?\b|\bthird[-\s]party\s+validated\b|\bSBTi\b")
 RE_TWO_DATES = rx(r"\bby\s+20\d{2}\b.*\bby\s+20\d{2}\b")
 
-# scope 既可以用 GHG Protocol 术语表达，也可以用一个明确命名的设施/业务边界表达
-# （"data center emissions"、"our fleet"、"global operations"）。后者同样是可核对的口径，
-# 只认前者会把 goog_sr_016 这类已说明边界的 claim 误判为 C。
+# Scope can be stated in GHG Protocol vocabulary, or by naming a facility or business
+# boundary outright ("data center emissions", "our fleet", "global operations"). The
+# second form is just as checkable; accepting only the first mislabels claims such as
+# goog_sr_016, which does state its boundary, as C.
 RE_SCOPE = rx(r"\bscopes?\s*[123]\b|\bscope\s*1\s*(?:and|&|,)\s*2\b|\bdirect\s+operations\b|"
               r"\bvalue\s+chain\b|\bindirect\s+emissions\b|"
               r"\bdata\s?cent(?:er|re)s?\b|\bfleet[-\s]?wide\b|\bour\s+fleet\b|"
@@ -138,13 +141,14 @@ RE_D_WATER = rx(r"\bwater\b|\bwatersheds?\b|\breplenish\w*")
 RE_D_EMISSIONS = rx(r"\bemissions?\b|\bcarbon\b|\bCO2e?\b|\bGHG\b|\bgreenhouse\s+gas\b|"
                     r"\bnet[-\s]zero\b")
 RE_D_ENERGY = rx(r"\belectricity\b|\benergy\b|\bpower(?:ed|ing)?\b|\brenewables?\b")
-# 只报装机容量（GW/MW，非 Wh）而无用电口径 → 采购事实，不是 Scope 2 核算问题
+# Installed capacity only (GW/MW, not Wh) with no consumption basis -> a procurement
+# fact, not a Scope 2 accounting question
 RE_CAPACITY_ONLY = rx(r"\d[\d,.]*\s*(?:GW|MW)\b(?!h)")
 RE_ENERGY_USE = rx(r"\bconsum\w*|\bused?\b|\busage\b|\bpowered\s+by\b|\bran\s+on\b|"
                    r"\bruns?\s+on\b|\bmatch\w*|\b(?:M|G|T|k)Wh\b|\bsourced\b|\bprocure\w*")
 
 
-# --------------------------------------------------------------- 节点测试
+# --------------------------------------------------------------- node tests
 def t0(t):
     m = RE_SELF.search(t)
     if not m:
@@ -155,7 +159,7 @@ def t0(t):
 
 
 def t6b_percent_no_baseline(t):
-    """T6b: 给了百分比变化却没有基准年 → yes 走 NO_BASELINE_YEAR。"""
+    """T6b: a percentage change with no baseline year -> yes leads to NO_BASELINE_YEAR."""
     if RE_PERCENT.search(t) and RE_CHANGE_VERB.search(t):
         return None if RE_BASELINE.search(t) else RE_PERCENT.search(t)
     return None
@@ -177,7 +181,7 @@ NODES = {
     "T5c":  Node("OPEN",   RE_GRID.search, "T5d", "GRID_MISMATCH_RISK"),
     "T5d":  Node("OPEN",   RE_COVERAGE.search, "SUBSTANTIATED_ENERGY", "COVERAGE_UNSTATED"),
 
-    # 按严重度排序（§7）：INTENSITY(3) 在 SCOPE(2) 之前，否则 §10 第 5 条用例无法通过
+    # Ordered by severity (sec. 7): INTENSITY(3) before SCOPE(2), or case 5 in sec. 10 fails
     "T6":   Node("CLOSED", RE_INTENSITY.search, "T6a2", "T6s"),
     "T6a2": Node("OPEN",   RE_ABSOLUTE.search, "T6s", "INTENSITY_NO_ABSOLUTE"),
     "T6s":  Node("CLOSED", RE_SCOPE.search, "T6b", "SCOPE_UNSTATED"),
@@ -209,9 +213,10 @@ NODES = {
 
 
 def route_domain(t):
-    """T4 [CLOSED] 域路由。优先级处理同句多域共现：
-    efficiency 先于 energy（§6 明确），waste/water 先于 energy（"energy recovery"），
-    emissions 先于 energy（"energy emissions" 的口径问题是 scope，不是 method）。"""
+    """T4 [CLOSED] domain routing. The order resolves sentences that touch several
+    domains at once: efficiency before energy (sec. 6 says so), waste/water before energy
+    ("energy recovery"), emissions before energy (the problem with "energy emissions" is
+    the scope boundary, not the method)."""
     if RE_D_EFFICIENCY.search(t):
         return "T9", "efficiency"
     if RE_D_WASTE.search(t):
@@ -222,7 +227,7 @@ def route_domain(t):
         return "T6", "emissions"
     if RE_D_ENERGY.search(t):
         if RE_CAPACITY_ONLY.search(t) and not RE_ENERGY_USE.search(t):
-            return "T10", "other_capacity"  # 装机容量，不是用电核算
+            return "T10", "other_capacity"  # installed capacity, not consumption accounting
         return "T5", "energy"
     return "T10", "other"
 
@@ -231,10 +236,12 @@ DOMAIN_OF_NODE = {"T5": "energy", "T6": "emissions", "T7": "water",
                   "T8": "waste", "T9": "efficiency", "T10": "other"}
 
 
-# ------------------------------------------------- 交叉核查（cross-check）
-# 结构借自 Hicks 等（PMC11404377）：模型先标，再由负责该类别的一方逐条核查并修正。
-# 这里的"负责人"是每个机制自己的独立检查器：树说某项披露缺失，检查器反过来问
-# "这项披露真的不在句子里吗"。命中就撤销 C，并把撤销理由记进路径。
+# ------------------------------------------------------------------ cross-checking
+# The structure is borrowed from Hicks et al. (PMC11404377): the model labels first, then
+# whoever owns that category checks and corrects each label. The "owner" here is an
+# independent checker per mechanism. The tree says a disclosure is missing; the checker
+# asks the opposite question -- is that disclosure really not there? A hit retracts the C
+# and the reason for the retraction is recorded on the path.
 RE_METHOD_ANY = rx(r"\b(?:market|location)[-\s]based\b|\bgrid[-\s]supplied\b|"
                    r"\bon[-\s]site\s+(?:solar|wind|generation)\b|"
                    r"\bretired\s+(?:RECs?|certificates?)\b|\bhourly\s+match\w*|"
@@ -259,25 +266,32 @@ CROSS_CHECKS = {
                        RE_DEFINITION_ANY),
 }
 
-# sev 3 的终点是术语事实（matched / 只报强度），不接受撤销；只核查 sev 1-2。
+# Severity-3 terminals rest on a vocabulary fact (matched / intensity-only) and are not
+# open to retraction. Only severity 1-2 is cross-checked.
 CROSS_CHECK_MAX_SEVERITY = 2
 
-# 默认关闭。2026-09-20 在 29 条 gold 上实测（窗口 ±1/±3/±5）：
-#   关闭    acc 0.793  C_spec 0.737  C_rec 1.000  C_BA 0.868
-#   ±1 句   acc 0.724  C_spec 0.842  C_rec 0.800  C_BA 0.821   撤销 4 条，0 条正确
-#   ±5 句   acc 0.655  C_spec 0.895  C_rec 0.500  C_BA 0.697   撤销 8 条，1 条正确
-# specificity 上升但 recall 掉得更快。原因：报告里 global / data centers / our operations
-# 这类口径词每隔几句就出现一次，"出现在附近"不等于"绑定到这个数字" —— 而这正是 C 类
-# 要抓的误导形态。保留实现与数据，供扩大语料后复测。
+# Off by default. Measured on the 29 gold claims on 2026-09-20, windows +/-1, 3 and 5:
+#   off      acc 0.793  C_spec 0.737  C_rec 1.000  C_BA 0.868
+#   +/-1     acc 0.724  C_spec 0.842  C_rec 0.800  C_BA 0.821   4 retractions, 0 correct
+#   +/-5     acc 0.655  C_spec 0.895  C_rec 0.500  C_BA 0.697   8 retractions, 1 correct
+# Specificity rises but recall falls faster. The reason: boundary words such as global,
+# data centers and our operations recur every few sentences in these reports, and
+# "appears nearby" is not the same as "bound to this number" -- which is exactly the
+# misleading form class C exists to catch. The implementation and the measurements are
+# kept here so this can be retested on a larger corpus.
 CROSS_CHECK_ENABLED = False
 
 
 def cross_check(text, terminal, context=None):
-    """返回 (是否撤销, 理由, 命中片段)。只对 C 且 severity <= 2 的终点生效。
+    """Returns (retract?, reason, matched span). Only applies to C terminals of
+    severity <= 2.
 
-    核查的输入必须与树不同，否则只是换一组同义词重读同一句（实测 390 条里 0 次触发）。
-    这里用的是**文档上下文**：句级的树看不到前后文，但读者看得到 —— 如果被指缺失的口径
-    就写在邻近句子里，那它并没有缺失。context 为空时退化为不撤销。
+    The check has to read a different input from the tree, or it is just the same
+    sentence re-read with a second set of synonyms -- tried, and it fired 0 times out of
+    390. So the input here is **document context**: the sentence-level tree cannot see
+    the surrounding text, but a reader can, and if the boundary alleged to be missing is
+    written in a neighbouring sentence then it is not missing. With no context, this
+    degrades to never retracting.
     """
     label, mechanism, severity = TERMINALS[terminal]
     if label != "C" or severity is None or severity > CROSS_CHECK_MAX_SEVERITY:
@@ -292,9 +306,10 @@ def cross_check(text, terminal, context=None):
 
 
 def classify(text, claim_id=None, context=None):
-    """从 T0 遍历到终点，返回 §8 的 track_R 结构。
+    """Walk from T0 to a terminal and return the track_R structure from sec. 8.
 
-    context 是这句话在原文里的邻近段落（前后各若干句）。给了就启用交叉核查。
+    context is the neighbouring text around this sentence in the source document (a few
+    sentences either side). Passing it enables cross-checking.
     """
     path, node, domain = [], "T0", None
     while node not in TERMINALS:

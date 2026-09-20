@@ -1,9 +1,19 @@
-"""标注辅助：LLM 对候选 claim 做四类初标，供人工复核。
+"""Annotation aid: the model pre-labels candidate claims into the four classes.
 
-data/candidates.json → data/prelabels.json + data/annotations.csv（gold_label 留空）。[LLM]
-初标不能代替人工复核——标注集若由 LLM 生成，准确率对比自证无效。
+data/candidates.json -> data/prelabels.json + data/annotations.csv  [model]
+
+The pre-labels feed the report-level indicators. They are NOT gold and cannot become
+gold: if the gold set were model-generated, every accuracy comparison would be scoring
+the model against its own answers.
+
+This file used to emit a blank `gold_label` column next to `llm_label`, inviting exactly
+that. It happened -- all 89 rows came back with gold_label identical to llm_label, and
+13 of the 30 that overlapped the real gold set contradicted it. Warning against the
+mistake was not enough, so the column is gone. Gold is collected only on a blind sheet
+(data/blind30.csv, data/blind_expand.csv), where the annotator sees the claim text and
+nothing else -- no model label, no rule-tree terminal, no flags.
 """
-import csv, json, os, re
+import csv, json, re
 from collections import Counter
 from src.llm import ask
 
@@ -74,7 +84,7 @@ def label_batch(batch):
 def main():
     claims = json.load(open("data/candidates.json"))
 
-    # 按公司分组再切批，D 类（同文档矛盾）需要同公司上下文
+    # Batch within a company: class D (contradicted elsewhere) needs same-company context
     by_co = {}
     for c in claims:
         by_co.setdefault(c["company"], []).append(c)
@@ -82,10 +92,10 @@ def main():
 
     results = {}
     for i, b in enumerate(batches, 1):
-        print(f"batch {i}/{len(batches)} ({b[0]['company']}, {len(b)} 条)")
+        print(f"batch {i}/{len(batches)} ({b[0]['company']}, {len(b)} claims)")
         results.update(label_batch(b))
 
-    # 漏标的条目单条补一次
+    # Retry any claim that came back without a label, one at a time
     missing = [c for c in claims if c["claim_id"] not in results]
     for c in missing:
         print(f"  retry {c['claim_id']}")
@@ -98,20 +108,11 @@ def main():
         c["llm_reason"] = r.get("reason", "")
     json.dump(claims, open("data/prelabels.json", "w"), ensure_ascii=False, indent=1)
 
-    # 重跑时保留已人工填写的 gold_label
+    # No gold_label column: see the module docstring. This sheet is for reading the
+    # model's pre-labels, not for recording human ones.
     path = "data/annotations.csv"
-    gold = {}
-    if os.path.exists(path):
-        with open(path, newline="", encoding="utf-8") as f:
-            # 只保留与 llm_label 不同的人工标注。相同的几乎一定是把初标复制过来了，
-            # 留着会让评测变成拿模型答案考模型自己。
-            gold = {r["claim_id"]: r.get("gold_label", "")
-                    for r in csv.DictReader(f)
-                    if r.get("gold_label", "").strip()
-                    and r.get("gold_label", "").strip() != r.get("llm_label", "").strip()}
-
     cols = ["claim_id", "company", "text", "flags", "vagueness",
-            "llm_label", "llm_reason", "gold_label"]
+            "llm_label", "llm_reason"]
     with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
@@ -119,11 +120,11 @@ def main():
             w.writerow({"claim_id": c["claim_id"], "company": c["company"],
                         "text": c["text"], "flags": ";".join(c.get("flags", [])),
                         "vagueness": c.get("vagueness"),
-                        "llm_label": c["llm_label"] or "", "llm_reason": c["llm_reason"],
-                        "gold_label": gold.get(c["claim_id"], "")})
+                        "llm_label": c["llm_label"] or "",
+                        "llm_reason": c["llm_reason"]})
 
     dist = Counter(c["llm_label"] or "UNLABELED" for c in claims)
-    print(f"\n共 {len(claims)} 条 → data/prelabels.json, {path}")
+    print(f"\n{len(claims)} claims -> data/prelabels.json, {path}")
     for k in ["A", "B", "C", "D", "UNLABELED"]:
         if dist[k]:
             print(f"  {k}: {dist[k]} ({dist[k] / len(claims) * 100:.1f}%)")

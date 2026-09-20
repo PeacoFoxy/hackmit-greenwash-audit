@@ -1,4 +1,5 @@
-"""§10 回归集：12 条来自语料的用例，每条断言终点与 label。"""
+"""Regression set from spec sec. 10: 12 cases drawn from the corpus, each asserting a
+terminal and a label."""
 from src.tree import classify
 
 CASES = [
@@ -12,7 +13,8 @@ CASES = [
      "SUBSTANTIATED_EMISSIONS", "A"),
     ("We reduced emissions per shipped unit by 39% compared to 2019",
      "INTENSITY_NO_ABSOLUTE", "C"),
-    # 边界已命名（data center）+ 基准年 2023 → A。gold 为 A，2026-09-20 修正期望值。
+    # Boundary is named (data center) + baseline year 2023 -> A. Gold says A; expected
+    # value corrected 2026-09-20.
     ("In 2024, Alphabet reduced its data center energy emissions by 12% compared to 2023",
      "SUBSTANTIATED_EMISSIONS", "A"),
     ("In Asia Pacific, Alphabet's regional average Google CFE was 12%",

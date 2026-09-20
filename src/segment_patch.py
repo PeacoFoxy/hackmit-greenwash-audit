@@ -1,4 +1,4 @@
-"""把长文本切成可送 LLM 的候选段落。被 extract.py 使用，不单独运行。"""
+"""Cut long text into candidate passages for the model. Used by extract.py, not run alone."""
 import re, json
 
 SIGNALS = re.compile(
@@ -6,7 +6,7 @@ SIGNALS = re.compile(
     r"PPA|sustainab|green|climate|scope\s*[123])", re.I)
 
 def windows(text, size=5, lo=200, hi=1500):
-    """按句子切，再滑窗组段。PDF 文本没有可靠的段落边界。"""
+    """Split on sentences, then window them. PDF text has no reliable paragraph breaks."""
     text = re.sub(r"\s+", " ", text)
     sents = re.split(r"(?<=[.!?])\s+(?=[A-Z])", text)
     out, i = [], 0
@@ -19,4 +19,4 @@ def windows(text, size=5, lo=200, hi=1500):
 
 if __name__ == "__main__":
     for d in json.load(open("data/corpus.json")):
-        print(f"{d['id']}: {len(windows(d['text']))} 个候选窗口")
+        print(f"{d['id']}: {len(windows(d['text']))} candidate windows")

@@ -1,7 +1,8 @@
-"""TextQuant — Streamlit 界面。FRONTEND.md 步骤 1-8：预加载三份报告 + 上传 PDF 实时管线。
+"""TextQuant -- the v1 Streamlit interface: three preloaded reports plus a live pipeline
+for uploaded PDFs.
 
-运行: streamlit run app.py
-离线自检: env -u ANTHROPIC_API_KEY streamlit run app.py
+Run:            streamlit run app.py
+Offline check:  env -u ANTHROPIC_API_KEY streamlit run app.py
 """
 import json
 from collections import Counter
@@ -34,7 +35,8 @@ def load_sources():
 
 
 def resolve(query, sources):
-    """公司名或 ticker 精确匹配，忽略大小写。匹配不到返回 None，绝不报错。"""
+    """Exact match on company name or ticker, case-insensitive. Returns None on no match;
+    never raises."""
     q = (query or "").strip().lower()
     if not q:
         return None
@@ -55,7 +57,7 @@ def load_regions():
 
 @st.cache_data
 def load_company_stats():
-    """公司级 PVR 等指标，按 PVR 从高到低。"""
+    """Company-level PVR and friends, sorted by PVR descending."""
     rows = json.loads((DATA / "anomaly_company.json").read_text(encoding="utf-8"))
     return sorted(rows, key=lambda r: -r["pvr"])
 
@@ -83,7 +85,8 @@ def load_sentence_counts():
 
 @st.cache_data(show_spinner=False)
 def analyse_upload(file_bytes, filename, _on_stage=None):
-    """按文件内容缓存：同一份 PDF 再传一次是瞬时的。_on_stage 不参与缓存键。"""
+    """Keyed on file contents, so re-uploading the same PDF is instant. _on_stage is
+    excluded from the cache key."""
     result = analyse(file_bytes, filename, on_stage=_on_stage)
     for r in result["regions"]:
         r["mechanism"] = mechanism_of_region(r.get("flag_types", {}))
@@ -91,13 +94,14 @@ def analyse_upload(file_bytes, filename, _on_stage=None):
 
 
 def render_map(regions, counts):
-    """每家一条 0→1 的横条，命中区间画成色块。窄区间加宽到 8px 以便点选。"""
+    """One 0-to-1 bar per company, with hits drawn as blocks. Narrow spans are widened to
+    8px so they stay clickable."""
     companies = list(counts)
     fig, ax = plt.subplots(figsize=(10, 0.9 * len(companies) + 1.1))
     ax.set_xlim(0, 1)
     ax.set_ylim(-0.6, len(companies) - 0.4)
 
-    # 先布局再量轴宽，才能把 8px 换算成数据单位
+    # Lay out first, then measure the axis width, so 8px can be converted to data units
     fig.canvas.draw()
     ax_px = ax.get_window_extent(fig.canvas.get_renderer()).width
     min_w = MIN_MARK_PX / ax_px if ax_px else 0.006
@@ -113,7 +117,7 @@ def render_map(regions, counts):
                     color=MECHANISM_COLORS.get(r["mechanism"], "#9498a0"))
 
     ax.set_yticks(range(len(companies)), companies)
-    ax.invert_yaxis()   # 第一家排在最上，符合阅读顺序
+    ax.invert_yaxis()   # first company on top, matching reading order
     ax.set_xticks([0, 1], ["start of report", "end"])
     ax.tick_params(axis="x", length=0)
     for side in ("top", "right", "left", "bottom"):
@@ -134,7 +138,8 @@ def region_option(r):
 
 
 def run_claim(text):
-    """分类一条 claim，结果存进 session_state。任何失败都转成提示，不抛 traceback。"""
+    """Classify one claim and store the result in session_state. Failures become a notice,
+    never a traceback."""
     cached = is_cached(text)
     try:
         r = classify_claim(text)
@@ -204,7 +209,8 @@ elif analyze:
 st.divider()
 
 # ------------------------------------------------------------- SECTION 1-7
-# 上传成功时整页改看上传件，否则走预加载路径（两条路都必须能用）
+# A successful upload switches the whole page to that document; otherwise the preloaded
+# path is used. Both have to work.
 if uploaded:
     regions = uploaded["regions"]
     counts = Counter({uploaded["company"]: uploaded["n_sentences"]})
@@ -256,7 +262,7 @@ else:
                 f"· {start_pct:.0f}–{end_pct:.0f}% into the report "
                 f"· {region['n_sentences']} sentences")
 
-    # 公司自己的话在前，解释在后
+    # The company's own words first, the explanation after
     st.markdown(f"> {region['text']}")
     st.caption("Excerpt, first 400 characters of the passage.")
 

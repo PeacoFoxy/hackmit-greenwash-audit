@@ -1,0 +1,55 @@
+{
+ "n_pooled": 49,
+ "n_evidence_backed": 31,
+ "n_unvalidated": 18,
+ "accuracy_pooled": 0.6326530612244898,
+ "accuracy_evidence_backed": 0.8064516129032258,
+ "accuracy_unvalidated": 0.3333333333333333,
+ "coverage": 0.6326530612244898,
+ "naive_random_mean": 0.6323612903225807,
+ "naive_random_p95": 0.7096774193548387,
+ "beats_naive_control": true,
+ "stratified_control_mean": 0.7671290322580646,
+ "stratified_control_p95": 0.8064516129032258,
+ "kept_source_quota": {
+  "random29": 29,
+  "stratified20": 2
+ },
+ "tier_by_source": {
+  "evidence_backed": {
+   "random29": 29,
+   "stratified20": 2
+  },
+  "unvalidated": {
+   "stratified20": 18
+  }
+ },
+ "source_consumed_by_kept": {
+  "random29": 1.0,
+  "stratified20": 0.1
+ },
+ "testable": false,
+ "beats_random": false,
+ "backed_terminals": [
+  "FUTURE_PROMISE_NO_MILESTONE",
+  "INSTRUMENT_NO_METHOD",
+  "INTENSITY_NO_ABSOLUTE",
+  "SCOPE_UNSTATED",
+  "SUBSTANTIATED_EMISSIONS",
+  "TARGET_SCOPE_UNSTATED",
+  "VAGUE_NO_QUANTITY"
+ ],
+ "by_source": {
+  "random29": {
+   "n": 29,
+   "accuracy": 0.7931034482758621,
+   "n_unvalidated": 0
+  },
+  "stratified20": {
+   "n": 20,
+   "accuracy": 0.4,
+   "n_unvalidated": 18
+  }
+ },
+ "note": "Tier is a property of the rule, assigned from gold coverage before the stratified claims were labelled, so it is a genuine prior prediction. It is nonetheless untestable on this data: the tier is almost perfectly collinear with which sample a claim came from, and the two samples differ in accuracy by construction. The naive pooled-random control does not separate the two and reports a false win; the source-stratified control has almost no freedom left to resample. Testing this needs unvalidated-rule claims inside a random sample, which means more random annotation, not more strata."
+}

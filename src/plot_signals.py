@@ -1,4 +1,5 @@
-"""三张句级信号图：趋势、累计话术强度、Microsoft 的 future vs verification 对照。"""
+"""Three sentence-signal figures: trend, cumulative rhetoric, and future-tense promises
+versus third-party verification."""
 import json
 import os
 from pathlib import Path
@@ -48,7 +49,7 @@ def plot_cumulative(groups):
             cum.append(total / n)
         x = [r["rel_pos"] for r in g]
         ax.plot(x, cum, label=company, color=COLORS.get(company), lw=1.4)
-        # 终点标注：斜率即单位句子的话术强度
+        # End label: the slope is rhetoric intensity per sentence
         ax.annotate(f"{cum[-1]:.3f}", (x[-1], cum[-1]), textcoords="offset points",
                     xytext=(6, 0), va="center", color=COLORS.get(company), fontsize=9)
     ax.set_xlim(0, 1.06)
@@ -66,7 +67,7 @@ OVERLAY_WINDOW = 80
 
 
 def smooth(values, window=OVERLAY_WINDOW):
-    """滑动平均，边界只对实际存在的样本取平均。"""
+    """Moving average; at the edges it averages only over samples that exist."""
     import numpy as np
     v = np.asarray(values, dtype=float)
     kernel = np.ones(window) / window
@@ -90,7 +91,7 @@ def plot_overlay(groups, company="Microsoft"):
     ax1.set_xlim(0, 1)
     ax1.set_ylim(0, max(future) * 1.15)
 
-    # 底部 5% 高度的 flag 密度色带
+    # Flag-density band across the bottom 5% of the axes
     lo, hi = ax1.get_ylim()
     band = lo + (hi - lo) * 0.05
     ax1.imshow(flag_density.reshape(1, -1), aspect="auto", cmap="OrRd",
@@ -113,7 +114,7 @@ def plot_overlay(groups, company="Microsoft"):
 
 
 def pvr(g):
-    """与 anomaly.py 一致：(句数/verification总和) / (句数/future总和)。"""
+    """Same definition as anomaly.py: (sentences/sum verification) / (sentences/sum future)."""
     n = len(g)
     fsum = sum(r["future"] for r in g)
     vsum = sum(r["verification"] for r in g)
@@ -123,7 +124,7 @@ def pvr(g):
 
 
 def draw_overlay(ax1, g, company, legend=False, ymax_left=None, ymax_right=None):
-    """单个公司的双轴 future/verification 曲线 + 底部 flag 密度色带。"""
+    """One company: twin-axis future/verification curves with a flag-density band below."""
     x = [r["rel_pos"] for r in g]
     future = smooth([r["future"] for r in g])
     verif = smooth([r["verification"] for r in g])
@@ -159,7 +160,8 @@ def draw_overlay(ax1, g, company, legend=False, ymax_left=None, ymax_right=None)
 def plot_overlay_all(groups):
     order = [c for c in ["Alphabet", "Microsoft", "Amazon"] if c in groups]
     order += [c for c in groups if c not in order]
-    # 三格共用 y 轴范围，否则跨格比较曲线高度会得出相反结论
+    # All three panels share one y range; otherwise comparing curve heights across
+    # panels leads to the opposite conclusion
     gmax_f = max(smooth([r["future"] for r in groups[c]]).max() for c in order)
     gmax_v = max(smooth([r["verification"] for r in groups[c]]).max() for c in order)
 
@@ -176,7 +178,7 @@ def plot_overlay_all(groups):
 def main():
     groups = load()
     for company, g in groups.items():
-        print(f"{company:<12}{len(g):>6} 句, flags>0: {sum(1 for r in g if r['flags'] > 0)}")
+        print(f"{company:<12}{len(g):>6} sent, flags>0: {sum(1 for r in g if r['flags'] > 0)}")
     plot_vagueness(groups)
     plot_cumulative(groups)
     plot_overlay(groups)

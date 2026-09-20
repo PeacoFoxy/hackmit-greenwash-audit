@@ -1,6 +1,7 @@
-"""单条 claim 的分类接口（界面用）。prompt 固定，因此同一条文本永远命中同一个缓存文件。
+"""Single-claim classification for the interface. The prompt is fixed, so the same text
+always hits the same cache file.
 
-预热缓存（联网跑一次，之后四条预设离线可用）：
+Warm the cache (run once online; the four presets then work offline):
     python -m src.claim_api warm
 """
 import hashlib
@@ -40,12 +41,12 @@ def cache_path(claim):
 
 
 def is_cached(claim):
-    """预设按钮在无网络时是否可用。"""
+    """Whether a preset button will work with no network."""
     return os.path.exists(cache_path(claim))
 
 
 def parse(raw):
-    """整体 JSON → 首个 {...} → 正则抓 label。全失败抛异常，由调用方兜住。"""
+    """Whole JSON -> first {...} -> regex for the label. Raises if all three fail."""
     s = re.sub(r"^```(?:json)?\s*|\s*```$", "", (raw or "").strip(), flags=re.I).strip()
     m = re.search(r"\{.*\}", s, re.S)
     for cand in (s, m.group(0) if m else None):
@@ -65,14 +66,14 @@ def parse(raw):
 
 
 def classify_claim(claim):
-    """返回 {label, reasoning, raw, cached}。缓存命中时不发请求。"""
+    """Returns {label, reasoning, raw, cached}. Sends nothing on a cache hit."""
     cached = is_cached(claim)
     raw = ask(build_prompt(claim), system=SYSTEM, model=MODEL, max_tokens=400)
     return {**parse(raw), "raw": raw, "cached": cached}
 
 
 def warm():
-    """把四条预设写进缓存，供离线 demo 使用。"""
+    """Write the four presets into the cache so the demo runs offline."""
     for p in PRESETS:
         hit = is_cached(p["claim"])
         r = classify_claim(p["claim"])

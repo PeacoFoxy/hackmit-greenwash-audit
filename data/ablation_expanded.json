@@ -1,0 +1,384 @@
+{
+ "metric": "C_balanced_accuracy",
+ "baseline": 0.7571428571428571,
+ "n_gold": 49,
+ "n_all": 390,
+ "n_boot": 2000,
+ "utilisation": {
+  "SKIP": 243,
+  "VAGUE_NO_QUANTITY": 43,
+  "FUTURE_PROMISE_NO_MILESTONE": 17,
+  "TARGET_SCOPE_UNSTATED": 2,
+  "SUBSTANTIATED_TARGET": 0,
+  "MARKET_BASED_IMPLIED": 4,
+  "INSTRUMENT_NO_METHOD": 1,
+  "METHOD_UNSTATED": 4,
+  "GRID_MISMATCH_RISK": 0,
+  "COVERAGE_UNSTATED": 0,
+  "SUBSTANTIATED_ENERGY": 0,
+  "SCOPE_UNSTATED": 11,
+  "INTENSITY_NO_ABSOLUTE": 6,
+  "NO_BASELINE_YEAR": 1,
+  "OFFSET_UNDISCLOSED": 0,
+  "SUBSTANTIATED_EMISSIONS": 10,
+  "WATER_TERM_UNDEFINED": 2,
+  "WATER_BOUNDARY_UNSTATED": 5,
+  "SUBSTANTIATED_WATER": 1,
+  "DIVERSION_UNDEFINED": 0,
+  "WASTE_BOUNDARY_UNSTATED": 6,
+  "SUBSTANTIATED_WASTE": 4,
+  "PROPRIETARY_METRIC": 5,
+  "REGIONAL_ONLY": 0,
+  "CHERRY_PICKED_METRIC": 1,
+  "SUBSTANTIATED_METRIC": 7,
+  "UNSCOPED_FIGURE": 7,
+  "SUBSTANTIATED_OTHER": 10
+ },
+ "ablations": [
+  {
+   "terminal": "UNSCOPED_FIGURE",
+   "severity": 1,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 7,
+   "fires_gold": 2,
+   "delta": 0.02857142857142858,
+   "ci": [
+    0.0,
+    0.07352941176470595
+   ],
+   "p_harmful": 0.876,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6530612244897959,
+   "C_spec_after": 0.5714285714285714,
+   "C_rec_after": 1.0,
+   "verdict": "no resample favours keeping it"
+  },
+  {
+   "terminal": "WATER_BOUNDARY_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 5,
+   "fires_gold": 2,
+   "delta": 0.02857142857142858,
+   "ci": [
+    0.0,
+    0.07142857142857151
+   ],
+   "p_harmful": 0.87,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6530612244897959,
+   "C_spec_after": 0.5714285714285714,
+   "C_rec_after": 1.0,
+   "verdict": "no resample favours keeping it"
+  },
+  {
+   "terminal": "METHOD_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 4,
+   "fires_gold": 2,
+   "delta": 0.02857142857142858,
+   "ci": [
+    0.0,
+    0.06944444444444442
+   ],
+   "p_harmful": 0.8625,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.673469387755102,
+   "C_spec_after": 0.5714285714285714,
+   "C_rec_after": 1.0,
+   "verdict": "no resample favours keeping it"
+  },
+  {
+   "terminal": "NO_BASELINE_YEAR",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 1,
+   "fires_gold": 1,
+   "delta": 0.014285714285714235,
+   "ci": [
+    0.0,
+    0.045454545454545414
+   ],
+   "p_harmful": 0.6335,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6530612244897959,
+   "C_spec_after": 0.5428571428571428,
+   "C_rec_after": 1.0,
+   "verdict": "no resample favours keeping it"
+  },
+  {
+   "terminal": "CHERRY_PICKED_METRIC",
+   "severity": 3,
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "fires_all": 1,
+   "fires_gold": 1,
+   "delta": 0.014285714285714235,
+   "ci": [
+    0.0,
+    0.045454545454545414
+   ],
+   "p_harmful": 0.6545,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6530612244897959,
+   "C_spec_after": 0.5428571428571428,
+   "C_rec_after": 1.0,
+   "verdict": "no resample favours keeping it"
+  },
+  {
+   "terminal": "GRID_MISMATCH_RISK",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "COVERAGE_UNSTATED",
+   "severity": 1,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "OFFSET_UNDISCLOSED",
+   "severity": 3,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "DIVERSION_UNDEFINED",
+   "severity": 3,
+   "mechanism": "UNDEFINED_TERM",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "REGIONAL_ONLY",
+   "severity": 2,
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "fires_all": 0,
+   "fires_gold": 0,
+   "delta": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.0,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 1.0,
+   "verdict": "never fires"
+  },
+  {
+   "terminal": "FUTURE_PROMISE_NO_MILESTONE",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 17,
+   "fires_gold": 3,
+   "delta": -0.0071428571428571175,
+   "ci": [
+    -0.09797297297297303,
+    0.05882352941176461
+   ],
+   "p_harmful": 0.434,
+   "p_helpful": 0.518,
+   "accuracy_after": 0.6530612244897959,
+   "C_spec_after": 0.5714285714285714,
+   "C_rec_after": 0.9285714285714286,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "WASTE_BOUNDARY_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 6,
+   "fires_gold": 2,
+   "delta": -0.021428571428571352,
+   "ci": [
+    -0.10149572649572636,
+    0.032258064516129004
+   ],
+   "p_harmful": 0.263,
+   "p_helpful": 0.617,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5428571428571428,
+   "C_rec_after": 0.9285714285714286,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "PROPRIETARY_METRIC",
+   "severity": 3,
+   "mechanism": "UNDEFINED_TERM",
+   "fires_all": 5,
+   "fires_gold": 2,
+   "delta": -0.021428571428571352,
+   "ci": [
+    -0.10988005050505051,
+    0.03846153846153855
+   ],
+   "p_harmful": 0.2625,
+   "p_helpful": 0.606,
+   "accuracy_after": 0.6122448979591837,
+   "C_spec_after": 0.5428571428571428,
+   "C_rec_after": 0.9285714285714286,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "MARKET_BASED_IMPLIED",
+   "severity": 3,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 4,
+   "fires_gold": 2,
+   "delta": -0.021428571428571352,
+   "ci": [
+    -0.1071428571428572,
+    0.039473684210526216
+   ],
+   "p_harmful": 0.252,
+   "p_helpful": 0.625,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5428571428571428,
+   "C_rec_after": 0.9285714285714286,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "WATER_TERM_UNDEFINED",
+   "severity": 3,
+   "mechanism": "UNDEFINED_TERM",
+   "fires_all": 2,
+   "fires_gold": 2,
+   "delta": -0.021428571428571352,
+   "ci": [
+    -0.1071428571428571,
+    0.03947368421052633
+   ],
+   "p_harmful": 0.268,
+   "p_helpful": 0.5935,
+   "accuracy_after": 0.6326530612244898,
+   "C_spec_after": 0.5428571428571428,
+   "C_rec_after": 0.9285714285714286,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "TARGET_SCOPE_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 2,
+   "fires_gold": 1,
+   "delta": -0.0357142857142857,
+   "ci": [
+    -0.11538461538461542,
+    0.0
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.64,
+   "accuracy_after": 0.6122448979591837,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 0.9285714285714286,
+   "verdict": "no resample favours dropping it"
+  },
+  {
+   "terminal": "INSTRUMENT_NO_METHOD",
+   "severity": 3,
+   "mechanism": "UNDISCLOSED_METHOD",
+   "fires_all": 1,
+   "fires_gold": 1,
+   "delta": -0.0357142857142857,
+   "ci": [
+    -0.11538461538461531,
+    0.0
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.6405,
+   "accuracy_after": 0.6122448979591837,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 0.9285714285714286,
+   "verdict": "no resample favours dropping it"
+  },
+  {
+   "terminal": "SCOPE_UNSTATED",
+   "severity": 2,
+   "mechanism": "UNDISCLOSED_BOUNDARY",
+   "fires_all": 11,
+   "fires_gold": 6,
+   "delta": -0.06428571428571428,
+   "ci": [
+    -0.1923076923076923,
+    0.04999999999999993
+   ],
+   "p_harmful": 0.135,
+   "p_helpful": 0.863,
+   "accuracy_after": 0.5918367346938775,
+   "C_spec_after": 0.6,
+   "C_rec_after": 0.7857142857142857,
+   "verdict": "not separable from zero"
+  },
+  {
+   "terminal": "INTENSITY_NO_ABSOLUTE",
+   "severity": 3,
+   "mechanism": "SELECTIVE_AGGREGATION",
+   "fires_all": 6,
+   "fires_gold": 4,
+   "delta": -0.1428571428571428,
+   "ci": [
+    -0.2727272727272727,
+    -0.03839285714285739
+   ],
+   "p_harmful": 0.0,
+   "p_helpful": 0.9885,
+   "accuracy_after": 0.5510204081632653,
+   "C_spec_after": 0.5142857142857142,
+   "C_rec_after": 0.7142857142857143,
+   "verdict": "earns its place"
+  }
+ ],
+ "note": "Single-factor ablation with a paired bootstrap interval. No subset search is performed: with this few labelled claims a wrapper search would overfit the gold set (Abiodun et al. 2021, sec. 5.v).",
+ "gold_source": "random29 + stratified20",
+ "caveat": "Pooled run: the stratified claims were drawn to a per-terminal quota, so a rule's delta is measured on a sample enriched for that rule. Magnitudes are not comparable with the random-only run; the point of this run is that ten terminals have any evidence at all."
+}

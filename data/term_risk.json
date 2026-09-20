@@ -4,7 +4,7 @@
  "base_rates": {
   "method_stated": 0.0408,
   "baseline_stated": 0.1237,
-  "scope_stated": 0.248,
+  "scope_stated": 0.354,
   "verifier_named": 0.0619
  },
  "terms": {
@@ -339,9 +339,16 @@
     "cooc": 0
    },
    {
-    "term": "customer sustainability",
+    "term": "sustainability appendix environmental",
     "lift": 0.0,
-    "count": 73,
+    "count": 71,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "global sustainability",
+    "lift": 0.0,
+    "count": 79,
     "in_topic": 16,
     "cooc": 0
    },
@@ -360,14 +367,14 @@
     "cooc": 0
    },
    {
-    "term": "sustainability global",
+    "term": "sustainability appendix",
     "lift": 0.0,
     "count": 71,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "sustainability appendix",
+    "term": "sustainability global",
     "lift": 0.0,
     "count": 71,
     "in_topic": 16,
@@ -381,21 +388,14 @@
     "cooc": 0
    },
    {
+    "term": "customer sustainability",
+    "lift": 0.0,
+    "count": 73,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
     "term": "sustainability global sustainability",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "global sustainability",
-    "lift": 0.0,
-    "count": 79,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability appendix environmental",
     "lift": 0.0,
     "count": 71,
     "in_topic": 16,
@@ -465,28 +465,14 @@
     "cooc": 0
    },
    {
-    "term": "chain communities",
+    "term": "appendix climate",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "experience health",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "packaging biodiversity",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "chain communities responsible",
+    "term": "rights employee experience",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -500,28 +486,28 @@
     "cooc": 0
    },
    {
-    "term": "human rights employee",
+    "term": "circularity packaging",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "sustainable shopping human",
+    "term": "communities responsible",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "appendix climate",
+    "term": "experience health",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "employee experience health",
+    "term": "biodiversity sustainable shopping",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -535,7 +521,63 @@
     "cooc": 0
    },
    {
+    "term": "shopping human rights",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
     "term": "packaging biodiversity sustainable",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "health and safety",
+    "lift": 0.0,
+    "count": 33,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "shopping",
+    "lift": 0.0,
+    "count": 29,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "safety responsible",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "human rights employee",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "packaging biodiversity",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "sustainable shopping human",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "biodiversity sustainable",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -556,35 +598,28 @@
     "cooc": 0
    },
    {
-    "term": "shopping human rights",
+    "term": "chain communities",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "shopping",
-    "lift": 0.0,
-    "count": 29,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "health and safety",
-    "lift": 0.0,
-    "count": 33,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "communities responsible",
+    "term": "employee experience health",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "rights employee experience",
+    "term": "rights employee",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "supply chain communities",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -605,42 +640,7 @@
     "cooc": 0
    },
    {
-    "term": "safety responsible",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "rights employee",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "biodiversity sustainable shopping",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "supply chain communities",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "biodiversity sustainable",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "circularity packaging",
+    "term": "chain communities responsible",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -696,13 +696,6 @@
     "cooc": 0
    },
    {
-    "term": "carbon water waste",
-    "lift": 0.0,
-    "count": 67,
-    "in_topic": 15,
-    "cooc": 0
-   },
-   {
     "term": "carbon water",
     "lift": 0.0,
     "count": 67,
@@ -710,49 +703,14 @@
     "cooc": 0
    },
    {
-    "term": "ecosystemsoverview customer",
+    "term": "carbon water waste",
     "lift": 0.0,
-    "count": 66,
+    "count": 67,
     "in_topic": 15,
     "cooc": 0
    },
    {
-    "term": "water waste ecosystemsoverview",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 0
-   },
-   {
-    "term": "waste ecosystemsoverview",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 0
-   },
-   {
-    "term": "microsoft sustainability carbon",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 0
-   },
-   {
-    "term": "waste ecosystemsoverview customer",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystemsoverview customer sustainability",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystemsoverview",
+    "term": "sustainability carbon",
     "lift": 0.0,
     "count": 66,
     "in_topic": 15,
@@ -766,7 +724,49 @@
     "cooc": 0
    },
    {
-    "term": "sustainability carbon",
+    "term": "waste ecosystemsoverview",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 0
+   },
+   {
+    "term": "water waste ecosystemsoverview",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 0
+   },
+   {
+    "term": "ecosystemsoverview",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 0
+   },
+   {
+    "term": "ecosystemsoverview customer sustainability",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 0
+   },
+   {
+    "term": "ecosystemsoverview customer",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 0
+   },
+   {
+    "term": "waste ecosystemsoverview customer",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 0
+   },
+   {
+    "term": "microsoft sustainability carbon",
     "lift": 0.0,
     "count": 66,
     "in_topic": 15,
@@ -829,14 +829,14 @@
     "cooc": 0
    },
    {
-    "term": "overview progress",
+    "term": "progress appendix",
     "lift": 0.0,
     "count": 30,
     "in_topic": 14,
     "cooc": 0
    },
    {
-    "term": "progress appendix",
+    "term": "overview progress",
     "lift": 0.0,
     "count": 30,
     "in_topic": 14,
@@ -1179,16 +1179,16 @@
     "cooc": 0
    },
    {
-    "term": "working",
+    "term": "how",
     "lift": 0.0,
-    "count": 107,
+    "count": 147,
     "in_topic": 9,
     "cooc": 0
    },
    {
-    "term": "how",
+    "term": "working",
     "lift": 0.0,
-    "count": 147,
+    "count": 107,
     "in_topic": 9,
     "cooc": 0
    },
@@ -1256,13 +1256,6 @@
     "cooc": 0
    },
    {
-    "term": "tons",
-    "lift": 0.0,
-    "count": 61,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
     "term": "metric tons",
     "lift": 0.0,
     "count": 55,
@@ -1270,9 +1263,9 @@
     "cooc": 0
    },
    {
-    "term": "construction",
+    "term": "tons",
     "lift": 0.0,
-    "count": 77,
+    "count": 61,
     "in_topic": 9,
     "cooc": 0
    },
@@ -1280,6 +1273,13 @@
     "term": "customers",
     "lift": 0.0,
     "count": 119,
+    "in_topic": 9,
+    "cooc": 0
+   },
+   {
+    "term": "construction",
+    "lift": 0.0,
+    "count": 77,
     "in_topic": 9,
     "cooc": 0
    },
@@ -1361,16 +1361,16 @@
     "cooc": 0
    },
    {
-    "term": "policy",
+    "term": "change",
     "lift": 0.0,
-    "count": 75,
+    "count": 66,
     "in_topic": 8,
     "cooc": 0
    },
    {
-    "term": "change",
+    "term": "policy",
     "lift": 0.0,
-    "count": 66,
+    "count": 75,
     "in_topic": 8,
     "cooc": 0
    },
@@ -1382,16 +1382,16 @@
     "cooc": 0
    },
    {
-    "term": "online",
+    "term": "advancing",
     "lift": 0.0,
-    "count": 30,
+    "count": 98,
     "in_topic": 8,
     "cooc": 0
    },
    {
-    "term": "advancing",
+    "term": "online",
     "lift": 0.0,
-    "count": 98,
+    "count": 30,
     "in_topic": 8,
     "cooc": 0
    },
@@ -1424,9 +1424,9 @@
     "cooc": 0
    },
    {
-    "term": "wind",
+    "term": "markets",
     "lift": 0.0,
-    "count": 31,
+    "count": 47,
     "in_topic": 8,
     "cooc": 0
    },
@@ -1438,16 +1438,16 @@
     "cooc": 0
    },
    {
-    "term": "markets",
+    "term": "many",
     "lift": 0.0,
-    "count": 47,
+    "count": 65,
     "in_topic": 8,
     "cooc": 0
    },
    {
-    "term": "many",
+    "term": "wind",
     "lift": 0.0,
-    "count": 65,
+    "count": 31,
     "in_topic": 8,
     "cooc": 0
    },
@@ -1599,16 +1599,16 @@
     "cooc": 0
    },
    {
-    "term": "development",
+    "term": "nearly",
     "lift": 0.0,
-    "count": 98,
+    "count": 29,
     "in_topic": 7,
     "cooc": 0
    },
    {
-    "term": "nearly",
+    "term": "development",
     "lift": 0.0,
-    "count": 29,
+    "count": 98,
     "in_topic": 7,
     "cooc": 0
    },
@@ -1634,16 +1634,16 @@
     "cooc": 0
    },
    {
-    "term": "like",
+    "term": "potential",
     "lift": 0.0,
-    "count": 127,
+    "count": 70,
     "in_topic": 7,
     "cooc": 0
    },
    {
-    "term": "potential",
+    "term": "like",
     "lift": 0.0,
-    "count": 70,
+    "count": 127,
     "in_topic": 7,
     "cooc": 0
    },
@@ -1711,16 +1711,16 @@
     "cooc": 0
    },
    {
-    "term": "learning",
+    "term": "models",
     "lift": 0.0,
-    "count": 39,
+    "count": 64,
     "in_topic": 7,
     "cooc": 0
    },
    {
-    "term": "models",
+    "term": "learning",
     "lift": 0.0,
-    "count": 64,
+    "count": 39,
     "in_topic": 7,
     "cooc": 0
    },
@@ -1865,16 +1865,16 @@
     "cooc": 0
    },
    {
-    "term": "google-owned and operated",
+    "term": "google-owned",
     "lift": 0.0,
-    "count": 15,
+    "count": 17,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "operated",
+    "term": "google-owned and operated",
     "lift": 0.0,
-    "count": 27,
+    "count": 15,
     "in_topic": 6,
     "cooc": 0
    },
@@ -1886,9 +1886,9 @@
     "cooc": 0
    },
    {
-    "term": "google-owned",
+    "term": "operated",
     "lift": 0.0,
-    "count": 17,
+    "count": 27,
     "in_topic": 6,
     "cooc": 0
    },
@@ -1921,16 +1921,16 @@
     "cooc": 0
    },
    {
-    "term": "electric",
+    "term": "develop",
     "lift": 0.0,
-    "count": 46,
+    "count": 56,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "develop",
+    "term": "electric",
     "lift": 0.0,
-    "count": 56,
+    "count": 46,
     "in_topic": 6,
     "cooc": 0
    },
@@ -1942,9 +1942,9 @@
     "cooc": 0
    },
    {
-    "term": "directly",
+    "term": "matched",
     "lift": 0.0,
-    "count": 42,
+    "count": 11,
     "in_topic": 6,
     "cooc": 0
    },
@@ -1956,9 +1956,9 @@
     "cooc": 0
    },
    {
-    "term": "matched",
+    "term": "directly",
     "lift": 0.0,
-    "count": 11,
+    "count": 42,
     "in_topic": 6,
     "cooc": 0
    },
@@ -1970,16 +1970,16 @@
     "cooc": 0
    },
    {
-    "term": "create",
+    "term": "deployment",
     "lift": 0.0,
-    "count": 56,
+    "count": 33,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "deployment",
+    "term": "create",
     "lift": 0.0,
-    "count": 33,
+    "count": 56,
     "in_topic": 6,
     "cooc": 0
    },
@@ -2005,13 +2005,6 @@
     "cooc": 0
    },
    {
-    "term": "taiwan",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
     "term": "gw of new",
     "lift": 0.0,
     "count": 6,
@@ -2026,6 +2019,13 @@
     "cooc": 0
    },
    {
+    "term": "taiwan",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 6,
+    "cooc": 0
+   },
+   {
     "term": "worldwide",
     "lift": 0.0,
     "count": 33,
@@ -2033,16 +2033,16 @@
     "cooc": 0
    },
    {
-    "term": "scaling",
+    "term": "meet",
     "lift": 0.0,
-    "count": 50,
+    "count": 59,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "meet",
+    "term": "scaling",
     "lift": 0.0,
-    "count": 59,
+    "count": 50,
     "in_topic": 6,
     "cooc": 0
    },
@@ -2222,14 +2222,14 @@
     "cooc": 0
    },
    {
-    "term": "refer to endnote",
+    "term": "endnote",
     "lift": 0.0,
     "count": 14,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "endnote",
+    "term": "refer to endnote",
     "lift": 0.0,
     "count": 14,
     "in_topic": 6,
@@ -2292,9 +2292,9 @@
     "cooc": 0
    },
    {
-    "term": "then",
+    "term": "prior year",
     "lift": 0.0,
-    "count": 27,
+    "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2306,9 +2306,9 @@
     "cooc": 0
    },
    {
-    "term": "prior year",
+    "term": "then",
     "lift": 0.0,
-    "count": 5,
+    "count": 27,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2362,16 +2362,16 @@
     "cooc": 0
    },
    {
-    "term": "goal",
+    "term": "people",
     "lift": 0.0,
-    "count": 44,
+    "count": 80,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "people",
+    "term": "goal",
     "lift": 0.0,
-    "count": 80,
+    "count": 44,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2390,21 +2390,28 @@
     "cooc": 0
    },
    {
-    "term": "energy use",
+    "term": "earth pro",
     "lift": 0.0,
-    "count": 17,
+    "count": 7,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "routing",
+    "term": "google earth",
+    "lift": 0.0,
+    "count": 10,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "fuel-efficient",
     "lift": 0.0,
     "count": 12,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "earth pro",
+    "term": "google earth pro",
     "lift": 0.0,
     "count": 7,
     "in_topic": 5,
@@ -2418,23 +2425,16 @@
     "cooc": 0
    },
    {
-    "term": "google earth pro",
-    "lift": 0.0,
-    "count": 7,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "fuel-efficient",
+    "term": "routing",
     "lift": 0.0,
     "count": 12,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "google earth",
+    "term": "energy use",
     "lift": 0.0,
-    "count": 10,
+    "count": 17,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2453,13 +2453,6 @@
     "cooc": 0
    },
    {
-    "term": "billion",
-    "lift": 0.0,
-    "count": 47,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "kwh",
     "lift": 0.0,
     "count": 11,
@@ -2467,9 +2460,9 @@
     "cooc": 0
    },
    {
-    "term": "accounting",
+    "term": "billion",
     "lift": 0.0,
-    "count": 26,
+    "count": 47,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2477,6 +2470,13 @@
     "term": "panels",
     "lift": 0.0,
     "count": 12,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "accounting",
+    "lift": 0.0,
+    "count": 26,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2572,16 +2572,16 @@
     "cooc": 0
    },
    {
-    "term": "given",
+    "term": "fact",
     "lift": 0.0,
-    "count": 15,
+    "count": 23,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "fact",
+    "term": "given",
     "lift": 0.0,
-    "count": 23,
+    "count": 15,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2733,16 +2733,16 @@
     "cooc": 0
    },
    {
-    "term": "carbon footprint",
+    "term": "ambition-based",
     "lift": 0.0,
-    "count": 40,
+    "count": 18,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "ambition-based",
+    "term": "carbon footprint",
     "lift": 0.0,
-    "count": 18,
+    "count": 40,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2810,9 +2810,9 @@
     "cooc": 0
    },
    {
-    "term": "laptop th edition",
+    "term": "edition",
     "lift": 0.0,
-    "count": 8,
+    "count": 10,
     "in_topic": 5,
     "cooc": 0
    },
@@ -2824,9 +2824,9 @@
     "cooc": 0
    },
    {
-    "term": "edition",
+    "term": "laptop th edition",
     "lift": 0.0,
-    "count": 10,
+    "count": 8,
     "in_topic": 5,
     "cooc": 0
    },
@@ -3237,16 +3237,16 @@
     "cooc": 1
    },
    {
-    "term": "center energy emissions",
+    "term": "center energy",
     "lift": 3.5,
-    "count": 8,
+    "count": 10,
     "in_topic": 7,
     "cooc": 1
    },
    {
-    "term": "center energy",
+    "term": "center energy emissions",
     "lift": 3.5,
-    "count": 10,
+    "count": 8,
     "in_topic": 7,
     "cooc": 1
    },
@@ -3475,16 +3475,16 @@
     "cooc": 1
    },
    {
-    "term": "refrigerant",
+    "term": "natural gas",
     "lift": 4.9,
-    "count": 14,
+    "count": 16,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "natural gas",
+    "term": "refrigerant",
     "lift": 4.9,
-    "count": 16,
+    "count": 14,
     "in_topic": 5,
     "cooc": 1
    },
@@ -3615,14 +3615,14 @@
     "cooc": 2
    },
    {
-    "term": "transmission and distribution",
+    "term": "distribution losses",
     "lift": 7.0,
     "count": 9,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "distribution losses",
+    "term": "transmission and distribution",
     "lift": 7.0,
     "count": 9,
     "in_topic": 7,
@@ -3748,6 +3748,13 @@
     "cooc": 2
    },
    {
+    "term": "egrid emission factors",
+    "lift": 9.8,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
     "term": "epa egrid emission",
     "lift": 9.8,
     "count": 5,
@@ -3756,13 +3763,6 @@
    },
    {
     "term": "egrid",
-    "lift": 9.8,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 2
-   },
-   {
-    "term": "egrid emission factors",
     "lift": 9.8,
     "count": 5,
     "in_topic": 5,
@@ -3862,16 +3862,16 @@
     "cooc": 0
    },
    {
-    "term": "tons",
+    "term": "metric tons",
     "lift": 0.0,
-    "count": 61,
+    "count": 55,
     "in_topic": 22,
     "cooc": 0
    },
    {
-    "term": "metric tons",
+    "term": "tons",
     "lift": 0.0,
-    "count": 55,
+    "count": 61,
     "in_topic": 22,
     "cooc": 0
    },
@@ -3918,16 +3918,16 @@
     "cooc": 0
    },
    {
-    "term": "goal",
+    "term": "states",
     "lift": 0.0,
-    "count": 44,
+    "count": 56,
     "in_topic": 14,
     "cooc": 0
    },
    {
-    "term": "states",
+    "term": "goal",
     "lift": 0.0,
-    "count": 56,
+    "count": 44,
     "in_topic": 14,
     "cooc": 0
    },
@@ -4037,16 +4037,16 @@
     "cooc": 0
    },
    {
-    "term": "operated data",
+    "term": "google-owned",
     "lift": 0.0,
-    "count": 18,
+    "count": 17,
     "in_topic": 11,
     "cooc": 0
    },
    {
-    "term": "google-owned",
+    "term": "operated data",
     "lift": 0.0,
-    "count": 17,
+    "count": 18,
     "in_topic": 11,
     "cooc": 0
    },
@@ -4464,13 +4464,6 @@
     "cooc": 0
    },
    {
-    "term": "chain partners",
-    "lift": 0.0,
-    "count": 10,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
     "term": "value chain partners",
     "lift": 0.0,
     "count": 10,
@@ -4478,9 +4471,9 @@
     "cooc": 0
    },
    {
-    "term": "obtained from value",
+    "term": "chain partners",
     "lift": 0.0,
-    "count": 8,
+    "count": 10,
     "in_topic": 8,
     "cooc": 0
    },
@@ -4488,6 +4481,13 @@
     "term": "obtained",
     "lift": 0.0,
     "count": 15,
+    "in_topic": 8,
+    "cooc": 0
+   },
+   {
+    "term": "obtained from value",
+    "lift": 0.0,
+    "count": 8,
     "in_topic": 8,
     "cooc": 0
    },
@@ -4856,16 +4856,16 @@
     "cooc": 0
    },
    {
-    "term": "homes",
+    "term": "light",
     "lift": 0.0,
-    "count": 10,
+    "count": 18,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "light",
+    "term": "homes",
     "lift": 0.0,
-    "count": 18,
+    "count": 10,
     "in_topic": 6,
     "cooc": 0
    },
@@ -4891,16 +4891,16 @@
     "cooc": 0
    },
    {
-    "term": "california",
+    "term": "stewardship",
     "lift": 0.0,
-    "count": 27,
+    "count": 24,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "stewardship",
+    "term": "california",
     "lift": 0.0,
-    "count": 24,
+    "count": 27,
     "in_topic": 6,
     "cooc": 0
    },
@@ -4975,16 +4975,16 @@
     "cooc": 0
    },
    {
-    "term": "waste diversion",
+    "term": "waste to landfill",
     "lift": 0.0,
-    "count": 11,
+    "count": 10,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "waste to landfill",
+    "term": "waste diversion",
     "lift": 0.0,
-    "count": 10,
+    "count": 11,
     "in_topic": 6,
     "cooc": 0
    },
@@ -5087,6 +5087,13 @@
     "cooc": 0
    },
    {
+    "term": "foods market",
+    "lift": 0.0,
+    "count": 37,
+    "in_topic": 6,
+    "cooc": 0
+   },
+   {
     "term": "whole foods market",
     "lift": 0.0,
     "count": 36,
@@ -5097,13 +5104,6 @@
     "term": "whole foods",
     "lift": 0.0,
     "count": 36,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "foods market",
-    "lift": 0.0,
-    "count": 37,
     "in_topic": 6,
     "cooc": 0
    },
@@ -5269,14 +5269,14 @@
     "cooc": 0
    },
    {
-    "term": "refer to endnote",
+    "term": "endnote",
     "lift": 0.0,
     "count": 14,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "endnote",
+    "term": "refer to endnote",
     "lift": 0.0,
     "count": 14,
     "in_topic": 5,
@@ -5353,13 +5353,6 @@
     "cooc": 0
    },
    {
-    "term": "freshwater",
-    "lift": 0.0,
-    "count": 23,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "cubic",
     "lift": 0.0,
     "count": 13,
@@ -5370,6 +5363,13 @@
     "term": "cubic meters",
     "lift": 0.0,
     "count": 13,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "freshwater",
+    "lift": 0.0,
+    "count": 23,
     "in_topic": 5,
     "cooc": 0
    },
@@ -5486,14 +5486,14 @@
     "cooc": 0
    },
    {
-    "term": "center campuses",
+    "term": "data center campuses",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "data center campuses",
+    "term": "center campuses",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -5535,14 +5535,14 @@
     "cooc": 0
    },
    {
-    "term": "approximately million tco2e",
+    "term": "emissions were approximately",
     "lift": 0.0,
     "count": 6,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "emissions were approximately",
+    "term": "approximately million tco2e",
     "lift": 0.0,
     "count": 6,
     "in_topic": 5,
@@ -5633,16 +5633,16 @@
     "cooc": 0
    },
    {
-    "term": "circular centers",
+    "term": "surpassing",
     "lift": 0.0,
-    "count": 11,
+    "count": 6,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "surpassing",
+    "term": "circular centers",
     "lift": 0.0,
-    "count": 6,
+    "count": 11,
     "in_topic": 5,
     "cooc": 0
    },
@@ -6263,7 +6263,7 @@
     "cooc": 1
    },
    {
-    "term": "routing",
+    "term": "fuel-efficient",
     "lift": 1.0104,
     "count": 12,
     "in_topic": 8,
@@ -6277,7 +6277,7 @@
     "cooc": 1
    },
    {
-    "term": "fuel-efficient",
+    "term": "routing",
     "lift": 1.0104,
     "count": 12,
     "in_topic": 8,
@@ -6536,16 +6536,16 @@
     "cooc": 1
    },
    {
-    "term": "america",
+    "term": "north america",
     "lift": 1.1548,
-    "count": 37,
+    "count": 31,
     "in_topic": 7,
     "cooc": 1
    },
    {
-    "term": "north america",
+    "term": "america",
     "lift": 1.1548,
-    "count": 31,
+    "count": 37,
     "in_topic": 7,
     "cooc": 1
    },
@@ -6858,14 +6858,14 @@
     "cooc": 1
    },
    {
-    "term": "laptop th edition",
+    "term": "laptop th",
     "lift": 1.3472,
     "count": 8,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "laptop th",
+    "term": "laptop th edition",
     "lift": 1.3472,
     "count": 8,
     "in_topic": 6,
@@ -6984,9 +6984,16 @@
     "cooc": 3
    },
    {
-    "term": "customer sustainability",
+    "term": "sustainability appendix environmental",
     "lift": 1.4265,
-    "count": 73,
+    "count": 71,
+    "in_topic": 17,
+    "cooc": 3
+   },
+   {
+    "term": "global sustainability",
+    "lift": 1.4265,
+    "count": 79,
     "in_topic": 17,
     "cooc": 3
    },
@@ -7005,14 +7012,14 @@
     "cooc": 3
    },
    {
-    "term": "sustainability global",
+    "term": "sustainability appendix",
     "lift": 1.4265,
     "count": 71,
     "in_topic": 17,
     "cooc": 3
    },
    {
-    "term": "sustainability appendix",
+    "term": "sustainability global",
     "lift": 1.4265,
     "count": 71,
     "in_topic": 17,
@@ -7026,21 +7033,14 @@
     "cooc": 3
    },
    {
+    "term": "customer sustainability",
+    "lift": 1.4265,
+    "count": 73,
+    "in_topic": 17,
+    "cooc": 3
+   },
+   {
     "term": "sustainability global sustainability",
-    "lift": 1.4265,
-    "count": 71,
-    "in_topic": 17,
-    "cooc": 3
-   },
-   {
-    "term": "global sustainability",
-    "lift": 1.4265,
-    "count": 79,
-    "in_topic": 17,
-    "cooc": 3
-   },
-   {
-    "term": "sustainability appendix environmental",
     "lift": 1.4265,
     "count": 71,
     "in_topic": 17,
@@ -7152,14 +7152,14 @@
     "cooc": 3
    },
    {
-    "term": "carbon water waste",
+    "term": "carbon water",
     "lift": 1.5156,
     "count": 67,
     "in_topic": 16,
     "cooc": 3
    },
    {
-    "term": "carbon water",
+    "term": "carbon water waste",
     "lift": 1.5156,
     "count": 67,
     "in_topic": 16,
@@ -7208,49 +7208,7 @@
     "cooc": 3
    },
    {
-    "term": "ecosystemsoverview customer",
-    "lift": 1.6167,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 3
-   },
-   {
-    "term": "water waste ecosystemsoverview",
-    "lift": 1.6167,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 3
-   },
-   {
-    "term": "waste ecosystemsoverview",
-    "lift": 1.6167,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 3
-   },
-   {
-    "term": "microsoft sustainability carbon",
-    "lift": 1.6167,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 3
-   },
-   {
-    "term": "waste ecosystemsoverview customer",
-    "lift": 1.6167,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 3
-   },
-   {
-    "term": "ecosystemsoverview customer sustainability",
-    "lift": 1.6167,
-    "count": 66,
-    "in_topic": 15,
-    "cooc": 3
-   },
-   {
-    "term": "ecosystemsoverview",
+    "term": "sustainability carbon",
     "lift": 1.6167,
     "count": 66,
     "in_topic": 15,
@@ -7264,7 +7222,49 @@
     "cooc": 3
    },
    {
-    "term": "sustainability carbon",
+    "term": "waste ecosystemsoverview",
+    "lift": 1.6167,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 3
+   },
+   {
+    "term": "water waste ecosystemsoverview",
+    "lift": 1.6167,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 3
+   },
+   {
+    "term": "ecosystemsoverview",
+    "lift": 1.6167,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 3
+   },
+   {
+    "term": "ecosystemsoverview customer sustainability",
+    "lift": 1.6167,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 3
+   },
+   {
+    "term": "ecosystemsoverview customer",
+    "lift": 1.6167,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 3
+   },
+   {
+    "term": "waste ecosystemsoverview customer",
+    "lift": 1.6167,
+    "count": 66,
+    "in_topic": 15,
+    "cooc": 3
+   },
+   {
+    "term": "microsoft sustainability carbon",
     "lift": 1.6167,
     "count": 66,
     "in_topic": 15,
@@ -7299,16 +7299,16 @@
     "cooc": 2
    },
    {
-    "term": "every",
+    "term": "basis",
     "lift": 1.6167,
-    "count": 53,
+    "count": 17,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "basis",
+    "term": "every",
     "lift": 1.6167,
-    "count": 17,
+    "count": 53,
     "in_topic": 5,
     "cooc": 1
    },
@@ -7537,13 +7537,6 @@
     "cooc": 1
    },
    {
-    "term": "recycled rare earth",
-    "lift": 1.6167,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
     "term": "recycled rare",
     "lift": 1.6167,
     "count": 5,
@@ -7551,9 +7544,9 @@
     "cooc": 1
    },
    {
-    "term": "rare earth",
+    "term": "recycled rare earth",
     "lift": 1.6167,
-    "count": 8,
+    "count": 5,
     "in_topic": 5,
     "cooc": 1
    },
@@ -7561,6 +7554,13 @@
     "term": "rare",
     "lift": 1.6167,
     "count": 9,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "rare earth",
+    "lift": 1.6167,
+    "count": 8,
     "in_topic": 5,
     "cooc": 1
    },
@@ -7635,16 +7635,16 @@
     "cooc": 4
    },
    {
-    "term": "carbon-free energy",
+    "term": "further",
     "lift": 1.7963,
-    "count": 52,
+    "count": 54,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "further",
+    "term": "carbon-free energy",
     "lift": 1.7963,
-    "count": 54,
+    "count": 52,
     "in_topic": 9,
     "cooc": 2
    },
@@ -7894,16 +7894,16 @@
     "cooc": 3
    },
    {
-    "term": "center energy emissions",
+    "term": "center energy",
     "lift": 2.6944,
-    "count": 8,
+    "count": 10,
     "in_topic": 6,
     "cooc": 2
    },
    {
-    "term": "center energy",
+    "term": "center energy emissions",
     "lift": 2.6944,
-    "count": 10,
+    "count": 8,
     "in_topic": 6,
     "cooc": 2
    },
@@ -8197,195 +8197,6 @@
   ],
   "scope_stated": [
    {
-    "term": "customer",
-    "lift": 0.0,
-    "count": 95,
-    "in_topic": 71,
-    "cooc": 0
-   },
-   {
-    "term": "customer sustainability",
-    "lift": 0.0,
-    "count": 73,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "appendix environmental",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "customer sustainability global",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability global",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability appendix",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "appendix environmental sustainability",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability global sustainability",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "global sustainability",
-    "lift": 0.0,
-    "count": 79,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability appendix environmental",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "global sustainability appendix",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 69,
-    "cooc": 0
-   },
-   {
-    "term": "microsoft sustainability",
-    "lift": 0.0,
-    "count": 75,
-    "in_topic": 67,
-    "cooc": 0
-   },
-   {
-    "term": "carbon water waste",
-    "lift": 0.0,
-    "count": 67,
-    "in_topic": 67,
-    "cooc": 0
-   },
-   {
-    "term": "carbon water",
-    "lift": 0.0,
-    "count": 67,
-    "in_topic": 67,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability report",
-    "lift": 0.0,
-    "count": 73,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "environmental sustainability report",
-    "lift": 0.0,
-    "count": 69,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystemsoverview customer",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "water waste ecosystemsoverview",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "waste ecosystemsoverview",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "microsoft sustainability carbon",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "waste ecosystemsoverview customer",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystemsoverview customer sustainability",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystemsoverview",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability carbon water",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability carbon",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "grid",
-    "lift": 0.0,
-    "count": 116,
-    "in_topic": 22,
-    "cooc": 0
-   },
-   {
-    "term": "advancing",
-    "lift": 0.0,
-    "count": 98,
-    "in_topic": 21,
-    "cooc": 0
-   },
-   {
     "term": "million metric tons",
     "lift": 0.0,
     "count": 22,
@@ -8400,30 +8211,9 @@
     "cooc": 0
    },
    {
-    "term": "action",
-    "lift": 0.0,
-    "count": 74,
-    "in_topic": 18,
-    "cooc": 0
-   },
-   {
-    "term": "since",
-    "lift": 0.0,
-    "count": 86,
-    "in_topic": 17,
-    "cooc": 0
-   },
-   {
     "term": "united",
     "lift": 0.0,
     "count": 67,
-    "in_topic": 13,
-    "cooc": 0
-   },
-   {
-    "term": "datacenters",
-    "lift": 0.0,
-    "count": 75,
     "in_topic": 13,
     "cooc": 0
    },
@@ -8432,55 +8222,6 @@
     "lift": 0.0,
     "count": 56,
     "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "targets",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "change",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 11,
-    "cooc": 0
-   },
-   {
-    "term": "product",
-    "lift": 0.0,
-    "count": 70,
-    "in_topic": 11,
-    "cooc": 0
-   },
-   {
-    "term": "supporting",
-    "lift": 0.0,
-    "count": 86,
-    "in_topic": 11,
-    "cooc": 0
-   },
-   {
-    "term": "improving",
-    "lift": 0.0,
-    "count": 76,
-    "in_topic": 11,
-    "cooc": 0
-   },
-   {
-    "term": "innovation in action",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 11,
-    "cooc": 0
-   },
-   {
-    "term": "continued microsoft",
-    "lift": 0.0,
-    "count": 11,
-    "in_topic": 11,
     "cooc": 0
    },
    {
@@ -8498,27 +8239,6 @@
     "cooc": 0
    },
    {
-    "term": "continued microsoft sustainability",
-    "lift": 0.0,
-    "count": 10,
-    "in_topic": 10,
-    "cooc": 0
-   },
-   {
-    "term": "model",
-    "lift": 0.0,
-    "count": 60,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
-    "term": "january",
-    "lift": 0.0,
-    "count": 24,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
     "term": "europe",
     "lift": 0.0,
     "count": 72,
@@ -8533,93 +8253,9 @@
     "cooc": 0
    },
    {
-    "term": "pledge",
-    "lift": 0.0,
-    "count": 41,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
-    "term": "climate pledge",
-    "lift": 0.0,
-    "count": 32,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystems",
-    "lift": 0.0,
-    "count": 69,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
-    "term": "three",
-    "lift": 0.0,
-    "count": 33,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "around",
-    "lift": 0.0,
-    "count": 54,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "amount",
-    "lift": 0.0,
-    "count": 26,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "cities",
-    "lift": 0.0,
-    "count": 30,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "greater",
-    "lift": 0.0,
-    "count": 33,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "circular",
-    "lift": 0.0,
-    "count": 47,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "partnering",
-    "lift": 0.0,
-    "count": 29,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
     "term": "accelerating",
     "lift": 0.0,
     "count": 50,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "partnering for impact",
-    "lift": 0.0,
-    "count": 13,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "measurement",
-    "lift": 0.0,
-    "count": 40,
     "in_topic": 8,
     "cooc": 0
    },
@@ -8628,27 +8264,6 @@
     "lift": 0.0,
     "count": 62,
     "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "action microsoft sustainability",
-    "lift": 0.0,
-    "count": 8,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "action microsoft",
-    "lift": 0.0,
-    "count": 8,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "demand",
-    "lift": 0.0,
-    "count": 78,
-    "in_topic": 7,
     "cooc": 0
    },
    {
@@ -8662,20 +8277,6 @@
     "term": "just",
     "lift": 0.0,
     "count": 67,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "like",
-    "lift": 0.0,
-    "count": 127,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "play",
-    "lift": 0.0,
-    "count": 25,
     "in_topic": 7,
     "cooc": 0
    },
@@ -8701,27 +8302,6 @@
     "cooc": 0
    },
    {
-    "term": "near-term",
-    "lift": 0.0,
-    "count": 8,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "mass",
-    "lift": 0.0,
-    "count": 15,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "long-term",
-    "lift": 0.0,
-    "count": 43,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
     "term": "investing",
     "lift": 0.0,
     "count": 35,
@@ -8736,58 +8316,9 @@
     "cooc": 0
    },
    {
-    "term": "lca",
-    "lift": 0.0,
-    "count": 21,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "impact microsoft",
-    "lift": 0.0,
-    "count": 8,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "report advancing",
-    "lift": 0.0,
-    "count": 7,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability report advancing",
-    "lift": 0.0,
-    "count": 7,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "impact microsoft sustainability",
-    "lift": 0.0,
-    "count": 7,
-    "in_topic": 7,
-    "cooc": 0
-   },
-   {
-    "term": "demands",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
     "term": "enable",
     "lift": 0.0,
     "count": 53,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "even",
-    "lift": 0.0,
-    "count": 39,
     "in_topic": 6,
     "cooc": 0
    },
@@ -8813,20 +8344,6 @@
     "cooc": 0
    },
    {
-    "term": "local",
-    "lift": 0.0,
-    "count": 112,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "digital",
-    "lift": 0.0,
-    "count": 25,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
     "term": "partnerships",
     "lift": 0.0,
     "count": 54,
@@ -8848,58 +8365,9 @@
     "cooc": 0
    },
    {
-    "term": "refer to endnote",
-    "lift": 0.0,
-    "count": 14,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "endnote",
-    "lift": 0.0,
-    "count": 14,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "annually",
-    "lift": 0.0,
-    "count": 28,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
     "term": "ghg emissions reductions",
     "lift": 0.0,
     "count": 6,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "what",
-    "lift": 0.0,
-    "count": 49,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "previous",
-    "lift": 0.0,
-    "count": 20,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "zero waste",
-    "lift": 0.0,
-    "count": 43,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "version",
-    "lift": 0.0,
-    "count": 8,
     "in_topic": 6,
     "cooc": 0
    },
@@ -8918,20 +8386,6 @@
     "cooc": 0
    },
    {
-    "term": "ai innovation",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "needs",
-    "lift": 0.0,
-    "count": 52,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
     "term": "air",
     "lift": 0.0,
     "count": 40,
@@ -8939,37 +8393,9 @@
     "cooc": 0
    },
    {
-    "term": "operate",
-    "lift": 0.0,
-    "count": 46,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
     "term": "shared",
     "lift": 0.0,
     "count": 38,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "organizations",
-    "lift": 0.0,
-    "count": 84,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "charting",
-    "lift": 0.0,
-    "count": 6,
-    "in_topic": 6,
-    "cooc": 0
-   },
-   {
-    "term": "sphera",
-    "lift": 0.0,
-    "count": 6,
     "in_topic": 6,
     "cooc": 0
    },
@@ -9009,20 +8435,6 @@
     "cooc": 0
    },
    {
-    "term": "reduced our data",
-    "lift": 0.0,
-    "count": 6,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "innovations",
-    "lift": 0.0,
-    "count": 29,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "markets",
     "lift": 0.0,
     "count": 47,
@@ -9058,58 +8470,9 @@
     "cooc": 0
    },
    {
-    "term": "expanding",
-    "lift": 0.0,
-    "count": 37,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "providing",
-    "lift": 0.0,
-    "count": 45,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "new carbon-free",
     "lift": 0.0,
     "count": 8,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "applying",
-    "lift": 0.0,
-    "count": 18,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "projected",
-    "lift": 0.0,
-    "count": 11,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "together",
-    "lift": 0.0,
-    "count": 43,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "device",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "replenishment",
-    "lift": 0.0,
-    "count": 64,
     "in_topic": 5,
     "cooc": 0
    },
@@ -9121,44 +8484,9 @@
     "cooc": 0
    },
    {
-    "term": "buildings",
-    "lift": 0.0,
-    "count": 37,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "above",
-    "lift": 0.0,
-    "count": 16,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "endnote above",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "validated",
-    "lift": 0.0,
-    "count": 7,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "shipments",
     "lift": 0.0,
     "count": 14,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "frontiers",
-    "lift": 0.0,
-    "count": 6,
     "in_topic": 5,
     "cooc": 0
    },
@@ -9184,27 +8512,6 @@
     "cooc": 0
    },
    {
-    "term": "taking",
-    "lift": 0.0,
-    "count": 15,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "avoiding",
-    "lift": 0.0,
-    "count": 14,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "new york",
-    "lift": 0.0,
-    "count": 11,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "york",
     "lift": 0.0,
     "count": 11,
@@ -9212,9 +8519,9 @@
     "cooc": 0
    },
    {
-    "term": "leading",
+    "term": "new york",
     "lift": 0.0,
-    "count": 25,
+    "count": 11,
     "in_topic": 5,
     "cooc": 0
    },
@@ -9236,34 +8543,6 @@
     "term": "find out",
     "lift": 0.0,
     "count": 7,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "currently",
-    "lift": 0.0,
-    "count": 16,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "co",
-    "lift": 0.0,
-    "count": 22,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "study",
-    "lift": 0.0,
-    "count": 11,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "typical",
-    "lift": 0.0,
-    "count": 11,
     "in_topic": 5,
     "cooc": 0
    },
@@ -9296,13 +8575,6 @@
     "cooc": 0
    },
    {
-    "term": "ec3",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "collected",
     "lift": 0.0,
     "count": 9,
@@ -9310,14 +8582,7 @@
     "cooc": 0
    },
    {
-    "term": "professional",
-    "lift": 0.0,
-    "count": 10,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "emissions are insignificant",
+    "term": "ec3",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -9331,7 +8596,14 @@
     "cooc": 0
    },
    {
-    "term": "data fact",
+    "term": "emissions are insignificant",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "sheet",
     "lift": 0.0,
     "count": 12,
     "in_topic": 5,
@@ -9345,14 +8617,14 @@
     "cooc": 0
    },
    {
-    "term": "data fact sheet",
+    "term": "data fact",
     "lift": 0.0,
     "count": 12,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "sheet",
+    "term": "data fact sheet",
     "lift": 0.0,
     "count": 12,
     "in_topic": 5,
@@ -9373,3935 +8645,4663 @@
     "cooc": 0
    },
    {
-    "term": "sustainability report microsoft",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "report microsoft",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "charting new frontiers",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "new frontiers",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "frontiers in ai",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "charting new",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "innovation continued",
-    "lift": 0.0,
-    "count": 6,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "water waste",
-    "lift": 0.0568,
-    "count": 99,
-    "in_topic": 71,
-    "cooc": 1
-   },
-   {
-    "term": "environmental sustainability",
-    "lift": 0.0576,
-    "count": 93,
-    "in_topic": 70,
-    "cooc": 1
-   },
-   {
-    "term": "sustainability",
-    "lift": 0.1008,
-    "count": 313,
-    "in_topic": 80,
-    "cooc": 2
-   },
-   {
-    "term": "appendix",
-    "lift": 0.1105,
-    "count": 111,
-    "in_topic": 73,
-    "cooc": 2
-   },
-   {
-    "term": "innovation",
-    "lift": 0.1493,
-    "count": 114,
-    "in_topic": 27,
-    "cooc": 1
-   },
-   {
-    "term": "projects",
-    "lift": 0.1493,
-    "count": 177,
-    "in_topic": 27,
-    "cooc": 1
-   },
-   {
-    "term": "water",
-    "lift": 0.1531,
-    "count": 450,
-    "in_topic": 79,
-    "cooc": 3
-   },
-   {
-    "term": "carbon-free energy",
-    "lift": 0.1613,
-    "count": 52,
-    "in_topic": 25,
-    "cooc": 1
-   },
-   {
     "term": "removal",
-    "lift": 0.168,
+    "lift": 0.1177,
     "count": 50,
     "in_topic": 24,
     "cooc": 1
    },
    {
     "term": "carbon removal",
-    "lift": 0.1753,
+    "lift": 0.1228,
     "count": 39,
     "in_topic": 23,
     "cooc": 1
    },
    {
-    "term": "new",
-    "lift": 0.1792,
-    "count": 270,
-    "in_topic": 45,
-    "cooc": 2
-   },
-   {
-    "term": "waste",
-    "lift": 0.2016,
-    "count": 308,
-    "in_topic": 80,
-    "cooc": 4
-   },
-   {
-    "term": "global",
-    "lift": 0.2057,
-    "count": 317,
-    "in_topic": 98,
-    "cooc": 5
-   },
-   {
-    "term": "estimated",
-    "lift": 0.2122,
-    "count": 39,
-    "in_topic": 19,
-    "cooc": 1
-   },
-   {
-    "term": "metric tons",
-    "lift": 0.218,
-    "count": 55,
-    "in_topic": 37,
-    "cooc": 2
-   },
-   {
-    "term": "environmental",
-    "lift": 0.2372,
-    "count": 288,
-    "in_topic": 85,
-    "cooc": 5
-   },
-   {
-    "term": "amazon",
-    "lift": 0.2372,
-    "count": 305,
-    "in_topic": 17,
-    "cooc": 1
-   },
-   {
-    "term": "report",
-    "lift": 0.2688,
-    "count": 152,
-    "in_topic": 75,
-    "cooc": 5
-   },
-   {
-    "term": "technologies",
-    "lift": 0.2688,
-    "count": 115,
-    "in_topic": 15,
-    "cooc": 1
-   },
-   {
-    "term": "scale",
-    "lift": 0.2688,
-    "count": 107,
-    "in_topic": 15,
-    "cooc": 1
-   },
-   {
-    "term": "embodied",
-    "lift": 0.2688,
-    "count": 27,
-    "in_topic": 15,
-    "cooc": 1
-   },
-   {
-    "term": "continued",
-    "lift": 0.2781,
-    "count": 75,
-    "in_topic": 29,
-    "cooc": 2
-   },
-   {
-    "term": "technology",
-    "lift": 0.288,
-    "count": 124,
-    "in_topic": 14,
-    "cooc": 1
-   },
-   {
-    "term": "embodied carbon",
-    "lift": 0.288,
-    "count": 24,
-    "in_topic": 14,
-    "cooc": 1
-   },
-   {
-    "term": "tons of carbon",
-    "lift": 0.288,
-    "count": 14,
-    "in_topic": 14,
-    "cooc": 1
-   },
-   {
-    "term": "tons",
-    "lift": 0.295,
-    "count": 61,
-    "in_topic": 41,
-    "cooc": 3
-   },
-   {
-    "term": "ve",
-    "lift": 0.3102,
-    "count": 102,
-    "in_topic": 13,
-    "cooc": 1
-   },
-   {
-    "term": "only",
-    "lift": 0.3102,
-    "count": 67,
-    "in_topic": 13,
-    "cooc": 1
-   },
-   {
-    "term": "commitment",
-    "lift": 0.3102,
-    "count": 48,
-    "in_topic": 13,
-    "cooc": 1
-   },
-   {
-    "term": "microsoft",
-    "lift": 0.3132,
-    "count": 366,
-    "in_topic": 103,
-    "cooc": 8
-   },
-   {
-    "term": "metric",
-    "lift": 0.3183,
-    "count": 68,
-    "in_topic": 38,
-    "cooc": 3
-   },
-   {
-    "term": "api",
-    "lift": 0.336,
-    "count": 18,
-    "in_topic": 12,
-    "cooc": 1
-   },
-   {
     "term": "expanded",
-    "lift": 0.336,
+    "lift": 0.2354,
     "count": 55,
     "in_topic": 12,
     "cooc": 1
    },
    {
-    "term": "driving",
-    "lift": 0.336,
-    "count": 60,
+    "term": "targets",
+    "lift": 0.2354,
+    "count": 27,
     "in_topic": 12,
     "cooc": 1
    },
    {
-    "term": "equivalent",
-    "lift": 0.336,
-    "count": 18,
-    "in_topic": 12,
-    "cooc": 1
-   },
-   {
-    "term": "zero",
-    "lift": 0.336,
-    "count": 64,
-    "in_topic": 12,
-    "cooc": 1
-   },
-   {
-    "term": "carbon-free",
-    "lift": 0.3506,
-    "count": 91,
-    "in_topic": 46,
-    "cooc": 4
-   },
-   {
-    "term": "working",
-    "lift": 0.3666,
-    "count": 107,
+    "term": "change",
+    "lift": 0.2568,
+    "count": 66,
     "in_topic": 11,
     "cooc": 1
    },
    {
-    "term": "up",
-    "lift": 0.3666,
-    "count": 59,
+    "term": "product",
+    "lift": 0.2568,
+    "count": 70,
     "in_topic": 11,
     "cooc": 1
    },
    {
-    "term": "solar api",
-    "lift": 0.3666,
-    "count": 17,
+    "term": "continued microsoft",
+    "lift": 0.2568,
+    "count": 11,
     "in_topic": 11,
-    "cooc": 1
-   },
-   {
-    "term": "design",
-    "lift": 0.3666,
-    "count": 86,
-    "in_topic": 11,
-    "cooc": 1
-   },
-   {
-    "term": "figure",
-    "lift": 0.3666,
-    "count": 24,
-    "in_topic": 11,
-    "cooc": 1
-   },
-   {
-    "term": "average",
-    "lift": 0.3666,
-    "count": 46,
-    "in_topic": 11,
-    "cooc": 1
-   },
-   {
-    "term": "datacenter",
-    "lift": 0.3666,
-    "count": 63,
-    "in_topic": 11,
-    "cooc": 1
-   },
-   {
-    "term": "solar",
-    "lift": 0.4032,
-    "count": 76,
-    "in_topic": 20,
-    "cooc": 2
-   },
-   {
-    "term": "enabled",
-    "lift": 0.4032,
-    "count": 38,
-    "in_topic": 20,
-    "cooc": 2
-   },
-   {
-    "term": "devices",
-    "lift": 0.4032,
-    "count": 77,
-    "in_topic": 20,
-    "cooc": 2
-   },
-   {
-    "term": "how",
-    "lift": 0.4032,
-    "count": 147,
-    "in_topic": 10,
     "cooc": 1
    },
    {
     "term": "contracted",
-    "lift": 0.4032,
+    "lift": 0.2825,
     "count": 35,
     "in_topic": 10,
     "cooc": 1
    },
    {
-    "term": "out",
-    "lift": 0.4032,
-    "count": 47,
+    "term": "continued microsoft sustainability",
+    "lift": 0.2825,
+    "count": 10,
     "in_topic": 10,
-    "cooc": 1
-   },
-   {
-    "term": "packaging",
-    "lift": 0.4032,
-    "count": 133,
-    "in_topic": 10,
-    "cooc": 1
-   },
-   {
-    "term": "drive",
-    "lift": 0.4032,
-    "count": 66,
-    "in_topic": 10,
-    "cooc": 1
-   },
-   {
-    "term": "impact",
-    "lift": 0.4136,
-    "count": 187,
-    "in_topic": 39,
-    "cooc": 4
-   },
-   {
-    "term": "ai",
-    "lift": 0.432,
-    "count": 357,
-    "in_topic": 28,
-    "cooc": 3
-   },
-   {
-    "term": "google",
-    "lift": 0.448,
-    "count": 244,
-    "in_topic": 36,
-    "cooc": 4
-   },
-   {
-    "term": "work",
-    "lift": 0.448,
-    "count": 132,
-    "in_topic": 9,
-    "cooc": 1
-   },
-   {
-    "term": "achieved",
-    "lift": 0.448,
-    "count": 55,
-    "in_topic": 9,
-    "cooc": 1
-   },
-   {
-    "term": "growth",
-    "lift": 0.448,
-    "count": 61,
-    "in_topic": 9,
-    "cooc": 1
-   },
-   {
-    "term": "next",
-    "lift": 0.448,
-    "count": 31,
-    "in_topic": 9,
     "cooc": 1
    },
    {
     "term": "electric",
-    "lift": 0.448,
+    "lift": 0.3139,
     "count": 46,
     "in_topic": 9,
     "cooc": 1
    },
    {
     "term": "earth",
-    "lift": 0.448,
+    "lift": 0.3139,
     "count": 48,
     "in_topic": 9,
     "cooc": 1
    },
    {
     "term": "pro",
-    "lift": 0.448,
+    "lift": 0.3139,
     "count": 32,
     "in_topic": 9,
     "cooc": 1
    },
    {
-    "term": "better",
-    "lift": 0.448,
-    "count": 51,
+    "term": "model",
+    "lift": 0.3139,
+    "count": 60,
     "in_topic": 9,
     "cooc": 1
    },
    {
     "term": "countries",
-    "lift": 0.448,
+    "lift": 0.3139,
     "count": 58,
     "in_topic": 9,
     "cooc": 1
    },
    {
-    "term": "biodiversity",
-    "lift": 0.448,
-    "count": 96,
+    "term": "january",
+    "lift": 0.3139,
+    "count": 24,
     "in_topic": 9,
     "cooc": 1
    },
    {
-    "term": "capacity",
-    "lift": 0.448,
-    "count": 36,
+    "term": "ecosystems",
+    "lift": 0.3139,
+    "count": 69,
     "in_topic": 9,
     "cooc": 1
-   },
-   {
-    "term": "platform",
-    "lift": 0.448,
-    "count": 46,
-    "in_topic": 9,
-    "cooc": 1
-   },
-   {
-    "term": "co2e",
-    "lift": 0.448,
-    "count": 9,
-    "in_topic": 9,
-    "cooc": 1
-   },
-   {
-    "term": "calculates",
-    "lift": 0.448,
-    "count": 13,
-    "in_topic": 9,
-    "cooc": 1
-   },
-   {
-    "term": "estimate",
-    "lift": 0.4839,
-    "count": 56,
-    "in_topic": 25,
-    "cooc": 3
-   },
-   {
-    "term": "reductions",
-    "lift": 0.4839,
-    "count": 50,
-    "in_topic": 25,
-    "cooc": 3
-   },
-   {
-    "term": "power",
-    "lift": 0.504,
-    "count": 144,
-    "in_topic": 24,
-    "cooc": 3
-   },
-   {
-    "term": "based",
-    "lift": 0.504,
-    "count": 108,
-    "in_topic": 24,
-    "cooc": 3
-   },
-   {
-    "term": "per",
-    "lift": 0.504,
-    "count": 41,
-    "in_topic": 16,
-    "cooc": 2
    },
    {
     "term": "target",
-    "lift": 0.504,
+    "lift": 0.3531,
     "count": 59,
     "in_topic": 16,
     "cooc": 2
    },
    {
-    "term": "energy emissions",
-    "lift": 0.504,
-    "count": 11,
+    "term": "three",
+    "lift": 0.3531,
+    "count": 33,
     "in_topic": 8,
     "cooc": 1
    },
    {
-    "term": "agreements",
-    "lift": 0.504,
-    "count": 28,
-    "in_topic": 8,
-    "cooc": 1
-   },
-   {
-    "term": "communities",
-    "lift": 0.504,
-    "count": 155,
-    "in_topic": 8,
-    "cooc": 1
-   },
-   {
-    "term": "supported",
-    "lift": 0.504,
-    "count": 49,
-    "in_topic": 8,
-    "cooc": 1
-   },
-   {
-    "term": "committed",
-    "lift": 0.504,
-    "count": 45,
-    "in_topic": 8,
-    "cooc": 1
-   },
-   {
-    "term": "reduction ambition",
-    "lift": 0.504,
-    "count": 8,
-    "in_topic": 8,
-    "cooc": 1
-   },
-   {
-    "term": "two",
-    "lift": 0.504,
-    "count": 34,
-    "in_topic": 8,
-    "cooc": 1
-   },
-   {
-    "term": "advance",
-    "lift": 0.504,
+    "term": "around",
+    "lift": 0.3531,
     "count": 54,
     "in_topic": 8,
     "cooc": 1
    },
    {
-    "term": "concrete",
-    "lift": 0.504,
-    "count": 15,
+    "term": "cities",
+    "lift": 0.3531,
+    "count": 30,
+    "in_topic": 8,
+    "cooc": 1
+   },
+   {
+    "term": "advance",
+    "lift": 0.3531,
+    "count": 54,
+    "in_topic": 8,
+    "cooc": 1
+   },
+   {
+    "term": "measurement",
+    "lift": 0.3531,
+    "count": 40,
     "in_topic": 8,
     "cooc": 1
    },
    {
     "term": "travel",
-    "lift": 0.504,
+    "lift": 0.3531,
     "count": 19,
     "in_topic": 8,
     "cooc": 1
    },
    {
     "term": "alphabet calculates",
-    "lift": 0.504,
+    "lift": 0.3531,
     "count": 11,
     "in_topic": 8,
     "cooc": 1
    },
    {
-    "term": "using",
-    "lift": 0.5259,
-    "count": 188,
-    "in_topic": 46,
-    "cooc": 6
-   },
-   {
     "term": "help",
-    "lift": 0.5259,
+    "lift": 0.3685,
     "count": 183,
     "in_topic": 23,
     "cooc": 3
    },
    {
-    "term": "world",
-    "lift": 0.5376,
-    "count": 106,
-    "in_topic": 15,
-    "cooc": 2
-   },
-   {
     "term": "green",
-    "lift": 0.5376,
+    "lift": 0.3766,
     "count": 71,
     "in_topic": 15,
     "cooc": 2
    },
    {
-    "term": "intensity",
-    "lift": 0.5376,
-    "count": 46,
+    "term": "scale",
+    "lift": 0.3766,
+    "count": 107,
     "in_topic": 15,
     "cooc": 2
    },
    {
-    "term": "carbon",
-    "lift": 0.5459,
-    "count": 377,
-    "in_topic": 229,
-    "cooc": 31
+    "term": "metric tons",
+    "lift": 0.3817,
+    "count": 55,
+    "in_topic": 37,
+    "cooc": 5
    },
    {
-    "term": "solutions",
-    "lift": 0.5499,
-    "count": 168,
-    "in_topic": 22,
-    "cooc": 3
-   },
-   {
-    "term": "carbon emissions",
-    "lift": 0.576,
-    "count": 59,
-    "in_topic": 28,
+    "term": "continued",
+    "lift": 0.3896,
+    "count": 75,
+    "in_topic": 29,
     "cooc": 4
    },
    {
-    "term": "first",
-    "lift": 0.576,
-    "count": 73,
-    "in_topic": 14,
-    "cooc": 2
-   },
-   {
     "term": "customers",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 119,
     "in_topic": 14,
     "cooc": 2
    },
    {
-    "term": "carbon intensity",
-    "lift": 0.576,
-    "count": 25,
+    "term": "technology",
+    "lift": 0.4036,
+    "count": 124,
     "in_topic": 14,
     "cooc": 2
    },
    {
     "term": "fy24",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 48,
     "in_topic": 14,
     "cooc": 2
    },
    {
-    "term": "center energy emissions",
-    "lift": 0.576,
-    "count": 8,
-    "in_topic": 7,
-    "cooc": 1
-   },
-   {
-    "term": "center energy",
-    "lift": 0.576,
-    "count": 10,
-    "in_topic": 7,
-    "cooc": 1
-   },
-   {
-    "term": "data center energy",
-    "lift": 0.576,
-    "count": 10,
-    "in_topic": 7,
-    "cooc": 1
-   },
-   {
-    "term": "expand",
-    "lift": 0.576,
-    "count": 36,
-    "in_topic": 7,
-    "cooc": 1
+    "term": "tons of carbon",
+    "lift": 0.4036,
+    "count": 14,
+    "in_topic": 14,
+    "cooc": 2
    },
    {
     "term": "agreement",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 30,
     "in_topic": 7,
     "cooc": 1
    },
    {
-    "term": "some",
-    "lift": 0.576,
-    "count": 46,
-    "in_topic": 7,
-    "cooc": 1
-   },
-   {
-    "term": "goal",
-    "lift": 0.576,
-    "count": 44,
-    "in_topic": 7,
-    "cooc": 1
-   },
-   {
     "term": "wind",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 31,
     "in_topic": 7,
     "cooc": 1
    },
    {
     "term": "transition",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 49,
     "in_topic": 7,
     "cooc": 1
    },
    {
     "term": "made",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 55,
     "in_topic": 7,
     "cooc": 1
    },
    {
+    "term": "like",
+    "lift": 0.4036,
+    "count": 127,
+    "in_topic": 7,
+    "cooc": 1
+   },
+   {
     "term": "google earth",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 10,
     "in_topic": 7,
     "cooc": 1
    },
    {
     "term": "estimates",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 39,
     "in_topic": 7,
     "cooc": 1
    },
    {
-    "term": "mw",
-    "lift": 0.576,
-    "count": 24,
-    "in_topic": 7,
-    "cooc": 1
-   },
-   {
     "term": "continue",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 82,
     "in_topic": 7,
     "cooc": 1
    },
    {
+    "term": "play",
+    "lift": 0.4036,
+    "count": 25,
+    "in_topic": 7,
+    "cooc": 1
+   },
+   {
     "term": "fact",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 23,
     "in_topic": 7,
     "cooc": 1
    },
    {
     "term": "practices",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 107,
     "in_topic": 7,
     "cooc": 1
    },
    {
-    "term": "make",
-    "lift": 0.576,
-    "count": 89,
-    "in_topic": 7,
-    "cooc": 1
-   },
-   {
-    "term": "impacts",
-    "lift": 0.576,
-    "count": 36,
+    "term": "near-term",
+    "lift": 0.4036,
+    "count": 8,
     "in_topic": 7,
     "cooc": 1
    },
    {
     "term": "because",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 28,
     "in_topic": 7,
     "cooc": 1
    },
    {
     "term": "commitments",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 38,
     "in_topic": 7,
     "cooc": 1
    },
    {
     "term": "calculated",
-    "lift": 0.576,
+    "lift": 0.4036,
     "count": 15,
     "in_topic": 7,
     "cooc": 1
    },
    {
-    "term": "climate",
-    "lift": 0.5901,
-    "count": 257,
+    "term": "lca",
+    "lift": 0.4036,
+    "count": 21,
+    "in_topic": 7,
+    "cooc": 1
+   },
+   {
+    "term": "sustainability report advancing",
+    "lift": 0.4036,
+    "count": 7,
+    "in_topic": 7,
+    "cooc": 1
+   },
+   {
+    "term": "report advancing",
+    "lift": 0.4036,
+    "count": 7,
+    "in_topic": 7,
+    "cooc": 1
+   },
+   {
+    "term": "tons",
+    "lift": 0.4134,
+    "count": 61,
     "in_topic": 41,
     "cooc": 6
    },
    {
-    "term": "emissions reductions",
-    "lift": 0.6048,
-    "count": 33,
+    "term": "devices",
+    "lift": 0.4237,
+    "count": 77,
     "in_topic": 20,
     "cooc": 3
    },
    {
-    "term": "progress",
-    "lift": 0.6109,
-    "count": 209,
-    "in_topic": 33,
-    "cooc": 5
-   },
-   {
-    "term": "million",
-    "lift": 0.6203,
-    "count": 160,
-    "in_topic": 39,
-    "cooc": 6
-   },
-   {
-    "term": "launched",
-    "lift": 0.6203,
-    "count": 67,
-    "in_topic": 13,
-    "cooc": 2
-   },
-   {
     "term": "future",
-    "lift": 0.6203,
+    "lift": 0.4346,
     "count": 91,
     "in_topic": 13,
     "cooc": 2
    },
    {
-    "term": "industry",
-    "lift": 0.6203,
-    "count": 89,
-    "in_topic": 13,
-    "cooc": 2
+    "term": "customer",
+    "lift": 0.4377,
+    "count": 95,
+    "in_topic": 71,
+    "cooc": 11
    },
    {
-    "term": "including",
-    "lift": 0.6367,
-    "count": 199,
-    "in_topic": 19,
-    "cooc": 3
+    "term": "metric",
+    "lift": 0.446,
+    "count": 68,
+    "in_topic": 38,
+    "cooc": 6
    },
    {
     "term": "epa",
-    "lift": 0.6367,
+    "lift": 0.446,
     "count": 23,
     "in_topic": 19,
     "cooc": 3
    },
    {
-    "term": "operational",
-    "lift": 0.672,
-    "count": 86,
-    "in_topic": 18,
-    "cooc": 3
+    "term": "sustainability appendix environmental",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "global sustainability",
+    "lift": 0.4503,
+    "count": 79,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "appendix environmental",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "customer sustainability global",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "sustainability appendix",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "sustainability global",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "appendix environmental sustainability",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "customer sustainability",
+    "lift": 0.4503,
+    "count": 73,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "sustainability global sustainability",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "global sustainability appendix",
+    "lift": 0.4503,
+    "count": 71,
+    "in_topic": 69,
+    "cooc": 11
+   },
+   {
+    "term": "sustainability",
+    "lift": 0.459,
+    "count": 313,
+    "in_topic": 80,
+    "cooc": 13
+   },
+   {
+    "term": "microsoft sustainability",
+    "lift": 0.4638,
+    "count": 75,
+    "in_topic": 67,
+    "cooc": 11
+   },
+   {
+    "term": "carbon water",
+    "lift": 0.4638,
+    "count": 67,
+    "in_topic": 67,
+    "cooc": 11
+   },
+   {
+    "term": "carbon water waste",
+    "lift": 0.4638,
+    "count": 67,
+    "in_topic": 67,
+    "cooc": 11
+   },
+   {
+    "term": "sustainability report",
+    "lift": 0.4708,
+    "count": 73,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "environmental sustainability report",
+    "lift": 0.4708,
+    "count": 69,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "sustainability carbon",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "sustainability carbon water",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "waste ecosystemsoverview",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "water waste ecosystemsoverview",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "ecosystemsoverview",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "ecosystemsoverview customer sustainability",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "ecosystemsoverview customer",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "waste ecosystemsoverview customer",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "microsoft sustainability carbon",
+    "lift": 0.4708,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 11
+   },
+   {
+    "term": "based",
+    "lift": 0.4708,
+    "count": 108,
+    "in_topic": 24,
+    "cooc": 4
    },
    {
     "term": "carbon-free electricity",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 32,
     "in_topic": 18,
     "cooc": 3
    },
    {
     "term": "policy",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 75,
     "in_topic": 12,
     "cooc": 2
    },
    {
-    "term": "one",
-    "lift": 0.672,
-    "count": 94,
+    "term": "api",
+    "lift": 0.4708,
+    "count": 18,
     "in_topic": 12,
     "cooc": 2
    },
    {
-    "term": "cloud",
-    "lift": 0.672,
-    "count": 68,
+    "term": "driving",
+    "lift": 0.4708,
+    "count": 60,
     "in_topic": 12,
     "cooc": 2
    },
    {
-    "term": "addition",
-    "lift": 0.672,
-    "count": 41,
-    "in_topic": 12,
-    "cooc": 2
-   },
-   {
-    "term": "refer",
-    "lift": 0.672,
-    "count": 41,
-    "in_topic": 12,
-    "cooc": 2
-   },
-   {
-    "term": "defra uk government",
-    "lift": 0.672,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 2
-   },
-   {
-    "term": "government",
-    "lift": 0.672,
-    "count": 16,
-    "in_topic": 12,
-    "cooc": 2
-   },
-   {
-    "term": "uk government",
-    "lift": 0.672,
-    "count": 12,
+    "term": "equivalent",
+    "lift": 0.4708,
+    "count": 18,
     "in_topic": 12,
     "cooc": 2
    },
    {
     "term": "defra",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 12,
     "in_topic": 12,
     "cooc": 2
    },
    {
-    "term": "conversion factors",
-    "lift": 0.672,
+    "term": "government ghg",
+    "lift": 0.4708,
     "count": 12,
-    "in_topic": 12,
-    "cooc": 2
-   },
-   {
-    "term": "uk government ghg",
-    "lift": 0.672,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 2
-   },
-   {
-    "term": "government ghg conversion",
-    "lift": 0.672,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 2
-   },
-   {
-    "term": "uk",
-    "lift": 0.672,
-    "count": 26,
     "in_topic": 12,
     "cooc": 2
    },
    {
     "term": "defra uk",
-    "lift": 0.672,
+    "lift": 0.4708,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 2
+   },
+   {
+    "term": "defra uk government",
+    "lift": 0.4708,
     "count": 12,
     "in_topic": 12,
     "cooc": 2
    },
    {
     "term": "conversion",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 17,
     "in_topic": 12,
     "cooc": 2
    },
    {
-    "term": "government ghg",
-    "lift": 0.672,
+    "term": "government ghg conversion",
+    "lift": 0.4708,
     "count": 12,
     "in_topic": 12,
     "cooc": 2
    },
    {
-    "term": "ghg conversion",
-    "lift": 0.672,
+    "term": "conversion factors",
+    "lift": 0.4708,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 2
+   },
+   {
+    "term": "uk government",
+    "lift": 0.4708,
     "count": 12,
     "in_topic": 12,
     "cooc": 2
    },
    {
     "term": "ghg conversion factors",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 12,
     "in_topic": 12,
     "cooc": 2
    },
    {
-    "term": "advanced",
-    "lift": 0.672,
-    "count": 67,
-    "in_topic": 6,
-    "cooc": 1
+    "term": "government",
+    "lift": 0.4708,
+    "count": 16,
+    "in_topic": 12,
+    "cooc": 2
+   },
+   {
+    "term": "uk government ghg",
+    "lift": 0.4708,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 2
+   },
+   {
+    "term": "uk",
+    "lift": 0.4708,
+    "count": 26,
+    "in_topic": 12,
+    "cooc": 2
+   },
+   {
+    "term": "ghg conversion",
+    "lift": 0.4708,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 2
    },
    {
     "term": "development",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 98,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "project",
-    "lift": 0.672,
-    "count": 99,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
     "term": "many",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 65,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "routing",
-    "lift": 0.672,
-    "count": 12,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
     "term": "nest",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 16,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "earth pro",
-    "lift": 0.672,
-    "count": 7,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
-    "term": "fuel-efficient routing",
-    "lift": 0.672,
-    "count": 10,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
-    "term": "google earth pro",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 7,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "thermostats",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 11,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "fuel-efficient",
-    "lift": 0.672,
+    "lift": 0.4708,
+    "count": 12,
+    "in_topic": 6,
+    "cooc": 1
+   },
+   {
+    "term": "google earth pro",
+    "lift": 0.4708,
+    "count": 7,
+    "in_topic": 6,
+    "cooc": 1
+   },
+   {
+    "term": "fuel-efficient routing",
+    "lift": 0.4708,
+    "count": 10,
+    "in_topic": 6,
+    "cooc": 1
+   },
+   {
+    "term": "routing",
+    "lift": 0.4708,
     "count": 12,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "learn",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 83,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "important",
-    "lift": 0.672,
-    "count": 46,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
     "term": "companies",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 58,
     "in_topic": 6,
     "cooc": 1
    },
    {
+    "term": "digital",
+    "lift": 0.4708,
+    "count": 25,
+    "in_topic": 6,
+    "cooc": 1
+   },
+   {
     "term": "opportunities",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 77,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "savings",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 24,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "portfolio",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 64,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "methodology",
-    "lift": 0.672,
-    "count": 37,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
-    "term": "circularity",
-    "lift": 0.672,
-    "count": 52,
+    "term": "annually",
+    "lift": 0.4708,
+    "count": 28,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "green light",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 13,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "light",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 18,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "areas",
-    "lift": 0.672,
-    "count": 51,
+    "term": "what",
+    "lift": 0.4708,
+    "count": 49,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "carbon reduction ambition",
-    "lift": 0.672,
-    "count": 6,
+    "term": "previous",
+    "lift": 0.4708,
+    "count": 20,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "enabled emissions",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 12,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "compute",
-    "lift": 0.672,
-    "count": 15,
+    "term": "ai innovation",
+    "lift": 0.4708,
+    "count": 12,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "built",
-    "lift": 0.672,
-    "count": 31,
+    "term": "organizations",
+    "lift": 0.4708,
+    "count": 84,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "innovative",
-    "lift": 0.672,
-    "count": 53,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
-    "term": "low-carbon",
-    "lift": 0.672,
-    "count": 23,
-    "in_topic": 6,
-    "cooc": 1
-   },
-   {
-    "term": "teams",
-    "lift": 0.672,
-    "count": 38,
+    "term": "charting",
+    "lift": 0.4708,
+    "count": 6,
     "in_topic": 6,
     "cooc": 1
    },
    {
     "term": "roadmap",
-    "lift": 0.672,
+    "lift": 0.4708,
     "count": 10,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "calculate emissions",
-    "lift": 0.672,
-    "count": 17,
-    "in_topic": 6,
-    "cooc": 1
+    "term": "water waste",
+    "lift": 0.4774,
+    "count": 99,
+    "in_topic": 71,
+    "cooc": 12
    },
    {
-    "term": "approach",
-    "lift": 0.7116,
-    "count": 127,
+    "term": "environmental sustainability",
+    "lift": 0.4843,
+    "count": 93,
+    "in_topic": 70,
+    "cooc": 12
+   },
+   {
+    "term": "amazon",
+    "lift": 0.4985,
+    "count": 305,
     "in_topic": 17,
     "cooc": 3
    },
    {
     "term": "ghg emissions",
-    "lift": 0.7116,
+    "lift": 0.4985,
     "count": 20,
     "in_topic": 17,
     "cooc": 3
    },
    {
+    "term": "appendix",
+    "lift": 0.5031,
+    "count": 111,
+    "in_topic": 73,
+    "cooc": 13
+   },
+   {
+    "term": "million",
+    "lift": 0.507,
+    "count": 160,
+    "in_topic": 39,
+    "cooc": 7
+   },
+   {
+    "term": "solutions",
+    "lift": 0.5136,
+    "count": 168,
+    "in_topic": 22,
+    "cooc": 4
+   },
+   {
     "term": "annual",
-    "lift": 0.7331,
+    "lift": 0.5136,
     "count": 57,
     "in_topic": 11,
     "cooc": 2
    },
    {
-    "term": "key",
-    "lift": 0.7331,
-    "count": 79,
+    "term": "working",
+    "lift": 0.5136,
+    "count": 107,
     "in_topic": 11,
     "cooc": 2
    },
    {
-    "term": "cfe",
-    "lift": 0.7331,
-    "count": 67,
+    "term": "solar api",
+    "lift": 0.5136,
+    "count": 17,
     "in_topic": 11,
     "cooc": 2
    },
    {
-    "term": "most",
-    "lift": 0.7331,
-    "count": 93,
+    "term": "supporting",
+    "lift": 0.5136,
+    "count": 86,
     "in_topic": 11,
     "cooc": 2
    },
    {
-    "term": "equipment",
-    "lift": 0.7331,
-    "count": 48,
-    "in_topic": 11,
-    "cooc": 2
+    "term": "innovation",
+    "lift": 0.5231,
+    "count": 114,
+    "in_topic": 27,
+    "cooc": 5
    },
    {
-    "term": "emission",
-    "lift": 0.8065,
-    "count": 66,
-    "in_topic": 45,
-    "cooc": 9
+    "term": "waste",
+    "lift": 0.5297,
+    "count": 308,
+    "in_topic": 80,
+    "cooc": 15
    },
    {
-    "term": "efficiency",
-    "lift": 0.8065,
-    "count": 145,
+    "term": "climate",
+    "lift": 0.5512,
+    "count": 257,
+    "in_topic": 41,
+    "cooc": 8
+   },
+   {
+    "term": "environmental",
+    "lift": 0.565,
+    "count": 288,
+    "in_topic": 85,
+    "cooc": 17
+   },
+   {
+    "term": "solar",
+    "lift": 0.565,
+    "count": 76,
     "in_topic": 20,
     "cooc": 4
    },
    {
-    "term": "negative",
-    "lift": 0.8065,
-    "count": 17,
+    "term": "enabled",
+    "lift": 0.565,
+    "count": 38,
+    "in_topic": 20,
+    "cooc": 4
+   },
+   {
+    "term": "world",
+    "lift": 0.565,
+    "count": 106,
     "in_topic": 15,
     "cooc": 3
    },
    {
+    "term": "technologies",
+    "lift": 0.565,
+    "count": 115,
+    "in_topic": 15,
+    "cooc": 3
+   },
+   {
+    "term": "how",
+    "lift": 0.565,
+    "count": 147,
+    "in_topic": 10,
+    "cooc": 2
+   },
+   {
     "term": "gw",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 26,
     "in_topic": 10,
     "cooc": 2
    },
    {
-    "term": "nearly",
-    "lift": 0.8065,
-    "count": 29,
-    "in_topic": 10,
-    "cooc": 2
-   },
-   {
-    "term": "potential",
-    "lift": 0.8065,
-    "count": 70,
-    "in_topic": 10,
-    "cooc": 2
-   },
-   {
-    "term": "adoption",
-    "lift": 0.8065,
-    "count": 55,
-    "in_topic": 10,
-    "cooc": 2
-   },
-   {
-    "term": "usage",
-    "lift": 0.8065,
-    "count": 44,
-    "in_topic": 10,
-    "cooc": 2
-   },
-   {
-    "term": "support",
-    "lift": 0.8065,
-    "count": 161,
-    "in_topic": 10,
-    "cooc": 2
-   },
-   {
-    "term": "distribution",
-    "lift": 0.8065,
-    "count": 20,
+    "term": "drive",
+    "lift": 0.565,
+    "count": 66,
     "in_topic": 10,
     "cooc": 2
    },
    {
     "term": "delivered",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 19,
     "in_topic": 10,
     "cooc": 2
    },
    {
     "term": "vehicle",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 31,
     "in_topic": 10,
     "cooc": 2
    },
    {
-    "term": "basis",
-    "lift": 0.8065,
-    "count": 17,
+    "term": "innovations",
+    "lift": 0.565,
+    "count": 29,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "efficient",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 40,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "tpu",
-    "lift": 0.8065,
-    "count": 12,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
     "term": "nest thermostats",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 9,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "meet",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 59,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "time",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 78,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "machine",
-    "lift": 0.8065,
-    "count": 22,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "achieve",
-    "lift": 0.8065,
-    "count": 35,
+    "term": "expanding",
+    "lift": 0.565,
+    "count": 37,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "period",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 20,
     "in_topic": 5,
     "cooc": 1
    },
    {
+    "term": "providing",
+    "lift": 0.565,
+    "count": 45,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
     "term": "group",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 28,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "across countries",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 12,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "overview",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 36,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "renewable diesel",
-    "lift": 0.8065,
-    "count": 10,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "positive",
-    "lift": 0.8065,
-    "count": 42,
+    "term": "applying",
+    "lift": 0.565,
+    "count": 18,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "collaboration",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 59,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "source",
-    "lift": 0.8065,
-    "count": 33,
+    "term": "together",
+    "lift": 0.565,
+    "count": 43,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "conventional",
-    "lift": 0.8065,
-    "count": 13,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "build",
-    "lift": 0.8065,
-    "count": 69,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "supply chain emissions",
-    "lift": 0.8065,
-    "count": 8,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "section",
-    "lift": 0.8065,
-    "count": 19,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "result",
-    "lift": 0.8065,
-    "count": 25,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "improve",
-    "lift": 0.8065,
+    "term": "replenishment",
+    "lift": 0.565,
     "count": 64,
     "in_topic": 5,
     "cooc": 1
    },
    {
+    "term": "validated",
+    "lift": 0.565,
+    "count": 7,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "build",
+    "lift": 0.565,
+    "count": 69,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "frontiers",
+    "lift": 0.565,
+    "count": 6,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "supply chain emissions",
+    "lift": 0.565,
+    "count": 8,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "result",
+    "lift": 0.565,
+    "count": 25,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
     "term": "needed",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 34,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "processes",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 42,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "case",
-    "lift": 0.8065,
-    "count": 11,
+    "term": "leading",
+    "lift": 0.565,
+    "count": 25,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "lower",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 21,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "methodologies",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 22,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "measure",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 27,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "availability",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 29,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "therefore",
-    "lift": 0.8065,
-    "count": 14,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "service",
-    "lift": 0.8065,
-    "count": 36,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
     "term": "pathways",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 17,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "avoided emissions",
-    "lift": 0.8065,
-    "count": 7,
+    "term": "currently",
+    "lift": 0.565,
+    "count": 16,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "co",
+    "lift": 0.565,
+    "count": 22,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "study",
+    "lift": 0.565,
+    "count": 11,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "lcas",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 16,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "methane",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 9,
     "in_topic": 5,
     "cooc": 1
    },
    {
     "term": "calculated based",
-    "lift": 0.8065,
+    "lift": 0.565,
     "count": 8,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "calculates emissions",
-    "lift": 0.8065,
-    "count": 6,
-    "in_topic": 5,
-    "cooc": 1
-   },
-   {
-    "term": "tons of co2e",
-    "lift": 0.8065,
+    "term": "charting new",
+    "lift": 0.565,
     "count": 5,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "year",
-    "lift": 0.8489,
-    "count": 116,
-    "in_topic": 38,
-    "cooc": 8
+    "term": "new frontiers",
+    "lift": 0.565,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 1
    },
    {
-    "term": "across",
-    "lift": 0.853,
-    "count": 319,
-    "in_topic": 52,
-    "cooc": 11
+    "term": "charting new frontiers",
+    "lift": 0.565,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 1
    },
    {
-    "term": "years",
-    "lift": 0.8641,
-    "count": 95,
+    "term": "frontiers in ai",
+    "lift": 0.565,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "innovation continued",
+    "lift": 0.565,
+    "count": 6,
+    "in_topic": 5,
+    "cooc": 1
+   },
+   {
+    "term": "estimated",
+    "lift": 0.5947,
+    "count": 39,
+    "in_topic": 19,
+    "cooc": 4
+   },
+   {
+    "term": "progress",
+    "lift": 0.5992,
+    "count": 209,
+    "in_topic": 33,
+    "cooc": 7
+   },
+   {
+    "term": "report",
+    "lift": 0.6026,
+    "count": 152,
+    "in_topic": 75,
+    "cooc": 16
+   },
+   {
+    "term": "first",
+    "lift": 0.6053,
+    "count": 73,
     "in_topic": 14,
     "cooc": 3
    },
    {
-    "term": "business",
-    "lift": 0.8641,
-    "count": 126,
-    "in_topic": 14,
-    "cooc": 3
+    "term": "water",
+    "lift": 0.6079,
+    "count": 450,
+    "in_topic": 79,
+    "cooc": 17
    },
    {
-    "term": "carbon negative",
-    "lift": 0.8641,
-    "count": 16,
-    "in_topic": 14,
-    "cooc": 3
+    "term": "carbon-free",
+    "lift": 0.6141,
+    "count": 91,
+    "in_topic": 46,
+    "cooc": 10
    },
    {
-    "term": "materials",
-    "lift": 0.8766,
-    "count": 136,
-    "in_topic": 23,
-    "cooc": 5
-   },
-   {
-    "term": "factors",
-    "lift": 0.8961,
-    "count": 96,
+    "term": "new",
+    "lift": 0.6277,
+    "count": 270,
     "in_topic": 45,
     "cooc": 10
    },
    {
-    "term": "reduced",
-    "lift": 0.8961,
-    "count": 37,
+    "term": "projects",
+    "lift": 0.6277,
+    "count": 177,
+    "in_topic": 27,
+    "cooc": 6
+   },
+   {
+    "term": "action",
+    "lift": 0.6277,
+    "count": 74,
     "in_topic": 18,
     "cooc": 4
    },
    {
     "term": "further",
-    "lift": 0.8961,
+    "lift": 0.6277,
     "count": 54,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "scaling",
-    "lift": 0.8961,
-    "count": 50,
+    "term": "next",
+    "lift": 0.6277,
+    "count": 31,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "increasing",
-    "lift": 0.8961,
-    "count": 37,
+    "term": "better",
+    "lift": 0.6277,
+    "count": 51,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "initiatives",
-    "lift": 0.8961,
-    "count": 80,
+    "term": "biodiversity",
+    "lift": 0.6277,
+    "count": 96,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "strategy",
-    "lift": 0.8961,
-    "count": 57,
+    "term": "capacity",
+    "lift": 0.6277,
+    "count": 36,
+    "in_topic": 9,
+    "cooc": 2
+   },
+   {
+    "term": "platform",
+    "lift": 0.6277,
+    "count": 46,
     "in_topic": 9,
     "cooc": 2
    },
    {
     "term": "life",
-    "lift": 0.8961,
+    "lift": 0.6277,
     "count": 64,
-    "in_topic": 9,
-    "cooc": 2
-   },
-   {
-    "term": "part",
-    "lift": 0.8961,
-    "count": 56,
     "in_topic": 9,
     "cooc": 2
    },
    {
     "term": "inventory",
-    "lift": 0.8961,
+    "lift": 0.6277,
     "count": 30,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "sbti",
-    "lift": 0.8961,
-    "count": 10,
-    "in_topic": 9,
-    "cooc": 2
-   },
-   {
-    "term": "co2",
-    "lift": 0.8961,
+    "term": "co2e",
+    "lift": 0.6277,
     "count": 9,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "lower-carbon",
-    "lift": 0.8961,
-    "count": 18,
+    "term": "pledge",
+    "lift": 0.6277,
+    "count": 41,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "center",
-    "lift": 0.9164,
-    "count": 127,
-    "in_topic": 22,
-    "cooc": 5
+    "term": "climate pledge",
+    "lift": 0.6277,
+    "count": 32,
+    "in_topic": 9,
+    "cooc": 2
    },
    {
-    "term": "emission factors",
-    "lift": 0.9305,
-    "count": 59,
-    "in_topic": 39,
-    "cooc": 9
+    "term": "calculates",
+    "lift": 0.6277,
+    "count": 13,
+    "in_topic": 9,
+    "cooc": 2
    },
    {
-    "term": "products",
-    "lift": 0.9305,
-    "count": 162,
-    "in_topic": 26,
+    "term": "ve",
+    "lift": 0.6519,
+    "count": 102,
+    "in_topic": 13,
+    "cooc": 3
+   },
+   {
+    "term": "only",
+    "lift": 0.6519,
+    "count": 67,
+    "in_topic": 13,
+    "cooc": 3
+   },
+   {
+    "term": "industry",
+    "lift": 0.6519,
+    "count": 89,
+    "in_topic": 13,
+    "cooc": 3
+   },
+   {
+    "term": "commitment",
+    "lift": 0.6519,
+    "count": 48,
+    "in_topic": 13,
+    "cooc": 3
+   },
+   {
+    "term": "microsoft",
+    "lift": 0.6582,
+    "count": 366,
+    "in_topic": 103,
+    "cooc": 24
+   },
+   {
+    "term": "global",
+    "lift": 0.663,
+    "count": 317,
+    "in_topic": 98,
+    "cooc": 23
+   },
+   {
+    "term": "since",
+    "lift": 0.6647,
+    "count": 86,
+    "in_topic": 17,
+    "cooc": 4
+   },
+   {
+    "term": "estimate",
+    "lift": 0.678,
+    "count": 56,
+    "in_topic": 25,
     "cooc": 6
    },
    {
-    "term": "decarbonization",
-    "lift": 0.9305,
-    "count": 69,
-    "in_topic": 13,
-    "cooc": 3
-   },
-   {
-    "term": "procurement",
-    "lift": 0.9305,
-    "count": 64,
-    "in_topic": 13,
-    "cooc": 3
-   },
-   {
-    "term": "avoided",
-    "lift": 0.9305,
-    "count": 27,
-    "in_topic": 13,
-    "cooc": 3
-   },
-   {
-    "term": "ambition",
-    "lift": 0.9305,
-    "count": 30,
-    "in_topic": 13,
-    "cooc": 3
-   },
-   {
-    "term": "dioxide",
-    "lift": 0.9305,
-    "count": 24,
-    "in_topic": 13,
-    "cooc": 3
-   },
-   {
-    "term": "carbon dioxide",
-    "lift": 0.9305,
-    "count": 24,
-    "in_topic": 13,
-    "cooc": 3
+    "term": "reductions",
+    "lift": 0.678,
+    "count": 50,
+    "in_topic": 25,
+    "cooc": 6
    },
    {
     "term": "ghg",
-    "lift": 0.9835,
+    "lift": 0.689,
     "count": 45,
     "in_topic": 41,
     "cooc": 10
    },
    {
-    "term": "reduce",
-    "lift": 1.0081,
-    "count": 166,
-    "in_topic": 44,
+    "term": "emission",
+    "lift": 0.6905,
+    "count": 66,
+    "in_topic": 45,
     "cooc": 11
    },
    {
-    "term": "data center",
-    "lift": 1.0081,
-    "count": 110,
+    "term": "emissions reductions",
+    "lift": 0.7062,
+    "count": 33,
     "in_topic": 20,
     "cooc": 5
    },
    {
-    "term": "cooling",
-    "lift": 1.0081,
-    "count": 86,
-    "in_topic": 12,
-    "cooc": 3
-   },
-   {
-    "term": "services",
-    "lift": 1.0081,
-    "count": 77,
-    "in_topic": 12,
-    "cooc": 3
+    "term": "per",
+    "lift": 0.7062,
+    "count": 41,
+    "in_topic": 16,
+    "cooc": 4
    },
    {
     "term": "investments",
-    "lift": 1.0081,
+    "lift": 0.7062,
     "count": 49,
     "in_topic": 12,
     "cooc": 3
    },
    {
-    "term": "consumer",
-    "lift": 1.0081,
-    "count": 34,
-    "in_topic": 12,
-    "cooc": 3
-   },
-   {
-    "term": "systems",
-    "lift": 1.0081,
-    "count": 120,
-    "in_topic": 12,
-    "cooc": 3
-   },
-   {
-    "term": "access",
-    "lift": 1.0081,
-    "count": 100,
-    "in_topic": 12,
-    "cooc": 3
-   },
-   {
-    "term": "logistics",
-    "lift": 1.0081,
-    "count": 51,
-    "in_topic": 12,
-    "cooc": 3
-   },
-   {
     "term": "emissions reduction",
-    "lift": 1.0081,
+    "lift": 0.7062,
     "count": 15,
     "in_topic": 12,
     "cooc": 3
    },
    {
     "term": "inventories",
-    "lift": 1.0081,
+    "lift": 0.7062,
     "count": 13,
     "in_topic": 12,
     "cooc": 3
    },
    {
-    "term": "provide",
-    "lift": 1.0081,
-    "count": 87,
+    "term": "agreements",
+    "lift": 0.7062,
+    "count": 28,
     "in_topic": 8,
     "cooc": 2
    },
    {
-    "term": "transmission",
-    "lift": 1.0081,
-    "count": 20,
+    "term": "communities",
+    "lift": 0.7062,
+    "count": 155,
     "in_topic": 8,
     "cooc": 2
    },
    {
-    "term": "losses",
-    "lift": 1.0081,
-    "count": 12,
+    "term": "supported",
+    "lift": 0.7062,
+    "count": 49,
     "in_topic": 8,
     "cooc": 2
    },
    {
-    "term": "international",
-    "lift": 1.0081,
-    "count": 27,
-    "in_topic": 8,
-    "cooc": 2
-   },
-   {
-    "term": "iea",
-    "lift": 1.0081,
-    "count": 15,
-    "in_topic": 8,
-    "cooc": 2
-   },
-   {
-    "term": "transmission and distribution",
-    "lift": 1.0081,
-    "count": 9,
-    "in_topic": 8,
-    "cooc": 2
-   },
-   {
-    "term": "distribution losses",
-    "lift": 1.0081,
-    "count": 9,
-    "in_topic": 8,
-    "cooc": 2
-   },
-   {
-    "term": "cycle",
-    "lift": 1.0081,
-    "count": 31,
-    "in_topic": 8,
-    "cooc": 2
-   },
-   {
-    "term": "life cycle",
-    "lift": 1.0081,
+    "term": "amount",
+    "lift": 0.7062,
     "count": 26,
     "in_topic": 8,
     "cooc": 2
    },
    {
-    "term": "steel",
-    "lift": 1.0081,
+    "term": "iea",
+    "lift": 0.7062,
     "count": 15,
     "in_topic": 8,
     "cooc": 2
    },
    {
+    "term": "committed",
+    "lift": 0.7062,
+    "count": 45,
+    "in_topic": 8,
+    "cooc": 2
+   },
+   {
+    "term": "greater",
+    "lift": 0.7062,
+    "count": 33,
+    "in_topic": 8,
+    "cooc": 2
+   },
+   {
+    "term": "circular",
+    "lift": 0.7062,
+    "count": 47,
+    "in_topic": 8,
+    "cooc": 2
+   },
+   {
+    "term": "life cycle",
+    "lift": 0.7062,
+    "count": 26,
+    "in_topic": 8,
+    "cooc": 2
+   },
+   {
+    "term": "cycle",
+    "lift": 0.7062,
+    "count": 31,
+    "in_topic": 8,
+    "cooc": 2
+   },
+   {
+    "term": "reduction ambition",
+    "lift": 0.7062,
+    "count": 8,
+    "in_topic": 8,
+    "cooc": 2
+   },
+   {
+    "term": "two",
+    "lift": 0.7062,
+    "count": 34,
+    "in_topic": 8,
+    "cooc": 2
+   },
+   {
     "term": "car",
-    "lift": 1.0081,
+    "lift": 0.7062,
     "count": 8,
     "in_topic": 8,
     "cooc": 2
    },
    {
     "term": "credits",
-    "lift": 1.0081,
+    "lift": 0.7062,
     "count": 25,
     "in_topic": 8,
     "cooc": 2
    },
    {
-    "term": "energy",
-    "lift": 1.0278,
-    "count": 580,
-    "in_topic": 102,
-    "cooc": 26
+    "term": "action microsoft",
+    "lift": 0.7062,
+    "count": 8,
+    "in_topic": 8,
+    "cooc": 2
    },
    {
-    "term": "infrastructure",
-    "lift": 1.0611,
-    "count": 112,
-    "in_topic": 19,
-    "cooc": 5
+    "term": "action microsoft sustainability",
+    "lift": 0.7062,
+    "count": 8,
+    "in_topic": 8,
+    "cooc": 2
    },
    {
-    "term": "supply",
-    "lift": 1.0856,
-    "count": 232,
-    "in_topic": 26,
-    "cooc": 7
+    "term": "impact",
+    "lift": 0.7243,
+    "count": 187,
+    "in_topic": 39,
+    "cooc": 10
    },
    {
-    "term": "sustainable",
-    "lift": 1.0997,
-    "count": 179,
+    "term": "using",
+    "lift": 0.7369,
+    "count": 188,
+    "in_topic": 46,
+    "cooc": 12
+   },
+   {
+    "term": "year",
+    "lift": 0.7434,
+    "count": 116,
+    "in_topic": 38,
+    "cooc": 10
+   },
+   {
+    "term": "carbon",
+    "lift": 0.7525,
+    "count": 377,
+    "in_topic": 229,
+    "cooc": 61
+   },
+   {
+    "term": "factors",
+    "lift": 0.7533,
+    "count": 96,
+    "in_topic": 45,
+    "cooc": 12
+   },
+   {
+    "term": "negative",
+    "lift": 0.7533,
+    "count": 17,
+    "in_topic": 15,
+    "cooc": 4
+   },
+   {
+    "term": "grid",
+    "lift": 0.7704,
+    "count": 116,
     "in_topic": 22,
     "cooc": 6
    },
    {
+    "term": "key",
+    "lift": 0.7704,
+    "count": 79,
+    "in_topic": 11,
+    "cooc": 3
+   },
+   {
     "term": "toward",
-    "lift": 1.0997,
+    "lift": 0.7704,
     "count": 65,
     "in_topic": 11,
     "cooc": 3
    },
    {
-    "term": "critical",
-    "lift": 1.0997,
-    "count": 73,
+    "term": "cfe",
+    "lift": 0.7704,
+    "count": 67,
     "in_topic": 11,
     "cooc": 3
    },
    {
-    "term": "greenhouse gas inventories",
-    "lift": 1.0997,
-    "count": 11,
+    "term": "most",
+    "lift": 0.7704,
+    "count": 93,
     "in_topic": 11,
     "cooc": 3
    },
    {
-    "term": "epa emission",
-    "lift": 1.0997,
-    "count": 11,
+    "term": "figure",
+    "lift": 0.7704,
+    "count": 24,
+    "in_topic": 11,
+    "cooc": 3
+   },
+   {
+    "term": "improving",
+    "lift": 0.7704,
+    "count": 76,
     "in_topic": 11,
     "cooc": 3
    },
    {
     "term": "epa emission factors",
-    "lift": 1.0997,
+    "lift": 0.7704,
     "count": 11,
     "in_topic": 11,
     "cooc": 3
    },
    {
-    "term": "gas inventories",
-    "lift": 1.0997,
+    "term": "greenhouse gas inventories",
+    "lift": 0.7704,
     "count": 11,
     "in_topic": 11,
     "cooc": 3
    },
    {
     "term": "factors for greenhouse",
-    "lift": 1.0997,
+    "lift": 0.7704,
     "count": 11,
     "in_topic": 11,
     "cooc": 3
    },
    {
-    "term": "available",
-    "lift": 1.1201,
-    "count": 103,
-    "in_topic": 18,
-    "cooc": 5
+    "term": "gas inventories",
+    "lift": 0.7704,
+    "count": 11,
+    "in_topic": 11,
+    "cooc": 3
    },
    {
-    "term": "greenhouse",
-    "lift": 1.1521,
-    "count": 28,
+    "term": "epa emission",
+    "lift": 0.7704,
+    "count": 11,
+    "in_topic": 11,
+    "cooc": 3
+   },
+   {
+    "term": "innovation in action",
+    "lift": 0.7704,
+    "count": 12,
+    "in_topic": 11,
+    "cooc": 3
+   },
+   {
+    "term": "google",
+    "lift": 0.7847,
+    "count": 244,
+    "in_topic": 36,
+    "cooc": 10
+   },
+   {
+    "term": "carbon-free energy",
+    "lift": 0.791,
+    "count": 52,
+    "in_topic": 25,
+    "cooc": 7
+   },
+   {
+    "term": "emission factors",
+    "lift": 0.7968,
+    "count": 59,
+    "in_topic": 39,
+    "cooc": 11
+   },
+   {
+    "term": "advancing",
+    "lift": 0.8071,
+    "count": 98,
     "in_topic": 21,
     "cooc": 6
    },
    {
-    "term": "tools",
-    "lift": 1.1521,
-    "count": 117,
+    "term": "years",
+    "lift": 0.8071,
+    "count": 95,
     "in_topic": 14,
     "cooc": 4
    },
    {
-    "term": "five",
-    "lift": 1.1521,
-    "count": 31,
+    "term": "business",
+    "lift": 0.8071,
+    "count": 126,
+    "in_topic": 14,
+    "cooc": 4
+   },
+   {
+    "term": "carbon intensity",
+    "lift": 0.8071,
+    "count": 25,
+    "in_topic": 14,
+    "cooc": 4
+   },
+   {
+    "term": "carbon negative",
+    "lift": 0.8071,
+    "count": 16,
+    "in_topic": 14,
+    "cooc": 4
+   },
+   {
+    "term": "demand",
+    "lift": 0.8071,
+    "count": 78,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "set",
-    "lift": 1.1521,
+    "term": "some",
+    "lift": 0.8071,
+    "count": 46,
+    "in_topic": 7,
+    "cooc": 2
+   },
+   {
+    "term": "goal",
+    "lift": 0.8071,
     "count": 44,
     "in_topic": 7,
     "cooc": 2
    },
    {
     "term": "enabling",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 50,
     "in_topic": 7,
     "cooc": 2
    },
    {
     "term": "market",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 90,
     "in_topic": 7,
     "cooc": 2
    },
    {
     "term": "energy consumption",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 32,
     "in_topic": 7,
     "cooc": 2
    },
    {
     "term": "less",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 37,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "health",
-    "lift": 1.1521,
-    "count": 83,
-    "in_topic": 7,
-    "cooc": 2
-   },
-   {
     "term": "others",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 33,
     "in_topic": 7,
     "cooc": 2
    },
    {
     "term": "food",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 73,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "reach",
-    "lift": 1.1521,
-    "count": 29,
+    "term": "mass",
+    "lift": 0.8071,
+    "count": 15,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "rideshare",
-    "lift": 1.1521,
-    "count": 9,
+    "term": "make",
+    "lift": 0.8071,
+    "count": 89,
+    "in_topic": 7,
+    "cooc": 2
+   },
+   {
+    "term": "long-term",
+    "lift": 0.8071,
+    "count": 43,
     "in_topic": 7,
     "cooc": 2
    },
    {
     "term": "rail",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 12,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "taxi",
-    "lift": 1.1521,
-    "count": 8,
-    "in_topic": 7,
-    "cooc": 2
-   },
-   {
     "term": "taxi rideshare",
-    "lift": 1.1521,
+    "lift": 0.8071,
     "count": 8,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "construction",
-    "lift": 1.1761,
-    "count": 77,
+    "term": "taxi",
+    "lift": 0.8071,
+    "count": 8,
+    "in_topic": 7,
+    "cooc": 2
+   },
+   {
+    "term": "rideshare",
+    "lift": 0.8071,
+    "count": 9,
+    "in_topic": 7,
+    "cooc": 2
+   },
+   {
+    "term": "impact microsoft",
+    "lift": 0.8071,
+    "count": 8,
+    "in_topic": 7,
+    "cooc": 2
+   },
+   {
+    "term": "impact microsoft sustainability",
+    "lift": 0.8071,
+    "count": 7,
+    "in_topic": 7,
+    "cooc": 2
+   },
+   {
+    "term": "power",
+    "lift": 0.8239,
+    "count": 144,
     "in_topic": 24,
     "cooc": 7
    },
    {
-    "term": "re",
-    "lift": 1.2097,
-    "count": 168,
-    "in_topic": 20,
-    "cooc": 6
+    "term": "out",
+    "lift": 0.8475,
+    "count": 47,
+    "in_topic": 10,
+    "cooc": 3
    },
    {
-    "term": "greenhouse gas",
-    "lift": 1.2097,
-    "count": 26,
-    "in_topic": 20,
-    "cooc": 6
+    "term": "nearly",
+    "lift": 0.8475,
+    "count": 29,
+    "in_topic": 10,
+    "cooc": 3
+   },
+   {
+    "term": "packaging",
+    "lift": 0.8475,
+    "count": 133,
+    "in_topic": 10,
+    "cooc": 3
+   },
+   {
+    "term": "adoption",
+    "lift": 0.8475,
+    "count": 55,
+    "in_topic": 10,
+    "cooc": 3
    },
    {
     "term": "employee",
-    "lift": 1.2097,
+    "lift": 0.8475,
     "count": 64,
     "in_topic": 10,
     "cooc": 3
    },
    {
-    "term": "collectively",
-    "lift": 1.2097,
-    "count": 22,
-    "in_topic": 10,
-    "cooc": 3
-   },
-   {
-    "term": "electricity",
-    "lift": 1.2161,
-    "count": 205,
-    "in_topic": 63,
-    "cooc": 19
-   },
-   {
-    "term": "where",
-    "lift": 1.2407,
-    "count": 196,
-    "in_topic": 26,
-    "cooc": 8
-   },
-   {
     "term": "supplier",
-    "lift": 1.2407,
+    "lift": 0.8692,
     "count": 82,
     "in_topic": 13,
     "cooc": 4
    },
    {
-    "term": "program",
-    "lift": 1.2407,
-    "count": 138,
+    "term": "launched",
+    "lift": 0.8692,
+    "count": 67,
+    "in_topic": 13,
+    "cooc": 4
+   },
+   {
+    "term": "decarbonization",
+    "lift": 0.8692,
+    "count": 69,
+    "in_topic": 13,
+    "cooc": 4
+   },
+   {
+    "term": "avoided",
+    "lift": 0.8692,
+    "count": 27,
+    "in_topic": 13,
+    "cooc": 4
+   },
+   {
+    "term": "ambition",
+    "lift": 0.8692,
+    "count": 30,
+    "in_topic": 13,
+    "cooc": 4
+   },
+   {
+    "term": "dioxide",
+    "lift": 0.8692,
+    "count": 24,
+    "in_topic": 13,
+    "cooc": 4
+   },
+   {
+    "term": "carbon dioxide",
+    "lift": 0.8692,
+    "count": 24,
     "in_topic": 13,
     "cooc": 4
    },
    {
     "term": "reporting",
-    "lift": 1.2601,
+    "lift": 0.8828,
     "count": 72,
     "in_topic": 16,
     "cooc": 5
    },
    {
-    "term": "reduction",
-    "lift": 1.2733,
-    "count": 95,
-    "in_topic": 38,
-    "cooc": 12
-   },
-   {
-    "term": "compared",
-    "lift": 1.2733,
-    "count": 44,
+    "term": "including",
+    "lift": 0.8921,
+    "count": 199,
     "in_topic": 19,
     "cooc": 6
    },
    {
-    "term": "supply chain",
-    "lift": 1.283,
-    "count": 171,
-    "in_topic": 22,
+    "term": "ai",
+    "lift": 0.908,
+    "count": 357,
+    "in_topic": 28,
+    "cooc": 9
+   },
+   {
+    "term": "greenhouse",
+    "lift": 0.9416,
+    "count": 28,
+    "in_topic": 21,
     "cooc": 7
    },
    {
-    "term": "reducing",
-    "lift": 1.2903,
-    "count": 129,
-    "in_topic": 25,
-    "cooc": 8
-   },
-   {
-    "term": "clean",
-    "lift": 1.2961,
-    "count": 185,
-    "in_topic": 28,
-    "cooc": 9
-   },
-   {
-    "term": "building",
-    "lift": 1.2961,
-    "count": 122,
-    "in_topic": 28,
-    "cooc": 9
-   },
-   {
-    "term": "data",
-    "lift": 1.3441,
-    "count": 523,
-    "in_topic": 93,
-    "cooc": 31
-   },
-   {
-    "term": "clean energy",
-    "lift": 1.3441,
-    "count": 133,
+    "term": "available",
+    "lift": 0.9416,
+    "count": 103,
     "in_topic": 18,
     "cooc": 6
    },
    {
-    "term": "consumption",
-    "lift": 1.3441,
-    "count": 103,
+    "term": "intensity",
+    "lift": 0.9416,
+    "count": 46,
     "in_topic": 15,
     "cooc": 5
    },
    {
-    "term": "corporate",
-    "lift": 1.3441,
-    "count": 66,
+    "term": "one",
+    "lift": 0.9416,
+    "count": 94,
+    "in_topic": 12,
+    "cooc": 4
+   },
+   {
+    "term": "services",
+    "lift": 0.9416,
+    "count": 77,
+    "in_topic": 12,
+    "cooc": 4
+   },
+   {
+    "term": "systems",
+    "lift": 0.9416,
+    "count": 120,
     "in_topic": 12,
     "cooc": 4
    },
    {
     "term": "vehicles",
-    "lift": 1.3441,
+    "lift": 0.9416,
     "count": 28,
     "in_topic": 12,
     "cooc": 4
    },
    {
+    "term": "addition",
+    "lift": 0.9416,
+    "count": 41,
+    "in_topic": 12,
+    "cooc": 4
+   },
+   {
+    "term": "access",
+    "lift": 0.9416,
+    "count": 100,
+    "in_topic": 12,
+    "cooc": 4
+   },
+   {
+    "term": "zero",
+    "lift": 0.9416,
+    "count": 64,
+    "in_topic": 12,
+    "cooc": 4
+   },
+   {
     "term": "reported",
-    "lift": 1.3441,
+    "lift": 0.9416,
     "count": 40,
     "in_topic": 12,
     "cooc": 4
    },
    {
-    "term": "criteria",
-    "lift": 1.3441,
-    "count": 30,
-    "in_topic": 12,
-    "cooc": 4
+    "term": "growth",
+    "lift": 0.9416,
+    "count": 61,
+    "in_topic": 9,
+    "cooc": 3
    },
    {
-    "term": "improvement",
-    "lift": 1.3441,
-    "count": 26,
+    "term": "scaling",
+    "lift": 0.9416,
+    "count": 50,
+    "in_topic": 9,
+    "cooc": 3
+   },
+   {
+    "term": "initiatives",
+    "lift": 0.9416,
+    "count": 80,
+    "in_topic": 9,
+    "cooc": 3
+   },
+   {
+    "term": "strategy",
+    "lift": 0.9416,
+    "count": 57,
+    "in_topic": 9,
+    "cooc": 3
+   },
+   {
+    "term": "part",
+    "lift": 0.9416,
+    "count": 56,
+    "in_topic": 9,
+    "cooc": 3
+   },
+   {
+    "term": "sbti",
+    "lift": 0.9416,
+    "count": 10,
+    "in_topic": 9,
+    "cooc": 3
+   },
+   {
+    "term": "co2",
+    "lift": 0.9416,
+    "count": 9,
+    "in_topic": 9,
+    "cooc": 3
+   },
+   {
+    "term": "even",
+    "lift": 0.9416,
+    "count": 39,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "local",
+    "lift": 0.9416,
+    "count": 112,
     "in_topic": 6,
     "cooc": 2
    },
    {
     "term": "specific",
-    "lift": 1.3441,
+    "lift": 0.9416,
     "count": 28,
     "in_topic": 6,
     "cooc": 2
    },
    {
     "term": "mix",
-    "lift": 1.3441,
+    "lift": 0.9416,
     "count": 17,
     "in_topic": 6,
     "cooc": 2
    },
    {
+    "term": "methodology",
+    "lift": 0.9416,
+    "count": 37,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
     "term": "iea emission",
-    "lift": 1.3441,
+    "lift": 0.9416,
     "count": 6,
     "in_topic": 6,
     "cooc": 2
    },
    {
     "term": "iea emission factors",
-    "lift": 1.3441,
+    "lift": 0.9416,
     "count": 6,
     "in_topic": 6,
     "cooc": 2
    },
    {
-    "term": "absolute",
-    "lift": 1.3441,
-    "count": 6,
-    "in_topic": 6,
-    "cooc": 2
-   },
-   {
-    "term": "not relevant",
-    "lift": 1.3441,
-    "count": 7,
-    "in_topic": 6,
-    "cooc": 2
-   },
-   {
-    "term": "warehousing",
-    "lift": 1.3441,
+    "term": "endnote",
+    "lift": 0.9416,
     "count": 14,
     "in_topic": 6,
     "cooc": 2
    },
    {
-    "term": "efforts",
-    "lift": 1.3958,
-    "count": 194,
+    "term": "refer to endnote",
+    "lift": 0.9416,
+    "count": 14,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "circularity",
+    "lift": 0.9416,
+    "count": 52,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "areas",
+    "lift": 0.9416,
+    "count": 51,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "zero waste",
+    "lift": 0.9416,
+    "count": 43,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "carbon reduction ambition",
+    "lift": 0.9416,
+    "count": 6,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "version",
+    "lift": 0.9416,
+    "count": 8,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "needs",
+    "lift": 0.9416,
+    "count": 52,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "compute",
+    "lift": 0.9416,
+    "count": 15,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "operate",
+    "lift": 0.9416,
+    "count": 46,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "teams",
+    "lift": 0.9416,
+    "count": 38,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "not relevant",
+    "lift": 0.9416,
+    "count": 7,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "calculate emissions",
+    "lift": 0.9416,
+    "count": 17,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "sphera",
+    "lift": 0.9416,
+    "count": 6,
+    "in_topic": 6,
+    "cooc": 2
+   },
+   {
+    "term": "reduction",
+    "lift": 0.9664,
+    "count": 95,
+    "in_topic": 38,
+    "cooc": 13
+   },
+   {
+    "term": "products",
+    "lift": 0.9778,
+    "count": 162,
     "in_topic": 26,
     "cooc": 9
    },
    {
-    "term": "renewable",
-    "lift": 1.4231,
-    "count": 96,
-    "in_topic": 17,
-    "cooc": 6
+    "term": "supply",
+    "lift": 0.9778,
+    "count": 232,
+    "in_topic": 26,
+    "cooc": 9
    },
    {
-    "term": "hardware",
-    "lift": 1.4231,
-    "count": 97,
-    "in_topic": 17,
-    "cooc": 6
+    "term": "greenhouse gas",
+    "lift": 0.9887,
+    "count": 26,
+    "in_topic": 20,
+    "cooc": 7
    },
    {
-    "term": "metrics",
-    "lift": 1.4663,
-    "count": 44,
+    "term": "tools",
+    "lift": 1.0089,
+    "count": 117,
+    "in_topic": 14,
+    "cooc": 5
+   },
+   {
+    "term": "supply chain",
+    "lift": 1.0272,
+    "count": 171,
+    "in_topic": 22,
+    "cooc": 8
+   },
+   {
+    "term": "sustainable",
+    "lift": 1.0272,
+    "count": 179,
+    "in_topic": 22,
+    "cooc": 8
+   },
+   {
+    "term": "up",
+    "lift": 1.0272,
+    "count": 59,
     "in_topic": 11,
     "cooc": 4
    },
    {
-    "term": "net-zero",
-    "lift": 1.4663,
-    "count": 22,
+    "term": "design",
+    "lift": 1.0272,
+    "count": 86,
     "in_topic": 11,
     "cooc": 4
    },
    {
-    "term": "carbon reduction",
-    "lift": 1.4856,
-    "count": 27,
+    "term": "infrastructure",
+    "lift": 1.0407,
+    "count": 112,
     "in_topic": 19,
     "cooc": 7
    },
    {
     "term": "not",
-    "lift": 1.4934,
+    "lift": 1.0462,
     "count": 161,
     "in_topic": 27,
     "cooc": 10
    },
    {
-    "term": "alphabet",
-    "lift": 1.4977,
-    "count": 104,
-    "in_topic": 35,
-    "cooc": 13
-   },
-   {
     "term": "suppliers",
-    "lift": 1.5121,
+    "lift": 1.0593,
     "count": 161,
     "in_topic": 24,
     "cooc": 9
    },
    {
-    "term": "fuel",
-    "lift": 1.5121,
-    "count": 41,
-    "in_topic": 16,
-    "cooc": 6
-   },
-   {
-    "term": "generation",
-    "lift": 1.5121,
-    "count": 53,
+    "term": "provide",
+    "lift": 1.0593,
+    "count": 87,
     "in_topic": 8,
     "cooc": 3
    },
    {
-    "term": "energy procurement",
-    "lift": 1.5121,
-    "count": 29,
+    "term": "international",
+    "lift": 1.0593,
+    "count": 27,
     "in_topic": 8,
     "cooc": 3
    },
    {
     "term": "heating and cooling",
-    "lift": 1.5121,
+    "lift": 1.0593,
     "count": 13,
     "in_topic": 8,
     "cooc": 3
    },
    {
-    "term": "carbon footprint",
-    "lift": 1.5361,
-    "count": 40,
-    "in_topic": 21,
-    "cooc": 8
+    "term": "partnering",
+    "lift": 1.0593,
+    "count": 29,
+    "in_topic": 8,
+    "cooc": 3
    },
    {
-    "term": "uses",
-    "lift": 1.5509,
-    "count": 56,
+    "term": "partnering for impact",
+    "lift": 1.0593,
+    "count": 13,
+    "in_topic": 8,
+    "cooc": 3
+   },
+   {
+    "term": "where",
+    "lift": 1.0865,
+    "count": 196,
+    "in_topic": 26,
+    "cooc": 10
+   },
+   {
+    "term": "procurement",
+    "lift": 1.0865,
+    "count": 64,
     "in_topic": 13,
     "cooc": 5
    },
    {
-    "term": "generated",
-    "lift": 1.5681,
-    "count": 49,
-    "in_topic": 18,
-    "cooc": 7
+    "term": "reduce",
+    "lift": 1.0914,
+    "count": 166,
+    "in_topic": 44,
+    "cooc": 17
    },
    {
-    "term": "use",
-    "lift": 1.5751,
-    "count": 305,
-    "in_topic": 64,
-    "cooc": 25
-   },
-   {
-    "term": "footprint",
-    "lift": 1.6129,
-    "count": 78,
-    "in_topic": 30,
-    "cooc": 12
+    "term": "efficiency",
+    "lift": 1.1299,
+    "count": 145,
+    "in_topic": 20,
+    "cooc": 8
    },
    {
     "term": "renewable energy",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 68,
     "in_topic": 10,
     "cooc": 4
    },
    {
+    "term": "usage",
+    "lift": 1.1299,
+    "count": 44,
+    "in_topic": 10,
+    "cooc": 4
+   },
+   {
+    "term": "support",
+    "lift": 1.1299,
+    "count": 161,
+    "in_topic": 10,
+    "cooc": 4
+   },
+   {
+    "term": "distribution",
+    "lift": 1.1299,
+    "count": 20,
+    "in_topic": 10,
+    "cooc": 4
+   },
+   {
     "term": "then",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 27,
     "in_topic": 5,
     "cooc": 2
    },
    {
-    "term": "operated data",
-    "lift": 1.6129,
-    "count": 18,
-    "in_topic": 5,
-    "cooc": 2
-   },
-   {
-    "term": "google-owned",
-    "lift": 1.6129,
+    "term": "basis",
+    "lift": 1.1299,
     "count": 17,
     "in_topic": 5,
     "cooc": 2
    },
    {
+    "term": "tpu",
+    "lift": 1.1299,
+    "count": 12,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
     "term": "between",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 38,
     "in_topic": 5,
     "cooc": 2
    },
    {
-    "term": "electricity consumption",
-    "lift": 1.6129,
-    "count": 34,
-    "in_topic": 5,
-    "cooc": 2
-   },
-   {
-    "term": "electrification",
-    "lift": 1.6129,
-    "count": 13,
+    "term": "machine",
+    "lift": 1.1299,
+    "count": 22,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "consumed",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 21,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "identify",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 72,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "egrid emission",
-    "lift": 1.6129,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 2
-   },
-   {
-    "term": "epa egrid emission",
-    "lift": 1.6129,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 2
-   },
-   {
-    "term": "egrid",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 5,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "egrid emission factors",
-    "lift": 1.6129,
+    "lift": 1.1299,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "epa egrid emission",
+    "lift": 1.1299,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "egrid",
+    "lift": 1.1299,
     "count": 5,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "epa egrid",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 5,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "upstream electricity",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 5,
     "in_topic": 5,
     "cooc": 2
    },
    {
-    "term": "homes",
-    "lift": 1.6129,
+    "term": "renewable diesel",
+    "lift": 1.1299,
     "count": 10,
     "in_topic": 5,
     "cooc": 2
    },
    {
+    "term": "source",
+    "lift": 1.1299,
+    "count": 33,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
     "term": "servers",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 22,
     "in_topic": 5,
     "cooc": 2
    },
    {
+    "term": "device",
+    "lift": 1.1299,
+    "count": 27,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
     "term": "date",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 19,
     "in_topic": 5,
     "cooc": 2
    },
    {
-    "term": "combination",
-    "lift": 1.6129,
-    "count": 21,
+    "term": "above",
+    "lift": 1.1299,
+    "count": 16,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "endnote above",
+    "lift": 1.1299,
+    "count": 12,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "largest",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 21,
     "in_topic": 5,
     "cooc": 2
    },
    {
-    "term": "community",
-    "lift": 1.6129,
-    "count": 70,
+    "term": "section",
+    "lift": 1.1299,
+    "count": 19,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "improve",
+    "lift": 1.1299,
+    "count": 64,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "taking",
+    "lift": 1.1299,
+    "count": 15,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "case",
+    "lift": 1.1299,
+    "count": 11,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "consumer devices",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 8,
     "in_topic": 5,
     "cooc": 2
    },
    {
+    "term": "service",
+    "lift": 1.1299,
+    "count": 36,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "avoided emissions",
+    "lift": 1.1299,
+    "count": 7,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "typical",
+    "lift": 1.1299,
+    "count": 11,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
     "term": "calculation",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 16,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "accordance",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 18,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "biogenic emissions",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 5,
     "in_topic": 5,
     "cooc": 2
    },
    {
-    "term": "warehouses",
-    "lift": 1.6129,
-    "count": 8,
-    "in_topic": 5,
-    "cooc": 2
-   },
-   {
-    "term": "rail bus",
-    "lift": 1.6129,
-    "count": 6,
+    "term": "professional",
+    "lift": 1.1299,
+    "count": 10,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "bus",
-    "lift": 1.6129,
+    "lift": 1.1299,
+    "count": 6,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "rail bus",
+    "lift": 1.1299,
     "count": 6,
     "in_topic": 5,
     "cooc": 2
    },
    {
     "term": "passenger",
-    "lift": 1.6129,
+    "lift": 1.1299,
     "count": 9,
     "in_topic": 5,
     "cooc": 2
    },
    {
-    "term": "centers",
-    "lift": 1.6428,
-    "count": 163,
-    "in_topic": 27,
-    "cooc": 11
+    "term": "calculates emissions",
+    "lift": 1.1299,
+    "count": 6,
+    "in_topic": 5,
+    "cooc": 2
    },
    {
-    "term": "base",
-    "lift": 1.6801,
-    "count": 22,
+    "term": "sustainability report microsoft",
+    "lift": 1.1299,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "report microsoft",
+    "lift": 1.1299,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "tons of co2e",
+    "lift": 1.1299,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 2
+   },
+   {
+    "term": "renewable",
+    "lift": 1.1632,
+    "count": 96,
+    "in_topic": 17,
+    "cooc": 7
+   },
+   {
+    "term": "cooling",
+    "lift": 1.177,
+    "count": 86,
     "in_topic": 12,
     "cooc": 5
    },
    {
-    "term": "emissions",
-    "lift": 1.7054,
-    "count": 454,
-    "in_topic": 279,
-    "cooc": 118
+    "term": "corporate",
+    "lift": 1.177,
+    "count": 66,
+    "in_topic": 12,
+    "cooc": 5
    },
    {
-    "term": "used",
-    "lift": 1.706,
-    "count": 114,
-    "in_topic": 26,
-    "cooc": 11
+    "term": "refer",
+    "lift": 1.177,
+    "count": 41,
+    "in_topic": 12,
+    "cooc": 5
    },
    {
-    "term": "both",
-    "lift": 1.7281,
-    "count": 91,
-    "in_topic": 14,
-    "cooc": 6
+    "term": "logistics",
+    "lift": 1.177,
+    "count": 51,
+    "in_topic": 12,
+    "cooc": 5
+   },
+   {
+    "term": "criteria",
+    "lift": 1.177,
+    "count": 30,
+    "in_topic": 12,
+    "cooc": 5
+   },
+   {
+    "term": "carbon reduction",
+    "lift": 1.1894,
+    "count": 27,
+    "in_topic": 19,
+    "cooc": 8
+   },
+   {
+    "term": "energy",
+    "lift": 1.1909,
+    "count": 580,
+    "in_topic": 102,
+    "cooc": 43
+   },
+   {
+    "term": "alphabet",
+    "lift": 1.2107,
+    "count": 104,
+    "in_topic": 35,
+    "cooc": 15
    },
    {
     "term": "goods",
-    "lift": 1.7281,
+    "lift": 1.2107,
     "count": 38,
     "in_topic": 14,
     "cooc": 6
    },
    {
-    "term": "operated",
-    "lift": 1.7281,
-    "count": 27,
+    "term": "expand",
+    "lift": 1.2107,
+    "count": 36,
     "in_topic": 7,
     "cooc": 3
    },
    {
-    "term": "following",
-    "lift": 1.7281,
-    "count": 26,
+    "term": "five",
+    "lift": 1.2107,
+    "count": 31,
     "in_topic": 7,
     "cooc": 3
    },
    {
-    "term": "building materials",
-    "lift": 1.7281,
-    "count": 15,
+    "term": "set",
+    "lift": 1.2107,
+    "count": 44,
+    "in_topic": 7,
+    "cooc": 3
+   },
+   {
+    "term": "mw",
+    "lift": 1.2107,
+    "count": 24,
+    "in_topic": 7,
+    "cooc": 3
+   },
+   {
+    "term": "health",
+    "lift": 1.2107,
+    "count": 83,
     "in_topic": 7,
     "cooc": 3
    },
    {
     "term": "goods and services",
-    "lift": 1.7281,
+    "lift": 1.2107,
     "count": 13,
     "in_topic": 7,
     "cooc": 3
    },
    {
+    "term": "impacts",
+    "lift": 1.2107,
+    "count": 36,
+    "in_topic": 7,
+    "cooc": 3
+   },
+   {
     "term": "total",
-    "lift": 1.7437,
+    "lift": 1.2216,
     "count": 102,
     "in_topic": 37,
     "cooc": 16
    },
    {
     "term": "partners",
-    "lift": 1.7532,
+    "lift": 1.2282,
     "count": 104,
     "in_topic": 23,
     "cooc": 10
    },
    {
-    "term": "operations",
-    "lift": 1.7577,
-    "count": 205,
-    "in_topic": 39,
-    "cooc": 17
+    "term": "clean energy",
+    "lift": 1.2555,
+    "count": 133,
+    "in_topic": 18,
+    "cooc": 8
    },
    {
-    "term": "increase",
-    "lift": 1.7921,
-    "count": 59,
+    "term": "operational",
+    "lift": 1.2555,
+    "count": 86,
+    "in_topic": 18,
+    "cooc": 8
+   },
+   {
+    "term": "increasing",
+    "lift": 1.2555,
+    "count": 37,
     "in_topic": 9,
     "cooc": 4
    },
    {
     "term": "heating",
-    "lift": 1.7921,
+    "lift": 1.2555,
     "count": 19,
     "in_topic": 9,
     "cooc": 4
    },
    {
-    "term": "standard",
-    "lift": 1.7921,
-    "count": 36,
-    "in_topic": 9,
-    "cooc": 4
-   },
-   {
     "term": "material",
-    "lift": 1.7921,
+    "lift": 1.2555,
     "count": 61,
     "in_topic": 9,
     "cooc": 4
    },
    {
-    "term": "method",
-    "lift": 1.7921,
-    "count": 27,
-    "in_topic": 9,
-    "cooc": 4
-   },
-   {
-    "term": "sold products",
-    "lift": 1.7921,
-    "count": 11,
+    "term": "lower-carbon",
+    "lift": 1.2555,
+    "count": 18,
     "in_topic": 9,
     "cooc": 4
    },
    {
     "term": "sold",
-    "lift": 1.7921,
+    "lift": 1.2555,
     "count": 28,
     "in_topic": 9,
     "cooc": 4
    },
    {
-    "term": "alphabet uses",
-    "lift": 1.7921,
-    "count": 20,
+    "term": "sold products",
+    "lift": 1.2555,
+    "count": 11,
     "in_topic": 9,
     "cooc": 4
    },
    {
     "term": "represent",
-    "lift": 1.8328,
+    "lift": 1.284,
     "count": 28,
     "in_topic": 11,
     "cooc": 5
    },
    {
-    "term": "management",
-    "lift": 1.8328,
-    "count": 85,
+    "term": "critical",
+    "lift": 1.284,
+    "count": 73,
     "in_topic": 11,
     "cooc": 5
    },
    {
-    "term": "account",
-    "lift": 1.8328,
-    "count": 31,
+    "term": "metrics",
+    "lift": 1.284,
+    "count": 44,
     "in_topic": 11,
     "cooc": 5
    },
    {
-    "term": "emissions generated",
-    "lift": 1.8328,
-    "count": 21,
+    "term": "average",
+    "lift": 1.284,
+    "count": 46,
     "in_topic": 11,
     "cooc": 5
    },
    {
-    "term": "calculate",
-    "lift": 1.9153,
-    "count": 71,
-    "in_topic": 40,
-    "cooc": 19
+    "term": "electricity",
+    "lift": 1.3003,
+    "count": 205,
+    "in_topic": 63,
+    "cooc": 29
    },
    {
-    "term": "data centers",
-    "lift": 1.9285,
-    "count": 134,
+    "term": "efforts",
+    "lift": 1.3038,
+    "count": 194,
+    "in_topic": 26,
+    "cooc": 12
+   },
+   {
+    "term": "uses",
+    "lift": 1.3038,
+    "count": 56,
+    "in_topic": 13,
+    "cooc": 6
+   },
+   {
+    "term": "program",
+    "lift": 1.3038,
+    "count": 138,
+    "in_topic": 13,
+    "cooc": 6
+   },
+   {
+    "term": "clean",
+    "lift": 1.3115,
+    "count": 185,
+    "in_topic": 28,
+    "cooc": 13
+   },
+   {
+    "term": "carbon emissions",
+    "lift": 1.3115,
+    "count": 59,
+    "in_topic": 28,
+    "cooc": 13
+   },
+   {
+    "term": "consumption",
+    "lift": 1.3183,
+    "count": 103,
+    "in_topic": 15,
+    "cooc": 7
+   },
+   {
+    "term": "approach",
+    "lift": 1.3293,
+    "count": 127,
+    "in_topic": 17,
+    "cooc": 8
+   },
+   {
+    "term": "carbon footprint",
+    "lift": 1.3452,
+    "count": 40,
+    "in_topic": 21,
+    "cooc": 10
+   },
+   {
+    "term": "materials",
+    "lift": 1.351,
+    "count": 136,
     "in_topic": 23,
     "cooc": 11
    },
    {
-    "term": "gas",
-    "lift": 1.9466,
-    "count": 47,
-    "in_topic": 29,
-    "cooc": 14
+    "term": "across",
+    "lift": 1.3581,
+    "count": 319,
+    "in_topic": 52,
+    "cooc": 25
+   },
+   {
+    "term": "footprint",
+    "lift": 1.4124,
+    "count": 78,
+    "in_topic": 30,
+    "cooc": 15
+   },
+   {
+    "term": "re",
+    "lift": 1.4124,
+    "count": 168,
+    "in_topic": 20,
+    "cooc": 10
+   },
+   {
+    "term": "generated",
+    "lift": 1.4124,
+    "count": 49,
+    "in_topic": 18,
+    "cooc": 9
+   },
+   {
+    "term": "fuel",
+    "lift": 1.4124,
+    "count": 41,
+    "in_topic": 16,
+    "cooc": 8
    },
    {
     "term": "include",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 94,
     "in_topic": 16,
     "cooc": 8
    },
    {
-    "term": "significant",
-    "lift": 2.0161,
-    "count": 60,
+    "term": "embodied carbon",
+    "lift": 1.4124,
+    "count": 24,
     "in_topic": 14,
     "cooc": 7
    },
    {
-    "term": "transportation",
-    "lift": 2.0161,
-    "count": 61,
+    "term": "cloud",
+    "lift": 1.4124,
+    "count": 68,
     "in_topic": 12,
     "cooc": 6
    },
    {
-    "term": "emissions using",
-    "lift": 2.0161,
-    "count": 20,
+    "term": "base",
+    "lift": 1.4124,
+    "count": 22,
     "in_topic": 12,
     "cooc": 6
    },
    {
     "term": "relevant",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 29,
     "in_topic": 12,
     "cooc": 6
    },
    {
-    "term": "details",
-    "lift": 2.0161,
-    "count": 43,
-    "in_topic": 10,
-    "cooc": 5
-   },
-   {
-    "term": "eacs",
-    "lift": 2.0161,
-    "count": 21,
+    "term": "potential",
+    "lift": 1.4124,
+    "count": 70,
     "in_topic": 10,
     "cooc": 5
    },
    {
     "term": "actual",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 42,
     "in_topic": 10,
     "cooc": 5
    },
    {
+    "term": "collectively",
+    "lift": 1.4124,
+    "count": 22,
+    "in_topic": 10,
+    "cooc": 5
+   },
+   {
     "term": "base year",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 13,
     "in_topic": 10,
     "cooc": 5
    },
    {
-    "term": "representing",
-    "lift": 2.0161,
-    "count": 12,
-    "in_topic": 10,
-    "cooc": 5
+    "term": "generation",
+    "lift": 1.4124,
+    "count": 53,
+    "in_topic": 8,
+    "cooc": 4
    },
    {
-    "term": "diesel",
-    "lift": 2.0161,
-    "count": 15,
+    "term": "transmission",
+    "lift": 1.4124,
+    "count": 20,
+    "in_topic": 8,
+    "cooc": 4
+   },
+   {
+    "term": "energy procurement",
+    "lift": 1.4124,
+    "count": 29,
+    "in_topic": 8,
+    "cooc": 4
+   },
+   {
+    "term": "losses",
+    "lift": 1.4124,
+    "count": 12,
+    "in_topic": 8,
+    "cooc": 4
+   },
+   {
+    "term": "distribution losses",
+    "lift": 1.4124,
+    "count": 9,
+    "in_topic": 8,
+    "cooc": 4
+   },
+   {
+    "term": "transmission and distribution",
+    "lift": 1.4124,
+    "count": 9,
     "in_topic": 8,
     "cooc": 4
    },
    {
     "term": "capital",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 31,
     "in_topic": 8,
     "cooc": 4
    },
    {
     "term": "chain emissions",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 11,
     "in_topic": 8,
     "cooc": 4
    },
    {
     "term": "use of sold",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 8,
     "in_topic": 8,
     "cooc": 4
    },
    {
-    "term": "includes emissions",
-    "lift": 2.0161,
-    "count": 8,
-    "in_topic": 8,
-    "cooc": 4
+    "term": "demands",
+    "lift": 1.4124,
+    "count": 27,
+    "in_topic": 6,
+    "cooc": 3
+   },
+   {
+    "term": "advanced",
+    "lift": 1.4124,
+    "count": 67,
+    "in_topic": 6,
+    "cooc": 3
+   },
+   {
+    "term": "important",
+    "lift": 1.4124,
+    "count": 46,
+    "in_topic": 6,
+    "cooc": 3
+   },
+   {
+    "term": "improvement",
+    "lift": 1.4124,
+    "count": 26,
+    "in_topic": 6,
+    "cooc": 3
+   },
+   {
+    "term": "absolute",
+    "lift": 1.4124,
+    "count": 6,
+    "in_topic": 6,
+    "cooc": 3
    },
    {
     "term": "council",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 22,
     "in_topic": 6,
     "cooc": 3
    },
    {
+    "term": "built",
+    "lift": 1.4124,
+    "count": 31,
+    "in_topic": 6,
+    "cooc": 3
+   },
+   {
+    "term": "innovative",
+    "lift": 1.4124,
+    "count": 53,
+    "in_topic": 6,
+    "cooc": 3
+   },
+   {
     "term": "no",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 37,
     "in_topic": 6,
     "cooc": 3
    },
    {
     "term": "category use",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 6,
     "in_topic": 6,
     "cooc": 3
    },
    {
     "term": "assumptions",
-    "lift": 2.0161,
+    "lift": 1.4124,
     "count": 12,
     "in_topic": 6,
     "cooc": 3
    },
    {
-    "term": "includes",
-    "lift": 2.1712,
-    "count": 90,
+    "term": "gas",
+    "lift": 1.4611,
+    "count": 47,
+    "in_topic": 29,
+    "cooc": 15
+   },
+   {
+    "term": "reducing",
+    "lift": 1.4689,
+    "count": 129,
+    "in_topic": 25,
+    "cooc": 13
+   },
+   {
+    "term": "emissions",
+    "lift": 1.4884,
+    "count": 454,
+    "in_topic": 279,
+    "cooc": 147
+   },
+   {
+    "term": "hardware",
+    "lift": 1.4955,
+    "count": 97,
+    "in_topic": 17,
+    "cooc": 9
+   },
+   {
+    "term": "use",
+    "lift": 1.5007,
+    "count": 305,
+    "in_topic": 64,
+    "cooc": 34
+   },
+   {
+    "term": "embodied",
+    "lift": 1.5066,
+    "count": 27,
+    "in_topic": 15,
+    "cooc": 8
+   },
+   {
+    "term": "building",
+    "lift": 1.5133,
+    "count": 122,
+    "in_topic": 28,
+    "cooc": 15
+   },
+   {
+    "term": "used",
+    "lift": 1.5211,
+    "count": 114,
     "in_topic": 26,
     "cooc": 14
    },
    {
-    "term": "accounting",
-    "lift": 2.1712,
-    "count": 26,
-    "in_topic": 13,
-    "cooc": 7
+    "term": "management",
+    "lift": 1.5408,
+    "count": 85,
+    "in_topic": 11,
+    "cooc": 6
    },
    {
-    "term": "due",
-    "lift": 2.2401,
-    "count": 44,
+    "term": "equipment",
+    "lift": 1.5408,
+    "count": 48,
+    "in_topic": 11,
+    "cooc": 6
+   },
+   {
+    "term": "net-zero",
+    "lift": 1.5408,
+    "count": 22,
+    "in_topic": 11,
+    "cooc": 6
+   },
+   {
+    "term": "calculate",
+    "lift": 1.5537,
+    "count": 71,
+    "in_topic": 40,
+    "cooc": 22
+   },
+   {
+    "term": "reduced",
+    "lift": 1.5694,
+    "count": 37,
+    "in_topic": 18,
+    "cooc": 10
+   },
+   {
+    "term": "work",
+    "lift": 1.5694,
+    "count": 132,
     "in_topic": 9,
     "cooc": 5
    },
    {
-    "term": "associated",
-    "lift": 2.2401,
-    "count": 28,
+    "term": "standard",
+    "lift": 1.5694,
+    "count": 36,
+    "in_topic": 9,
+    "cooc": 5
+   },
+   {
+    "term": "alphabet uses",
+    "lift": 1.5694,
+    "count": 20,
     "in_topic": 9,
     "cooc": 5
    },
    {
     "term": "manufacturing",
-    "lift": 2.2681,
+    "lift": 1.589,
     "count": 52,
     "in_topic": 16,
     "cooc": 9
    },
    {
-    "term": "fuels",
-    "lift": 2.3041,
-    "count": 31,
-    "in_topic": 14,
-    "cooc": 8
-   },
-   {
-    "term": "increased",
-    "lift": 2.3041,
-    "count": 45,
+    "term": "both",
+    "lift": 1.6142,
+    "count": 91,
     "in_topic": 14,
     "cooc": 8
    },
    {
     "term": "within",
-    "lift": 2.3041,
+    "lift": 1.6142,
     "count": 66,
     "in_topic": 7,
     "cooc": 4
    },
    {
     "term": "additional",
-    "lift": 2.3041,
+    "lift": 1.6142,
     "count": 59,
     "in_topic": 7,
     "cooc": 4
    },
    {
     "term": "focus",
-    "lift": 2.3041,
+    "lift": 1.6142,
     "count": 68,
     "in_topic": 7,
     "cooc": 4
    },
    {
     "term": "same",
-    "lift": 2.3041,
+    "lift": 1.6142,
     "count": 41,
     "in_topic": 7,
     "cooc": 4
    },
    {
+    "term": "following",
+    "lift": 1.6142,
+    "count": 26,
+    "in_topic": 7,
+    "cooc": 4
+   },
+   {
     "term": "emissions increased",
-    "lift": 2.3041,
+    "lift": 1.6142,
     "count": 8,
     "in_topic": 7,
     "cooc": 4
    },
    {
+    "term": "reach",
+    "lift": 1.6142,
+    "count": 29,
+    "in_topic": 7,
+    "cooc": 4
+   },
+   {
     "term": "combined",
-    "lift": 2.3041,
+    "lift": 1.6142,
     "count": 13,
     "in_topic": 7,
     "cooc": 4
    },
    {
-    "term": "sector",
-    "lift": 2.3041,
-    "count": 25,
-    "in_topic": 7,
-    "cooc": 4
-   },
-   {
     "term": "primary",
-    "lift": 2.3041,
+    "lift": 1.6142,
     "count": 24,
     "in_topic": 7,
     "cooc": 4
    },
    {
+    "term": "consumer",
+    "lift": 1.6478,
+    "count": 34,
+    "in_topic": 12,
+    "cooc": 7
+   },
+   {
     "term": "included",
-    "lift": 2.3522,
+    "lift": 1.6478,
     "count": 43,
     "in_topic": 12,
     "cooc": 7
    },
    {
     "term": "category emissions",
-    "lift": 2.3522,
+    "lift": 1.6478,
     "count": 14,
     "in_topic": 12,
     "cooc": 7
    },
    {
-    "term": "well",
-    "lift": 2.4194,
-    "count": 64,
-    "in_topic": 15,
-    "cooc": 9
+    "term": "details",
+    "lift": 1.6949,
+    "count": 43,
+    "in_topic": 10,
+    "cooc": 6
    },
    {
-    "term": "tco2e",
-    "lift": 2.4194,
-    "count": 16,
-    "in_topic": 15,
-    "cooc": 9
+    "term": "representing",
+    "lift": 1.6949,
+    "count": 12,
+    "in_topic": 10,
+    "cooc": 6
    },
    {
-    "term": "percentage",
-    "lift": 2.4194,
-    "count": 35,
-    "in_topic": 5,
-    "cooc": 3
-   },
-   {
-    "term": "clean electricity",
-    "lift": 2.4194,
-    "count": 21,
-    "in_topic": 5,
-    "cooc": 3
-   },
-   {
-    "term": "electricity use",
-    "lift": 2.4194,
-    "count": 11,
-    "in_topic": 5,
-    "cooc": 3
-   },
-   {
-    "term": "clean energy procurement",
-    "lift": 2.4194,
-    "count": 21,
-    "in_topic": 5,
-    "cooc": 3
-   },
-   {
-    "term": "employees",
-    "lift": 2.4194,
-    "count": 126,
-    "in_topic": 5,
-    "cooc": 3
-   },
-   {
-    "term": "california",
-    "lift": 2.4194,
-    "count": 27,
-    "in_topic": 5,
-    "cooc": 3
-   },
-   {
-    "term": "assembly",
-    "lift": 2.4194,
+    "term": "electrification",
+    "lift": 1.6949,
     "count": 13,
     "in_topic": 5,
     "cooc": 3
    },
    {
+    "term": "clean energy procurement",
+    "lift": 1.6949,
+    "count": 21,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "achieve",
+    "lift": 1.6949,
+    "count": 35,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "positive",
+    "lift": 1.6949,
+    "count": 42,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "homes",
+    "lift": 1.6949,
+    "count": 10,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "california",
+    "lift": 1.6949,
+    "count": 27,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "conventional",
+    "lift": 1.6949,
+    "count": 13,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "assembly",
+    "lift": 1.6949,
+    "count": 13,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "buildings",
+    "lift": 1.6949,
+    "count": 37,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
     "term": "commuting",
-    "lift": 2.4194,
+    "lift": 1.6949,
     "count": 16,
     "in_topic": 5,
     "cooc": 3
    },
    {
+    "term": "combination",
+    "lift": 1.6949,
+    "count": 21,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
     "term": "parts",
-    "lift": 2.4194,
+    "lift": 1.6949,
     "count": 19,
     "in_topic": 5,
     "cooc": 3
    },
    {
     "term": "company",
-    "lift": 2.4194,
+    "lift": 1.6949,
     "count": 51,
     "in_topic": 5,
     "cooc": 3
    },
    {
+    "term": "avoiding",
+    "lift": 1.6949,
+    "count": 14,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "community",
+    "lift": 1.6949,
+    "count": 70,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
+    "term": "therefore",
+    "lift": 1.6949,
+    "count": 14,
+    "in_topic": 5,
+    "cooc": 3
+   },
+   {
     "term": "activity",
-    "lift": 2.4194,
+    "lift": 1.6949,
     "count": 21,
     "in_topic": 5,
     "cooc": 3
    },
    {
-    "term": "category capital",
-    "lift": 2.4194,
+    "term": "emissions from category",
+    "lift": 1.6949,
     "count": 5,
     "in_topic": 5,
     "cooc": 3
    },
    {
     "term": "category capital goods",
-    "lift": 2.4194,
+    "lift": 1.6949,
     "count": 5,
     "in_topic": 5,
     "cooc": 3
    },
    {
-    "term": "emissions from category",
-    "lift": 2.4194,
+    "term": "category capital",
+    "lift": 1.6949,
     "count": 5,
     "in_topic": 5,
     "cooc": 3
    },
    {
     "term": "steam heating",
-    "lift": 2.4194,
+    "lift": 1.6949,
     "count": 6,
     "in_topic": 5,
     "cooc": 3
    },
    {
-    "term": "approximately",
-    "lift": 2.5202,
-    "count": 44,
+    "term": "includes",
+    "lift": 1.7384,
+    "count": 90,
+    "in_topic": 26,
+    "cooc": 16
+   },
+   {
+    "term": "accounting",
+    "lift": 1.7384,
+    "count": 26,
+    "in_topic": 13,
+    "cooc": 8
+   },
+   {
+    "term": "construction",
+    "lift": 1.7655,
+    "count": 77,
     "in_topic": 24,
     "cooc": 15
    },
    {
+    "term": "diesel",
+    "lift": 1.7655,
+    "count": 15,
+    "in_topic": 8,
+    "cooc": 5
+   },
+   {
     "term": "sources",
-    "lift": 2.5202,
+    "lift": 1.7655,
     "count": 57,
     "in_topic": 8,
     "cooc": 5
    },
    {
-    "term": "chain",
-    "lift": 2.5319,
-    "count": 215,
-    "in_topic": 43,
-    "cooc": 27
-   },
-   {
-    "term": "upstream",
-    "lift": 2.5467,
-    "count": 34,
-    "in_topic": 19,
-    "cooc": 12
-   },
-   {
-    "term": "natural",
-    "lift": 2.566,
-    "count": 57,
+    "term": "account",
+    "lift": 1.7976,
+    "count": 31,
     "in_topic": 11,
     "cooc": 7
    },
    {
-    "term": "category",
-    "lift": 2.6015,
-    "count": 39,
-    "in_topic": 31,
-    "cooc": 20
+    "term": "emissions generated",
+    "lift": 1.7976,
+    "count": 21,
+    "in_topic": 11,
+    "cooc": 7
+   },
+   {
+    "term": "operations",
+    "lift": 1.8108,
+    "count": 205,
+    "in_topic": 39,
+    "cooc": 25
+   },
+   {
+    "term": "significant",
+    "lift": 1.816,
+    "count": 60,
+    "in_topic": 14,
+    "cooc": 9
+   },
+   {
+    "term": "fuels",
+    "lift": 1.816,
+    "count": 31,
+    "in_topic": 14,
+    "cooc": 9
+   },
+   {
+    "term": "increased",
+    "lift": 1.816,
+    "count": 45,
+    "in_topic": 14,
+    "cooc": 9
+   },
+   {
+    "term": "data",
+    "lift": 1.8225,
+    "count": 523,
+    "in_topic": 93,
+    "cooc": 60
    },
    {
     "term": "direct",
-    "lift": 2.6091,
+    "lift": 1.8278,
     "count": 54,
     "in_topic": 17,
     "cooc": 11
    },
    {
-    "term": "baseline",
-    "lift": 2.6882,
-    "count": 23,
+    "term": "chain",
+    "lift": 1.8394,
+    "count": 215,
+    "in_topic": 43,
+    "cooc": 28
+   },
+   {
+    "term": "well",
+    "lift": 1.8832,
+    "count": 64,
+    "in_topic": 15,
+    "cooc": 10
+   },
+   {
+    "term": "tco2e",
+    "lift": 1.8832,
+    "count": 16,
+    "in_topic": 15,
+    "cooc": 10
+   },
+   {
+    "term": "emissions using",
+    "lift": 1.8832,
+    "count": 20,
     "in_topic": 12,
     "cooc": 8
    },
    {
-    "term": "refrigerant",
-    "lift": 2.6882,
-    "count": 14,
+    "term": "achieved",
+    "lift": 1.8832,
+    "count": 55,
     "in_topic": 9,
     "cooc": 6
    },
    {
-    "term": "million tco2e",
-    "lift": 2.6882,
-    "count": 9,
+    "term": "increase",
+    "lift": 1.8832,
+    "count": 59,
+    "in_topic": 9,
+    "cooc": 6
+   },
+   {
+    "term": "due",
+    "lift": 1.8832,
+    "count": 44,
+    "in_topic": 9,
+    "cooc": 6
+   },
+   {
+    "term": "associated",
+    "lift": 1.8832,
+    "count": 28,
     "in_topic": 9,
     "cooc": 6
    },
    {
     "term": "biogenic",
-    "lift": 2.6882,
+    "lift": 1.8832,
     "count": 12,
     "in_topic": 9,
     "cooc": 6
    },
    {
+    "term": "project",
+    "lift": 1.8832,
+    "count": 99,
+    "in_topic": 6,
+    "cooc": 4
+   },
+   {
     "term": "network",
-    "lift": 2.6882,
+    "lift": 1.8832,
     "count": 56,
     "in_topic": 6,
     "cooc": 4
    },
    {
-    "term": "center construction",
-    "lift": 2.6882,
-    "count": 9,
-    "in_topic": 6,
-    "cooc": 4
-   },
-   {
-    "term": "data center construction",
-    "lift": 2.6882,
-    "count": 9,
-    "in_topic": 6,
-    "cooc": 4
-   },
-   {
     "term": "ambition-based carbon footprint",
-    "lift": 2.6882,
+    "lift": 1.8832,
     "count": 6,
     "in_topic": 6,
     "cooc": 4
    },
    {
     "term": "ambition-based carbon",
-    "lift": 2.6882,
+    "lift": 1.8832,
     "count": 6,
     "in_topic": 6,
     "cooc": 4
    },
    {
     "term": "delivery",
-    "lift": 2.6882,
+    "lift": 1.8832,
     "count": 51,
     "in_topic": 6,
     "cooc": 4
    },
    {
+    "term": "low-carbon",
+    "lift": 1.8832,
+    "count": 23,
+    "in_topic": 6,
+    "cooc": 4
+   },
+   {
     "term": "values",
-    "lift": 2.6882,
+    "lift": 1.8832,
     "count": 23,
     "in_topic": 6,
     "cooc": 4
    },
    {
     "term": "capital goods",
-    "lift": 2.6882,
+    "lift": 1.8832,
     "count": 9,
     "in_topic": 6,
     "cooc": 4
    },
    {
+    "term": "eacs",
+    "lift": 1.9774,
+    "count": 21,
+    "in_topic": 10,
+    "cooc": 7
+   },
+   {
     "term": "guidance",
-    "lift": 2.8226,
+    "lift": 1.9774,
     "count": 37,
     "in_topic": 10,
     "cooc": 7
    },
    {
-    "term": "purchased",
-    "lift": 2.8463,
-    "count": 33,
-    "in_topic": 17,
-    "cooc": 12
+    "term": "category",
+    "lift": 2.0047,
+    "count": 39,
+    "in_topic": 31,
+    "cooc": 22
+   },
+   {
+    "term": "operated",
+    "lift": 2.0178,
+    "count": 27,
+    "in_topic": 7,
+    "cooc": 5
    },
    {
     "term": "steam",
-    "lift": 2.8802,
+    "lift": 2.0178,
     "count": 9,
     "in_topic": 7,
     "cooc": 5
    },
    {
     "term": "emissions from purchased",
-    "lift": 2.8802,
+    "lift": 2.0178,
     "count": 7,
     "in_topic": 7,
     "cooc": 5
    },
    {
-    "term": "primarily",
-    "lift": 2.8802,
-    "count": 17,
+    "term": "building materials",
+    "lift": 2.0178,
+    "count": 15,
     "in_topic": 7,
     "cooc": 5
    },
    {
+    "term": "sector",
+    "lift": 2.0178,
+    "count": 25,
+    "in_topic": 7,
+    "cooc": 5
+   },
+   {
+    "term": "natural",
+    "lift": 2.0544,
+    "count": 57,
+    "in_topic": 11,
+    "cooc": 8
+   },
+   {
     "term": "protocol",
-    "lift": 2.9326,
+    "lift": 2.0544,
     "count": 18,
     "in_topic": 11,
     "cooc": 8
    },
    {
     "term": "ambition-based",
-    "lift": 2.957,
+    "lift": 2.0716,
     "count": 18,
     "in_topic": 15,
     "cooc": 11
    },
    {
-    "term": "centers and offices",
-    "lift": 3.0242,
-    "count": 13,
-    "in_topic": 8,
-    "cooc": 6
+    "term": "compared",
+    "lift": 2.0815,
+    "count": 44,
+    "in_topic": 19,
+    "cooc": 14
    },
    {
-    "term": "activities",
-    "lift": 3.0242,
-    "count": 31,
-    "in_topic": 8,
-    "cooc": 6
+    "term": "upstream",
+    "lift": 2.0815,
+    "count": 34,
+    "in_topic": 19,
+    "cooc": 14
+   },
+   {
+    "term": "approximately",
+    "lift": 2.1186,
+    "count": 44,
+    "in_topic": 24,
+    "cooc": 18
+   },
+   {
+    "term": "transportation",
+    "lift": 2.1186,
+    "count": 61,
+    "in_topic": 12,
+    "cooc": 9
+   },
+   {
+    "term": "baseline",
+    "lift": 2.1186,
+    "count": 23,
+    "in_topic": 12,
+    "cooc": 9
    },
    {
     "term": "approximately million",
-    "lift": 3.0242,
+    "lift": 2.1186,
     "count": 11,
     "in_topic": 8,
     "cooc": 6
    },
    {
     "term": "ambition-based emissions",
-    "lift": 3.0242,
+    "lift": 2.1186,
     "count": 10,
     "in_topic": 8,
     "cooc": 6
    },
    {
     "term": "methods",
-    "lift": 3.0242,
+    "lift": 2.1186,
     "count": 23,
     "in_topic": 8,
     "cooc": 6
    },
    {
-    "term": "offices",
-    "lift": 3.1017,
-    "count": 61,
-    "in_topic": 13,
-    "cooc": 10
+    "term": "includes emissions",
+    "lift": 2.1186,
+    "count": 8,
+    "in_topic": 8,
+    "cooc": 6
    },
    {
     "term": "technical",
-    "lift": 3.1017,
+    "lift": 2.173,
     "count": 48,
     "in_topic": 13,
     "cooc": 10
    },
    {
+    "term": "million tco2e",
+    "lift": 2.1971,
+    "count": 9,
+    "in_topic": 9,
+    "cooc": 7
+   },
+   {
+    "term": "method",
+    "lift": 2.1971,
+    "count": 27,
+    "in_topic": 9,
+    "cooc": 7
+   },
+   {
     "term": "upstream emissions",
-    "lift": 3.1362,
+    "lift": 2.1971,
     "count": 15,
     "in_topic": 9,
     "cooc": 7
    },
    {
+    "term": "google-owned",
+    "lift": 2.2599,
+    "count": 17,
+    "in_topic": 5,
+    "cooc": 4
+   },
+   {
+    "term": "percentage",
+    "lift": 2.2599,
+    "count": 35,
+    "in_topic": 5,
+    "cooc": 4
+   },
+   {
+    "term": "operated data",
+    "lift": 2.2599,
+    "count": 18,
+    "in_topic": 5,
+    "cooc": 4
+   },
+   {
+    "term": "electricity consumption",
+    "lift": 2.2599,
+    "count": 34,
+    "in_topic": 5,
+    "cooc": 4
+   },
+   {
+    "term": "electricity use",
+    "lift": 2.2599,
+    "count": 11,
+    "in_topic": 5,
+    "cooc": 4
+   },
+   {
     "term": "certificates",
-    "lift": 3.2258,
+    "lift": 2.2599,
     "count": 19,
     "in_topic": 5,
     "cooc": 4
    },
    {
+    "term": "employees",
+    "lift": 2.2599,
+    "count": 126,
+    "in_topic": 5,
+    "cooc": 4
+   },
+   {
     "term": "total ambition-based carbon",
-    "lift": 3.2258,
+    "lift": 2.2599,
     "count": 5,
     "in_topic": 5,
     "cooc": 4
    },
    {
     "term": "technical infrastructure",
-    "lift": 3.2258,
+    "lift": 2.2599,
     "count": 10,
     "in_topic": 5,
     "cooc": 4
    },
    {
     "term": "remaining",
-    "lift": 3.2258,
+    "lift": 2.2599,
     "count": 19,
     "in_topic": 5,
     "cooc": 4
    },
    {
+    "term": "warehouses",
+    "lift": 2.2599,
+    "count": 8,
+    "in_topic": 5,
+    "cooc": 4
+   },
+   {
+    "term": "purchased",
+    "lift": 2.3264,
+    "count": 33,
+    "in_topic": 17,
+    "cooc": 14
+   },
+   {
     "term": "defined",
-    "lift": 3.3602,
+    "lift": 2.354,
     "count": 26,
     "in_topic": 6,
     "cooc": 5
    },
    {
-    "term": "ghg protocol",
-    "lift": 3.4562,
+    "term": "primarily",
+    "lift": 2.4213,
+    "count": 17,
+    "in_topic": 7,
+    "cooc": 6
+   },
+   {
+    "term": "factors used",
+    "lift": 2.4213,
     "count": 8,
     "in_topic": 7,
     "cooc": 6
    },
    {
     "term": "emission factors used",
-    "lift": 3.4562,
+    "lift": 2.4213,
     "count": 8,
     "in_topic": 7,
     "cooc": 6
    },
    {
-    "term": "factors used",
-    "lift": 3.4562,
+    "term": "ghg protocol",
+    "lift": 2.4213,
     "count": 8,
     "in_topic": 7,
     "cooc": 6
    },
    {
-    "term": "market-based",
-    "lift": 3.5282,
-    "count": 27,
-    "in_topic": 24,
-    "cooc": 21
+    "term": "energy emissions",
+    "lift": 2.4718,
+    "count": 11,
+    "in_topic": 8,
+    "cooc": 7
+   },
+   {
+    "term": "activities",
+    "lift": 2.4718,
+    "count": 31,
+    "in_topic": 8,
+    "cooc": 7
    },
    {
     "term": "total ambition-based",
-    "lift": 3.5282,
+    "lift": 2.4718,
     "count": 8,
     "in_topic": 8,
     "cooc": 7
    },
    {
+    "term": "steel",
+    "lift": 2.4718,
+    "count": 15,
+    "in_topic": 8,
+    "cooc": 7
+   },
+   {
+    "term": "concrete",
+    "lift": 2.4718,
+    "count": 15,
+    "in_topic": 8,
+    "cooc": 7
+   },
+   {
+    "term": "centers",
+    "lift": 2.511,
+    "count": 163,
+    "in_topic": 27,
+    "cooc": 24
+   },
+   {
     "term": "location-based",
-    "lift": 3.5842,
+    "lift": 2.511,
     "count": 12,
     "in_topic": 9,
     "cooc": 8
    },
    {
+    "term": "refrigerant",
+    "lift": 2.511,
+    "count": 14,
+    "in_topic": 9,
+    "cooc": 8
+   },
+   {
     "term": "market-based emissions",
-    "lift": 3.629,
+    "lift": 2.5424,
     "count": 10,
     "in_topic": 10,
     "cooc": 9
    },
    {
+    "term": "center",
+    "lift": 2.5681,
+    "count": 127,
+    "in_topic": 22,
+    "cooc": 20
+   },
+   {
     "term": "used to calculate",
-    "lift": 3.6657,
+    "lift": 2.5681,
     "count": 11,
     "in_topic": 11,
     "cooc": 10
    },
    {
     "term": "value",
-    "lift": 3.8569,
+    "lift": 2.702,
     "count": 58,
     "in_topic": 23,
     "cooc": 22
    },
    {
+    "term": "market-based",
+    "lift": 2.7072,
+    "count": 27,
+    "in_topic": 24,
+    "cooc": 23
+   },
+   {
     "term": "scope",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 143,
     "in_topic": 105,
     "cooc": 105
    },
    {
     "term": "scope emissions",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 47,
     "in_topic": 47,
     "cooc": 47
    },
    {
+    "term": "data centers",
+    "lift": 2.8249,
+    "count": 134,
+    "in_topic": 23,
+    "cooc": 23
+   },
+   {
     "term": "value chain",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 42,
     "in_topic": 21,
     "cooc": 21
    },
    {
+    "term": "data center",
+    "lift": 2.8249,
+    "count": 110,
+    "in_topic": 20,
+    "cooc": 20
+   },
+   {
     "term": "scope market-based",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 17,
     "in_topic": 17,
     "cooc": 17
    },
    {
-    "term": "chain partners",
-    "lift": 4.0323,
+    "term": "offices",
+    "lift": 2.8249,
+    "count": 61,
+    "in_topic": 13,
+    "cooc": 13
+   },
+   {
+    "term": "datacenters",
+    "lift": 2.8249,
+    "count": 75,
+    "in_topic": 13,
+    "cooc": 13
+   },
+   {
+    "term": "datacenter",
+    "lift": 2.8249,
+    "count": 63,
+    "in_topic": 11,
+    "cooc": 11
+   },
+   {
+    "term": "value chain partners",
+    "lift": 2.8249,
     "count": 10,
     "in_topic": 10,
     "cooc": 10
    },
    {
-    "term": "value chain partners",
-    "lift": 4.0323,
+    "term": "chain partners",
+    "lift": 2.8249,
     "count": 10,
     "in_topic": 10,
     "cooc": 10
    },
    {
     "term": "indirect",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 16,
     "in_topic": 8,
     "cooc": 8
    },
    {
     "term": "indirect emissions",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 9,
     "in_topic": 8,
     "cooc": 8
    },
    {
-    "term": "scope market-based emissions",
-    "lift": 4.0323,
-    "count": 8,
+    "term": "centers and offices",
+    "lift": 2.8249,
+    "count": 13,
     "in_topic": 8,
     "cooc": 8
    },
    {
-    "term": "obtained from value",
-    "lift": 4.0323,
+    "term": "scope market-based emissions",
+    "lift": 2.8249,
     "count": 8,
     "in_topic": 8,
     "cooc": 8
    },
    {
     "term": "obtained",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 15,
     "in_topic": 8,
     "cooc": 8
    },
    {
-    "term": "calculate scope",
-    "lift": 4.0323,
+    "term": "obtained from value",
+    "lift": 2.8249,
     "count": 8,
     "in_topic": 8,
     "cooc": 8
    },
    {
+    "term": "calculate scope",
+    "lift": 2.8249,
+    "count": 8,
+    "in_topic": 8,
+    "cooc": 8
+   },
+   {
+    "term": "center energy",
+    "lift": 2.8249,
+    "count": 10,
+    "in_topic": 7,
+    "cooc": 7
+   },
+   {
+    "term": "center energy emissions",
+    "lift": 2.8249,
+    "count": 8,
+    "in_topic": 7,
+    "cooc": 7
+   },
+   {
+    "term": "data center energy",
+    "lift": 2.8249,
+    "count": 10,
+    "in_topic": 7,
+    "cooc": 7
+   },
+   {
     "term": "natural gas",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 16,
     "in_topic": 7,
     "cooc": 7
    },
    {
     "term": "emissions scope",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 7,
     "in_topic": 7,
     "cooc": 7
    },
    {
     "term": "categories",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 13,
     "in_topic": 7,
     "cooc": 7
    },
    {
-    "term": "approximately million tco2e",
-    "lift": 4.0323,
-    "count": 6,
+    "term": "center construction",
+    "lift": 2.8249,
+    "count": 9,
+    "in_topic": 6,
+    "cooc": 6
+   },
+   {
+    "term": "data center construction",
+    "lift": 2.8249,
+    "count": 9,
     "in_topic": 6,
     "cooc": 6
    },
    {
     "term": "emissions were approximately",
-    "lift": 4.0323,
+    "lift": 2.8249,
+    "count": 6,
+    "in_topic": 6,
+    "cooc": 6
+   },
+   {
+    "term": "approximately million tco2e",
+    "lift": 2.8249,
     "count": 6,
     "in_topic": 6,
     "cooc": 6
    },
    {
     "term": "scope ambition-based",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 6,
     "in_topic": 6,
     "cooc": 6
    },
    {
     "term": "scope and emissions",
-    "lift": 4.0323,
-    "count": 6,
-    "in_topic": 6,
-    "cooc": 6
-   },
-   {
-    "term": "includes upstream emissions",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 6,
     "in_topic": 6,
     "cooc": 6
    },
    {
     "term": "includes upstream",
-    "lift": 4.0323,
+    "lift": 2.8249,
+    "count": 6,
+    "in_topic": 6,
+    "cooc": 6
+   },
+   {
+    "term": "includes upstream emissions",
+    "lift": 2.8249,
     "count": 6,
     "in_topic": 6,
     "cooc": 6
    },
    {
     "term": "technical guidance",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 18,
     "in_topic": 6,
     "cooc": 6
    },
    {
+    "term": "warehousing",
+    "lift": 2.8249,
+    "count": 14,
+    "in_topic": 6,
+    "cooc": 6
+   },
+   {
+    "term": "reduced our data",
+    "lift": 2.8249,
+    "count": 6,
+    "in_topic": 5,
+    "cooc": 5
+   },
+   {
+    "term": "clean electricity",
+    "lift": 2.8249,
+    "count": 21,
+    "in_topic": 5,
+    "cooc": 5
+   },
+   {
     "term": "purchased electricity",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 8,
     "in_topic": 5,
     "cooc": 5
    },
    {
     "term": "scope location-based",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 5,
     "in_topic": 5,
     "cooc": 5
    },
    {
     "term": "control",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 27,
     "in_topic": 5,
     "cooc": 5
    },
    {
+    "term": "projected",
+    "lift": 2.8249,
+    "count": 11,
+    "in_topic": 5,
+    "cooc": 5
+   },
+   {
     "term": "wri",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 17,
     "in_topic": 5,
     "cooc": 5
    },
    {
     "term": "scope emissions scope",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 5,
     "in_topic": 5,
     "cooc": 5
    },
    {
     "term": "total scope",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 5,
     "in_topic": 5,
     "cooc": 5
    },
    {
     "term": "wbcsd",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 6,
     "in_topic": 5,
     "cooc": 5
    },
    {
     "term": "scope category",
-    "lift": 4.0323,
+    "lift": 2.8249,
     "count": 6,
     "in_topic": 5,
     "cooc": 5
    },
    {
-    "term": "scope technical",
-    "lift": 4.0323,
+    "term": "scope technical guidance",
+    "lift": 2.8249,
     "count": 17,
     "in_topic": 5,
     "cooc": 5
    },
    {
-    "term": "scope technical guidance",
-    "lift": 4.0323,
+    "term": "scope technical",
+    "lift": 2.8249,
     "count": 17,
     "in_topic": 5,
     "cooc": 5
@@ -13337,9 +13337,16 @@
     "cooc": 0
    },
    {
-    "term": "customer sustainability",
+    "term": "sustainability appendix environmental",
     "lift": 0.0,
-    "count": 73,
+    "count": 71,
+    "in_topic": 71,
+    "cooc": 0
+   },
+   {
+    "term": "global sustainability",
+    "lift": 0.0,
+    "count": 79,
     "in_topic": 71,
     "cooc": 0
    },
@@ -13358,14 +13365,14 @@
     "cooc": 0
    },
    {
-    "term": "sustainability global",
+    "term": "sustainability appendix",
     "lift": 0.0,
     "count": 71,
     "in_topic": 71,
     "cooc": 0
    },
    {
-    "term": "sustainability appendix",
+    "term": "sustainability global",
     "lift": 0.0,
     "count": 71,
     "in_topic": 71,
@@ -13379,21 +13386,14 @@
     "cooc": 0
    },
    {
+    "term": "customer sustainability",
+    "lift": 0.0,
+    "count": 73,
+    "in_topic": 71,
+    "cooc": 0
+   },
+   {
     "term": "sustainability global sustainability",
-    "lift": 0.0,
-    "count": 71,
-    "in_topic": 71,
-    "cooc": 0
-   },
-   {
-    "term": "global sustainability",
-    "lift": 0.0,
-    "count": 79,
-    "in_topic": 71,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability appendix environmental",
     "lift": 0.0,
     "count": 71,
     "in_topic": 71,
@@ -13421,14 +13421,14 @@
     "cooc": 0
    },
    {
-    "term": "carbon water waste",
+    "term": "carbon water",
     "lift": 0.0,
     "count": 67,
     "in_topic": 67,
     "cooc": 0
    },
    {
-    "term": "carbon water",
+    "term": "carbon water waste",
     "lift": 0.0,
     "count": 67,
     "in_topic": 67,
@@ -13442,49 +13442,7 @@
     "cooc": 0
    },
    {
-    "term": "ecosystemsoverview customer",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "water waste ecosystemsoverview",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "waste ecosystemsoverview",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "microsoft sustainability carbon",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "waste ecosystemsoverview customer",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystemsoverview customer sustainability",
-    "lift": 0.0,
-    "count": 66,
-    "in_topic": 66,
-    "cooc": 0
-   },
-   {
-    "term": "ecosystemsoverview",
+    "term": "sustainability carbon",
     "lift": 0.0,
     "count": 66,
     "in_topic": 66,
@@ -13498,7 +13456,49 @@
     "cooc": 0
    },
    {
-    "term": "sustainability carbon",
+    "term": "waste ecosystemsoverview",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 0
+   },
+   {
+    "term": "water waste ecosystemsoverview",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 0
+   },
+   {
+    "term": "ecosystemsoverview",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 0
+   },
+   {
+    "term": "ecosystemsoverview customer sustainability",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 0
+   },
+   {
+    "term": "ecosystemsoverview customer",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 0
+   },
+   {
+    "term": "waste ecosystemsoverview customer",
+    "lift": 0.0,
+    "count": 66,
+    "in_topic": 66,
+    "cooc": 0
+   },
+   {
+    "term": "microsoft sustainability carbon",
     "lift": 0.0,
     "count": 66,
     "in_topic": 66,
@@ -14254,16 +14254,16 @@
     "cooc": 0
    },
    {
-    "term": "learning",
+    "term": "models",
     "lift": 0.0,
-    "count": 39,
+    "count": 64,
     "in_topic": 17,
     "cooc": 0
    },
    {
-    "term": "models",
+    "term": "learning",
     "lift": 0.0,
-    "count": 64,
+    "count": 39,
     "in_topic": 17,
     "cooc": 0
    },
@@ -14359,14 +14359,14 @@
     "cooc": 0
    },
    {
-    "term": "scope technical",
+    "term": "scope technical guidance",
     "lift": 0.0,
     "count": 17,
     "in_topic": 17,
     "cooc": 0
    },
    {
-    "term": "scope technical guidance",
+    "term": "scope technical",
     "lift": 0.0,
     "count": 17,
     "in_topic": 17,
@@ -14499,28 +14499,14 @@
     "cooc": 0
    },
    {
-    "term": "chain communities",
+    "term": "appendix climate",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "experience health",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "packaging biodiversity",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "chain communities responsible",
+    "term": "rights employee experience",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -14534,28 +14520,28 @@
     "cooc": 0
    },
    {
-    "term": "human rights employee",
+    "term": "circularity packaging",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "sustainable shopping human",
+    "term": "communities responsible",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "appendix climate",
+    "term": "experience health",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "employee experience health",
+    "term": "biodiversity sustainable shopping",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -14569,7 +14555,56 @@
     "cooc": 0
    },
    {
+    "term": "shopping human rights",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
     "term": "packaging biodiversity sustainable",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "shopping",
+    "lift": 0.0,
+    "count": 29,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "safety responsible",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "human rights employee",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "packaging biodiversity",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "sustainable shopping human",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "biodiversity sustainable",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -14590,28 +14625,28 @@
     "cooc": 0
    },
    {
-    "term": "shopping human rights",
+    "term": "chain communities",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "shopping",
-    "lift": 0.0,
-    "count": 29,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "communities responsible",
+    "term": "employee experience health",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
     "cooc": 0
    },
    {
-    "term": "rights employee experience",
+    "term": "rights employee",
+    "lift": 0.0,
+    "count": 27,
+    "in_topic": 16,
+    "cooc": 0
+   },
+   {
+    "term": "supply chain communities",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -14632,42 +14667,7 @@
     "cooc": 0
    },
    {
-    "term": "safety responsible",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "rights employee",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "biodiversity sustainable shopping",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "supply chain communities",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "biodiversity sustainable",
-    "lift": 0.0,
-    "count": 27,
-    "in_topic": 16,
-    "cooc": 0
-   },
-   {
-    "term": "circularity packaging",
+    "term": "chain communities responsible",
     "lift": 0.0,
     "count": 27,
     "in_topic": 16,
@@ -15339,56 +15339,7 @@
     "cooc": 0
    },
    {
-    "term": "defra uk government",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "government",
-    "lift": 0.0,
-    "count": 16,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "uk government",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
     "term": "defra",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "conversion factors",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "uk government ghg",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "government ghg conversion",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 12,
-    "cooc": 0
-   },
-   {
-    "term": "defra uk",
     "lift": 0.0,
     "count": 12,
     "in_topic": 12,
@@ -15402,6 +15353,20 @@
     "cooc": 0
    },
    {
+    "term": "defra uk",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 0
+   },
+   {
+    "term": "defra uk government",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 0
+   },
+   {
     "term": "inventories",
     "lift": 0.0,
     "count": 13,
@@ -15409,7 +15374,21 @@
     "cooc": 0
    },
    {
-    "term": "ghg conversion",
+    "term": "government ghg conversion",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 0
+   },
+   {
+    "term": "conversion factors",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 0
+   },
+   {
+    "term": "uk government",
     "lift": 0.0,
     "count": 12,
     "in_topic": 12,
@@ -15417,6 +15396,27 @@
    },
    {
     "term": "ghg conversion factors",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 0
+   },
+   {
+    "term": "government",
+    "lift": 0.0,
+    "count": 16,
+    "in_topic": 12,
+    "cooc": 0
+   },
+   {
+    "term": "uk government ghg",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 12,
+    "cooc": 0
+   },
+   {
+    "term": "ghg conversion",
     "lift": 0.0,
     "count": 12,
     "in_topic": 12,
@@ -15633,6 +15633,13 @@
     "cooc": 0
    },
    {
+    "term": "epa emission factors",
+    "lift": 0.0,
+    "count": 11,
+    "in_topic": 11,
+    "cooc": 0
+   },
+   {
     "term": "greenhouse gas inventories",
     "lift": 0.0,
     "count": 11,
@@ -15640,14 +15647,7 @@
     "cooc": 0
    },
    {
-    "term": "epa emission",
-    "lift": 0.0,
-    "count": 11,
-    "in_topic": 11,
-    "cooc": 0
-   },
-   {
-    "term": "epa emission factors",
+    "term": "factors for greenhouse",
     "lift": 0.0,
     "count": 11,
     "in_topic": 11,
@@ -15661,7 +15661,7 @@
     "cooc": 0
    },
    {
-    "term": "factors for greenhouse",
+    "term": "epa emission",
     "lift": 0.0,
     "count": 11,
     "in_topic": 11,
@@ -15927,14 +15927,14 @@
     "cooc": 0
    },
    {
-    "term": "chain partners",
+    "term": "value chain partners",
     "lift": 0.0,
     "count": 10,
     "in_topic": 10,
     "cooc": 0
    },
    {
-    "term": "value chain partners",
+    "term": "chain partners",
     "lift": 0.0,
     "count": 10,
     "in_topic": 10,
@@ -16095,16 +16095,16 @@
     "cooc": 0
    },
    {
-    "term": "ways",
+    "term": "startups",
     "lift": 0.0,
-    "count": 37,
+    "count": 14,
     "in_topic": 10,
     "cooc": 0
    },
    {
-    "term": "startups",
+    "term": "ways",
     "lift": 0.0,
-    "count": 14,
+    "count": 37,
     "in_topic": 10,
     "cooc": 0
    },
@@ -16207,20 +16207,6 @@
     "cooc": 0
    },
    {
-    "term": "routing",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
-    "term": "fuel-efficient routing",
-    "lift": 0.0,
-    "count": 10,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
     "term": "nest thermostats",
     "lift": 0.0,
     "count": 9,
@@ -16235,6 +16221,20 @@
     "cooc": 0
    },
    {
+    "term": "fuel-efficient routing",
+    "lift": 0.0,
+    "count": 10,
+    "in_topic": 9,
+    "cooc": 0
+   },
+   {
+    "term": "routing",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 9,
+    "cooc": 0
+   },
+   {
     "term": "electricity use",
     "lift": 0.0,
     "count": 11,
@@ -16242,14 +16242,14 @@
     "cooc": 0
    },
    {
-    "term": "transmission and distribution",
+    "term": "distribution losses",
     "lift": 0.0,
     "count": 9,
     "in_topic": 9,
     "cooc": 0
    },
    {
-    "term": "distribution losses",
+    "term": "transmission and distribution",
     "lift": 0.0,
     "count": 9,
     "in_topic": 9,
@@ -16431,9 +16431,9 @@
     "cooc": 0
    },
    {
-    "term": "firesat",
+    "term": "wildfires",
     "lift": 0.0,
-    "count": 12,
+    "count": 15,
     "in_topic": 9,
     "cooc": 0
    },
@@ -16445,16 +16445,16 @@
     "cooc": 0
    },
    {
-    "term": "wildfires",
+    "term": "flood",
     "lift": 0.0,
-    "count": 15,
+    "count": 26,
     "in_topic": 9,
     "cooc": 0
    },
    {
-    "term": "flood",
+    "term": "firesat",
     "lift": 0.0,
-    "count": 26,
+    "count": 12,
     "in_topic": 9,
     "cooc": 0
    },
@@ -16473,6 +16473,13 @@
     "cooc": 0
    },
    {
+    "term": "benefit",
+    "lift": 0.0,
+    "count": 22,
+    "in_topic": 9,
+    "cooc": 0
+   },
+   {
     "term": "million cubic meters",
     "lift": 0.0,
     "count": 9,
@@ -16483,13 +16490,6 @@
     "term": "million cubic",
     "lift": 0.0,
     "count": 9,
-    "in_topic": 9,
-    "cooc": 0
-   },
-   {
-    "term": "benefit",
-    "lift": 0.0,
-    "count": 22,
     "in_topic": 9,
     "cooc": 0
    },
@@ -16865,13 +16865,6 @@
     "cooc": 0
    },
    {
-    "term": "new york",
-    "lift": 0.0,
-    "count": 11,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
     "term": "combined",
     "lift": 0.0,
     "count": 13,
@@ -16880,6 +16873,13 @@
    },
    {
     "term": "york",
+    "lift": 0.0,
+    "count": 11,
+    "in_topic": 8,
+    "cooc": 0
+   },
+   {
+    "term": "new york",
     "lift": 0.0,
     "count": 11,
     "in_topic": 8,
@@ -16949,16 +16949,16 @@
     "cooc": 0
    },
    {
-    "term": "rideshare",
+    "term": "rail",
     "lift": 0.0,
-    "count": 9,
+    "count": 12,
     "in_topic": 8,
     "cooc": 0
    },
    {
-    "term": "rail",
+    "term": "rideshare",
     "lift": 0.0,
-    "count": 12,
+    "count": 9,
     "in_topic": 8,
     "cooc": 0
    },
@@ -16970,7 +16970,7 @@
     "cooc": 0
    },
    {
-    "term": "data fact",
+    "term": "sheet",
     "lift": 0.0,
     "count": 12,
     "in_topic": 8,
@@ -16984,6 +16984,13 @@
     "cooc": 0
    },
    {
+    "term": "data fact",
+    "lift": 0.0,
+    "count": 12,
+    "in_topic": 8,
+    "cooc": 0
+   },
+   {
     "term": "data fact sheet",
     "lift": 0.0,
     "count": 12,
@@ -16991,21 +16998,14 @@
     "cooc": 0
    },
    {
-    "term": "sheet",
-    "lift": 0.0,
-    "count": 12,
-    "in_topic": 8,
-    "cooc": 0
-   },
-   {
-    "term": "action microsoft sustainability",
+    "term": "action microsoft",
     "lift": 0.0,
     "count": 8,
     "in_topic": 8,
     "cooc": 0
    },
    {
-    "term": "action microsoft",
+    "term": "action microsoft sustainability",
     "lift": 0.0,
     "count": 8,
     "in_topic": 8,
@@ -17292,16 +17292,16 @@
     "cooc": 0
    },
    {
-    "term": "center energy emissions",
+    "term": "center energy",
     "lift": 0.0,
-    "count": 8,
+    "count": 10,
     "in_topic": 7,
     "cooc": 0
    },
    {
-    "term": "center energy",
+    "term": "center energy emissions",
     "lift": 0.0,
-    "count": 10,
+    "count": 8,
     "in_topic": 7,
     "cooc": 0
    },
@@ -17516,9 +17516,9 @@
     "cooc": 0
    },
    {
-    "term": "personal",
+    "term": "taxi rideshare",
     "lift": 0.0,
-    "count": 9,
+    "count": 8,
     "in_topic": 7,
     "cooc": 0
    },
@@ -17530,9 +17530,9 @@
     "cooc": 0
    },
    {
-    "term": "taxi rideshare",
+    "term": "personal",
     "lift": 0.0,
-    "count": 8,
+    "count": 9,
     "in_topic": 7,
     "cooc": 0
    },
@@ -17558,14 +17558,14 @@
     "cooc": 0
    },
    {
-    "term": "report advancing",
+    "term": "sustainability report advancing",
     "lift": 0.0,
     "count": 7,
     "in_topic": 7,
     "cooc": 0
    },
    {
-    "term": "sustainability report advancing",
+    "term": "report advancing",
     "lift": 0.0,
     "count": 7,
     "in_topic": 7,
@@ -18202,14 +18202,14 @@
     "cooc": 0
    },
    {
-    "term": "approximately million tco2e",
+    "term": "emissions were approximately",
     "lift": 0.0,
     "count": 6,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "emissions were approximately",
+    "term": "approximately million tco2e",
     "lift": 0.0,
     "count": 6,
     "in_topic": 6,
@@ -18363,9 +18363,9 @@
     "cooc": 0
    },
    {
-    "term": "assumptions",
+    "term": "includes upstream",
     "lift": 0.0,
-    "count": 12,
+    "count": 6,
     "in_topic": 6,
     "cooc": 0
    },
@@ -18377,9 +18377,9 @@
     "cooc": 0
    },
    {
-    "term": "includes upstream",
+    "term": "assumptions",
     "lift": 0.0,
-    "count": 6,
+    "count": 12,
     "in_topic": 6,
     "cooc": 0
    },
@@ -18475,16 +18475,16 @@
     "cooc": 0
    },
    {
-    "term": "understanding",
+    "term": "near",
     "lift": 0.0,
-    "count": 24,
+    "count": 16,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "near",
+    "term": "understanding",
     "lift": 0.0,
-    "count": 16,
+    "count": 24,
     "in_topic": 6,
     "cooc": 0
    },
@@ -18559,16 +18559,16 @@
     "cooc": 0
    },
    {
-    "term": "efficiencies",
+    "term": "not only",
     "lift": 0.0,
-    "count": 15,
+    "count": 29,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "not only",
+    "term": "efficiencies",
     "lift": 0.0,
-    "count": 29,
+    "count": 15,
     "in_topic": 6,
     "cooc": 0
    },
@@ -18699,16 +18699,16 @@
     "cooc": 0
    },
    {
-    "term": "flexible",
+    "term": "collaborative",
     "lift": 0.0,
-    "count": 14,
+    "count": 15,
     "in_topic": 6,
     "cooc": 0
    },
    {
-    "term": "collaborative",
+    "term": "flexible",
     "lift": 0.0,
-    "count": 15,
+    "count": 14,
     "in_topic": 6,
     "cooc": 0
    },
@@ -19385,6 +19385,13 @@
     "cooc": 0
    },
    {
+    "term": "egrid emission factors",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
     "term": "epa egrid emission",
     "lift": 0.0,
     "count": 5,
@@ -19393,13 +19400,6 @@
    },
    {
     "term": "egrid",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "egrid emission factors",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19427,14 +19427,14 @@
     "cooc": 0
    },
    {
-    "term": "center campuses",
+    "term": "data center campuses",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "data center campuses",
+    "term": "center campuses",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19462,14 +19462,14 @@
     "cooc": 0
    },
    {
-    "term": "recycled rare earth",
+    "term": "recycled rare",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "recycled rare",
+    "term": "recycled rare earth",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19567,7 +19567,7 @@
     "cooc": 0
    },
    {
-    "term": "category capital",
+    "term": "emissions from category",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19581,7 +19581,7 @@
     "cooc": 0
    },
    {
-    "term": "emissions from category",
+    "term": "category capital",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19602,14 +19602,14 @@
     "cooc": 0
    },
    {
-    "term": "rail bus",
+    "term": "bus",
     "lift": 0.0,
     "count": 6,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "bus",
+    "term": "rail bus",
     "lift": 0.0,
     "count": 6,
     "in_topic": 5,
@@ -19630,14 +19630,14 @@
     "cooc": 0
    },
    {
-    "term": "emissions are insignificant",
+    "term": "insignificant",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "insignificant",
+    "term": "emissions are insignificant",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19658,7 +19658,7 @@
     "cooc": 0
    },
    {
-    "term": "charting new frontiers",
+    "term": "charting new",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19672,14 +19672,14 @@
     "cooc": 0
    },
    {
-    "term": "frontiers in ai",
+    "term": "charting new frontiers",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "charting new",
+    "term": "frontiers in ai",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -19770,13 +19770,6 @@
     "cooc": 0
    },
    {
-    "term": "graph",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "live",
     "lift": 0.0,
     "count": 10,
@@ -19787,6 +19780,13 @@
     "term": "precise",
     "lift": 0.0,
     "count": 12,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "graph",
+    "lift": 0.0,
+    "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
@@ -19847,9 +19847,9 @@
     "cooc": 0
    },
    {
-    "term": "grown",
+    "term": "water for cooling",
     "lift": 0.0,
-    "count": 7,
+    "count": 14,
     "in_topic": 5,
     "cooc": 0
    },
@@ -19861,16 +19861,16 @@
     "cooc": 0
    },
    {
-    "term": "water for cooling",
+    "term": "creates",
     "lift": 0.0,
-    "count": 14,
+    "count": 16,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "creates",
+    "term": "grown",
     "lift": 0.0,
-    "count": 16,
+    "count": 7,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20036,16 +20036,16 @@
     "cooc": 0
    },
    {
-    "term": "global data center",
+    "term": "global data",
     "lift": 0.0,
-    "count": 5,
+    "count": 6,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "global data",
+    "term": "global data center",
     "lift": 0.0,
-    "count": 6,
+    "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20190,16 +20190,16 @@
     "cooc": 0
    },
    {
-    "term": "cornerstone",
+    "term": "see",
     "lift": 0.0,
-    "count": 7,
+    "count": 17,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "see",
+    "term": "cornerstone",
     "lift": 0.0,
-    "count": 17,
+    "count": 7,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20309,16 +20309,16 @@
     "cooc": 0
    },
    {
-    "term": "fall",
+    "term": "closer",
     "lift": 0.0,
-    "count": 5,
+    "count": 10,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "closer",
+    "term": "fall",
     "lift": 0.0,
-    "count": 10,
+    "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20456,16 +20456,16 @@
     "cooc": 0
    },
    {
-    "term": "incinerators",
+    "term": "landfills and incinerators",
     "lift": 0.0,
-    "count": 7,
+    "count": 6,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "landfills and incinerators",
+    "term": "incinerators",
     "lift": 0.0,
-    "count": 6,
+    "count": 7,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20484,16 +20484,9 @@
     "cooc": 0
    },
    {
-    "term": "chief sustainability",
+    "term": "officer",
     "lift": 0.0,
-    "count": 13,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "sustainability officer",
-    "lift": 0.0,
-    "count": 12,
+    "count": 16,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20505,6 +20498,13 @@
     "cooc": 0
    },
    {
+    "term": "chief sustainability",
+    "lift": 0.0,
+    "count": 13,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
     "term": "chief sustainability officer",
     "lift": 0.0,
     "count": 12,
@@ -20512,9 +20512,9 @@
     "cooc": 0
    },
    {
-    "term": "officer",
+    "term": "sustainability officer",
     "lift": 0.0,
-    "count": 16,
+    "count": 12,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20610,16 +20610,16 @@
     "cooc": 0
    },
    {
-    "term": "measuring",
+    "term": "sustainability efforts",
     "lift": 0.0,
-    "count": 11,
+    "count": 9,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "sustainability efforts",
+    "term": "measuring",
     "lift": 0.0,
-    "count": 9,
+    "count": 11,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20638,16 +20638,16 @@
     "cooc": 0
    },
    {
-    "term": "data isn available",
+    "term": "data isn",
     "lift": 0.0,
     "count": 22,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "data isn",
+    "term": "where actual",
     "lift": 0.0,
-    "count": 22,
+    "count": 20,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20659,9 +20659,9 @@
     "cooc": 0
    },
    {
-    "term": "where actual",
+    "term": "data isn available",
     "lift": 0.0,
-    "count": 20,
+    "count": 22,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20736,13 +20736,6 @@
     "cooc": 0
    },
    {
-    "term": "year ended",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "ended",
     "lift": 0.0,
     "count": 5,
@@ -20750,7 +20743,7 @@
     "cooc": 0
    },
    {
-    "term": "uses combination",
+    "term": "year ended",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -20758,6 +20751,13 @@
    },
    {
     "term": "alphabet uses combination",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "uses combination",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -20799,16 +20799,16 @@
     "cooc": 0
    },
    {
-    "term": "copilot pcs",
+    "term": "surface copilot",
     "lift": 0.0,
-    "count": 8,
+    "count": 6,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "surface copilot",
+    "term": "copilot pcs",
     "lift": 0.0,
-    "count": 6,
+    "count": 8,
     "in_topic": 5,
     "cooc": 0
    },
@@ -20827,49 +20827,7 @@
     "cooc": 0
    },
    {
-    "term": "waste ecosystems",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "sustainabilityoverview",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
     "term": "sustainabilityoverview customer",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "reportcarbon",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "sustainabilityoverview customer sustainability",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "reportcarbon water",
-    "lift": 0.0,
-    "count": 5,
-    "in_topic": 5,
-    "cooc": 0
-   },
-   {
-    "term": "microsoft sustainabilityoverview customer",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -20890,7 +20848,7 @@
     "cooc": 0
    },
    {
-    "term": "environmental sustainability reportcarbon",
+    "term": "reportcarbon water",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -20904,7 +20862,49 @@
     "cooc": 0
    },
    {
+    "term": "waste ecosystems",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "reportcarbon",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "microsoft sustainabilityoverview customer",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "environmental sustainability reportcarbon",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
     "term": "sustainability reportcarbon",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "sustainabilityoverview",
+    "lift": 0.0,
+    "count": 5,
+    "in_topic": 5,
+    "cooc": 0
+   },
+   {
+    "term": "sustainabilityoverview customer sustainability",
     "lift": 0.0,
     "count": 5,
     "in_topic": 5,
@@ -21023,14 +21023,14 @@
     "cooc": 0
    },
    {
-    "term": "waste streams",
+    "term": "streams",
     "lift": 0.0,
     "count": 8,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "streams",
+    "term": "waste streams",
     "lift": 0.0,
     "count": 8,
     "in_topic": 5,
@@ -21086,16 +21086,16 @@
     "cooc": 0
    },
    {
-    "term": "electric delivery",
+    "term": "vans",
     "lift": 0.0,
-    "count": 5,
+    "count": 8,
     "in_topic": 5,
     "cooc": 0
    },
    {
-    "term": "vans",
+    "term": "electric delivery",
     "lift": 0.0,
-    "count": 8,
+    "count": 5,
     "in_topic": 5,
     "cooc": 0
    },
@@ -21716,16 +21716,16 @@
     "cooc": 1
    },
    {
-    "term": "north",
+    "term": "america",
     "lift": 0.7338,
-    "count": 41,
+    "count": 37,
     "in_topic": 22,
     "cooc": 1
    },
    {
-    "term": "america",
+    "term": "north",
     "lift": 0.7338,
-    "count": 37,
+    "count": 41,
     "in_topic": 22,
     "cooc": 1
    },
@@ -23123,14 +23123,14 @@
     "cooc": 2
    },
    {
-    "term": "overview progress",
+    "term": "progress appendix",
     "lift": 1.7937,
     "count": 30,
     "in_topic": 18,
     "cooc": 2
    },
    {
-    "term": "progress appendix",
+    "term": "overview progress",
     "lift": 1.7937,
     "count": 30,
     "in_topic": 18,
@@ -23473,14 +23473,14 @@
     "cooc": 1
    },
    {
-    "term": "laptop th edition",
+    "term": "laptop th",
     "lift": 2.0179,
     "count": 8,
     "in_topic": 8,
     "cooc": 1
    },
    {
-    "term": "laptop th",
+    "term": "laptop th edition",
     "lift": 2.0179,
     "count": 8,
     "in_topic": 8,
@@ -24005,14 +24005,14 @@
     "cooc": 1
    },
    {
-    "term": "select environmental metrics",
+    "term": "select environmental",
     "lift": 2.3061,
     "count": 8,
     "in_topic": 7,
     "cooc": 1
    },
    {
-    "term": "select environmental",
+    "term": "select environmental metrics",
     "lift": 2.3061,
     "count": 8,
     "in_topic": 7,
@@ -24397,14 +24397,14 @@
     "cooc": 1
    },
    {
-    "term": "above refer",
+    "term": "endnote above refer",
     "lift": 2.6905,
     "count": 6,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "endnote above refer",
+    "term": "above refer",
     "lift": 2.6905,
     "count": 6,
     "in_topic": 6,
@@ -24460,16 +24460,16 @@
     "cooc": 1
    },
    {
-    "term": "amazon data",
+    "term": "amazon data centers",
     "lift": 2.6905,
-    "count": 9,
+    "count": 8,
     "in_topic": 6,
     "cooc": 1
    },
    {
-    "term": "amazon data centers",
+    "term": "amazon data",
     "lift": 2.6905,
-    "count": 8,
+    "count": 9,
     "in_topic": 6,
     "cooc": 1
    },
@@ -24593,6 +24593,13 @@
     "cooc": 3
    },
    {
+    "term": "foods market",
+    "lift": 3.0268,
+    "count": 37,
+    "in_topic": 16,
+    "cooc": 3
+   },
+   {
     "term": "whole foods market",
     "lift": 3.0268,
     "count": 36,
@@ -24603,13 +24610,6 @@
     "term": "whole foods",
     "lift": 3.0268,
     "count": 36,
-    "in_topic": 16,
-    "cooc": 3
-   },
-   {
-    "term": "foods market",
-    "lift": 3.0268,
-    "count": 37,
     "in_topic": 16,
     "cooc": 3
    },
@@ -24929,14 +24929,14 @@
     "cooc": 1
    },
    {
-    "term": "sustainable aviation fuel",
+    "term": "aviation fuel",
     "lift": 3.2286,
     "count": 8,
     "in_topic": 5,
     "cooc": 1
    },
    {
-    "term": "aviation fuel",
+    "term": "sustainable aviation fuel",
     "lift": 3.2286,
     "count": 8,
     "in_topic": 5,
@@ -25062,14 +25062,14 @@
     "cooc": 2
    },
    {
-    "term": "center operations",
+    "term": "data center operations",
     "lift": 3.5873,
     "count": 14,
     "in_topic": 9,
     "cooc": 2
    },
    {
-    "term": "data center operations",
+    "term": "center operations",
     "lift": 3.5873,
     "count": 14,
     "in_topic": 9,
@@ -25125,16 +25125,16 @@
     "cooc": 6
    },
    {
-    "term": "operated data",
+    "term": "google-owned",
     "lift": 4.0357,
-    "count": 18,
+    "count": 17,
     "in_topic": 16,
     "cooc": 4
    },
    {
-    "term": "google-owned",
+    "term": "operated data",
     "lift": 4.0357,
-    "count": 17,
+    "count": 18,
     "in_topic": 16,
     "cooc": 4
    },
@@ -25223,14 +25223,14 @@
     "cooc": 4
    },
    {
-    "term": "refer to endnote",
+    "term": "endnote",
     "lift": 4.6122,
     "count": 14,
     "in_topic": 14,
     "cooc": 4
    },
    {
-    "term": "endnote",
+    "term": "refer to endnote",
     "lift": 4.6122,
     "count": 14,
     "in_topic": 14,
@@ -25272,14 +25272,14 @@
     "cooc": 2
    },
    {
-    "term": "emission factors used",
+    "term": "factors used",
     "lift": 4.6122,
     "count": 8,
     "in_topic": 7,
     "cooc": 2
    },
    {
-    "term": "factors used",
+    "term": "emission factors used",
     "lift": 4.6122,
     "count": 8,
     "in_topic": 7,
@@ -25685,16 +25685,16 @@
     "cooc": 3
    },
    {
-    "term": "statements",
+    "term": "forward-looking statements",
     "lift": 8.0714,
-    "count": 19,
+    "count": 15,
     "in_topic": 6,
     "cooc": 3
    },
    {
-    "term": "forward-looking statements",
+    "term": "statements",
     "lift": 8.0714,
-    "count": 15,
+    "count": 19,
     "in_topic": 6,
     "cooc": 3
    },
@@ -25923,7 +25923,7 @@
     "cooc": 5
    },
    {
-    "term": "service and not-for-resale",
+    "term": "goods providers",
     "lift": 16.1429,
     "count": 5,
     "in_topic": 5,
@@ -25944,7 +25944,7 @@
     "cooc": 5
    },
    {
-    "term": "not-for-resale goods",
+    "term": "service and not-for-resale",
     "lift": 16.1429,
     "count": 5,
     "in_topic": 5,
@@ -25958,7 +25958,7 @@
     "cooc": 5
    },
    {
-    "term": "goods providers",
+    "term": "not-for-resale goods",
     "lift": 16.1429,
     "count": 5,
     "in_topic": 5,

@@ -1,16 +1,20 @@
-"""按终点分层抽样，补齐 gold 从未检验过的规则。
+"""Stratified sampling by terminal, to cover rules the gold set has never exercised.
 
-为什么要分层：消融显示 19 个 C 终点里 10 个从未被 gold 覆盖，它们的贡献度无法测量
-（Abiodun 等 2021 §4.4.3「dataset issue」、§4.4.4「established benchmarks」）。
+Why stratify: the ablation shows 10 of 19 class-C terminals are never covered by a gold
+label, so their contribution cannot be measured at all (Abiodun et al. 2021, sec. 4.4.3
+"dataset issue" and sec. 4.4.4 "established benchmarks").
 
-两个必须守住的边界：
-1. **分层集不是随机样本**。它按终点配额抽取，因此它上面的总准确率不是现场准确率的估计。
-   原 29 条随机 gold 的指标独立保留，两者永不合并成一个"总分"。
-2. **来源池不同**。4 个终点在 89 条候选里为零，只能从 390 条全量抽，这些条目在
-   filter.py 下不会进入候选池。每条都记 pool 字段，便于分开统计。
+Two boundaries this module must not cross:
+1. **A stratified set is not a random sample.** It is drawn to a per-terminal quota, so
+   overall accuracy on it does not estimate field accuracy. The original 29 random gold
+   claims keep their own metrics, and the two are never merged into one score.
+2. **The source pools differ.** Four terminals appear in none of the 89 candidates and can
+   only be drawn from the full 390, where filter.py would have excluded them. Every row
+   records a pool field so the two can be counted separately.
 
-另外抽 4 条树判为 A 的条目：当前 C recall = 1.000，只有在树说"没问题"的条目里
-才可能找到反例。不抽这一层，recall 就永远是自证的。
+Four claims the tree labels A are also drawn. C recall is currently 1.000, and a
+counter-example can only exist among claims the tree calls clean. Without this stratum
+recall stays self-confirming.
 """
 import csv
 import json
@@ -22,8 +26,8 @@ from src.tree import TERMINALS, classify
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-PER_TERMINAL = 2          # 每个未检验终点的配额
-N_NEGATIVE_PROBE = 4      # 树判 A 的探针，用于检验 C recall 是否真是 1.0
+PER_TERMINAL = 2          # quota per untested terminal
+N_NEGATIVE_PROBE = 4      # probes the tree calls A, to test whether C recall is really 1.0
 SEED = 20260920
 
 
@@ -44,7 +48,7 @@ def pools():
 
 
 def untested(rows, gold_ids):
-    """gold 覆盖为 0、但在语料上确实触发的 C 终点。"""
+    """Class-C terminals with zero gold coverage that do fire on the corpus."""
     covered = Counter(r["terminal"] for r in rows if r["in_gold"])
     fires = Counter(r["terminal"] for r in rows)
     return [t for t, (lab, _, _) in TERMINALS.items()
@@ -63,7 +67,7 @@ def sample():
         by_terminal[t] = len(take)
         picked += take
 
-    # 探针层：树判 A/B 的条目，用来寻找漏报
+    # Probe stratum: claims the tree calls A or B, to look for missed flags
     probe_pool = [r for r in rows if r["label"] in ("A", "B") and not r["in_gold"]]
     probes = rng.sample(probe_pool, min(N_NEGATIVE_PROBE, len(probe_pool)))
     for p in probes:
@@ -71,12 +75,12 @@ def sample():
         by_terminal["(negative probe)"] += 1
     picked += probes
 
-    rng.shuffle(picked)          # 打乱，标注者看不出分层结构
+    rng.shuffle(picked)          # shuffle so the annotator cannot see the strata
     return picked, by_terminal, targets
 
 
 def write(picked):
-    """盲标 CSV 不含 terminal / 树标签；答案键单独存，合并时才用。"""
+    """The blind CSV carries no terminal or tree label; the key is stored separately."""
     blind = DATA / "blind_expand.csv"
     with blind.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
@@ -84,8 +88,9 @@ def write(picked):
         for r in picked:
             w.writerow([r["claim_id"], r["company"], r["text"], "", ""])
 
-    # 答案键不进仓库（.gitignore）：它含树的预测，看到就不盲了。
-    # 需要时用固定种子 SEED 重跑本模块即可完全复现。
+    # The key is excluded from the repository (.gitignore): it holds the tree predictions,
+    # and seeing them breaks the blindness. Re-running this module with the fixed SEED
+    # reproduces it exactly.
     key = DATA / "expand_key.json"
     key.write_text(json.dumps(
         [{"claim_id": r["claim_id"], "terminal": r["terminal"],
@@ -98,18 +103,18 @@ def main():
     picked, by_terminal, targets = sample()
     blind, key = write(picked)
 
-    print(f"{len(targets)} 个 C 终点在 gold 上从未被检验，抽样配额如下：\n")
+    print(f"{len(targets)} class-C terminals have never been tested by gold. Quota:\n")
     print(f"{'stratum':<32}{'sampled':>8}")
     for t, n in sorted(by_terminal.items()):
         print(f"{t:<32}{n:>8}")
     print(f"{'total':<32}{len(picked):>8}")
 
     pool_mix = Counter(r["pool"] for r in picked)
-    print(f"\n来源池：candidates {pool_mix['candidates']} 条 · "
-          f"flagged_only {pool_mix['flagged_only']} 条")
-    print("flagged_only 的条目在 filter.py 下不会进入候选池，统计时要分开。")
-    print(f"\n→ {blind.name}（盲标，填 my_label 列：A / B / C / D / SKIP）")
-    print(f"→ {key.name}（答案键，合并前不要看）")
+    print(f"\nSource pools: candidates {pool_mix['candidates']} · "
+          f"flagged_only {pool_mix['flagged_only']}")
+    print("flagged_only rows would not pass filter.py, so count them separately.")
+    print(f"\n-> {blind.name}  (blind sheet; fill my_label with A / B / C / D / SKIP)")
+    print(f"-> {key.name}  (answer key; do not open before merging)")
 
 
 if __name__ == "__main__":

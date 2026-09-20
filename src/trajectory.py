@@ -1,7 +1,9 @@
-"""从语料里抽取量化承诺与其已实现值，用于比较「要求速度」与「实际速度」。
+"""Extract quantified commitments and their achieved values, so the pace a target
+requires can be compared with the pace actually delivered.
 
-data/claims.json + data/signals.json → data/trajectories.json。[LLM]
-三步：目标抽取 → 观测值抽取 → 配对（同公司同指标，保留最近两次观测）。
+data/claims.json + data/signals.json → data/trajectories.json  [LLM]
+Three steps: extract targets -> extract observations -> pair them (same company, same
+metric, keeping the two most recent observations).
 """
 import json
 import re
@@ -14,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
 BATCH = 10
-OBS_CANDIDATES = 20        # 每个指标最多送多少条候选去抽观测值
+OBS_CANDIDATES = 20        # how many candidates per metric to send for observation extraction
 MIN_OBSERVATIONS = 2
 
 RE_TARGET_YEAR = re.compile(r"\b20[2-5]\d\b")
@@ -46,7 +48,8 @@ Only include values the company reports as achieved, not targets. Return [] if n
 
 
 def parse_json(raw):
-    """整体 JSON → 首个 [...] → 放弃。解析失败打印原文前 200 字符。"""
+    """Try whole-JSON, then the first [...], then give up. On failure print the first 200
+    characters of the raw response."""
     s = re.sub(r"^```(?:json)?\s*|\s*```$", "", (raw or "").strip(), flags=re.I).strip()
     m = re.search(r"\[.*\]", s, re.S)
     for cand in (s, m.group(0) if m else None):
@@ -63,7 +66,7 @@ def parse_json(raw):
 
 
 def num(v):
-    """把 "66%"、"1,234" 之类转成 float；失败返回 None。"""
+    """Turn "66%", "1,234" and similar into a float; None when that is not possible."""
     if isinstance(v, (int, float)):
         return float(v)
     if isinstance(v, str):
@@ -78,7 +81,7 @@ def words(text):
 
 
 def similarity(metric, text):
-    """指标名与候选文本的词重叠比例。"""
+    """Word-overlap ratio between the metric name and the candidate text."""
     mw = words(metric)
     return len(mw & words(text)) / len(mw) if mw else 0.0
 
@@ -105,7 +108,8 @@ def extract_targets(claims):
                             "metric": str(r["metric"]).strip(),
                             "target_value": tv, "target_unit": r.get("target_unit", ""),
                             "target_year": int(ty), "domain": r.get("domain", "other")})
-    # 同一个承诺常被多条 claim 重复表述，按 (公司,指标,目标值,目标年) 合并
+    # The same commitment is usually restated across several claims; merge on
+    # (company, metric, target value, target year)
     merged = {}
     for t in targets:
         key = (t["company"], t["metric"].lower(), t["target_value"], t["target_year"])
@@ -121,7 +125,8 @@ def extract_targets(claims):
 
 # ------------------------------------------------------------------ step 2
 def extract_observations(metric, company, pool):
-    """在同公司的候选里抽已实现值。pool 已按与 metric 的相似度排序。"""
+    """Extract achieved values from the same company's candidates. pool is already sorted
+    by similarity to the metric."""
     obs = []
     for i in range(0, len(pool), BATCH):
         batch = pool[i:i + BATCH]
@@ -139,7 +144,8 @@ def extract_observations(metric, company, pool):
 
 
 def candidate_pool(metric, company, claims, sentences):
-    """同公司候选，按指标词重叠排序。claim 级优先，不足时回落到句级。"""
+    """Candidates from the same company, sorted by word overlap with the metric. Claim-level
+    first, falling back to sentence-level when there are too few."""
     cand = [{"id": c["claim_id"], "text": c["text"], "sim": similarity(metric, c["text"])}
             for c in claims if c["company"] == company]
     cand = [c for c in cand if c["sim"] > 0]
@@ -155,14 +161,16 @@ def candidate_pool(metric, company, claims, sentences):
 
 # ------------------------------------------------------------------ step 3
 def pair(targets, observations):
-    """同公司同指标配对，保留最近两次观测；不足两次的丢弃并记原因。
+    """Pair on company and metric, keeping the two most recent observations; anything
+    with fewer than two is dropped with a recorded reason.
 
-    返回 (轨迹, 丢弃分组, 审计)。审计包含每一个目标的去向，不只是被丢弃的。
+    Returns (trajectories, drops grouped by reason, audit). The audit covers where every
+    target ended up, not only the dropped ones.
     """
     out, discarded, audit = [], defaultdict(list), []
     for t in targets:
         obs = observations.get((t["company"], t["metric"]), [])
-        # 去重（同年取最后一次），排除目标年本身
+        # Deduplicate (last observation wins within a year) and exclude the target year itself
         by_year = {}
         for o in obs:
             if o["year"] < t["target_year"]:
@@ -203,10 +211,12 @@ def pair(targets, observations):
     return out, discarded, audit
 
 
-# ------------------------------------------------------------------ gap 分析
+# --------------------------------------------------------------------- gap analysis
 def compute_gap(traj):
-    """把一条轨迹换算成速度缺口。符号自适应：减排类目标（gap 为负、achieved 为负）
-    的 pace_ratio 同样为正，因此用 ratio 而非 achieved 的正负来判定 MOVING_AWAY。"""
+    """Convert a trajectory into a pace gap. The sign handling is direction-agnostic: for
+    a reduction target both the gap and the achieved change are negative, so pace_ratio
+    still comes out positive. MOVING_AWAY is therefore decided on the ratio, not on the
+    sign of achieved."""
     obs = sorted(traj["observations"], key=lambda o: o["year"])
     prior, latest = obs[-2], obs[-1]
     gap = traj["target_value"] - latest["value"]
@@ -248,7 +258,8 @@ def compute_gap(traj):
 
 
 def gaps():
-    """读 data/trajectories.json，算缺口，写 data/trajectory_gaps.json 并打表。"""
+    """Read data/trajectories.json, compute the gaps, write data/trajectory_gaps.json and
+    print the table."""
     trajs = json.loads((DATA / "trajectories.json").read_text(encoding="utf-8"))
     rows = [compute_gap(t) for t in trajs]
     (DATA / "trajectory_gaps.json").write_text(
@@ -275,7 +286,7 @@ def main():
 
     targets = extract_targets(claims)
 
-    # 同公司同指标只抽一次观测值
+    # Extract observations once per (company, metric) pair
     observations = {}
     keys = {(t["company"], t["metric"]) for t in targets}
     print(f"\nstep 2: {len(keys)} distinct (company, metric) pairs")
@@ -295,7 +306,7 @@ def main():
     for reason, items in discarded.items():
         print(f"  discarded ({reason}): {len(items)}")
 
-    # 按公司分组的丢弃统计：可追踪性本身就是结论
+    # Drop counts grouped by company: how trackable a company is, is itself a result
     print(f"\n{'company':<12}{'targets':>8}{'kept':>6}{'1 obs':>7}{'0 obs':>7}{'untrackable':>13}")
     for co in sorted({a["company"] for a in audit}):
         rows = [a for a in audit if a["company"] == co]
@@ -312,7 +323,7 @@ def main():
 
 if __name__ == "__main__":
     import sys
-    if "gaps" in sys.argv[1:]:   # 只跑缺口分析：python -m src.trajectory gaps（零调用）
+    if "gaps" in sys.argv[1:]:   # gap analysis only: python -m src.trajectory gaps (zero calls)
         gaps()
     else:
         main()

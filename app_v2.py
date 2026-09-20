@@ -1,8 +1,8 @@
-"""TextQuant v2 — 分析终端布局。FRONTEND_V2.md 步骤 1：骨架，所有面板为占位。
+"""TextQuant v2 -- the analyst terminal layout, per FRONTEND_V2.md.
 
-v1 的 app.py 保持可用，两者并存直到 v2 完成。
-运行: streamlit run app_v2.py
-离线自检: env -u ANTHROPIC_API_KEY streamlit run app_v2.py
+app.py (v1) stays working; the two live side by side.
+Run:            streamlit run app_v2.py
+Offline check:  env -u ANTHROPIC_API_KEY streamlit run app_v2.py
 """
 import json
 import time
@@ -32,7 +32,8 @@ CORPUS = ROOT / "corpus"
 DATA = ROOT / "data"
 FIGS = ROOT / "figures"
 
-# 左栏底部对齐用的留白高度（Streamlit 没有真正的 sticky，靠固定高度近似）
+# Spacer height used to bottom-align the left column. Streamlit has no real sticky
+# positioning, so a fixed height approximates it.
 LEFT_SPACER_PX = 220
 
 st.set_page_config(page_title="TextQuant", layout="wide")
@@ -40,7 +41,7 @@ st.set_page_config(page_title="TextQuant", layout="wide")
 
 @st.cache_data
 def load_bundles():
-    """三份预加载报告，按公司切好 claims / sentences / audit。"""
+    """The three preloaded reports, with claims / sentences / audit split by company."""
     return cached_bundle()
 
 
@@ -52,13 +53,15 @@ def tag_mechanisms(result):
 
 @st.cache_data(show_spinner=False)
 def analyse_upload(file_bytes, filename, _on_stage=None, _on_partial=None):
-    """按文件字节缓存，同一份 PDF 再传是瞬时的。下划线参数不参与缓存键。"""
+    """Keyed on the file bytes, so re-uploading the same PDF is instant. Underscore-prefixed
+    parameters are excluded from the cache key."""
     return tag_mechanisms(analyse(file_bytes, filename,
                                   on_stage=_on_stage, on_partial=_on_partial))
 
 
 def analyse_passage(text):
-    """规则树（零调用）+ 可选的一句话理由 + 该段命中的关键术语。任何失败都不抛。"""
+    """Rule tree (zero calls) + an optional one-line rationale + the key terms this passage
+    hits. Never raises."""
     tree = tree_classify(text)
     spans = [n["span"] for n in tree["path"] if "span" in n]
     out = {"text": text, "tree": tree, "span": spans[-1] if spans else None,
@@ -68,12 +71,13 @@ def analyse_passage(text):
         r = classify_claim(text)
         out["reasoning"], out["llm_label"] = r["reasoning"], r["label"]
     except Exception:
-        pass   # 断网或无 key：只给规则树结论
+        pass   # no network or no key: fall back to the rule tree's answer alone
     return out
 
 
 def upload_indicators(result):
-    """上传路径的四个指标。轨迹扫描不在上传流程里，第四项返回 None。"""
+    """The four indicators for the upload path. The trajectory scan is not part of the
+    upload flow, so the fourth comes back None."""
     rows, claims = result["rows"], result["claims"]
     return {"claims_needing_review": claims_needing_review(claims) if claims else None,
             "promises_per_verification": promises_per_verification(rows),
@@ -89,7 +93,8 @@ def load_gaps():
 
 @st.cache_data
 def load_term_risk():
-    """Track S 的 lift 表。没跑过就返回 None，药丸退化为不着色。"""
+    """Track S lift table. Returns None when it has not been built, and the pills then
+    render without colouring."""
     path = DATA / "term_risk.json"
     if not path.exists():
         return None
@@ -97,7 +102,7 @@ def load_term_risk():
 
 
 def key_terms_present(sentences, term_risk):
-    """§4.1：本报告里出现、且承载量化声明的会计术语。"""
+    """sec. 4.1: accounting terms that appear in this report and carry a quantified claim."""
     blob = " ".join(s["text"] for s in sentences).lower()
     out = []
     for term in KEY_TERMS:
@@ -121,7 +126,8 @@ def load_sources():
 
 
 def resolve(query, sources):
-    """公司名或 ticker 精确匹配，忽略大小写。匹配不到返回 None，绝不报错。"""
+    """Exact match on company name or ticker, case-insensitive. Returns None on no match;
+    never raises."""
     q = (query or "").strip().lower()
     if not q:
         return None
@@ -129,7 +135,7 @@ def resolve(query, sources):
 
 
 def panel(title, note, height="content"):
-    """占位面板：标题 + 待建说明。步骤 2 起逐个替换。"""
+    """Placeholder panel: a title plus a note that it is not built yet."""
     with st.container(border=True, height=height):
         st.markdown(f"**{title}**")
         st.caption(f"{note} — placeholder, FRONTEND_V2.md build order.")
@@ -166,7 +172,7 @@ bundles = load_bundles()
 bundle = bundles.get(selected["company"]) if selected else None
 
 with bar_grade:
-    grade_slot = st.container(border=True)   # 上传时管线跑完再填
+    grade_slot = st.container(border=True)   # filled after the pipeline finishes on upload
 
 
 def render_grade(slot, grade, subject, blocked=None):
@@ -245,7 +251,8 @@ if upload is None and not st.session_state.get("active_hash"):
     uploaded = None
 values = (upload_indicators(uploaded) if uploaded
           else (indicators_for(bundle) if bundle else None))
-# 没有 claim 时 completeness 的分母为空，公式会退化成满分 —— 宁可不给字母
+# With no claims the completeness denominator is empty and the formula degenerates to a
+# perfect score. Withholding the letter is better than reporting that.
 grade = None
 blocked = None
 if uploaded:
@@ -309,7 +316,7 @@ with right:
         n_one = sum(a["reason"] == "only_one_observation" for a in audit)
         n_two = sum(a["outcome"] == "kept" for a in audit)
 
-        # 少于三个观测点不拟合趋势线（§4.4 / §9）
+        # Fewer than three observations: no trend line (sec. 4.4 / sec. 9)
         plottable = [g for g in gaps if g.get("observations_found", 2) >= 3]
 
         if uploaded:
@@ -344,7 +351,7 @@ with right:
                                f"{g['latest_year']} {g['latest_value']:g}, target "
                                f"{g['target_value']:g}{g['unit']} by {g['target_year']}")
 
-    # ---- Where to look（步骤 4：从 v1 原样移植）
+    # ---- Where to look (ported unchanged from v1)
     with st.container(border=True):
         if uploaded:
             regions = uploaded["regions"]
@@ -367,7 +374,7 @@ with right:
             st.markdown("**No passages crossed the review threshold**")
             st.session_state.selected_region = None
 
-    # ---- Analyse a passage（粘贴原文，规则树零调用 + 可选 LLM 理由）
+    # ---- Analyse a passage (paste text; rule tree costs nothing, LLM rationale optional)
     with st.container(border=True):
         st.markdown(f"**{PASSAGE_PANEL['title']}**")
         st.caption(PASSAGE_PANEL["hint"])
@@ -406,7 +413,7 @@ with right:
                           "path": [f"{n['node']}:{n['answer']}" for n in tree["path"]],
                           "llm_label": res.get("llm_label"), "cached": res.get("cached")})
 
-    # ---- Selected passage（步骤 4：顺序不变，公司自己的话在前）
+    # ---- Selected passage (order matters: the company's own words come first)
     with st.container(border=True):
         region = st.session_state.get("selected_region")
         if not region:
@@ -448,7 +455,8 @@ tree_slot = st.container()
 
 
 def render_tree(slot, state):
-    """state: {stage_name: done|running|pending|failed}。渲染整棵树，当前阶段高亮。"""
+    """state: {stage_name: done|running|pending|failed}. Renders the whole tree with the
+    current stage highlighted."""
     with slot:
         for title, children, stage_name in WORK_TREE:
             mark = TREE_MARKS[state.get(stage_name, "pending")]
@@ -469,7 +477,8 @@ st.header("What this does not claim")
 panel("Limitations", "Carried over from v1 unchanged")
 
 # ======================================================= UPLOAD RUN (last)
-# 管线放在最后跑：工作树已经在屏幕上，阶段逐个点亮；跑完 rerun，让上方面板拿到数据。
+# The pipeline runs last, so the work tree is already on screen and lights up stage by
+# stage. It reruns on completion, which is how the panels above receive the data.
 if upload is not None:
     file_bytes = upload.getvalue()
     h = history.file_hash(file_bytes)

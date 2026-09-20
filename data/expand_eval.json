@@ -1,0 +1,153 @@
+{
+ "n_labelled": 20,
+ "n_unlabelled": 0,
+ "agreement": 0.4,
+ "c_precision_in_sample": 0.25,
+ "n_flagged_c": 16,
+ "n_confirmed_c": 4,
+ "n_probes": 4,
+ "n_missed_flags": 0,
+ "missed_flag_ids": [],
+ "per_terminal": [
+  {
+   "terminal": "CHERRY_PICKED_METRIC",
+   "tree_label": "C",
+   "n": 1,
+   "agree": 0,
+   "human_labels": {
+    "A": 1
+   },
+   "pool": "flagged_only",
+   "verdict": "over-flags"
+  },
+  {
+   "terminal": "METHOD_UNSTATED",
+   "tree_label": "C",
+   "n": 2,
+   "agree": 0,
+   "human_labels": {
+    "A": 2
+   },
+   "pool": "flagged_only",
+   "verdict": "over-flags"
+  },
+  {
+   "terminal": "NO_BASELINE_YEAR",
+   "tree_label": "C",
+   "n": 1,
+   "agree": 0,
+   "human_labels": {
+    "A": 1
+   },
+   "pool": "candidates",
+   "verdict": "over-flags"
+  },
+  {
+   "terminal": "UNSCOPED_FIGURE",
+   "tree_label": "C",
+   "n": 2,
+   "agree": 0,
+   "human_labels": {
+    "B": 1,
+    "A": 1
+   },
+   "pool": "flagged_only",
+   "verdict": "over-flags"
+  },
+  {
+   "terminal": "WATER_BOUNDARY_UNSTATED",
+   "tree_label": "C",
+   "n": 2,
+   "agree": 0,
+   "human_labels": {
+    "B": 1,
+    "A": 1
+   },
+   "pool": "flagged_only",
+   "verdict": "over-flags"
+  },
+  {
+   "terminal": "MARKET_BASED_IMPLIED",
+   "tree_label": "C",
+   "n": 2,
+   "agree": 1,
+   "human_labels": {
+    "A": 1,
+    "C": 1
+   },
+   "pool": "candidates",
+   "verdict": "mixed"
+  },
+  {
+   "terminal": "PROPRIETARY_METRIC",
+   "tree_label": "C",
+   "n": 2,
+   "agree": 1,
+   "human_labels": {
+    "B": 1,
+    "C": 1
+   },
+   "pool": "flagged_only",
+   "verdict": "mixed"
+  },
+  {
+   "terminal": "WASTE_BOUNDARY_UNSTATED",
+   "tree_label": "C",
+   "n": 2,
+   "agree": 1,
+   "human_labels": {
+    "A": 1,
+    "C": 1
+   },
+   "pool": "candidates",
+   "verdict": "mixed"
+  },
+  {
+   "terminal": "WATER_TERM_UNDEFINED",
+   "tree_label": "C",
+   "n": 2,
+   "agree": 1,
+   "human_labels": {
+    "A": 1,
+    "C": 1
+   },
+   "pool": "candidates",
+   "verdict": "mixed"
+  },
+  {
+   "terminal": "SUBSTANTIATED_METRIC",
+   "tree_label": "A",
+   "n": 1,
+   "agree": 1,
+   "human_labels": {
+    "A": 1
+   },
+   "pool": "flagged_only",
+   "verdict": "no missed flag"
+  },
+  {
+   "terminal": "SUBSTANTIATED_WASTE",
+   "tree_label": "A",
+   "n": 1,
+   "agree": 1,
+   "human_labels": {
+    "A": 1
+   },
+   "pool": "flagged_only",
+   "verdict": "no missed flag"
+  },
+  {
+   "terminal": "VAGUE_NO_QUANTITY",
+   "tree_label": "B",
+   "n": 2,
+   "agree": 2,
+   "human_labels": {
+    "B": 2
+   },
+   "pool": "candidates",
+   "verdict": "no missed flag"
+  }
+ ],
+ "n_original_gold": 29,
+ "note": "Quota sample over previously unmeasured terminals. Agreement here is not comparable with accuracy on the 29 random gold claims and the two are never averaged."
+}

@@ -1,7 +1,9 @@
-"""方法间差异的统计检验：Friedman + Nemenyi 临界差 + 成对 McNemar（Holm 校正）。
+"""Are the methods actually different? Friedman + Nemenyi critical difference +
+pairwise McNemar with Holm correction.
 
-block = 单条 gold claim，treatment = 五种方法，观测值 = 该方法在该条上是否判对。
-二元观测下 Friedman 等价于 Cochran's Q；结论以 p 值与临界差呈现，不做单点排名宣称。
+block = one gold claim, treatment = one of the five methods, observation = whether that
+method got that claim right. On binary observations Friedman is equivalent to Cochran's Q.
+Results are reported as p-values and a critical difference, never as a point ranking.
 """
 import json
 from itertools import combinations
@@ -13,19 +15,19 @@ from scipy.stats import binomtest, friedmanchisquare, rankdata
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
-# Nemenyi 检验的 q 临界值（alpha=0.05），索引为方法数 k
+# Critical q values for the Nemenyi test (alpha=0.05), indexed by the number of methods k
 Q_ALPHA_05 = {2: 1.960, 3: 2.344, 4: 2.569, 5: 2.728, 6: 2.850, 7: 2.949,
               8: 3.031, 9: 3.102, 10: 3.164}
 
 
 def correctness_matrix(predictions, methods):
-    """n_claims × k_methods 的 0/1 矩阵。"""
+    """An n_claims x k_methods matrix of 0/1 correctness."""
     return np.array([[1 if p[m] == p["gold"] else 0 for m in methods] for p in predictions])
 
 
 def friedman(M):
     stat, p = friedmanchisquare(*[M[:, i] for i in range(M.shape[1])])
-    ranks = np.array([rankdata(-row, method="average") for row in M])  # 1 = 最好
+    ranks = np.array([rankdata(-row, method="average") for row in M])  # 1 = best
     return {"chi2": float(stat), "p": float(p),
             "mean_ranks": ranks.mean(axis=0).tolist(),
             "n_blocks": int(M.shape[0]), "k_methods": int(M.shape[1]),
@@ -33,13 +35,14 @@ def friedman(M):
 
 
 def critical_difference(k, n, alpha_q=None):
-    """Nemenyi CD = q · sqrt(k(k+1) / (6n))。两方法平均秩之差小于 CD 即不可区分。"""
+    """Nemenyi CD = q * sqrt(k(k+1) / (6n)). Two methods whose mean ranks differ by less
+    than CD are indistinguishable."""
     q = alpha_q or Q_ALPHA_05.get(k, 3.164)
     return float(q * np.sqrt(k * (k + 1) / (6 * n)))
 
 
 def mcnemar_exact(a_correct, b_correct):
-    """成对精确 McNemar：只看两方法判定不一致的条目（b01 / b10）。"""
+    """Exact pairwise McNemar: only the claims where the two methods disagree (b01 / b10)."""
     b01 = int(np.sum((a_correct == 1) & (b_correct == 0)))
     b10 = int(np.sum((a_correct == 0) & (b_correct == 1)))
     n = b01 + b10
@@ -48,12 +51,12 @@ def mcnemar_exact(a_correct, b_correct):
 
 
 def holm(pairs):
-    """Holm-Bonferroni 校正，返回按原顺序排列的校正后 p 值。"""
+    """Holm-Bonferroni correction; returns adjusted p-values in the original order."""
     order = sorted(range(len(pairs)), key=lambda i: pairs[i]["p"])
     m, out, running = len(pairs), [None] * len(pairs), 0.0
     for rank, idx in enumerate(order):
         adj = min(1.0, (m - rank) * pairs[idx]["p"])
-        running = max(running, adj)          # 保持单调
+        running = max(running, adj)          # keep the sequence monotone
         out[idx] = running
     return out
 
@@ -104,12 +107,14 @@ def run():
     return out
 
 
-# ------------------------------------------------ 折级分布（箱线图与 Friedman）
+# ------------------------------------- fold-level distribution (box plot and Friedman)
 def fold_scores(predictions, methods, metric="balanced_accuracy", k=5, repeats=10, seed=0):
-    """重复分层 k 折：每折对每个方法算一次指标，得到可画箱线图的分布。
+    """Repeated stratified k-fold: score every method once per fold, giving a
+    distribution that can be drawn as a box plot.
 
-    方法不需要训练（预测已固定），折只用于重采样评估。同一批 29 条被反复切分，
-    折与折之间并不独立，因此这里的 p 值偏乐观 —— 结论以箱体重叠程度为准。
+    No method is trained here -- the predictions are already fixed -- so the folds are
+    purely a resampling device. The same claims are split over and over, so the folds are
+    not independent and the p-value below is optimistic. Read the box overlap, not the p.
     """
     import warnings
     from src.evaluate import score
@@ -121,7 +126,7 @@ def fold_scores(predictions, methods, metric="balanced_accuracy", k=5, repeats=1
     blocks = []
     for _ in range(repeats):
         folds = [[] for _ in range(k)]
-        for lab, idx in idx_by_label.items():          # 分层：每折内类别比例接近
+        for lab, idx in idx_by_label.items():          # stratify: keep class ratios per fold
             order = rng.permutation(idx)
             for i, j in enumerate(order):
                 folds[i % k].append(j)
@@ -148,7 +153,8 @@ def fold_friedman(predictions, methods, metric="balanced_accuracy", **kw):
 
 
 def print_folds(out):
-    print(f"\n折级分布（重复分层 5 折 × 10 次 = {out['fold_level']['accuracy']['n_folds']} 折）")
+    print(f"\nFold-level distribution (stratified 5-fold x 10 repeats = "
+          f"{out['fold_level']['accuracy']['n_folds']} folds)")
     for metric, r in out["fold_level"].items():
         print(f"  {metric:<18} chi2={r['chi2']:7.2f}  p={r['p']:.2e}  "
               f"CD={r['critical_difference']:.3f}")
@@ -158,12 +164,15 @@ def print_folds(out):
 
 
 
-# ------------------------------------------------ 分数据集 mean-rank（Abualigah 表 4/5）
+# ----------------------------------- per-dataset mean rank (Abualigah tables 4 and 5)
 def per_dataset_ranks(predictions, methods, metric="balanced_accuracy"):
-    """把每家公司当一个数据集，按 Abualigah 等的格式给出每列排名、求和、均值、总排名。
+    """Treat each company as a dataset and lay out per-column ranks, sums, means and an
+    overall rank, in the format Abualigah et al. use.
 
-    他们用 7-8 个数据集；我们只有 3 个，每个约 10 条，因此名次很噪。这张表的用途是
-    看**排名是否跨公司一致**，不是宣称某个方法更好 —— 一致性本身是比单点分数更强的证据。
+    They have 7-8 datasets; we have 3, about 10 claims each, so individual ranks are
+    noisy. The table is here to show **whether the ranking is consistent across
+    companies**, not to claim a winner -- consistency is stronger evidence than any
+    single score.
     """
     import warnings
 
@@ -178,7 +187,7 @@ def per_dataset_ranks(predictions, methods, metric="balanced_accuracy"):
     for ds, rows in sorted(groups.items()):
         s = [score([r["gold"] for r in rows], [r[m] for r in rows])[metric] for m in methods]
         scores[ds] = s
-        per_ds[ds] = rankdata([-v for v in s], method="average").tolist()  # 1 = 最好
+        per_ds[ds] = rankdata([-v for v in s], method="average").tolist()  # 1 = best
 
     summation = [sum(per_ds[ds][i] for ds in per_ds) for i in range(len(methods))]
     mean_rank = [v / len(per_ds) for v in summation]
@@ -192,8 +201,8 @@ def per_dataset_ranks(predictions, methods, metric="balanced_accuracy"):
 
 def print_ranks(r, methods):
     ds = r["datasets"]
-    print(f"\n分数据集 mean-rank（metric = {r['metric']}，每家 n = "
-          + ", ".join(f"{d}:{r['n_per_dataset'][d]}" for d in ds) + "）")
+    print(f"\nPer-dataset mean rank (metric = {r['metric']}, n per company = "
+          + ", ".join(f"{d}:{r['n_per_dataset'][d]}" for d in ds) + ")")
     print(f"{'method':<20}" + "".join(f"{d[:8]:>10}" for d in ds)
           + f"{'sum':>7}{'mean':>7}{'rank':>6}")
     for i, m in enumerate(methods):
@@ -201,7 +210,8 @@ def print_ranks(r, methods):
               + "".join(f"{r['ranks'][d][i]:>10.1f}" for d in ds)
               + f"{r['summation'][i]:>7.1f}{r['mean_rank'][i]:>7.2f}"
               + f"{r['final_ranking'][i]:>6}")
-    print("  每家公司的名次向量" + ("完全一致" if r["unanimous"] else "并不一致"))
+    print("  Rank vectors across companies are "
+          + ("identical" if r["unanimous"] else "not identical"))
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
-"""承诺可追踪性：各公司量化承诺中「同一份报告里凑不出两个年度观测值」的占比。
+"""Commitment trackability: the share of quantified commitments for which the same
+report does not contain two yearly observations.
 
-data/trajectory_audit.json → figures/commitment_verifiability.png。
+data/trajectory_audit.json → figures/commitment_verifiability.png
 """
 import json
 import os

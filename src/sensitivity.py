@@ -1,15 +1,17 @@
-"""参数敏感性分析：结论对阈值的依赖程度。
+"""Parameter sensitivity: how much does the conclusion depend on the thresholds?
 
-做法取自 Mosa（2020）§5.4「Effects of parameters」与 Lu 等（2015）的参数表：报告整条
-曲线，而不是只报最优点。阈值是作者选的而非拟合的（FRONTEND_V2 §5 已声明），因此唯一
-诚实的辩护不是"阈值对"，而是"结论在阈值附近是否稳定"。
+The form is taken from Mosa (2020) sec. 5.4 "Effects of parameters" and the parameter
+tables in Lu et al. (2015): report the whole curve, not just the best point. The
+thresholds here were chosen by the author rather than fitted (FRONTEND_V2 sec. 5 says so),
+so the only honest defence is not "the threshold is right" but "the conclusion holds in a
+neighbourhood of it".
 
-四条扫描：
-  1. 评级带边界整体平移
-  2. PVR 上限（promise_balance 的 clamp 右端）
-  3. 核验目标（每 100 句的第三方核验提及数）
-  4. 异常检测的 z 倍数（段落数量如何随之变化）
-零 LLM 调用。
+Four sweeps:
+  1. shifting all three grade-band edges together
+  2. the PVR ceiling (the right end of the promise_balance clamp)
+  3. the verification target (third-party verification mentions per 100 sentences)
+  4. the z multiplier in anomaly detection (how the passage count moves with it)
+Zero LLM calls.
 """
 import json
 from pathlib import Path
@@ -29,7 +31,7 @@ def grade_of(bundle, **kw):
 
 
 def sweep_bands(bundles, shifts=np.arange(-12, 12.1, 2)):
-    """整体平移 75/55/35 三条带边界。"""
+    """Shift all three band edges (75/55/35) by the same amount."""
     rows = []
     for d in shifts:
         bands = [(cut + d, g) for cut, g in GRADE_BANDS]
@@ -56,7 +58,7 @@ def sweep_verif_target(bundles, targets=np.arange(2.0, 10.01, 0.5)):
 
 
 def sweep_anomaly(bundles, ks=np.arange(1.0, 3.51, 0.25)):
-    """异常段落的 z 倍数：阈值 = mean + k·std。段落数随 k 的变化。"""
+    """z multiplier for anomalous passages: threshold = mean + k*std. Passage count vs k."""
     from collections import Counter
 
     from src.anomaly import MIN_REGION, PRECISE_FLAGS, smooth
@@ -90,7 +92,7 @@ def sweep_anomaly(bundles, ks=np.arange(1.0, 3.51, 0.25)):
 
 
 def margins(bundles):
-    """每家离最近一条带边界还有多少分 —— 评级的脆弱程度。"""
+    """Points from each company to its nearest band edge -- how fragile the grade is."""
     out = []
     for co, b in bundles.items():
         letter, s = grade_of(b)
@@ -103,7 +105,7 @@ def margins(bundles):
 
 
 def stability(rows, companies):
-    """一条扫描里每家公司出现过几种评级；1 = 完全稳定。"""
+    """How many distinct grades each company takes across a sweep; 1 = fully stable."""
     return {co: sorted({r[co] for r in rows}) for co in companies}
 
 
@@ -128,25 +130,26 @@ def main():
     (DATA / "sensitivity.json").write_text(json.dumps(out, ensure_ascii=False, indent=1),
                                            encoding="utf-8")
 
-    print("评级离最近带边界的距离（越小越脆弱）")
+    print("Distance from each grade to its nearest band edge (smaller = more fragile)")
     print(f"{'company':<11}{'score':>7}{'grade':>7}{'edge':>7}{'margin':>8}")
     for m in marg:
         print(f"{m['company']:<11}{m['score']:>7.1f}{m['grade']:>7}"
               f"{m['nearest_edge']:>7}{m['margin']:>8.1f}")
 
-    for name, key, unit in [("评级带整体平移", "band_shift", "shift"),
-                            ("PVR 上限", "pvr_ceil", "pvr_ceil"),
-                            ("核验目标（每 100 句）", "verif_target", "verif_target")]:
+    for name, key, unit in [("grade bands shifted together", "band_shift", "shift"),
+                            ("PVR ceiling", "pvr_ceil", "pvr_ceil"),
+                            ("verification target (per 100 sentences)", "verif_target",
+                             "verif_target")]:
         rows = sweeps[key]
         st = stability(rows, companies)
         lo, hi = rows[0][unit], rows[-1][unit]
-        print(f"\n{name}  扫描 {lo:g} → {hi:g}")
+        print(f"\n{name}  sweep {lo:g} -> {hi:g}")
         for co in companies:
             seq = "".join(r[co] for r in rows)
             flips = sum(1 for a, b in zip(seq, seq[1:]) if a != b)
-            print(f"  {co:<11}{seq}   评级集合 {st[co]}  翻转 {flips} 次")
+            print(f"  {co:<11}{seq}   grades seen {st[co]}  {flips} flips")
 
-    print("\n异常段落的 z 倍数 k  扫描 1.0 → 3.5")
+    print("\nz multiplier k for anomalous passages  sweep 1.0 -> 3.5")
     print("  " + "k".ljust(9) + "".join(f"{co[:9]:>11}" for co in companies))
     for r in sweeps["anomaly_k"]:
         print(f"  {r['k']:<9.2f}" + "".join(f"{r[co]:>11}" for co in companies))

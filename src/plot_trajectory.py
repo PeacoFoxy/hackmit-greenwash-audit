@@ -1,4 +1,5 @@
-"""承诺进度缺口图：每条轨迹一个横向面板。data/trajectory_gaps.json → figures/trajectory_gap.png。"""
+"""Commitment progress gaps: one horizontal panel per trajectory.
+data/trajectory_gaps.json -> figures/trajectory_gap.png."""
 import json
 import os
 from pathlib import Path
@@ -26,17 +27,17 @@ def draw(ax, r):
     color = STATUS_COLOR.get(r["status"], "#9498a0")
     latest, target = r["latest_value"], r["target_value"]
 
-    # 已达成部分
+    # achieved so far
     ax.barh([0], [latest], height=0.42, color=color, alpha=0.85, zorder=2)
     ax.text(latest, -0.30, f"{latest:g}{r['unit']} ({r['latest_year']})",
             va="top", ha="left", fontsize=8, color=color)
 
-    # 目标竖线
+    # target marker
     ax.axvline(target, color="#333", lw=1.6, zorder=3)
     ax.text(target, -0.42, f"target {target:g}{r['unit']} by {r['target_year']}",
             va="top", ha="right", fontsize=8, color="#333")
 
-    # 按已实现速度外推到目标位置，标注预计达成年份
+    # Extrapolate at the achieved pace and annotate the projected year
     proj = r["projected_year"]
     ax.plot([latest, target], [0, 0], ls=":", lw=1.6, color=color, zorder=4)
     if proj is None:
@@ -45,7 +46,8 @@ def draw(ax, r):
         note = f"reaches target ≈ {proj:.0f}"
         if r["shortfall_years"] and r["shortfall_years"] > 0:
             note += f"  (+{r['shortfall_years']:.0f} yr late)"
-    # 减排类目标（target < latest）的外推段落在柱子内部，标注上移避免被柱体盖住
+    # For reduction targets (target < latest) the extrapolation falls inside the bar, so
+    # the label is raised to stay visible
     note_y = 0.30 if target < latest else 0.02
     ax.text((latest + target) / 2, note_y, note, va="bottom", ha="center",
             fontsize=8, color=color, style="italic",
@@ -69,7 +71,7 @@ def draw(ax, r):
 def main():
     rows = json.loads((DATA / "trajectory_gaps.json").read_text(encoding="utf-8"))
     if not rows:
-        print("trajectory_gaps.json 为空，无可绘制内容")
+        print("trajectory_gaps.json is empty, nothing to plot")
         return
 
     fig, axes = plt.subplots(len(rows), 1, figsize=(10, 1.5 * len(rows) + 1.2))

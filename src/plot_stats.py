@@ -1,6 +1,7 @@
-"""Friedman 检验的三张图：临界差图、指标点图、成对 McNemar 热图。
+"""Three figures for the significance tests: critical-difference diagram, fold-level box
+plots, and the pairwise McNemar heat map.
 
-data/significance.json + data/metrics.json → figures/。matplotlib only, dpi 120。
+data/significance.json + data/metrics.json -> figures/   matplotlib only, dpi 120
 """
 import json
 import os
@@ -29,13 +30,14 @@ def load():
     return sig, met
 
 
-# ------------------------------------------------------------------ 图 1
+# ---------------------------------------------------------------- figure 1
 def plot_cd(sig):
-    """Friedman + Nemenyi 临界差图：秩越小越好（左侧），粗线内的方法不可区分。"""
+    """Friedman + Nemenyi diagram: lower rank is better (left); methods joined by a thick
+    bar are not distinguishable."""
     methods = sig["methods"]
     ranks = np.array(sig["friedman"]["mean_ranks"])
     cd = sig["critical_difference"]
-    order = list(np.argsort(ranks))          # 最好的在前
+    order = list(np.argsort(ranks))          # best first
     k = len(methods)
 
     lo, hi = ranks.min() - 0.18, ranks.max() + 0.18
@@ -43,17 +45,17 @@ def plot_cd(sig):
     ax.set_xlim(lo - 0.55, hi + 0.55)
     ax.set_ylim(-(k // 2 + 1) - 0.9, 1.9)
 
-    # 秩轴
+    # rank axis
     ax.hlines(0, lo, hi, color="#333", lw=1.4)
     for t in np.arange(np.ceil(lo * 10) / 10, hi + 1e-9, 0.1):
         tall = abs(round(t, 2) * 100 % 20) < 1e-6
         ax.vlines(t, -0.09 if tall else -0.05, 0, color="#333", lw=1)
-        if tall:                      # 刻度标签放轴下方，给上方的集团线让位
+        if tall:                      # labels below the axis, leaving room for the clique bars
             ax.text(t, -0.13, f"{t:.1f}", ha="center", va="top", fontsize=8)
     ax.text(lo, -0.42, "better", ha="left", va="top", fontsize=8, color="#666")
     ax.text(hi, -0.42, "worse", ha="right", va="top", fontsize=8, color="#666")
 
-    # 方法：前一半标在左，后一半标在右，避免引线交叉
+    # Label the better half on the left and the rest on the right, so leaders do not cross
     left, right = order[:(k + 1) // 2], order[(k + 1) // 2:]
     for i, idx in enumerate(left):
         y = -(i + 1)
@@ -66,7 +68,7 @@ def plot_cd(sig):
         ax.text(hi + 0.55, y, f"({ranks[idx]:.2f}) {SHOW.get(methods[idx], methods[idx])}",
                 va="center", ha="left", fontsize=9)
 
-    # 不可区分的集团：秩差 <= CD 的方法用一条粗线连起来
+    # Cliques: methods within one critical difference are joined by a thick bar
     groups, used = [], set()
     for a in order:
         if a in used:
@@ -80,7 +82,7 @@ def plot_cd(sig):
         ax.plot([min(ranks[g]) - 0.02, max(ranks[g]) + 0.02], [y, y],
                 color="#333", lw=5, solid_capstyle="butt")
 
-    # CD 标尺
+    # critical-difference ruler
     ax.plot([lo, lo + cd], [1.35, 1.35], color="#ff725c", lw=3, solid_capstyle="butt")
     ax.vlines([lo, lo + cd], 1.28, 1.42, color="#ff725c", lw=1.5)
     ax.text(lo + cd / 2, 1.46, f"critical difference {cd:.2f}", ha="center", va="bottom",
@@ -99,13 +101,14 @@ def plot_cd(sig):
     plt.close(fig)
 
 
-# ------------------------------------------------------------------ 图 2
+# ---------------------------------------------------------------- figure 2
 def plot_boxplot(sig):
-    """折级分布箱线图：每个方法一个箱，点是单折得分；标题给 Friedman 统计量。"""
+    """Fold-level box plots: one box per method, dots are single folds; the title carries
+    the Friedman statistic."""
     methods = sig["methods"]
     panels = [("accuracy", "Accuracy"), ("balanced_accuracy", "Balanced accuracy"),
               ("C_f1", "F1 on technically-true claims")]
-    order = np.argsort(sig["fold_level"]["balanced_accuracy"]["mean_ranks"])  # 好的在左
+    order = np.argsort(sig["fold_level"]["balanced_accuracy"]["mean_ranks"])  # best on the left
     labels = [SHOW.get(methods[i], methods[i]) for i in order]
 
     fig, axes = plt.subplots(1, len(panels), figsize=(14, 5.2), sharey=True)
@@ -117,7 +120,7 @@ def plot_boxplot(sig):
                         medianprops=dict(color="#222", lw=1.6))
         for patch in bp["boxes"]:
             patch.set(facecolor="#dbe4f7", edgecolor="#4269d0", lw=1.1)
-        for i in range(S.shape[1]):          # 单折得分，抖动后叠在箱上
+        for i in range(S.shape[1]):          # single folds, jittered over the box
             x = np.full(S.shape[0], i + 1) + rng.normal(0, 0.06, S.shape[0])
             ax.plot(x, S[:, i], "o", ms=3, alpha=0.35, color="#4269d0")
         ax.set_title(f"{title}\nFriedman χ² = {r['chi2']:.1f}, p = {r['p']:.1e}",
@@ -139,22 +142,23 @@ def plot_boxplot(sig):
     plt.close(fig)
 
 
-# ------------------------------------------------------------------ 图 3
+# ---------------------------------------------------------------- figure 3
 def plot_mcnemar(sig):
-    """成对 McNemar 热图：下三角原始 p，上三角 Holm 校正后 p。"""
+    """Pairwise McNemar heat map: raw p below the diagonal, Holm-adjusted p above."""
     methods = sig["methods"]
     n = len(methods)
     grid = np.full((n, n), np.nan)
     ann = [["" for _ in range(n)] for _ in range(n)]
     for r in sig["pairwise_mcnemar"]:
         i, j = methods.index(r["a"]), methods.index(r["b"])
-        grid[max(i, j), min(i, j)] = r["p"]          # 下三角：原始 p
-        grid[min(i, j), max(i, j)] = r["p_holm"]     # 上三角：Holm
+        grid[max(i, j), min(i, j)] = r["p"]          # lower triangle: raw p
+        grid[min(i, j), max(i, j)] = r["p_holm"]     # upper triangle: Holm-adjusted
         ann[max(i, j)][min(i, j)] = f"{r['p']:.2f}\n{r['b01']}v{r['b10']}"
         ann[min(i, j)][max(i, j)] = f"{r['p_holm']:.2f}"
 
     fig, ax = plt.subplots(figsize=(7.4, 6.2))
-    # 中性单色：红绿会让 p=0.12 看起来像“显著”。显著的格子另加星号标出。
+    # Neutral single hue: red-green would make p=0.12 look significant. Significant cells
+    # are marked with a star instead.
     im = ax.imshow(grid, cmap="Blues_r", vmin=0, vmax=1)
     ax.set_xticks(range(n), [SHOW.get(m, m) for m in methods], rotation=25, ha="right",
                   fontsize=8)

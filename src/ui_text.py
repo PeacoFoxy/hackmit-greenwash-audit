@@ -1,9 +1,11 @@
-"""界面用词表：内部机制名 / 终点名 / 标签 → 用户可读措辞，以及四条预设 claim。
+"""Interface wording: internal mechanism / terminal / label codes mapped to readable
+phrasing, plus the four preset claims.
 
-FRONTEND.md §2 的铁律：内部代号不上屏，只出现在「技术细节」折叠块里。
+The hard rule from FRONTEND.md sec. 2: internal codes never appear on screen. They live
+only inside the "technical detail" expander.
 """
 
-# §2 机制（四类）
+# sec. 2 mechanisms (four of them)
 MECHANISM_LABELS = {
     "UNDISCLOSED_METHOD": "Method not stated",
     "UNDISCLOSED_BOUNDARY": "Coverage not stated",
@@ -11,7 +13,7 @@ MECHANISM_LABELS = {
     "UNDEFINED_TERM": "Term undefined",
 }
 
-# §2 列出的终点（其余终点回落到所属机制的措辞）
+# The terminals sec. 2 names. Anything else falls back to its mechanism's wording.
 TERMINAL_LABELS = {
     "MARKET_BASED_IMPLIED": "Purchased, not consumed",
     "INTENSITY_NO_ABSOLUTE": "Per-unit figure only",
@@ -21,7 +23,7 @@ TERMINAL_LABELS = {
     "DIVERSION_UNDEFINED": "Disposal route unstated",
 }
 
-# §2 四类标签
+# sec. 2 labels (four of them)
 LABEL_NAMES = {
     "A": "Substantiated",
     "B": "Unverifiable",
@@ -29,7 +31,7 @@ LABEL_NAMES = {
     "D": "Contradicted",
 }
 
-# 四类机制的配色（报告地图的色块、图例共用）
+# Colours for the four mechanisms, shared by the report-map blocks and the legend
 MECHANISM_COLORS = {
     "UNDISCLOSED_METHOD": "#4269d0",
     "UNDISCLOSED_BOUNDARY": "#efb118",
@@ -37,7 +39,8 @@ MECHANISM_COLORS = {
     "UNDEFINED_TERM": "#3ca951",
 }
 
-# v1 flag（异常区间用的就是它）→ 机制。区间按出现最多的 flag 归类。
+# v1 flag (what the anomalous passages are built from) -> mechanism. A passage is
+# assigned the mechanism of its most frequent flag.
 FLAG_MECHANISM = {
     "SCOPE2_METHOD_UNSTATED": "UNDISCLOSED_METHOD",
     "MATCHING_LANGUAGE": "UNDISCLOSED_METHOD",
@@ -50,7 +53,8 @@ FLAG_MECHANISM = {
 }
 
 
-# 每个 v1 flag 的名词短语说明。用名词短语而非动词，计数为 1 时也不会出现主谓不一致。
+# A noun phrase per v1 flag. Noun phrases rather than verbs, so a count of 1 does not
+# produce subject-verb disagreement.
 FLAG_WHY = {
     "SCOPE2_METHOD_UNSTATED": "clean-electricity figures with no accounting method stated "
                               "(market-based or location-based)",
@@ -65,7 +69,7 @@ FLAG_WHY = {
 
 
 def why_flagged(flag_types, n_sentences):
-    """把区间的 flag 计数写成一段用户读得懂的解释。"""
+    """Turn a passage's flag counts into an explanation a reader can follow."""
     if not flag_types:
         return (f"These {n_sentences} sentences sit above this report's flag density, "
                 f"but no single pattern dominates.")
@@ -75,14 +79,15 @@ def why_flagged(flag_types, n_sentences):
 
 
 def mechanism_of_region(flag_types):
-    """区间里命中最多的 flag 决定它的机制；并列时取字母序，保证渲染稳定。"""
+    """The most frequent flag in the passage decides its mechanism; ties break
+    alphabetically so rendering stays stable."""
     if not flag_types:
         return None
     top = max(sorted(flag_types), key=lambda f: flag_types[f])
     return FLAG_MECHANISM.get(top)
 
 
-# Streamlit 原生 badge 的颜色名（:green-badge[...]），不是 CSS 色值
+# Streamlit's own badge colour names (:green-badge[...]), not CSS colour values
 LABEL_BADGE_COLOR = {"A": "green", "B": "gray", "C": "orange", "D": "red"}
 MECHANISM_BADGE_COLOR = {
     "UNDISCLOSED_METHOD": "blue",
@@ -95,12 +100,14 @@ MECHANISM_BADGE_COLOR = {
 
 
 def say_mechanism(mechanism):
-    """机制代号 → 用户措辞。未知代号返回原样，便于发现遗漏。"""
+    """Mechanism code -> readable wording. An unknown code is returned unchanged, so gaps
+    are visible rather than silent."""
     return MECHANISM_LABELS.get(mechanism, mechanism or "—")
 
 
 def say_terminal(terminal, mechanism=None):
-    """终点代号 → 用户措辞。未列入 §2 的终点回落到机制措辞。"""
+    """Terminal code -> readable wording. Terminals sec. 2 does not name fall back to their
+    mechanism's wording."""
     if terminal in TERMINAL_LABELS:
         return TERMINAL_LABELS[terminal]
     return say_mechanism(mechanism) if mechanism else (terminal or "—")
@@ -110,7 +117,8 @@ def say_label(label):
     return LABEL_NAMES.get(label, label or "—")
 
 
-# §3 四条预设 claim。第三条是 demo 高潮：highlight 指出要高亮的术语。
+# sec. 3, the four preset claims. The third is the demo's punchline; highlight names the
+# term to pick out.
 PRESETS = [
     {"button": "Substantiated", "expected": "A", "highlight": "Scope 1 and 2",
      "claim": "Our Scope 1 and 2 emissions decreased by 30% from the 2020 base year"},
@@ -132,8 +140,8 @@ def mechanism_badge(mechanism):
     return f":{color}-badge[{say_mechanism(mechanism)}]"
 
 
-# ============================================================ FRONTEND_V2 用语
-# §4.2 四个指标：标签、tooltip（含公式）、格式化
+# ========================================================= FRONTEND_V2 wording
+# sec. 4.2, the four indicators: label, tooltip (with the formula), formatting
 INDICATORS = [
     {"key": "claims_needing_review", "label": "Claims needing review",
      "help": "Share of quantified claims that are technically true but incomplete. "
@@ -153,7 +161,7 @@ INDICATORS = [
      "fmt": lambda v: f"{v:.0f}%"},
 ]
 
-# §3.2 评级读数
+# sec. 3.2, grade readings
 GRADE_READINGS = {
     "A": "Figures are scoped and verifiable",
     "B": "Mostly scoped, some gaps",
@@ -163,13 +171,13 @@ GRADE_READINGS = {
 GRADE_BADGE_COLOR = {"A": "green", "B": "blue", "C": "orange", "D": "red"}
 GRADE_TOOLTIP = ("Measures how completely this report discloses the basis for its own figures. "
                  "It is not a judgment of environmental performance or of the company.")
-# §5 必须逐字出现在展开块里
+# sec. 5 requires this verbatim inside the expander
 GRADE_DISCLAIMER = (
     "The thresholds in this grade were chosen by the author, not fitted to outcome data. "
     "There is no dataset of \"correctly graded\" reports to calibrate against. The grade is a "
     "transparent, reproducible summary of three measured quantities — not a validated rating.")
 
-# §3.4 阶段名（不是模块名）
+# sec. 3.4, stage names (not module names)
 STAGES = [
     ("Reading the PDF", "{sentences:,} sentences"),
     ("Checking disclosures", "9 rules, {regions} passages flagged"),
@@ -178,12 +186,12 @@ STAGES = [
     ("Extracting commitments", "{commitments} targets"),
 ]
 
-# §4.1 关键术语词表：没有 term_risk.json 时的回落（不带 lift 着色）
+# sec. 4.1, key-term vocabulary: the fallback when term_risk.json is absent (no lift colouring)
 KEY_TERMS = ["matched", "carbon-free", "market-based", "location-based", "diverted",
              "inset", "replenished", "net zero", "carbon neutral", "offset", "REC", "PPA",
              "PUE", "water positive", "renewable energy", "intensity"]
 
-KEY_TERM_QUALIFIER = {          # 每个术语用哪一类限定语判断 lift
+KEY_TERM_QUALIFIER = {          # which qualifier class each term's lift is read against
     "matched": "method_stated", "carbon-free": "method_stated",
     "market-based": "method_stated", "location-based": "method_stated",
     "renewable energy": "method_stated", "REC": "method_stated", "PPA": "method_stated",
@@ -195,7 +203,8 @@ KEY_TERM_QUALIFIER = {          # 每个术语用哪一类限定语判断 lift
 
 
 def term_pill(term, lift=None, count=None):
-    """§4.1 术语药丸：lift < 1 用警示色，其余中性；无 lift 时一律中性。"""
+    """sec. 4.1 term pills: lift below 1 gets the warning colour, everything else is
+    neutral; with no lift available, everything is neutral."""
     if lift is None:
         return f":gray-badge[{term}]"
     color = "orange" if lift < 1 else "gray"
@@ -209,7 +218,7 @@ def term_hover(term, lift, count, cooc):
     return f"{term}: appears {count} times, qualifier present in {share}"
 
 
-# ---------------------------------------------- 段落分析面板（右栏，粘贴原文）
+# ------------------------------- passage analysis panel (right column, pasted text)
 PASSAGE_PANEL = {
     "title": "Analyse a passage",
     "hint": "Paste a sentence or short passage from any report. Ctrl+Enter to run.",
@@ -223,12 +232,12 @@ PASSAGE_PANEL = {
 
 
 def say_span(span):
-    """终点命中的原文片段，用引号包起来给用户看。"""
+    """The span of source text the terminal matched, quoted for display."""
     return f"“{span}”" if span else None
 
 
-# ------------------------------------------------- 工作树（“跑到哪一步”的可视化）
-# 每个阶段：(标题, 子项, 与 pipeline stage 名的对应)
+# --------------------------------- the work tree ("where has it got to" visualisation)
+# Per stage: (title, sub-items, the pipeline stage name it corresponds to)
 WORK_TREE = [
     ("Read the document",
      ["Pull text out of the PDF", "Repair line breaks, drop contents pages and tables"],
@@ -263,12 +272,13 @@ HISTORY_PANEL = {
 }
 
 
-# ------------------------------------- 评级脆弱度与子分说明（敏感性分析的界面出口）
+# --------------- grade fragility and sub-score notes (the sensitivity analysis on screen)
 def say_margin(m, n_subscores=3):
-    """把 band_margin 的结果写成一句给人看的话。
+    """Turn a band_margin result into one readable sentence.
 
-    总分是三个子分的平均，所以总分要动 margin 分，单个子分得动 margin × 3 分 ——
-    直接写总分差距会让评级显得比实际更脆。
+    The overall score is the mean of three sub-scores, so while the overall score has to
+    move by `margin` to flip the letter, any single sub-score has to move by margin x 3.
+    Quoting the overall gap alone makes the grade look more fragile than it is.
     """
     verb = "below" if m["direction"] == "up" else "above"
     need = m["margin"] * n_subscores
@@ -281,7 +291,8 @@ GRADE_FRAGILITY_NOTE = (
     "of the three reports; the ranking between them never changes. Read the ordering, "
     "not the letter.")
 
-# 惰性子分：扫描区间内不影响任何公司的字母，必须在展开块里说明，不能默认它在起作用
+# An inert sub-score: across the whole sweep it changes no company's letter. That has to
+# be stated in the expander rather than left to the assumption that it is doing work.
 INERT_SUBSCORE_NOTE = (
     "Promise balance does not discriminate here: sweeping its ceiling from 3 to 8 leaves "
     "every letter on this corpus unchanged. It is kept because a report with a very high "
@@ -289,12 +300,15 @@ INERT_SUBSCORE_NOTE = (
     "it contributes no separation.")
 
 
-# ------------------------------------------------------------- 文档来源描述
+# ------------------------------------------------------------ document source line
 def say_source(src):
-    """来源行。只说文件里可核实的东西：标题、文件名、PDF 创建日期。
+    """The source line. States only what can be checked in the file itself: title,
+    filename, PDF creation date.
 
-    出版日期我们没有核实过，所以不声称。PDF 创建日期取自文件元数据，通常接近但不等于
-    出版日期，措辞上必须区分 —— 之前这里写的是编造的 published 2025-01-01。
+    The publication date was never verified, so it is not claimed. The PDF creation date
+    comes from file metadata; it is usually close to, but not the same as, the
+    publication date, and the wording has to keep them apart -- this line previously
+    carried a fabricated "published 2025-01-01".
     """
     bits = [src.get("title") or src["company"]]
     from pathlib import Path
@@ -304,8 +318,9 @@ def say_source(src):
     return "Source: " + " · ".join(bits)
 
 
-# ------------------------------------------- 建议动作：机制 → 分析师下一步要什么
-# 每条都必须是「可以发给 IR 的一句具体请求」，不是「需要进一步调查」这种空话。
+# ------------------------- recommended action: mechanism -> what the analyst asks next
+# Every entry has to be one concrete request that could be sent to investor relations,
+# not filler like "warrants further investigation".
 ACTION_BY_MECHANISM = {
     "UNDISCLOSED_METHOD":
         "Ask which accounting method produced the figure, and request the other one: "
@@ -321,7 +336,7 @@ ACTION_BY_MECHANISM = {
         "against that definition.",
 }
 
-# 少数终点有更具体的请求，覆盖机制默认值
+# A few terminals have a more specific request that overrides the mechanism default
 ACTION_BY_TERMINAL = {
     "INTENSITY_NO_ABSOLUTE":
         "Request the absolute tonnage for the same period and boundary. A 39% fall per "
@@ -342,7 +357,8 @@ ACTION_BY_TERMINAL = {
 
 
 def recommended_action(mechanism=None, terminal=None):
-    """给分析师的下一步。没有对应机制时返回 None，界面就不显示这一块。"""
+    """The analyst's next step. Returns None when the mechanism has no entry, and the
+    interface then omits the block."""
     if terminal and terminal in ACTION_BY_TERMINAL:
         return ACTION_BY_TERMINAL[terminal]
     return ACTION_BY_MECHANISM.get(mechanism)

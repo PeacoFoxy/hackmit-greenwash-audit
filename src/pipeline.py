@@ -1,7 +1,9 @@
-"""上传 PDF 的实时管线：解析 → 句级信号 → 异常区间 → claim 抽取 → 规则树分类。
+"""Live pipeline for an uploaded PDF: parse -> sentence signals -> passages ->
+claim extraction -> rule-tree classification.
 
-预加载路径不走这里（那条路直接读 data/*.json）。
-claim 抽取需要 LLM；其余全部零调用，断网时仍能产出前四个阶段。
+The preloaded path does not come through here; it reads data/*.json directly.
+Only claim extraction needs the model. Everything else is deterministic, so the first
+four stages still produce output with no network.
 """
 import json
 import re
@@ -16,7 +18,7 @@ from src.rules import flags as rule_flags
 from src.signals import is_prose, sentences, signals
 from src.tree import classify as tree_classify
 
-MAX_CLAIM_SENTENCES = 150     # 抽取上限，保证上传流程可在约 90 秒内完成
+MAX_CLAIM_SENTENCES = 150     # extraction cap, keeping an upload inside ~90 seconds
 EXTRACT_BATCH = 10
 
 RE_TARGET_YEAR = re.compile(r"\b20[2-5]\d\b")
@@ -53,7 +55,7 @@ def _parse_array(raw):
 
 
 def build_rows(text, company, source_id):
-    """句子 → 七标量 + 相对位置，形状与 data/signals.json 一致。"""
+    """Sentence -> 7 signals + relative position, shaped like data/signals.json."""
     kept = [s for s in sentences(text) if is_prose(s)]
     rows = []
     for i, s in enumerate(kept):
@@ -66,7 +68,7 @@ def build_rows(text, company, source_id):
 
 
 def extract_claims(rows, company, progress=None):
-    """对前 MAX_CLAIM_SENTENCES 条带环境信号的句子做 claim 抽取。需要 LLM。"""
+    """Extract claims from the first MAX_CLAIM_SENTENCES qualifying sentences. Needs the model."""
     pool = [r for r in rows if SIGNALS.search(r["text"])][:MAX_CLAIM_SENTENCES]
     claims, n_batches = [], -(-len(pool) // EXTRACT_BATCH)
     for i in range(0, len(pool), EXTRACT_BATCH):
@@ -84,10 +86,11 @@ def extract_claims(rows, company, progress=None):
 
 
 def analyse(pdf_bytes, filename, company=None, on_stage=None, extract=True, on_partial=None):
-    """完整上传管线。
+    """The full upload pipeline.
 
-    on_stage(name, detail) 更新进度行；on_partial(dict) 在每个阶段完成时交出累计结果，
-    调用方据此做渐进渲染 —— 后面的阶段失败时，前面的结果不会丢。
+    on_stage(name, detail) updates the progress line. on_partial(dict) hands out the
+    accumulated result as each stage completes, so the caller can render progressively:
+    when a later stage fails, the earlier results are not lost.
     """
     partial = {}
 

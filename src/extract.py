@@ -1,9 +1,11 @@
-"""Stage 3b：LLM 把长文本切成原子 claim。data/corpus.json → data/claims.json。[LLM]"""
+"""Stage 3b: the model splits long text into atomic claims.
+data/corpus.json -> data/claims.json. [model]"""
 import json, re, os
 from src.llm import ask
 from src.segment_patch import windows
 
-# 只保留含环境宣称信号的段落，把 94 万字符砍到可处理规模
+# Keep only paragraphs carrying an environmental-claim signal, cutting 940k characters
+# down to a workable size
 SIGNALS = re.compile(
     r"(100%|carbon|renewable|net.?zero|emission|PUE|water|offset|REC|"
     r"PPA|sustainab|green|climate|scope\s*[123])", re.I)
@@ -36,8 +38,8 @@ def main(per_doc=45):
     claims, n = [], 0
     for d in docs:
         paras = windows(d["text"])
-        print(f"{d['id']}: {len(paras)} 个候选段落")
-        # 均匀取样，覆盖全文而非只看开头
+        print(f"{d['id']}: {len(paras)} candidate paragraphs")
+        # Sample evenly so the whole document is covered, not just the opening
         step = max(1, len(paras) // per_doc)
         picked = paras[::step][:per_doc]
         for i in range(0, len(picked), 3):
@@ -56,7 +58,7 @@ def main(per_doc=45):
             except Exception as e:
                 print(f"  parse fail: {e}")
     json.dump(claims, open("data/claims.json", "w"), ensure_ascii=False, indent=1)
-    print(f"\n共 {len(claims)} 条 claim → data/claims.json")
+    print(f"\n{len(claims)} claims -> data/claims.json")
 
 
 if __name__ == "__main__":
